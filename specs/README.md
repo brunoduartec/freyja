@@ -23,3 +23,10 @@ A lista de entregas é uma proposta de produção. No Codex, as skills ficam em 
 > Consulte `.specify/feature.json` para localizar a entrega ativa. A 005 tem primeira maquete e vistas comparativas apresentadas; as tarefas posteriores ao checkpoint aguardam avaliação visual. A 004 foi encerrada com entrega parcial. Cada nova entrega começa por uma spec curta para avaliação, mesmo quando o usuário disser "pode seguir" após avaliar a anterior. O encontro com Artur e o recorte narrativo da 001 permanecem no backlog.
 
 Ao trocar de modelo ou máquina, compartilhe o GDD, a constituição e a pasta da feature. A integração com Unity MCP e Blender MCP precisa estar disponível na sessão que for usar os editores.
+
+
+## Branches para novas specs
+
+Cada nova spec usa uma branch própria no padrão `<NNN>-<nome-curto>`, alinhada à pasta da feature. Resolver o nome com o modo `--dry-run` de `.specify/scripts/bash/create-new-feature.sh`, criar/selecionar a branch Git e então gerar a spec e seus metadados. O script base local não cria a branch sozinho. Ao retomar a entrega, usar sua branch e manter `.specify/feature.json` coerente.
+
+A regra completa, incluindo preservação de alterações existentes e hooks oficiais, está em [AGENTS.md](../AGENTS.md#git-e-branches-do-spec-kit). Continua obrigatória a aprovação explícita da spec antes de plan, tasks e implementação.

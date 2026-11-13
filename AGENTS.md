@@ -63,3 +63,14 @@
 - Leia `/Users/bruno.duartec/.codex/RTK.md` uma vez por sessão antes de usar comandos shell. Use `rtk` em comandos suportados com saída volumosa e `rtk proxy` para conteúdo exato ou comandos sem suporte; recorra ao comando nativo se necessário.
 - Restrinja buscas aos arquivos e intervalos relevantes e amplie apenas quando necessário. Não repita verificações aprovadas sem mudança ou dúvida que justifique.
 - Preserve alterações do usuário e mantenha as mudanças restritas à tarefa solicitada.
+
+
+## Git e branches do Spec Kit
+
+- A partir desta orientação, cada nova spec deve ser criada em uma branch própria, nunca diretamente em `main`. O nome deve seguir o padrão sequencial do Spec Kit: `<NNN>-<nome-curto>`, correspondente à pasta `specs/<NNN>-<nome-curto>/`.
+- Antes de escrever a spec, verifique o estado do Git e as branches locais/remotas. Use `main` atualizada como base quando isso puder ser feito sem misturar ou descartar alterações existentes. Preserve trabalhos em andamento.
+- Use `.specify/scripts/bash/create-new-feature.sh --dry-run --json --short-name <nome-curto> "<descrição>"` para resolver o próximo número e nome sem criar artefatos. Crie e selecione a branch resolvida com Git antes de gravar a nova spec.
+- Execute o mesmo script sem `--dry-run`, com os mesmos argumentos, para criar a pasta e os metadados. Confirme que o nome retornado corresponde à branch selecionada; mantenha `.specify/feature.json` apontando para essa pasta. Se houver divergência, corrija-a antes de prosseguir.
+- Na versão local atual, esse script cria a pasta e os metadados, mas não cria a branch Git. A existência da pasta não substitui a criação da branch. Se um hook oficial de Git estiver ativo e já tiver criado a branch correta, reutilize-a em vez de criar outra.
+- Ao retomar uma spec existente, trabalhe na branch correspondente. Planejamento, tarefas e implementação dessa feature permanecem nela. Essa regra de branches não elimina a aprovação da spec antes de planejar ou implementar.
+- Não reescreva o histórico nem mova alterações de outras entregas para satisfazer o fluxo. Esta orientação vale para novas specs após o commit que a registra; specs anteriores permanecem com seu histórico atual.
