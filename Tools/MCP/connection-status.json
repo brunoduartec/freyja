@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-11-12T18:34:16.945768+00:00",
+  "unity": {
+    "server": {
+      "name": "unity-mcp",
+      "version": "1.0.0-beta.12"
+    },
+    "tool_count": 184,
+    "tool": "eval",
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"project\": \"/Users/bruno.duartec/Documents/Projects/Ilha Misterio/IlhaMisterio/Assets\",\n  \"version\": \"6000.3.25f1\",\n  \"scene\": \"Assets/Scenes/SampleScene.unity\",\n  \"compiling\": false,\n  \"updating\": false,\n  \"renderPipeline\": \"Built-in\"\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "blender": {
+    "server": {
+      "name": "blender-mcp",
+      "version": "1.30.0"
+    },
+    "tool_count": 26,
+    "tool": "execute_blender_code",
+    "response": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"status\": \"ok\",\n  \"result\": {\n    \"file\": \"/Users/bruno.duartec/Documents/Projects/Ilha Misterio/Source/Blender/IlhaMisterio.blend\",\n    \"version\": \"5.2.2 LTS\",\n    \"scene\": \"Scene\",\n    \"dirty\": false\n  }\n}"
+        }
+      ],
+      "structuredContent": {
+        "status": "ok",
+        "result": {
+          "file": "/Users/bruno.duartec/Documents/Projects/Ilha Misterio/Source/Blender/IlhaMisterio.blend",
+          "version": "5.2.2 LTS",
+          "scene": "Scene",
+          "dirty": false
+        }
+      },
+      "isError": false
+    }
+  }
+}

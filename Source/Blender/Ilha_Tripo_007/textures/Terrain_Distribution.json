@@ -1,0 +1,13 @@
+{
+  "extent": [
+    -0.54,
+    0.54,
+    -0.54,
+    0.54
+  ],
+  "red": "paths and plaza",
+  "green": "beach",
+  "blue": "exposed coastal rock",
+  "inspection_size": 1200,
+  "seed": 7007
+}

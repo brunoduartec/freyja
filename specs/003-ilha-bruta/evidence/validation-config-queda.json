@@ -1,0 +1,27 @@
+{
+  "mode": "route",
+  "defaultArrivalRadius": 0.8,
+  "defaultWaypointTimeoutSeconds": 30,
+  "stuckWindowSeconds": 4,
+  "stuckProgressMeters": 0.15,
+  "sampleIntervalSeconds": 0.2,
+  "requireCapturedControl": true,
+  "waypoints": [
+    {
+      "id": "cais",
+      "position": [
+        0,
+        0,
+        7.5
+      ]
+    },
+    {
+      "id": "queda_intencional",
+      "position": [
+        12,
+        0,
+        7.5
+      ]
+    }
+  ]
+}

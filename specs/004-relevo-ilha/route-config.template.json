@@ -1,0 +1,17 @@
+{
+  "mode": "route",
+  "defaultArrivalRadius": 1.25,
+  "defaultWaypointTimeoutSeconds": 180,
+  "stuckWindowSeconds": 3,
+  "stuckProgressMeters": 0.15,
+  "sampleIntervalSeconds": 0.5,
+  "requireCapturedControl": true,
+  "waypoints": [
+    { "id": "replace-with-cais", "position": [0, 0, 0], "arrivalRadius": 1.25 },
+    { "id": "replace-with-largo", "position": [0, 0, 0], "arrivalRadius": 1.25 },
+    { "id": "replace-with-setores-hortas-ruina", "position": [0, 0, 0], "arrivalRadius": 1.25 },
+    { "id": "replace-with-topo", "position": [0, 0, 0], "arrivalRadius": 1.25 },
+    { "id": "replace-with-recanto", "position": [0, 0, 0], "arrivalRadius": 1.25 },
+    { "id": "replace-with-return-to-cais", "position": [0, 0, 0], "arrivalRadius": 1.25 }
+  ]
+}

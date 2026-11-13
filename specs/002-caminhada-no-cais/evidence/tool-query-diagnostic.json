@@ -1,0 +1,13 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "Error: Pipeline server returned 400 Bad Request: Command Not Found. No command named 'get' is available. 'get' names several commands; run one of: animation.clip get, animation.timeline get, console get, settings.audio get, settings.graphics get, settings.input get, settings.physics get, settings.player get, settings.quality get, settings.runtime_pipeline get, settings.tags_layers get, settings.time get.",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": null,
+  "isError": true
+}

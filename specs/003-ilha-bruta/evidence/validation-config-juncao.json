@@ -1,0 +1,19 @@
+{
+  "mode": "route",
+  "defaultArrivalRadius": 1,
+  "defaultWaypointTimeoutSeconds": 30,
+  "stuckWindowSeconds": 4,
+  "stuckProgressMeters": 0.15,
+  "sampleIntervalSeconds": 0.2,
+  "requireCapturedControl": true,
+  "waypoints": [
+    {
+      "id": "travessia_cais_corrigido",
+      "position": [
+        0,
+        0,
+        -10
+      ]
+    }
+  ]
+}

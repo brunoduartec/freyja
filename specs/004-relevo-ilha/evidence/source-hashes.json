@@ -1,0 +1,176 @@
+{
+  "algorithm": "SHA-256",
+  "captured_date": "2026-11-12",
+  "files": [
+    {
+      "path": "Source/Blender/Ilha_Bruta_003.blend",
+      "sha256": "8d9fe5756cec09025a2438bd62a70404ecb635610cc511d37099ec2f36867095",
+      "bytes": 305797
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Scenes/Ilha_Bruta_003.unity",
+      "sha256": "8b31820fb3a9b551e70b50ee8e680a1d10fe66fe0522fc5c162c6f0b1b60a147",
+      "bytes": 83346
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Scenes/Ilha_Bruta_003.unity.meta",
+      "sha256": "a13e33a5a426a9cd1068ccf8baba26804ee20f682e2c0fd058ac3bbc8bab65f8",
+      "bytes": 155
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Prefabs/Cais_VisualReview.prefab",
+      "sha256": "174582aa318bc795858619460fe6e5c73bb63d8e74e495e87e27020956e84bde",
+      "bytes": 58692
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Prefabs/IlhaBruta.prefab",
+      "sha256": "f7edc6d786efb157bbd6c92452b9c5afba940f187bca18d738394bba2f940ffb",
+      "bytes": 23720
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Prefabs/PlayerPrototype.prefab",
+      "sha256": "65b1b17f3cd04c5d86d96ffc63d85471144ef9185ee9454c807abf9e8e74d2be",
+      "bytes": 7067
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Prefabs/Cais_VisualReview.prefab.meta",
+      "sha256": "6b8b46282b82d034a813c21fc33f3ab29655ea2a79e67dbad10062be66849878",
+      "bytes": 154
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Prefabs/IlhaBruta.prefab.meta",
+      "sha256": "370dfb5dfa2f98628866edb6aa4b4d2f198b3feb8511b1f9f1846411a61f82b9",
+      "bytes": 154
+    },
+    {
+      "path": "IlhaMisterio/Assets/_Project/Prefabs/PlayerPrototype.prefab.meta",
+      "sha256": "3a1aa3d4a35ab6acfb097e8b0868665228097610738c816bb50674b56d9f1506",
+      "bytes": 154
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/AudioManager.asset",
+      "sha256": "f2ed914f70919b6434c647bd820850be731b408f0f0c31e3bf7f98c8cafb617f",
+      "bytes": 416
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/ClusterInputManager.asset",
+      "sha256": "40e65dd214bf254955d2c8829ca8ce2130fd3510485560ce012e9a1ddd93e623",
+      "bytes": 114
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/DynamicsManager.asset",
+      "sha256": "80ba5565beefddabba07863f19983c62409753fb36bff400fe36cf9a7db94690",
+      "bytes": 1190
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/EditorBuildSettings.asset",
+      "sha256": "07315000fa46f2a14dd884792e4e0b50b744f1a547a057c5c9d3bfd63561b745",
+      "bytes": 304
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/EditorSettings.asset",
+      "sha256": "32d6a9be4c9aa9795a96bd951820a2d9be1bfefab82ed05a5db111af0863938f",
+      "bytes": 1585
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/GraphicsSettings.asset",
+      "sha256": "442894020eebc9cfeddc7b95f3e637fdcf033513a507e0fbe231a8e0e4f7d60b",
+      "bytes": 2230
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/InputManager.asset",
+      "sha256": "1fb1c30f8a1615cf9a4220be6d18a33eccd3a09cc4cd0a3c7cd0a38a7c083134",
+      "bytes": 5793
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/MemorySettings.asset",
+      "sha256": "1e8379a461b10ae09f3f696911088c16875d63e87ed5f2d95df9e1892703f9fd",
+      "bytes": 1192
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/MultiplayerManager.asset",
+      "sha256": "ce4075d7a7dd8ac7ffe55de2427692c63f90dae398208bd80cec0f27cbe09f4b",
+      "bytes": 232
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/NavMeshAreas.asset",
+      "sha256": "80106cfa7e6181a1928b142c075f3e510d527441e3d79bc83590e4ac91e7cd66",
+      "bytes": 1308
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/PackageManagerSettings.asset",
+      "sha256": "9c4d407e7f474c73f87c22bf85581146b6389c9554aebb8334e84c8aab9d0b00",
+      "bytes": 928
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/Physics2DSettings.asset",
+      "sha256": "d57a0fe55659c33879e8b70bc01c5ea9cdf082069dab649905c6c5138531e6eb",
+      "bytes": 2028
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/PresetManager.asset",
+      "sha256": "29c125923fe6e29f90190d4fce1c82d660e7051546e2c9d02908d18c9cf2436c",
+      "bytes": 146
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/ProjectSettings.asset",
+      "sha256": "31245852ef92a08a639d5be046e3a4bf22300ec0bba434559ce454b5d88a3903",
+      "bytes": 24342
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/ProjectVersion.txt",
+      "sha256": "4a18b4936a9f83ec28b32cf336e6f62f6b00ddf12a48c792feac779add1380f3",
+      "bytes": 85
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/QualitySettings.asset",
+      "sha256": "2666fdbcc78de7e4b6d74fc5afd5ebaf573a2ae562677c1e13fcb7a0f19a95fc",
+      "bytes": 6497
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/SceneTemplateSettings.json",
+      "sha256": "bb9098b3bfcde78d93e264b96f7b77b5430e64e8c57a7aad7f5a5d9c3945e16a",
+      "bytes": 3535
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/TagManager.asset",
+      "sha256": "77e2a64d73782f0aad95c82c6edc4e545bc1ac1f822675341fe670defffedf6c",
+      "bytes": 430
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/TimeManager.asset",
+      "sha256": "1a83e54adbbda7c9f4851103a0c6ab7f6448a3343d4ea5b7620452fa08416ecd",
+      "bytes": 202
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/UnityConnectSettings.asset",
+      "sha256": "b7dd1e8290598f5ce86919ba1c98b42b766c8c42191a30fa2c4d12195c4ecd00",
+      "bytes": 1063
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/VFXManager.asset",
+      "sha256": "f066c6483919961332415ee64204f74fe52f38c02e82892eb02b7a5b2e381f0e",
+      "bytes": 308
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/VersionControlSettings.asset",
+      "sha256": "e7bda45bf7a394745fee1316e6c71fa676004d591ad1f3aa247fd3e4ceb86071",
+      "bytes": 188
+    },
+    {
+      "path": "IlhaMisterio/ProjectSettings/XRSettings.asset",
+      "sha256": "edd2beb4a2e388312b4b7da241aa51070434005d82c59363f1237dd2e567585f",
+      "bytes": 158
+    },
+    {
+      "path": "IlhaMisterio/Packages/manifest.json",
+      "sha256": "d5f33dbcb820cc7d845a77eedc7fd8575276883e2fab194304a0bb02977239ee",
+      "bytes": 1885
+    },
+    {
+      "path": "IlhaMisterio/Packages/packages-lock.json",
+      "sha256": "ea650afe3cc3984055ad1de0e05b044fdd07166c4d97074725fa376a087a8b1d",
+      "bytes": 11744
+    }
+  ]
+}

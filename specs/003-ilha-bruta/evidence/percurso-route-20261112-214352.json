@@ -1,0 +1,459 @@
+{
+  "utcStarted": "2026-11-12T21:43:52.1955050Z",
+  "scene": "Assets/_Project/Scenes/Ilha_Bruta_003.unity",
+  "mode": "route",
+  "outcome": "route-complete",
+  "detail": "Todos os waypoints alcançados por movimento contínuo.",
+  "inputCoverage": "guided-synthetic-direction; mouse/click/Esc/WASD controls not validated",
+  "timeScale": 1.0,
+  "elapsedSeconds": 5.366893,
+  "startPosition": [
+    -9.313226E-10,
+    0.94,
+    7.5
+  ],
+  "endPosition": [
+    -5.26378281E-11,
+    2.07145977,
+    -9.010868
+  ],
+  "lastPositionBeforeRecovery": [
+    -9.313226E-10,
+    0.94,
+    7.5
+  ],
+  "routeDistance3dMeters": 16.6842537,
+  "routeDistancePlanarMeters": 16.5108471,
+  "collisionFlagFrames": {
+    "sides": 0,
+    "above": 0,
+    "below": 3878
+  },
+  "recoveryCount": 0,
+  "waypointIndex": 1,
+  "waypoints": [
+    {
+      "id": "travessia_cais_corrigido",
+      "reached": true,
+      "elapsedSeconds": 5.362355,
+      "distanceAtArrival": 0.9891319,
+      "reachedPosition": [
+        -5.26378281E-11,
+        2.07145953,
+        -9.010868
+      ]
+    }
+  ],
+  "fallExpectedPosition": null,
+  "fallRecoveryPositionTolerance": 0.75,
+  "fallRecoveryPositionError": null,
+  "finalPlayerGrounded": true,
+  "finalPlanarSpeed": 0.0,
+  "samples": [
+    {
+      "elapsedSeconds": 0.200967714,
+      "position": [
+        -8.766973E-10,
+        0.944999754,
+        6.47358847
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 16.4735889,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 0.401386529,
+      "position": [
+        -8.446397E-10,
+        0.9449999,
+        5.871224
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 15.8712234,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 0.6027869,
+      "position": [
+        -8.12587442E-10,
+        0.9449999,
+        5.268961
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 15.268961,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 0.8029021,
+      "position": [
+        -7.805006E-10,
+        0.945,
+        4.666048
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 14.666048,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 1.00296068,
+      "position": [
+        -7.48538342E-10,
+        0.9449999,
+        4.06547451
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 14.0654745,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 1.20398784,
+      "position": [
+        -7.165256E-10,
+        0.9449999,
+        3.46395421
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 13.463954,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 1.41119289,
+      "position": [
+        -6.864807E-10,
+        0.9449999,
+        2.899409
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 12.8994093,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 1.6119467,
+      "position": [
+        -6.514629E-10,
+        0.9449999,
+        2.241422
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 12.2414217,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 1.81278384,
+      "position": [
+        -6.19352236E-10,
+        0.945,
+        1.63806081
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 11.6380606,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 2.01379061,
+      "position": [
+        -5.8728844E-10,
+        0.945,
+        1.03558052
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 11.0355806,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 2.2143178,
+      "position": [
+        -5.55133051E-10,
+        0.9445664,
+        0.431379378
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 10.4313793,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 2.41436,
+      "position": [
+        -5.231845E-10,
+        0.944999754,
+        -0.16893588
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 9.831064,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 2.61484122,
+      "position": [
+        -4.911984E-10,
+        0.945,
+        -0.769955635
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 9.230044,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 2.81614566,
+      "position": [
+        -4.60034372E-10,
+        0.945,
+        -1.3555299
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 8.64447,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 3.01710248,
+      "position": [
+        -4.2710005E-10,
+        0.945,
+        -1.97436738
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 8.025633,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 3.21778083,
+      "position": [
+        -3.949612E-10,
+        0.9499821,
+        -2.578258
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 7.421742,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 3.41849685,
+      "position": [
+        -3.62952668E-10,
+        0.9449999,
+        -3.17970014
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 6.8203,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 3.61860132,
+      "position": [
+        -3.31056377E-10,
+        1.05317557,
+        -3.77903318
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 6.220967,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 3.8188684,
+      "position": [
+        -2.99098746E-10,
+        1.22000492,
+        -4.379543
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 5.620457,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 4.01943445,
+      "position": [
+        -2.67051964E-10,
+        1.33230746,
+        -4.981745
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 5.018255,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 4.219529,
+      "position": [
+        -2.35056752E-10,
+        1.4444288,
+        -5.582976
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 4.417024,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 4.42038631,
+      "position": [
+        -2.0305381E-10,
+        1.55657756,
+        -6.184354
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 3.81564617,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 4.62078571,
+      "position": [
+        -1.70996509E-10,
+        1.66891682,
+        -6.786752
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 3.21324778,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 4.82275248,
+      "position": [
+        -1.38986836E-10,
+        1.781089,
+        -7.388255
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 2.61174488,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 5.02340555,
+      "position": [
+        -1.06868236E-10,
+        1.89312446,
+        -7.991808
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 2.008192,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 5.22431564,
+      "position": [
+        -7.467399E-11,
+        1.99899423,
+        -8.596779
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 1.40322113,
+      "waypoint": "travessia_cais_corrigido",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 5.3647337,
+      "position": [
+        -5.26378281E-11,
+        2.07145977,
+        -9.010868
+      ],
+      "grounded": true,
+      "planarSpeed": 0.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": null,
+      "waypoint": null,
+      "recoveryCount": 0
+    }
+  ]
+}

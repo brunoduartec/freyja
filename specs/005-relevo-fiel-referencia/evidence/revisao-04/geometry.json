@@ -1,0 +1,12 @@
+{
+  "revision": 4,
+  "vertices": 26189,
+  "faces": 51850,
+  "min_z": -0.8,
+  "max_z": 35.15789480612635,
+  "faces_70_to_80": 2941,
+  "faces_over_80": 73,
+  "oracle": "Referencias/modelagem-vista-aerea.png",
+  "unity_validation": false,
+  "note": "Face slopes describe visual geometry, not certified traversability."
+}

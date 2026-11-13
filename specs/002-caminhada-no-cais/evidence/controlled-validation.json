@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-12T20:31:54.7891970Z",
+  "initialized": true,
+  "axialDistance": 0.5999999,
+  "diagonalDistance": 0.5999999,
+  "sameSpeed": true,
+  "heldKeyStopped": true,
+  "explicitResume": true,
+  "boundsReset": true,
+  "cameraClear": true,
+  "nearClear": true,
+  "blockedPivotClear": true,
+  "note": "Controlados via MCP; percurso, queda e troca real de janela registrados separadamente."
+}

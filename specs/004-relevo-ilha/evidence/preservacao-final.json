@@ -1,0 +1,138 @@
+[
+  {
+    "path": "Source/Blender/Ilha_Bruta_003.blend",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Scenes/Ilha_Bruta_003.unity",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Scenes/Ilha_Bruta_003.unity.meta",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Prefabs/Cais_VisualReview.prefab",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Prefabs/IlhaBruta.prefab",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Prefabs/PlayerPrototype.prefab",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Prefabs/Cais_VisualReview.prefab.meta",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Prefabs/IlhaBruta.prefab.meta",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Assets/_Project/Prefabs/PlayerPrototype.prefab.meta",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/AudioManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/ClusterInputManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/DynamicsManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/EditorBuildSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/EditorSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/GraphicsSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/InputManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/MemorySettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/MultiplayerManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/NavMeshAreas.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/PackageManagerSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/Physics2DSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/PresetManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/ProjectSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/ProjectVersion.txt",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/QualitySettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/SceneTemplateSettings.json",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/TagManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/TimeManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/UnityConnectSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/VFXManager.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/VersionControlSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/ProjectSettings/XRSettings.asset",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Packages/manifest.json",
+    "preserved": true
+  },
+  {
+    "path": "IlhaMisterio/Packages/packages-lock.json",
+    "preserved": true
+  }
+]

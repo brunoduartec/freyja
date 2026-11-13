@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "unityVersion": "6000.3.25f1",
+  "projectPath": "/Users/bruno.duartec/Documents/Projects/Freyja/Freyja",
+  "missingScripts": 0,
+  "scenes": [
+    "Assets/_Project/Scenes/Cais_Caminhada.unity",
+    "Assets/_Project/Scenes/Cais_Iteracao02.unity",
+    "Assets/_Project/Scenes/Ilha_Bruta_003.unity",
+    "Assets/_Project/Scenes/Ilha_Relevo_004.unity",
+    "Assets/_Project/Scenes/Ilha_Relevo_005.unity"
+  ],
+  "prefabs": [
+    "Assets/_Project/Prefabs/Cais_VisualReview.prefab",
+    "Assets/_Project/Prefabs/IlhaBruta.prefab",
+    "Assets/_Project/Prefabs/IlhaRelevo.prefab",
+    "Assets/_Project/Prefabs/PlayerPrototype.prefab"
+  ],
+  "errors": [],
+  "originalGuidCount": 80,
+  "allOriginalGuidsPreserved": true,
+  "editorVersionAndPackagesPreserved": true,
+  "initialBlendHashPreserved": true,
+  "serializedIdentifiersMigrated": true,
+  "validationMode": "Unity batchmode; compilation, scene/prefab load and API save; no Play Mode test"
+}

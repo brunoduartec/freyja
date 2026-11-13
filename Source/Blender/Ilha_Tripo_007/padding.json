@@ -1,0 +1,6 @@
+{
+  "method": "Iterative neighboring baked-color extension until all empty texels are filled",
+  "additional_passes": 69,
+  "empty_pixels_before_second_pass": 200127,
+  "empty_pixels_after": 0
+}

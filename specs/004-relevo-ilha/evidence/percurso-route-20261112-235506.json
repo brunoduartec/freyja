@@ -1,0 +1,294 @@
+{
+  "utcStarted": "2026-11-12T23:55:06.5190410Z",
+  "scene": "Assets/_Project/Scenes/Ilha_Relevo_004.unity",
+  "mode": "route",
+  "outcome": "stuck",
+  "detail": "Sem progresso de 0.15m por 3.0s em enseada_shore; restante 42.07m.",
+  "inputCoverage": "guided-synthetic-direction; mouse/click/Esc/WASD controls not validated",
+  "timeScale": 1.0,
+  "elapsedSeconds": 7.92796469,
+  "startPosition": [
+    -3.09340024,
+    3.09203887,
+    -14.9874182
+  ],
+  "endPosition": [
+    0.4361493,
+    0.944999754,
+    6.85486269
+  ],
+  "lastPositionBeforeRecovery": [
+    -3.09340024,
+    3.09203887,
+    -14.9874182
+  ],
+  "routeDistance3dMeters": 52.1411438,
+  "routeDistancePlanarMeters": 48.7880974,
+  "collisionFlagFrames": {
+    "sides": 0,
+    "above": 0,
+    "below": 10264
+  },
+  "recoveryCount": 3,
+  "waypointIndex": 1,
+  "waypoints": [
+    {
+      "id": "cais_spawn_ramp",
+      "reached": true,
+      "elapsedSeconds": 3.26532531,
+      "distanceAtArrival": 1.23386776,
+      "reachedPosition": [
+        -0.334383667,
+        1.370714,
+        -5.187694
+      ]
+    }
+  ],
+  "fallExpectedPosition": null,
+  "fallRecoveryPositionTolerance": 0.75,
+  "fallRecoveryPositionError": null,
+  "finalPlayerGrounded": true,
+  "finalPlanarSpeed": 3.0,
+  "samples": [
+    {
+      "elapsedSeconds": 0.500741541,
+      "position": [
+        -2.582111,
+        2.78936529,
+        -13.1713743
+      ],
+      "grounded": true,
+      "planarSpeed": 2.99999976,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 9.527927,
+      "waypoint": "cais_spawn_ramp",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 1.0008775,
+      "position": [
+        -2.17519927,
+        2.54661942,
+        -11.7260695
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 8.026434,
+      "waypoint": "cais_spawn_ramp",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 1.50102437,
+      "position": [
+        -1.76874375,
+        2.29397464,
+        -10.2823839
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 6.526623,
+      "waypoint": "cais_spawn_ramp",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 2.001195,
+      "position": [
+        -1.36201966,
+        2.04116321,
+        -8.837745
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 5.02582026,
+      "waypoint": "cais_spawn_ramp",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 2.5018177,
+      "position": [
+        -0.9552316,
+        1.78195071,
+        -7.392878
+      ],
+      "grounded": true,
+      "planarSpeed": 2.99999976,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 3.52478218,
+      "waypoint": "cais_spawn_ramp",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 3.00620246,
+      "position": [
+        -0.5490055,
+        1.51287508,
+        -5.95000744
+      ],
+      "grounded": true,
+      "planarSpeed": 2.99999976,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 2.02581739,
+      "waypoint": "cais_spawn_ramp",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 3.50626588,
+      "position": [
+        0.180122271,
+        1.46066093,
+        -5.67001867
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 32.64988,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 4.006559,
+      "position": [
+        1.28642678,
+        1.531975,
+        -6.70712566
+      ],
+      "grounded": false,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.25685143,
+      "collisionFlags": "None",
+      "remainingToWaypoint": 31.1334686,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 4.506678,
+      "position": [
+        2.38148141,
+        1.03999877,
+        -7.73368645
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 29.6324787,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 0
+    },
+    {
+      "elapsedSeconds": 5.00689,
+      "position": [
+        0.07745564,
+        0.9449999,
+        7.38543034
+      ],
+      "grounded": true,
+      "planarSpeed": 3.00000024,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 42.713192,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 1
+    },
+    {
+      "elapsedSeconds": 5.50751352,
+      "position": [
+        0.9183069,
+        0.9449999,
+        6.141671
+      ],
+      "grounded": true,
+      "planarSpeed": 3.00000024,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 41.21187,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 1
+    },
+    {
+      "elapsedSeconds": 6.00807047,
+      "position": [
+        1.75971,
+        0.865514457,
+        4.89709568
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 39.70956,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 1
+    },
+    {
+      "elapsedSeconds": 6.51002169,
+      "position": [
+        0.3182627,
+        0.945,
+        7.02923632
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 42.2832375,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 2
+    },
+    {
+      "elapsedSeconds": 7.01009655,
+      "position": [
+        1.16924381,
+        0.9449999,
+        5.77049351
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 40.76383,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 2
+    },
+    {
+      "elapsedSeconds": 7.51057243,
+      "position": [
+        2.01024342,
+        0.409876168,
+        4.526515
+      ],
+      "grounded": false,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -4.40138245,
+      "collisionFlags": "None",
+      "remainingToWaypoint": 39.26224,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 2
+    },
+    {
+      "elapsedSeconds": 7.9274087,
+      "position": [
+        0.4361493,
+        0.944999754,
+        6.85486269
+      ],
+      "grounded": true,
+      "planarSpeed": 3.0,
+      "verticalVelocity": -2.0,
+      "collisionFlags": "Below",
+      "remainingToWaypoint": 42.0727539,
+      "waypoint": "enseada_shore",
+      "recoveryCount": 3
+    }
+  ]
+}

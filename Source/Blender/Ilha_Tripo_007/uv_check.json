@@ -1,0 +1,20 @@
+{
+  "overlap_selection": {
+    "faces": 0,
+    "verts": 0,
+    "edges": 0
+  },
+  "method": "Blender 5.2 uv.select_overlap extend=False, face selection",
+  "uv_loops": 1741896,
+  "zero_area_faces": 0,
+  "finite": true,
+  "min": [
+    0.0035779247991740704,
+    0.0035778856836259365
+  ],
+  "max": [
+    0.9964221715927124,
+    0.9954336285591125
+  ],
+  "area_sum": 0.3259942199143053
+}

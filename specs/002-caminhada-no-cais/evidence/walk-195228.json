@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-12T19:32:04.5408720Z",
+  "frame": 195228,
+  "scene": "Assets/_Project/Scenes/Cais_Caminhada.unity",
+  "initialized": true,
+  "focused": true,
+  "captured": true,
+  "recoveries": 0,
+  "player": [
+    -1.23394216E-06,
+    1.63483584,
+    -6.60400057
+  ],
+  "camera": [
+    -9.013661E-07,
+    4.220904,
+    -2.79977417
+  ],
+  "yaw": 180.0,
+  "pitch": 18.0,
+  "grounded": true,
+  "positionVelocity": 0.0,
+  "verticalVelocity": -2.0
+}

@@ -1,0 +1,33 @@
+{
+  "expectedScenePath": "Assets/_Project/Scenes/Ilha_Relevo_004.unity",
+  "terrainRootPaths": [
+    "REPLACE_WITH_EXACT_SCENE_ROOT_NAME/TerrainColliderRoot"
+  ],
+  "maxWalkableSlopeDegrees": 35.0,
+  "gridSpacingMeters": 0.5,
+  "rayStartAboveBoundsMeters": 3.0,
+  "rayDistanceMeters": 100.0,
+  "edgeSampleRadiusMeters": 0.29,
+  "edgeSampleCount": 8,
+  "edgeHeightToleranceMeters": 0.25,
+  "supportRayNormalMaxDegrees": 35.0,
+  "capsuleRadiusMeters": 0.3,
+  "capsuleHeightMeters": 1.8,
+  "stepOffsetMeters": 0.25,
+  "capsuleSkinClearanceMeters": 0.015,
+  "maxGridCells": 300000,
+  "regionSearchRadiusMeters": 2.0,
+  "regions": [
+    "cais,0,0,0",
+    "largo,0,0,0",
+    "setor-B,0,0,0",
+    "setor-A,0,0,0",
+    "setor-L,0,0,0",
+    "hortas,0,0,0",
+    "ruina,0,0,0",
+    "topo,0,0,0",
+    "encosta-frontal,0,0,0",
+    "encosta-lateral,0,0,0",
+    "recanto,0,0,0"
+  ]
+}

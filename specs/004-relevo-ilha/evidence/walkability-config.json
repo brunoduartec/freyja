@@ -1,0 +1,34 @@
+{
+  "expectedScenePath": "Assets/_Project/Scenes/Ilha_Relevo_004.unity",
+  "terrainRootPaths": [
+    "IlhaRelevo/Terrain_004_Walkable_Island_Collider"
+  ],
+  "maxWalkableSlopeDegrees": 35.0,
+  "gridSpacingMeters": 0.5,
+  "rayStartAboveBoundsMeters": 3.0,
+  "rayDistanceMeters": 100.0,
+  "edgeSampleRadiusMeters": 0.29,
+  "edgeSampleCount": 8,
+  "edgeHeightToleranceMeters": 0.25,
+  "supportRayNormalMaxDegrees": 35.0,
+  "capsuleRadiusMeters": 0.3,
+  "capsuleHeightMeters": 1.8,
+  "stepOffsetMeters": 0.25,
+  "capsuleSkinClearanceMeters": 0.015,
+  "maxGridCells": 300000,
+  "regionSearchRadiusMeters": 5.0,
+  "regions": [
+    "cais,0,1.2,-4",
+    "enseada,24,1.303,-28",
+    "largo,0,5.08,-68",
+    "setor-B,34,4.842,-68",
+    "setor-A,0,16.256,-103",
+    "setor-L,-34,4.475,-68",
+    "horta-ruina,55,9.639,-91",
+    "subida-oeste,28,19.685,-109",
+    "topo,12,31.608,-130",
+    "encosta-leste,-44,21.33,-113",
+    "recanto,12,17.406,-159",
+    "retorno-cais,0,1.917,-34"
+  ]
+}

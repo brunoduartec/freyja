@@ -107,3 +107,58 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Regras locais preservadas
+# Unity: arquivos locais e gerados
+Freyja/[Ll]ibrary/
+Freyja/[Tt]emp/
+Freyja/[Oo]bj/
+Freyja/[Ll]ogs/
+Freyja/[Uu]ser[Ss]ettings/
+Freyja/[Bb]uild/
+Freyja/[Bb]uilds/
+Freyja/.vs/
+Freyja/*.csproj
+Freyja/*.sln
+Freyja/*.slnx
+Freyja/*.user
+Freyja/*.pidb
+Freyja/*.suo
+
+# Sistema, Python e backups do Blender
+.DS_Store
+__pycache__/
+*.blend1
+*.blend2
+
+# Freyja: caches e arquivos locais em qualquer raiz Unity
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/.vs/
+**/.vscode/
+**/MemoryCaptures/
+**/Recordings/
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+.DS_Store
+.serena/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx

@@ -1,0 +1,147 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "filepath": "/Users/bruno.duartec/Documents/Projects/Ilha Misterio/Source/Blender/Ilha_Tripo_007/Ilha_Tripo_Texturizada.blend",
+  "scene": "Ilha_Tripo_Texturizada",
+  "active_camera": "Camera_General",
+  "original_glb_sha256": "3eb10182fd1d9997e07d01c74d82d8b3fa8cc11b72e17bdc0b5a5e8b489ccfd7",
+  "original_unchanged": true,
+  "geometry_sha256": "6b2d29493a90bc2fe44cc5fca5fb5bd5a69cf590a2b3bf0009ed4e7a9482856e",
+  "geometry_unchanged": true,
+  "transform_unchanged": true,
+  "vertices": 290322,
+  "triangles": 580632,
+  "uv": {
+    "name": "Island_UV",
+    "mapped_faces": 580632,
+    "finite": true,
+    "zero_area_faces": 0,
+    "min": [
+      0.0035779247991740704,
+      0.0035778856836259365
+    ],
+    "max": [
+      0.9964221715927124,
+      0.9954336285591125
+    ],
+    "area_sum": 0.3259942199143053,
+    "overlap_check": {
+      "overlap_selection": {
+        "faces": 0,
+        "verts": 0,
+        "edges": 0
+      },
+      "method": "Blender 5.2 uv.select_overlap extend=False, face selection",
+      "uv_loops": 1741896,
+      "zero_area_faces": 0,
+      "finite": true,
+      "min": [
+        0.0035779247991740704,
+        0.0035778856836259365
+      ],
+      "max": [
+        0.9964221715927124,
+        0.9954336285591125
+      ],
+      "area_sum": 0.3259942199143053
+    }
+  },
+  "material": "Island_Terrain_Atlas",
+  "images": [
+    {
+      "name": "Dirt_Pixel.png",
+      "size": [
+        128,
+        128
+      ],
+      "packed": true,
+      "external_exists": true,
+      "path": "//textures/Dirt_Pixel.png",
+      "loaded": true
+    },
+    {
+      "name": "Grass_Pixel.png",
+      "size": [
+        128,
+        128
+      ],
+      "packed": true,
+      "external_exists": true,
+      "path": "//textures/Grass_Pixel.png",
+      "loaded": true
+    },
+    {
+      "name": "Island_BaseColor",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "path": "//textures/Island_BaseColor.png",
+      "loaded": true
+    },
+    {
+      "name": "Rock_Pixel.png",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "external_exists": true,
+      "path": "//textures/Rock_Pixel.png",
+      "loaded": true
+    },
+    {
+      "name": "Sand_Pixel.png",
+      "size": [
+        128,
+        128
+      ],
+      "packed": true,
+      "external_exists": true,
+      "path": "//textures/Sand_Pixel.png",
+      "loaded": true
+    },
+    {
+      "name": "Terrain_Distribution.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "path": "//textures/Terrain_Distribution.png",
+      "loaded": true
+    }
+  ],
+  "image_interpolation": {
+    "Island_Terrain_Atlas": {
+      "Island Base Color": "Closest"
+    },
+    "Terrain_Source_Editable": {
+      "Terrain Distribution RGB": "Closest",
+      "Grass Pixel Source": "Closest",
+      "Rock Pixel Source": "Closest",
+      "Dirt Pixel Source": "Closest",
+      "Sand Pixel Source": "Closest",
+      "Atlas Bake Target": "Linear"
+    }
+  },
+  "source_material_retained": true,
+  "previews": [
+    "Beach_Detail.png",
+    "Cliff_Detail.png",
+    "Source_General.png",
+    "Source_Path_Detail.png",
+    "Top.png",
+    "Path_Detail.png",
+    "Source_Top.png",
+    "Inspection_Top.png",
+    "General.png",
+    "UV_Layout.png"
+  ],
+  "limits": [
+    "Original dense mesh preserved; no retopology or game performance validation.",
+    "No Unity integration or build in this delivery."
+  ]
+}
