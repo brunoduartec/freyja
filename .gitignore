@@ -166,7 +166,9 @@ __pycache__/
 # Local browser QA logs (delivery captures live in Source/Narrative/)
 .playwright-mcp/
 
-# Arquivos grandes locais, aguardando definicao de armazenamento
+# Assets de trabalho locais, mantidos fora do Git
+/TripoAi/
+/Referencias/
 /Artifacts/TripoAi/tripo-out/freyja-armazem-18-0a024e2c/model.glb
 /Artifacts/TripoAi/tripo-out/freyja-casa-leste-14-8e2407e4/model.glb
 /Artifacts/TripoAi/tripo-out/freyja-casa-praia-15-34d75252/model.glb
@@ -177,10 +179,3 @@ __pycache__/
 /Artifacts/Videos/Freyja-Moradores-A1-A2-A3-2026-11-19.mp4
 /Freyja/Assets/_Project/Art/Ilha_Tripo_018/Ilha_Visual.fbx
 /Source/Blender/Ilha_Tripo_018/Ilha_018.blend
-/TripoAi/cenario/12 - venda.glb
-/TripoAi/cenario/13 - oficina.glb
-/TripoAi/cenario/14 - casa lado leste.glb
-/TripoAi/cenario/15 - casa caminho da praia.glb
-/TripoAi/cenario/16 - casa isolada do velho.glb
-/TripoAi/cenario/17 - salao comunitario.glb
-/TripoAi/cenario/18 - armazem em terra.glb
