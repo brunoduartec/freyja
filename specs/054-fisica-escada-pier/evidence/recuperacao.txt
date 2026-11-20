@@ -1,0 +1,7 @@
+low: -2.35448647
+position: (-33.54, -2.35, -64.15)
+before: 0
+IsInitialized: true
+RecoveryCount: 1
+position: (-33.54, 1.84, -61.18)
+grounded: true

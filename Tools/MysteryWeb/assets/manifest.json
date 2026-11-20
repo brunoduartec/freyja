@@ -1,0 +1,45 @@
+{
+  "sources": {
+    "map": {
+      "file": "map.png",
+      "source": "Referencias/ilha-dos-trinta-opcao-a.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "12090a2d0f13b034cc79067b2040cda63cae0564471a023c0a7e5a0faa82d4f4"
+    },
+    "charactersSheet": {
+      "file": "characters-sheet.png",
+      "source": "Referencias/ilha-dos-trinta-personagens.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3d741fa02555d928d5e1b61e7cf1f571e7296693c09bfa98ea034a54eee4de91"
+    }
+  },
+  "faceRects": {
+    "artur": {
+      "name": "Artur Marçal",
+      "association": "confirmed by GDD: worker of the dock",
+      "x": 0.5645933,
+      "y": 0.26992561,
+      "width": 0.090311,
+      "height": 0.16365569
+    },
+    "teresa": {
+      "name": "Teresa Faria",
+      "association": "confirmed by GDD: woman in the light cardigan",
+      "x": 0.72787081,
+      "y": 0.2869288,
+      "width": 0.09150718,
+      "height": 0.15302869
+    },
+    "ivo": {
+      "name": "Ivo Batista",
+      "association": "provisional visual association: last adult on the right; review required",
+      "x": 0.83732057,
+      "y": 0.25717322,
+      "width": 0.09569378,
+      "height": 0.17959617
+    }
+  },
+  "rectCoordinates": "normalized 0-1, origin at top-left, x/y/width/height relative to characters-sheet.png"
+}

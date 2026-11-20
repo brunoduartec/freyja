@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4bd7849a7cd841dbb20f0ac813a894a, type: 3}
+  m_Name: Praia
+  m_EditorClassIdentifier: Freyja.WorldBuilder::Freyja.WorldBuilder.WorldDefinition
+  worldId: freyja-ps1-022
+  seed: 1138
+  size: {x: 64, y: 64}
+  terrainHeight: 12
+  originY: -2
+  resolution: 257
+  amplitude: 6
+  gridStep: 1
+  lots:
+  - id: casa-praia
+    center: {x: -15, y: 12}
+    size: {x: 12, y: 14}
+    footprint: {x: 9, y: 11}
+    yaw: 90
+    setback: 0.5
+    blend: 2
+    manualHeight: 1
+    foundationY: 4.8
+    prefab: {fileID: 3361904482242445119, guid: f09f5b35d48ac45ecbe1b9b235dfb93b, type: 3}
+  roads:
+  - id: praia-casa
+    start: {x: 0, y: -14}
+    end: {x: 0, y: 23}
+    width: 3.5
+    startY: 0.65
+    endY: 5.4
+  grass: {fileID: 8574412962073106934, guid: 2b23012ed1e2145c7ac88d3f6447f702, type: 2}
+  terrainLayers:
+  - {fileID: 8574412962073106934, guid: 2b23012ed1e2145c7ac88d3f6447f702, type: 2}
+  - {fileID: 8574412962073106934, guid: 19c0370b5c4de424dabe8cb3c0f02093, type: 2}
+  - {fileID: 8574412962073106934, guid: 3b9fd1da063a447858be864038ed4f45, type: 2}
+  - {fileID: 8574412962073106934, guid: f56f4dfb7a86949feaa483256c0a7337, type: 2}
+  baseTerrain: {fileID: 15600000, guid: b2f8af7431abf4e0393bc082c787088d, type: 2}
+  roadMaterial: {fileID: 2100000, guid: 02b6607bb0789443e903b5d8806e31a8, type: 2}
+  foundationMaterial: {fileID: 2100000, guid: 61b9941deaa4649de9adb8d14d83d693, type: 2}

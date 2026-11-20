@@ -1,0 +1,20 @@
+PASS
+exploração ativa
+sessão nova com três objetos e zero itens
+I abre painel vazio e suspende exploração
+painel impede E e Tab
+I fecha e devolve exploração
+E fora de alcance
+alvo correto: Carretel de linha — pier-spool
+coletado sem diálogo: Carretel de linha — pier-spool
+três repetições sem duplicar
+alvo correto: Boia de pesca — pier-float
+coletado sem diálogo: Boia de pesca — pier-float
+alvo correto: Carretel de linha — square-spool
+coletado sem diálogo: Carretel de linha — square-spool
+duas unidades de carretel e uma boia
+E abre diálogo de Nuno
+I durante diálogo preserva conversa
+Esc encerra diálogo
+Tab abre caderno
+painel preenchido após reabrir

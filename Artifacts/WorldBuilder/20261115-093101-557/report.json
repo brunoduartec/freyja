@@ -1,0 +1,91 @@
+{
+    "worldId": "freyja-demo-021",
+    "unityVersion": "6000.3.25f1",
+    "scene": "Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity",
+    "sceneHash": "d214dd0ce57f61ab7dc00ac7efa869cf",
+    "seed": 1138,
+    "lots": 3,
+    "externalGenerationJobs": 0,
+    "mapMeters": {
+        "x": 160.0,
+        "y": 160.0
+    },
+    "milliseconds": 145.1628,
+    "buildStatus": "not_run",
+    "testStatus": "not_run",
+    "checks": [
+        {
+            "id": "layout",
+            "status": "passed",
+            "details": ""
+        },
+        {
+            "id": "foundation-16-samples",
+            "status": "passed",
+            "details": "maxDelta=0.0004315376"
+        },
+        {
+            "id": "prefabs",
+            "status": "failed",
+            "details": "houses=3"
+        },
+        {
+            "id": "visual",
+            "status": "needs_review",
+            "details": "Capturas reais; sem baseline automático."
+        }
+    ],
+    "screenshots": [
+        {
+            "file": "top_down.png",
+            "position": {
+                "x": 0.0,
+                "y": 95.0,
+                "z": 0.0
+            },
+            "euler": {
+                "x": 90.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "fov": 0.0,
+            "orthographicSize": 48.0,
+            "width": 1280,
+            "height": 720
+        },
+        {
+            "file": "isometric_overview.png",
+            "position": {
+                "x": 65.0,
+                "y": 55.0,
+                "z": -65.0
+            },
+            "euler": {
+                "x": 29.966205596923829,
+                "y": 315.0,
+                "z": 0.0
+            },
+            "fov": 0.0,
+            "orthographicSize": 47.0,
+            "width": 1280,
+            "height": 720
+        },
+        {
+            "file": "street_level.png",
+            "position": {
+                "x": 2.0,
+                "y": 3.0,
+                "z": -28.0
+            },
+            "euler": {
+                "x": 0.0,
+                "y": 357.1376037597656,
+                "z": 0.0
+            },
+            "fov": 65.0,
+            "orthographicSize": 0.0,
+            "width": 1280,
+            "height": 720
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+  "seconds": 10.7528877,
+  "tests": [
+    {
+      "id": "A4",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3680661,
+      "heightError": 0.2225895,
+      "seconds": 2.66814041,
+      "x": 49.0129738,
+      "y": 6.95741034,
+      "z": 2.108356,
+      "waypoint": 37
+    },
+    {
+      "id": "L2",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.37940073,
+      "heightError": 0.140452147,
+      "seconds": 3.59206,
+      "x": -6.281321,
+      "y": 2.83954787,
+      "z": -33.61389,
+      "waypoint": 52
+    },
+    {
+      "id": "L4 — casa isolada",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.378472149,
+      "heightError": 0.1405487,
+      "seconds": 0.736564636,
+      "x": -52.8143768,
+      "y": 18.0394516,
+      "z": 40.6582756,
+      "waypoint": 9
+    },
+    {
+      "id": "Salão comunitário",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3695366,
+      "heightError": 0.219573021,
+      "seconds": 2.63042068,
+      "x": 18.4333839,
+      "y": 6.040427,
+      "z": -7.212203,
+      "waypoint": 35
+    },
+    {
+      "id": "Armazém do cais (apoio em terra)",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.370693326,
+      "heightError": 0.0600612164,
+      "seconds": 1.09355545,
+      "x": -35.7300453,
+      "y": 2.03993869,
+      "z": -46.36741,
+      "waypoint": 14
+    }
+  ]
+}

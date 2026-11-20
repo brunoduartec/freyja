@@ -1,0 +1,498 @@
+velocidade	tipo	casa	contato	quadro	fase	distancia_m	angulo_graus
+normal	apoio	L3	1	37	0.030	0.0018	6.31
+normal	ponta	L3	1	38	0.129	0.0064
+normal	apoio	L3	1	38	0.129	0.0038	5.91
+normal	ponta	L3	1	39	0.228	0.1257
+normal	apoio	L3	1	39	0.228	0.0063	5.20
+normal	ponta	L3	1	40	0.327	0.3720
+normal	apoio	L3	1	40	0.327	0.0057	4.63
+normal	ponta	L3	1	41	0.427	0.4680
+normal	apoio	L3	1	41	0.427	0.0046	4.03
+normal	ponta	L3	1	42	0.526	0.4405
+normal	apoio	L3	1	42	0.526	0.0037	3.24
+normal	ponta	L3	1	43	0.625	0.0752
+normal	apoio	L3	1	43	0.625	0.0035	2.62
+normal	ponta	L3	1	44	0.724	0.0492
+normal	apoio	L3	1	44	0.724	0.0030	1.89
+normal	ponta	L3	1	45	0.823	0.0223
+normal	apoio	L3	1	45	0.823	0.0014	0.90
+normal	apoio	L3	1	46	0.923	0.0050	2.21
+normal	apoio	L3	2	47	0.029	0.0062	4.33
+normal	ponta	L3	2	48	0.159	0.2809
+normal	apoio	L3	2	48	0.159	0.0065	4.87
+normal	ponta	L3	2	49	0.289	0.2992
+normal	apoio	L3	2	49	0.289	0.0063	5.35
+normal	ponta	L3	2	50	0.419	0.4653
+normal	apoio	L3	2	50	0.419	0.0056	5.73
+normal	ponta	L3	2	51	0.549	0.4323
+normal	apoio	L3	2	51	0.549	0.0047	6.04
+normal	ponta	L3	2	52	0.680	0.0608
+normal	apoio	L3	2	52	0.680	0.0037	6.28
+normal	ponta	L3	2	53	0.810	0.0256
+normal	apoio	L3	2	53	0.810	0.0026	6.38
+normal	apoio	L3	2	54	0.940	0.0018	6.42
+normal	apoio	L3	3	55	0.059	0.0033	1.49
+normal	ponta	L3	3	56	0.169	0.0098
+normal	apoio	L3	3	56	0.169	0.0031	1.39
+normal	ponta	L3	3	57	0.279	0.2691
+normal	apoio	L3	3	57	0.279	0.0030	1.32
+normal	ponta	L3	3	58	0.388	0.4421
+normal	apoio	L3	3	58	0.388	0.0029	1.32
+normal	ponta	L3	3	59	0.498	0.4379
+normal	apoio	L3	3	59	0.498	0.0028	1.26
+normal	ponta	L3	3	60	0.607	0.0783
+normal	apoio	L3	3	60	0.607	0.0028	1.24
+normal	ponta	L3	3	61	0.717	0.0503
+normal	apoio	L3	3	61	0.717	0.0030	1.44
+normal	ponta	L3	3	62	0.827	0.0221
+normal	apoio	L3	3	62	0.827	0.0034	1.84
+normal	apoio	L3	3	63	0.936	0.0040	2.38
+normal	apoio	L3	4	64	0.044	0.0042	1.94
+normal	ponta	L3	4	65	0.148	0.2529
+normal	apoio	L3	4	65	0.148	0.0034	1.53
+normal	ponta	L3	4	66	0.252	0.2244
+normal	apoio	L3	4	66	0.252	0.0031	1.44
+normal	ponta	L3	4	67	0.356	0.4390
+normal	apoio	L3	4	67	0.356	0.0031	1.38
+normal	ponta	L3	4	68	0.460	0.4795
+normal	apoio	L3	4	68	0.460	0.0028	1.25
+normal	ponta	L3	4	69	0.565	0.4491
+normal	apoio	L3	4	69	0.565	0.0025	1.13
+normal	ponta	L3	4	70	0.669	0.0646
+normal	apoio	L3	4	70	0.669	0.0029	1.27
+normal	ponta	L3	4	71	0.773	0.0365
+normal	apoio	L3	4	71	0.773	0.0029	1.26
+normal	ponta	L3	4	72	0.877	0.0115
+normal	apoio	L3	4	72	0.877	0.0031	1.36
+normal	apoio	L3	4	73	0.981	0.0031	1.43
+normal	apoio	L3	5	74	0.083	0.0024	6.49
+normal	ponta	L3	5	75	0.185	0.3732
+normal	apoio	L3	5	75	0.185	0.0017	6.40
+normal	ponta	L3	5	76	0.287	0.3028
+normal	apoio	L3	5	76	0.287	0.0026	6.12
+normal	ponta	L3	5	77	0.388	0.4696
+normal	apoio	L3	5	77	0.388	0.0057	5.50
+normal	ponta	L3	5	78	0.490	0.4702
+normal	apoio	L3	5	78	0.490	0.0062	4.82
+normal	ponta	L3	5	79	0.591	0.0818
+normal	apoio	L3	5	79	0.591	0.0049	4.32
+normal	ponta	L3	5	80	0.693	0.0572
+normal	apoio	L3	5	80	0.693	0.0040	3.55
+normal	ponta	L3	5	81	0.795	0.0294
+normal	apoio	L3	5	81	0.795	0.0035	2.84
+normal	ponta	L3	5	82	0.896	0.0065
+normal	apoio	L3	5	82	0.896	0.0034	2.24
+normal	apoio	L3	5	83	0.998	0.0108	1.26
+normal	ponta	L3	6	84	0.105	0.1415
+normal	apoio	L3	6	84	0.105	0.0054	3.47
+normal	ponta	L3	6	85	0.212	0.4527
+normal	apoio	L3	6	85	0.212	0.0061	4.10
+normal	ponta	L3	6	86	0.318	0.3721
+normal	apoio	L3	6	86	0.318	0.0064	4.66
+normal	ponta	L3	6	87	0.425	0.4857
+normal	apoio	L3	6	87	0.425	0.0064	5.16
+normal	ponta	L3	6	88	0.532	0.4571
+normal	apoio	L3	6	88	0.532	0.0059	5.59
+normal	ponta	L3	6	89	0.639	0.0709
+normal	apoio	L3	6	89	0.639	0.0051	5.92
+normal	ponta	L3	6	90	0.746	0.0426
+normal	apoio	L3	6	90	0.746	0.0041	6.19
+normal	ponta	L3	6	91	0.853	0.0154
+normal	apoio	L3	6	91	0.853	0.0030	6.35
+normal	apoio	L3	6	92	0.959	0.0021	6.44
+normal	apoio	L3	7	93	1.000	0.0033	1.49
+normal	apoio	L3	7	94	1.000	0.0032	1.44
+normal	apoio	L3	7	95	1.000	0.0030	1.34
+normal	apoio	B3	0	328	0.972	0.0030	1.44
+normal	apoio	B3	1	329	0.085	0.0180	5.10
+normal	ponta	B3	1	330	0.192	0.1807
+normal	apoio	B3	1	330	0.192	0.0073	5.55
+normal	ponta	B3	1	331	0.299	0.3246
+normal	apoio	B3	1	331	0.299	0.0069	5.93
+normal	ponta	B3	1	332	0.406	0.4091
+normal	apoio	B3	1	332	0.406	0.0061	6.16
+normal	ponta	B3	1	333	0.513	0.3902
+normal	apoio	B3	1	333	0.513	0.0051	6.31
+normal	ponta	B3	1	334	0.620	0.0605
+normal	apoio	B3	1	334	0.620	0.0039	6.44
+normal	ponta	B3	1	335	0.727	0.0396
+normal	apoio	B3	1	335	0.727	0.0029	6.50
+normal	ponta	B3	1	336	0.833	0.0164
+normal	apoio	B3	1	336	0.833	0.0019	6.46
+normal	apoio	B3	1	337	0.940	0.0018	6.29
+normal	apoio	B3	2	338	0.063	0.0029	1.57
+normal	ponta	B3	2	339	0.207	0.3367
+normal	apoio	B3	2	339	0.207	0.0028	1.43
+normal	ponta	B3	2	340	0.351	0.2971
+normal	apoio	B3	2	340	0.351	0.0027	1.25
+normal	ponta	B3	2	341	0.494	0.3332
+normal	apoio	B3	2	341	0.494	0.0027	1.17
+normal	ponta	B3	2	342	0.566	0.3222
+normal	apoio	B3	2	342	0.566	0.0030	1.43
+normal	ponta	B3	2	343	0.566	0.3225
+normal	apoio	B3	2	343	0.566	0.0035	1.88
+normal	ponta	B3	2	344	0.566	0.3237
+normal	apoio	B3	2	344	0.566	0.0040	2.27
+normal	ponta	B3	2	345	0.566	0.3245
+normal	apoio	B3	2	345	0.566	0.0042	2.50
+normal	ponta	B3	2	346	0.566	0.3235
+normal	apoio	B3	2	346	0.566	0.0043	2.55
+normal	ponta	B3	2	347	0.566	0.3235
+normal	apoio	B3	2	347	0.566	0.0043	2.51
+normal	ponta	B3	2	348	0.566	0.3235
+normal	apoio	B3	2	348	0.566	0.0043	2.47
+normal	ponta	B3	2	349	0.566	0.3234
+normal	apoio	B3	2	349	0.566	0.0042	2.43
+normal	ponta	B3	2	350	0.566	0.3234
+normal	apoio	B3	2	350	0.566	0.0042	2.39
+normal	ponta	B3	2	351	0.566	0.3234
+normal	apoio	B3	2	351	0.566	0.0042	2.35
+normal	ponta	B3	2	352	0.566	0.3234
+normal	apoio	B3	2	352	0.566	0.0042	2.32
+normal	ponta	B3	2	353	0.566	0.3234
+normal	apoio	B3	2	353	0.566	0.0042	2.29
+normal	ponta	B3	2	354	0.566	0.3233
+normal	apoio	B3	2	354	0.566	0.0042	2.26
+normal	ponta	B3	2	355	0.566	0.3233
+normal	apoio	B3	2	355	0.566	0.0042	2.23
+normal	ponta	B3	2	356	0.566	0.3233
+normal	apoio	B3	2	356	0.566	0.0042	2.21
+normal	ponta	B3	2	357	0.566	0.3233
+normal	apoio	B3	2	357	0.566	0.0042	2.19
+normal	ponta	B3	2	358	0.566	0.3233
+normal	apoio	B3	2	358	0.566	0.0042	2.17
+normal	ponta	B3	2	359	0.566	0.3232
+normal	apoio	B3	2	359	0.566	0.0042	2.16
+normal	ponta	B3	2	360	0.710	0.0353
+normal	apoio	B3	2	360	0.710	0.0044	2.49
+normal	ponta	B3	2	361	0.853	0.0107
+normal	apoio	B3	2	361	0.853	0.0047	3.55
+normal	apoio	B3	2	362	0.997	0.0032	4.61
+normal	ponta	B3	3	363	0.157	0.0083
+normal	apoio	B3	3	363	0.157	0.0028	1.23
+normal	ponta	B3	3	364	0.317	0.3252
+normal	apoio	B3	3	364	0.317	0.0029	1.32
+normal	ponta	B3	3	365	0.478	0.3941
+normal	apoio	B3	3	365	0.478	0.0028	1.26
+normal	ponta	B3	3	366	0.638	0.0715
+normal	apoio	B3	3	366	0.638	0.0028	1.24
+normal	ponta	B3	3	367	0.798	0.0282
+normal	apoio	B3	3	367	0.798	0.0030	1.44
+normal	apoio	B3	3	368	0.958	0.0034	1.83
+normal	ponta	B3	4	369	0.119	0.0053
+normal	apoio	B3	4	369	0.119	0.0023	1.41
+normal	ponta	B3	4	370	0.279	0.2533
+normal	apoio	B3	4	370	0.279	0.0042	1.94
+normal	ponta	B3	4	371	0.439	0.4055
+normal	apoio	B3	4	371	0.439	0.0034	1.53
+normal	ponta	B3	4	372	0.599	0.0801
+normal	apoio	B3	4	372	0.599	0.0031	1.44
+normal	ponta	B3	4	373	0.760	0.0392
+normal	apoio	B3	4	373	0.760	0.0031	1.37
+normal	apoio	B3	4	374	0.920	0.0028	1.25
+normal	apoio	B3	5	375	1.000	0.0072	5.76
+normal	apoio	B3	5	376	1.000	0.0066	6.07
+normal	apoio	B3	5	377	1.000	0.0056	6.23
+slow	apoio	L3	0	61	1.000	0.0259	1.60
+slow	apoio	L3	1	62	0.060	0.0045	5.79
+slow	ponta	L3	1	63	0.119	0.0057
+slow	apoio	L3	1	63	0.119	0.0061	5.35
+slow	ponta	L3	1	64	0.179	0.0096
+slow	apoio	L3	1	64	0.179	0.0063	4.93
+slow	ponta	L3	1	65	0.238	0.1546
+slow	apoio	L3	1	65	0.238	0.0057	4.63
+slow	ponta	L3	1	66	0.298	0.3102
+slow	apoio	L3	1	66	0.298	0.0049	4.32
+slow	ponta	L3	1	67	0.357	0.4188
+slow	apoio	L3	1	67	0.357	0.0044	3.87
+slow	ponta	L3	1	68	0.417	0.4663
+slow	apoio	L3	1	68	0.417	0.0039	3.39
+slow	ponta	L3	1	69	0.476	0.4557
+slow	apoio	L3	1	69	0.476	0.0035	2.96
+slow	ponta	L3	1	70	0.536	0.4375
+slow	apoio	L3	1	70	0.536	0.0035	2.62
+slow	ponta	L3	1	71	0.595	0.0818
+slow	apoio	L3	1	71	0.595	0.0034	2.24
+slow	ponta	L3	1	72	0.655	0.0680
+slow	apoio	L3	1	72	0.655	0.0026	1.69
+slow	ponta	L3	1	73	0.714	0.0520
+slow	apoio	L3	1	73	0.714	0.0016	1.07
+slow	ponta	L3	1	74	0.774	0.0354
+slow	apoio	L3	1	74	0.774	0.0026	1.22
+slow	ponta	L3	1	75	0.833	0.0199
+slow	apoio	L3	1	75	0.833	0.0050	2.21
+slow	ponta	L3	1	76	0.893	0.0073
+slow	apoio	L3	1	76	0.893	0.0042	1.84
+slow	apoio	L3	1	77	0.952	0.0036	1.61
+slow	apoio	L3	2	78	0.016	0.0065	4.77
+slow	apoio	L3	2	79	0.094	0.0065	5.07
+slow	ponta	L3	2	80	0.172	0.3189
+slow	apoio	L3	2	80	0.172	0.0063	5.34
+slow	ponta	L3	2	81	0.250	0.2026
+slow	apoio	L3	2	81	0.250	0.0059	5.59
+slow	ponta	L3	2	82	0.328	0.3780
+slow	apoio	L3	2	82	0.328	0.0054	5.80
+slow	ponta	L3	2	83	0.406	0.4613
+slow	apoio	L3	2	83	0.406	0.0049	5.98
+slow	ponta	L3	2	84	0.484	0.4515
+slow	apoio	L3	2	84	0.484	0.0043	6.15
+slow	ponta	L3	2	85	0.562	0.0890
+slow	apoio	L3	2	85	0.562	0.0037	6.28
+slow	ponta	L3	2	86	0.641	0.0708
+slow	apoio	L3	2	86	0.641	0.0030	6.35
+slow	ponta	L3	2	87	0.719	0.0503
+slow	apoio	L3	2	87	0.719	0.0024	6.40
+slow	ponta	L3	2	88	0.797	0.0290
+slow	apoio	L3	2	88	0.797	0.0019	6.43
+slow	ponta	L3	2	89	0.875	0.0106
+slow	apoio	L3	2	89	0.875	0.0019	6.42
+slow	apoio	L3	2	90	0.953	0.0026	6.34
+slow	apoio	L3	3	91	0.026	0.0032	1.44
+slow	apoio	L3	3	92	0.092	0.0031	1.37
+slow	ponta	L3	3	93	0.158	0.0090
+slow	apoio	L3	3	93	0.158	0.0030	1.32
+slow	ponta	L3	3	94	0.224	0.1264
+slow	apoio	L3	3	94	0.224	0.0029	1.31
+slow	ponta	L3	3	95	0.289	0.2941
+slow	apoio	L3	3	95	0.289	0.0029	1.32
+slow	ponta	L3	3	96	0.355	0.4102
+slow	apoio	L3	3	96	0.355	0.0029	1.29
+slow	ponta	L3	3	97	0.421	0.4562
+slow	apoio	L3	3	97	0.421	0.0028	1.24
+slow	ponta	L3	3	98	0.487	0.4411
+slow	apoio	L3	3	98	0.487	0.0028	1.23
+slow	ponta	L3	3	99	0.553	0.0915
+slow	apoio	L3	3	99	0.553	0.0029	1.29
+slow	ponta	L3	3	100	0.618	0.0755
+slow	apoio	L3	3	100	0.618	0.0030	1.44
+slow	ponta	L3	3	101	0.684	0.0596
+slow	apoio	L3	3	101	0.684	0.0032	1.65
+slow	ponta	L3	3	102	0.750	0.0427
+slow	apoio	L3	3	102	0.750	0.0035	1.93
+slow	ponta	L3	3	103	0.816	0.0266
+slow	apoio	L3	3	103	0.816	0.0039	2.26
+slow	ponta	L3	3	104	0.882	0.0074
+slow	apoio	L3	3	104	0.882	0.0043	2.63
+slow	apoio	L3	3	105	0.947	0.0048	3.04
+slow	apoio	L3	4	106	0.012	0.0033	1.50
+slow	apoio	L3	4	107	0.075	0.0034	1.54
+slow	ponta	L3	4	108	0.137	0.2237
+slow	apoio	L3	4	108	0.137	0.0032	1.47
+slow	ponta	L3	4	109	0.200	0.0763
+slow	apoio	L3	4	109	0.200	0.0031	1.42
+slow	ponta	L3	4	110	0.262	0.2519
+slow	apoio	L3	4	110	0.262	0.0031	1.38
+slow	ponta	L3	4	111	0.325	0.3911
+slow	apoio	L3	4	111	0.325	0.0029	1.30
+slow	ponta	L3	4	112	0.387	0.4704
+slow	apoio	L3	4	112	0.387	0.0028	1.23
+slow	ponta	L3	4	113	0.450	0.4830
+slow	apoio	L3	4	113	0.450	0.0026	1.17
+slow	ponta	L3	4	114	0.513	0.4639
+slow	apoio	L3	4	114	0.513	0.0027	1.19
+slow	ponta	L3	4	115	0.575	0.0867
+slow	apoio	L3	4	115	0.575	0.0029	1.27
+slow	ponta	L3	4	116	0.637	0.0726
+slow	apoio	L3	4	116	0.637	0.0029	1.26
+slow	ponta	L3	4	117	0.700	0.0566
+slow	apoio	L3	4	117	0.700	0.0029	1.27
+slow	ponta	L3	4	118	0.763	0.0394
+slow	apoio	L3	4	118	0.763	0.0030	1.33
+slow	ponta	L3	4	119	0.825	0.0231
+slow	apoio	L3	4	119	0.825	0.0031	1.40
+slow	ponta	L3	4	120	0.887	0.0095
+slow	apoio	L3	4	120	0.887	0.0031	1.43
+slow	apoio	L3	4	121	0.950	0.0030	1.41
+slow	apoio	L3	5	122	0.012	0.0022	6.48
+slow	apoio	L3	5	123	0.073	0.0017	6.43
+slow	ponta	L3	5	124	0.134	0.2214
+slow	apoio	L3	5	124	0.134	0.0018	6.31
+slow	ponta	L3	5	125	0.195	0.4044
+slow	apoio	L3	5	125	0.195	0.0026	6.12
+slow	ponta	L3	5	126	0.256	0.2239
+slow	apoio	L3	5	126	0.256	0.0045	5.79
+slow	ponta	L3	5	127	0.317	0.3705
+slow	apoio	L3	5	127	0.317	0.0061	5.35
+slow	ponta	L3	5	128	0.378	0.4607
+slow	apoio	L3	5	128	0.378	0.0063	4.93
+slow	ponta	L3	5	129	0.439	0.4856
+slow	apoio	L3	5	129	0.439	0.0057	4.63
+slow	ponta	L3	5	130	0.500	0.4670
+slow	apoio	L3	5	130	0.500	0.0049	4.32
+slow	ponta	L3	5	131	0.561	0.4494
+slow	apoio	L3	5	131	0.561	0.0044	3.87
+slow	ponta	L3	5	132	0.622	0.0751
+slow	apoio	L3	5	132	0.622	0.0038	3.39
+slow	ponta	L3	5	133	0.683	0.0599
+slow	apoio	L3	5	133	0.683	0.0035	2.96
+slow	ponta	L3	5	134	0.744	0.0432
+slow	apoio	L3	5	134	0.744	0.0035	2.62
+slow	ponta	L3	5	135	0.805	0.0268
+slow	apoio	L3	5	135	0.805	0.0034	2.24
+slow	ponta	L3	5	136	0.866	0.0124
+slow	apoio	L3	5	136	0.866	0.0026	1.69
+slow	apoio	L3	5	137	0.927	0.0016	1.07
+slow	apoio	L3	5	138	0.988	0.0072	1.22
+slow	apoio	L3	6	139	0.051	0.0057	3.72
+slow	ponta	L3	6	140	0.115	0.1685
+slow	apoio	L3	6	140	0.115	0.0061	4.10
+slow	ponta	L3	6	141	0.179	0.3553
+slow	apoio	L3	6	141	0.179	0.0063	4.45
+slow	ponta	L3	6	142	0.244	0.1880
+slow	apoio	L3	6	142	0.244	0.0065	4.77
+slow	ponta	L3	6	143	0.308	0.3503
+slow	apoio	L3	6	143	0.308	0.0065	5.07
+slow	ponta	L3	6	144	0.372	0.4537
+slow	apoio	L3	6	144	0.372	0.0063	5.35
+slow	ponta	L3	6	145	0.436	0.4856
+slow	apoio	L3	6	145	0.436	0.0059	5.59
+slow	ponta	L3	6	146	0.500	0.4667
+slow	apoio	L3	6	146	0.500	0.0054	5.80
+slow	ponta	L3	6	147	0.564	0.4483
+slow	apoio	L3	6	147	0.564	0.0049	5.98
+slow	ponta	L3	6	148	0.628	0.0735
+slow	apoio	L3	6	148	0.628	0.0043	6.15
+slow	ponta	L3	6	149	0.692	0.0574
+slow	apoio	L3	6	149	0.692	0.0037	6.28
+slow	ponta	L3	6	150	0.756	0.0399
+slow	apoio	L3	6	150	0.756	0.0030	6.35
+slow	ponta	L3	6	151	0.821	0.0230
+slow	apoio	L3	6	151	0.821	0.0024	6.40
+slow	ponta	L3	6	152	0.885	0.0088
+slow	apoio	L3	6	152	0.885	0.0019	6.43
+slow	apoio	L3	6	153	0.949	0.0019	6.42
+slow	apoio	L3	7	154	1.000	0.0033	1.49
+slow	apoio	L3	7	155	1.000	0.0032	1.44
+slow	apoio	L3	7	156	1.000	0.0031	1.37
+slow	apoio	L3	7	157	1.000	0.0030	1.32
+slow	apoio	L3	7	158	1.000	0.0029	1.31
+slow	apoio	L3	7	159	1.000	0.0033	1.39
+slow	apoio	B3	1	477	0.000	0.0338	5.15
+slow	apoio	B3	1	478	0.064	0.0203	5.41
+slow	ponta	B3	1	479	0.128	0.0957
+slow	apoio	B3	1	479	0.128	0.0079	5.67
+slow	ponta	B3	1	480	0.192	0.1808
+slow	apoio	B3	1	480	0.192	0.0070	5.90
+slow	ponta	B3	1	481	0.256	0.2719
+slow	apoio	B3	1	481	0.256	0.0066	6.07
+slow	ponta	B3	1	482	0.321	0.3472
+slow	apoio	B3	1	482	0.321	0.0060	6.17
+slow	ponta	B3	1	483	0.385	0.3967
+slow	apoio	B3	1	483	0.385	0.0054	6.26
+slow	ponta	B3	1	484	0.449	0.4051
+slow	apoio	B3	1	484	0.449	0.0047	6.35
+slow	ponta	B3	1	485	0.513	0.3903
+slow	apoio	B3	1	485	0.513	0.0040	6.43
+slow	ponta	B3	1	486	0.577	0.0673
+slow	apoio	B3	1	486	0.577	0.0034	6.48
+slow	ponta	B3	1	487	0.641	0.0570
+slow	apoio	B3	1	487	0.641	0.0028	6.50
+slow	ponta	B3	1	488	0.705	0.0442
+slow	apoio	B3	1	488	0.705	0.0022	6.48
+slow	ponta	B3	1	489	0.769	0.0301
+slow	apoio	B3	1	489	0.769	0.0017	6.43
+slow	ponta	B3	1	490	0.833	0.0164
+slow	apoio	B3	1	490	0.833	0.0018	6.31
+slow	ponta	B3	1	491	0.897	0.0052
+slow	apoio	B3	1	491	0.897	0.0026	6.12
+slow	apoio	B3	1	492	0.962	0.0045	5.79
+slow	apoio	B3	2	493	0.034	0.0028	1.48
+slow	ponta	B3	2	494	0.121	0.1320
+slow	apoio	B3	2	494	0.121	0.0028	1.37
+slow	ponta	B3	2	495	0.207	0.3366
+slow	apoio	B3	2	495	0.207	0.0027	1.26
+slow	ponta	B3	2	496	0.293	0.2129
+slow	apoio	B3	2	496	0.293	0.0026	1.18
+slow	ponta	B3	2	497	0.379	0.3221
+slow	apoio	B3	2	497	0.379	0.0027	1.17
+slow	ponta	B3	2	498	0.466	0.3378
+slow	apoio	B3	2	498	0.466	0.0028	1.26
+slow	ponta	B3	2	499	0.552	0.3245
+slow	apoio	B3	2	499	0.552	0.0030	1.46
+slow	ponta	B3	2	500	0.552	0.3238
+slow	apoio	B3	2	500	0.552	0.0034	1.80
+slow	ponta	B3	2	501	0.552	0.3241
+slow	apoio	B3	2	501	0.552	0.0038	2.20
+slow	ponta	B3	2	502	0.552	0.3258
+slow	apoio	B3	2	502	0.552	0.0041	2.47
+slow	ponta	B3	2	503	0.552	0.3264
+slow	apoio	B3	2	503	0.552	0.0043	2.58
+slow	ponta	B3	2	504	0.552	0.3254
+slow	apoio	B3	2	504	0.552	0.0043	2.55
+slow	ponta	B3	2	505	0.552	0.3253
+slow	apoio	B3	2	505	0.552	0.0043	2.51
+slow	ponta	B3	2	506	0.552	0.3253
+slow	apoio	B3	2	506	0.552	0.0043	2.47
+slow	ponta	B3	2	507	0.552	0.3253
+slow	apoio	B3	2	507	0.552	0.0042	2.43
+slow	ponta	B3	2	508	0.552	0.3253
+slow	apoio	B3	2	508	0.552	0.0042	2.39
+slow	ponta	B3	2	509	0.552	0.3253
+slow	apoio	B3	2	509	0.552	0.0042	2.35
+slow	ponta	B3	2	510	0.552	0.3252
+slow	apoio	B3	2	510	0.552	0.0042	2.32
+slow	ponta	B3	2	511	0.552	0.3252
+slow	apoio	B3	2	511	0.552	0.0042	2.29
+slow	ponta	B3	2	512	0.552	0.3252
+slow	apoio	B3	2	512	0.552	0.0042	2.26
+slow	ponta	B3	2	513	0.552	0.3252
+slow	apoio	B3	2	513	0.552	0.0042	2.23
+slow	ponta	B3	2	514	0.552	0.3251
+slow	apoio	B3	2	514	0.552	0.0042	2.21
+slow	ponta	B3	2	515	0.552	0.3251
+slow	apoio	B3	2	515	0.552	0.0042	2.19
+slow	ponta	B3	2	516	0.552	0.3251
+slow	apoio	B3	2	516	0.552	0.0042	2.17
+slow	ponta	B3	2	517	0.552	0.3251
+slow	apoio	B3	2	517	0.552	0.0042	2.16
+slow	ponta	B3	2	518	0.638	0.0456
+slow	apoio	B3	2	518	0.638	0.0044	2.49
+slow	ponta	B3	2	519	0.724	0.0326
+slow	apoio	B3	2	519	0.724	0.0047	3.50
+slow	ponta	B3	2	520	0.810	0.0173
+slow	apoio	B3	2	520	0.810	0.0035	4.70
+slow	ponta	B3	2	521	0.897	0.0051
+slow	apoio	B3	2	521	0.897	0.0038	5.95
+slow	apoio	B3	2	522	0.983	0.0063	5.78
+slow	apoio	B3	3	523	0.077	0.0030	1.32
+slow	ponta	B3	3	524	0.173	0.0099
+slow	apoio	B3	3	524	0.173	0.0029	1.32
+slow	ponta	B3	3	525	0.269	0.2378
+slow	apoio	B3	3	525	0.269	0.0029	1.32
+slow	ponta	B3	3	526	0.365	0.3817
+slow	apoio	B3	3	526	0.365	0.0029	1.29
+slow	ponta	B3	3	527	0.462	0.3991
+slow	apoio	B3	3	527	0.462	0.0028	1.24
+slow	ponta	B3	3	528	0.558	0.0904
+slow	apoio	B3	3	528	0.558	0.0028	1.23
+slow	ponta	B3	3	529	0.654	0.0674
+slow	apoio	B3	3	529	0.654	0.0029	1.29
+slow	ponta	B3	3	530	0.750	0.0412
+slow	apoio	B3	3	530	0.750	0.0030	1.44
+slow	ponta	B3	3	531	0.846	0.0167
+slow	apoio	B3	3	531	0.846	0.0032	1.66
+slow	apoio	B3	3	532	0.942	0.0035	1.93
+slow	apoio	B3	4	533	0.038	0.0006	1.10
+slow	ponta	B3	4	534	0.135	0.0064
+slow	apoio	B3	4	534	0.135	0.0044	2.10
+slow	ponta	B3	4	535	0.231	0.1470
+slow	apoio	B3	4	535	0.231	0.0042	1.94
+slow	ponta	B3	4	536	0.327	0.3368
+slow	apoio	B3	4	536	0.327	0.0033	1.51
+slow	ponta	B3	4	537	0.423	0.4069
+slow	apoio	B3	4	537	0.423	0.0034	1.54
+slow	ponta	B3	4	538	0.519	0.1012
+slow	apoio	B3	4	538	0.519	0.0032	1.47
+slow	ponta	B3	4	539	0.615	0.0767
+slow	apoio	B3	4	539	0.615	0.0031	1.41
+slow	ponta	B3	4	540	0.712	0.0525
+slow	apoio	B3	4	540	0.712	0.0031	1.37
+slow	ponta	B3	4	541	0.808	0.0264
+slow	apoio	B3	4	541	0.808	0.0029	1.30
+slow	apoio	B3	4	542	0.904	0.0028	1.23
+slow	apoio	B3	5	543	1.000	0.0072	5.67
+slow	apoio	B3	5	544	1.000	0.0070	5.90
+slow	apoio	B3	5	545	1.000	0.0066	6.07
+slow	apoio	B3	5	546	1.000	0.0060	6.17
+slow	apoio	B3	5	547	1.000	0.0054	6.26
+slow	apoio	B3	5	548	1.000	0.0049	6.34

@@ -1,0 +1,56 @@
+{
+    "scenePath": "Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity",
+    "spawnId": "GlobalObjectId_V1-2-653b506f34b104a8383faa4a5c094893-1289592143-0",
+    "title": "CAMINHAR PELA ILHA",
+    "roots": [
+        "Cenario",
+        "Cenario_Colisao",
+        "Galpão do cais e píer",
+        "Ilha Tripo 018 - Teste",
+        "Blocos 019 - Implantacao",
+        "Terreno modular 020 - Teste"
+    ],
+    "active": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false
+    ],
+    "playerPosition": {
+        "x": 32.0,
+        "y": 4.983819484710693,
+        "z": 3.9999992847442629
+    },
+    "cameraPosition": {
+        "x": -8.381902460996571e-8,
+        "y": 5.8080339431762699,
+        "z": 0.7399997711181641
+    },
+    "playerRotation": {
+        "x": 0.0,
+        "y": -0.7071068286895752,
+        "z": 0.0,
+        "w": 0.7071068286895752
+    },
+    "cameraRotation": {
+        "x": 0.16190165281295777,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.9868069291114807
+    },
+    "bounds": {
+        "m_Center": {
+            "x": 0.0,
+            "y": 10.0,
+            "z": 0.0
+        },
+        "m_Extent": {
+            "x": 90.0,
+            "y": 40.0,
+            "z": 85.0
+        }
+    },
+    "fallHeight": -2.0
+}

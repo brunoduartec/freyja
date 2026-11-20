@@ -1,0 +1,3 @@
+Encosta: (5.000, 1.938, 37.000) yaw 330 distância 1.081
+Vista livre: 3.979
+Queda pela margem (10; 37): True altura mínima observada 0.504 retorno (0.000, 9.127, 14.000) câmera (0.000, 11.713, 10.196)

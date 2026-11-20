@@ -1,0 +1,5 @@
+chegou=True
+segundos=14.51
+quadros=129
+posicao=(0.92, 7.22, -1.88)
+ponto=32

@@ -1,0 +1,119 @@
+1/118  Human@HandsClosed01
+2/118  Human@ObjectGripHands01
+3/118  HumanF@Fall01
+4/118  HumanF@Idle01
+5/118  HumanF@Idle01-Idle02
+6/118  HumanF@Idle02
+7/118  HumanF@Idle02-Idle01
+8/118  HumanF@Jump01
+9/118  HumanF@Jump01 - Begin
+10/118  HumanF@Jump01 - Land
+11/118  HumanF@Jump01 [RM]
+12/118  HumanF@Jump01 [RM] - Begin
+13/118  HumanF@Jump01 [RM] - Land
+14/118  HumanF@Run01_Backward
+15/118  HumanF@Run01_Backward [RM]
+16/118  HumanF@Run01_BackwardLeft
+17/118  HumanF@Run01_BackwardLeft [RM]
+18/118  HumanF@Run01_BackwardRight
+19/118  HumanF@Run01_BackwardRight [RM]
+20/118  HumanF@Run01_Forward
+21/118  HumanF@Run01_Forward [RM]
+22/118  HumanF@Run01_ForwardLeft
+23/118  HumanF@Run01_ForwardLeft [RM]
+24/118  HumanF@Run01_ForwardRight
+25/118  HumanF@Run01_ForwardRight [RM]
+26/118  HumanF@Run01_Left
+27/118  HumanF@Run01_Left [RM]
+28/118  HumanF@Run01_Right
+29/118  HumanF@Run01_Right [RM]
+30/118  HumanF@Sprint01_Forward
+31/118  HumanF@Sprint01_Forward [RM]
+32/118  HumanF@Sprint01_ForwardLeft
+33/118  HumanF@Sprint01_ForwardLeft [RM]
+34/118  HumanF@Sprint01_ForwardRight
+35/118  HumanF@Sprint01_ForwardRight [RM]
+36/118  HumanF@Sprint01_Left
+37/118  HumanF@Sprint01_Left [RM]
+38/118  HumanF@Sprint01_Right
+39/118  HumanF@Sprint01_Right [RM]
+40/118  HumanF@Talk01
+41/118  HumanF@Turn01_Left
+42/118  HumanF@Turn01_Left [RM]
+43/118  HumanF@Turn01_Right
+44/118  HumanF@Turn01_Right [RM]
+45/118  HumanF@Walk01_Backward
+46/118  HumanF@Walk01_Backward [RM]
+47/118  HumanF@Walk01_BackwardLeft
+48/118  HumanF@Walk01_BackwardLeft [RM]
+49/118  HumanF@Walk01_BackwardRight
+50/118  HumanF@Walk01_BackwardRight [RM]
+51/118  HumanF@Walk01_Forward
+52/118  HumanF@Walk01_Forward [RM]
+53/118  HumanF@Walk01_ForwardLeft
+54/118  HumanF@Walk01_ForwardLeft [RM]
+55/118  HumanF@Walk01_ForwardRight
+56/118  HumanF@Walk01_ForwardRight [RM]
+57/118  HumanF@Walk01_Left
+58/118  HumanF@Walk01_Left [RM]
+59/118  HumanF@Walk01_Right
+60/118  HumanF@Walk01_Right [RM]
+61/118  HumanM@Fall01
+62/118  HumanM@Idle01
+63/118  HumanM@Idle01-Idle02
+64/118  HumanM@Idle02
+65/118  HumanM@Idle02-Idle01
+66/118  HumanM@Jump01
+67/118  HumanM@Jump01 - Begin
+68/118  HumanM@Jump01 - Land
+69/118  HumanM@Jump01 [RM]
+70/118  HumanM@Jump01 [RM] - Begin
+71/118  HumanM@Jump01 [RM] - Land
+72/118  HumanM@Run01_Backward
+73/118  HumanM@Run01_Backward [RM]
+74/118  HumanM@Run01_BackwardLeft
+75/118  HumanM@Run01_BackwardLeft [RM]
+76/118  HumanM@Run01_BackwardRight
+77/118  HumanM@Run01_BackwardRight [RM]
+78/118  HumanM@Run01_Forward
+79/118  HumanM@Run01_Forward [RM]
+80/118  HumanM@Run01_ForwardLeft
+81/118  HumanM@Run01_ForwardLeft [RM]
+82/118  HumanM@Run01_ForwardRight
+83/118  HumanM@Run01_ForwardRight [RM]
+84/118  HumanM@Run01_Left
+85/118  HumanM@Run01_Left [RM]
+86/118  HumanM@Run01_Right
+87/118  HumanM@Run01_Right [RM]
+88/118  HumanM@Sprint01_Forward
+89/118  HumanM@Sprint01_Forward [RM]
+90/118  HumanM@Sprint01_ForwardLeft
+91/118  HumanM@Sprint01_ForwardLeft [RM]
+92/118  HumanM@Sprint01_ForwardRight
+93/118  HumanM@Sprint01_ForwardRight [RM]
+94/118  HumanM@Sprint01_Left
+95/118  HumanM@Sprint01_Left [RM]
+96/118  HumanM@Sprint01_Right
+97/118  HumanM@Sprint01_Right [RM]
+98/118  HumanM@Talk01
+99/118  HumanM@Turn01_Left
+100/118  HumanM@Turn01_Left [RM]
+101/118  HumanM@Turn01_Right
+102/118  HumanM@Turn01_Right [RM]
+103/118  HumanM@Walk01_Backward
+104/118  HumanM@Walk01_Backward [RM]
+105/118  HumanM@Walk01_BackwardLeft
+106/118  HumanM@Walk01_BackwardLeft [RM]
+107/118  HumanM@Walk01_BackwardRight
+108/118  HumanM@Walk01_BackwardRight [RM]
+109/118  HumanM@Walk01_Forward
+110/118  HumanM@Walk01_Forward [RM]
+111/118  HumanM@Walk01_ForwardLeft
+112/118  HumanM@Walk01_ForwardLeft [RM]
+113/118  HumanM@Walk01_ForwardRight
+114/118  HumanM@Walk01_ForwardRight [RM]
+115/118  HumanM@Walk01_Left
+116/118  HumanM@Walk01_Left [RM]
+117/118  HumanM@Walk01_Right
+118/118  HumanM@Walk01_Right [RM]
+Concluído quadros 5605

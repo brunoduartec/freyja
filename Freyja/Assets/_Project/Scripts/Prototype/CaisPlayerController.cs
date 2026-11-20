@@ -11,13 +11,18 @@ namespace Freyja.Prototype
 
         [SerializeField] private Transform cameraTransform;
         [SerializeField] private float moveSpeed = 3f;
+        [SerializeField, Min(1f)] private float runSpeedMultiplier = 1.8f;
+        [SerializeField, Min(0.01f)] private float jumpHeight = 0.55f;
         [SerializeField] private float rotationSpeed = 540f;
+        [SerializeField] private StairFootPlacement stairPlacement;
 
         private CharacterController body;
         private Vector2 moveInput;
         private Vector3 planarVelocity;
         private float verticalVelocity;
         private bool missingCameraReported;
+        private bool runHeld;
+        private bool jumpPressed;
 
         public Transform CameraTransform
         {
@@ -32,6 +37,9 @@ namespace Freyja.Prototype
             set => moveSpeed = Mathf.Max(0f, value);
         }
         public Vector3 PlanarVelocity => planarVelocity;
+        public float GroundSpeed { get; private set; }
+        public bool IsRunning => GroundSpeed > moveSpeed * 1.05f && runHeld;
+        public bool IsJumping { get; private set; }
         public float VerticalVelocity => verticalVelocity;
         public CharacterController Body => body;
 
@@ -49,6 +57,12 @@ namespace Freyja.Prototype
             moveInput = Vector2.ClampMagnitude(input, 1f);
         }
 
+        public void SetTraversalInput(bool run, bool jump)
+        {
+            runHeld = run;
+            jumpPressed = jump;
+        }
+
         public void ResetTo(Vector3 feetPosition, Quaternion rotation)
         {
             if (body == null)
@@ -60,14 +74,20 @@ namespace Freyja.Prototype
             moveInput = Vector2.zero;
             planarVelocity = Vector3.zero;
             verticalVelocity = 0f;
+            GroundSpeed = 0f;
+            IsJumping = false;
+            SetTraversalInput(false, false);
             body.enabled = wasEnabled;
         }
 
         public void Tick(float deltaTime)
         {
+            GroundSpeed = 0f;
             if (body == null || !body.enabled || deltaTime <= 0f)
                 return;
 
+            bool startJump = ControlEnabled && jumpPressed && body.isGrounded;
+            jumpPressed = false;
             Vector3 desiredPlanarVelocity = Vector3.zero;
             if (ControlEnabled && moveInput.sqrMagnitude > 0f)
             {
@@ -82,11 +102,14 @@ namespace Freyja.Prototype
                     Vector3 right = Vector3.ProjectOnPlane(cameraTransform.right, Vector3.up).normalized;
                     Vector2 clampedInput = Vector2.ClampMagnitude(moveInput, 1f);
                     Vector3 direction = forward * clampedInput.y + right * clampedInput.x;
-                    desiredPlanarVelocity = Vector3.ClampMagnitude(direction, 1f) * moveSpeed;
+                    float speed = moveSpeed * (runHeld ? runSpeedMultiplier : 1f);
+                    desiredPlanarVelocity = Vector3.ClampMagnitude(direction, 1f) * speed;
                 }
             }
 
-            planarVelocity = desiredPlanarVelocity;
+            planarVelocity = stairPlacement != null && !IsJumping && !startJump
+                ? stairPlacement.LimitAscentSpeed(desiredPlanarVelocity)
+                : desiredPlanarVelocity;
             if (planarVelocity.sqrMagnitude > 0.0001f)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(planarVelocity, Vector3.up);
@@ -96,16 +119,34 @@ namespace Freyja.Prototype
                     rotationSpeed * deltaTime);
             }
 
-            if (body.isGrounded && verticalVelocity < 0f)
+            if (startJump)
+            {
+                verticalVelocity = Mathf.Sqrt(-2f * Gravity * jumpHeight);
+                IsJumping = true;
+            }
+            else if (body.isGrounded && verticalVelocity < 0f)
                 verticalVelocity = GroundAdhesionVelocity;
             else
                 verticalVelocity += Gravity * deltaTime;
 
             Vector3 displacement = (planarVelocity + Vector3.up * verticalVelocity) * deltaTime;
-            body.Move(displacement);
+            Vector3 previousPosition = transform.position;
+            CollisionFlags collisions = body.Move(displacement);
+            if ((collisions & CollisionFlags.Above) != 0 && verticalVelocity > 0f)
+                verticalVelocity = 0f;
+
+            if (body.isGrounded && planarVelocity.sqrMagnitude > 0f)
+            {
+                Vector3 travel = transform.position - previousPosition;
+                travel.y = 0f;
+                GroundSpeed = travel.magnitude / deltaTime;
+            }
 
             if (body.isGrounded && verticalVelocity < 0f)
+            {
                 verticalVelocity = GroundAdhesionVelocity;
+                IsJumping = false;
+            }
         }
 
         private void Update()
@@ -115,8 +156,12 @@ namespace Freyja.Prototype
 
         private void OnDisable()
         {
+            GroundSpeed = 0f;
             moveInput = Vector2.zero;
             planarVelocity = Vector3.zero;
+            verticalVelocity = 0f;
+            IsJumping = false;
+            SetTraversalInput(false, false);
         }
 
         private void ReportMissingCamera()

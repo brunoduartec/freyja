@@ -1,0 +1,109 @@
+flowchart LR
+  cl_village-selected-ivo("village-selected-ivo · A partida foi escolhida pela vila, não por Ivo.")
+  cl_departure-before-birth("departure-before-birth · A data prevista para a partida é anterior ao nascimento do bebê.")
+  cl_voluntary-departure-claim("voluntary-departure-claim · Ivo decidiu partir voluntariamente, sem imposição da vila.")
+  cl_ledger-is-not-consent("ledger-is-not-consent · O caderno registra decisões, mas não prova que elas foram voluntárias.")
+  cl_repair-interrupted("repair-interrupted · O reparo de Ivo na encosta ficou interrompido.")
+  cl_notice-records-selection("notice-records-selection · O aviso público registra Ivo entre as pessoas escolhidas pela vila.")
+  cl_letter-records-objection("letter-records-objection · Um bilhete anterior à perda registra que Ivo não pediu para partir.")
+  cl_blue-ribbon-visible("blue-ribbon-visible · Uma tira azul está presa à manga de Ivo.")
+  ev_ev-sleeve-ribbon["ev-sleeve-ribbon · A tira azul · origem sleeve-ribbon-observation"]
+  or_sleeve-ribbon-observation["Origem sleeve-ribbon-observation"]
+  ev_ev-sleeve-ribbon -. proveniência .-> or_sleeve-ribbon-observation
+  object_sleeve-ribbon["object · Tira azul na manga de Ivo"]
+  object_sleeve-ribbon --> ev_ev-sleeve-ribbon
+  ev_ev-sleeve-ribbon --> cl_blue-ribbon-visible
+  ev_ev-ledger-entry["ev-ledger-entry · Nome no caderno do cais · origem harbor-ledger-entry"]
+  or_harbor-ledger-entry["Origem harbor-ledger-entry"]
+  ev_ev-ledger-entry -. proveniência .-> or_harbor-ledger-entry
+  document_harbor-ledger["document · Caderno de partidas no cais"]
+  document_harbor-ledger --> ev_ev-ledger-entry
+  ev_ev-ledger-entry --> cl_village-selected-ivo
+  ev_ev-ledger-entry --> cl_voluntary-departure-claim
+  ev_ev-ledger-entry --> cl_ledger-is-not-consent
+  ev_ev-unfinished-step["ev-unfinished-step · Um degrau por terminar · origem unfinished-hillside-step"]
+  or_unfinished-hillside-step["Origem unfinished-hillside-step"]
+  ev_ev-unfinished-step -. proveniência .-> or_unfinished-hillside-step
+  place_hillside-steps["place · Caminho da encosta"]
+  place_hillside-steps --> ev_ev-unfinished-step
+  ev_ev-unfinished-step --> cl_repair-interrupted
+  ev_ev-artur-procedure["ev-artur-procedure · Como a vila registra partidas · origem artur-describes-selection"]
+  or_artur-describes-selection["Origem artur-describes-selection"]
+  ev_ev-artur-procedure -. proveniência .-> or_artur-describes-selection
+  person_artur["person · Artur no cais"]
+  person_artur --> ev_ev-artur-procedure
+  ev_ev-artur-procedure --> cl_village-selected-ivo
+  ev_ev-artur-procedure --> cl_ledger-is-not-consent
+  ev_ev-teresa-hears-luana["ev-teresa-hears-luana · O que Luana contestou · origem teresa-hears-luana"]
+  or_teresa-hears-luana["Origem teresa-hears-luana"]
+  ev_ev-teresa-hears-luana -. proveniência .-> or_teresa-hears-luana
+  person_teresa["person · Teresa na sala comunitária"]
+  person_teresa --> ev_ev-teresa-hears-luana
+  ev_ev-teresa-hears-luana --> cl_village-selected-ivo
+  ev_ev-teresa-hears-luana --> cl_departure-before-birth
+  ev_ev-teresa-hears-luana --> cl_voluntary-departure-claim
+  ev_ev-ivo-selection["ev-ivo-selection · A escolha não foi dele · origem ivo-personal-account"]
+  or_ivo-personal-account["Origem ivo-personal-account"]
+  ev_ev-ivo-selection -. proveniência .-> or_ivo-personal-account
+  person_ivo["person · Ivo junto aos degraus"]
+  person_ivo --> ev_ev-ivo-selection
+  ev_ev-ivo-selection --> cl_village-selected-ivo
+  ev_ev-ivo-selection --> cl_departure-before-birth
+  ev_ev-ivo-selection --> cl_voluntary-departure-claim
+  ev_ev-departure-notice["ev-departure-notice · Aviso de embarque · origem public-departure-notice"]
+  or_public-departure-notice["Origem public-departure-notice"]
+  ev_ev-departure-notice -. proveniência .-> or_public-departure-notice
+  document_departure-notice["document · Aviso público de embarque"]
+  document_departure-notice --> ev_ev-departure-notice
+  ev_ev-departure-notice --> cl_notice-records-selection
+  ev_ev-departure-notice --> cl_departure-before-birth
+  ev_ev-ivo-note["ev-ivo-note · Bilhete guardado por Ivo · origem ivo-personal-account"]
+  ev_ev-ivo-note -. proveniência .-> or_ivo-personal-account
+  document_ivo-note["document · Bilhete particular de Ivo"]
+  document_ivo-note --> ev_ev-ivo-note
+  ev_ev-ivo-note --> cl_letter-records-objection
+  ev_ev-ivo-note --> cl_village-selected-ivo
+  ix_inspect-sleeve-ribbon["inspect-sleeve-ribbon · Examinar a tira azul"]
+  ix_inspect-sleeve-ribbon --> ev_ev-sleeve-ribbon
+  ix_inspect-harbor-ledger["inspect-harbor-ledger · Ler o caderno do cais"]
+  ix_inspect-harbor-ledger --> ev_ev-ledger-entry
+  ix_inspect-hillside-step["inspect-hillside-step · Examinar o reparo"]
+  ix_inspect-hillside-step --> ev_ev-unfinished-step
+  ix_artur-explains-ledger["artur-explains-ledger · Perguntar sobre a lista de partidas · condição {\"notMarkers\":[\"artur-accepted-version\",\"artur-challenged-version\"]}"]
+  ix_artur-explains-ledger --> ev_ev-artur-procedure
+  ix_artur-explains-ledger -. define marcador .-> mk_artur-challenged-version["Marcador artur-challenged-version"]
+  ix_artur-official-version["artur-official-version · Dizer que não precisa explicar a partida · condição {\"notMarkers\":[\"artur-challenged-version\",\"artur-accepted-version\"]}"]
+  ix_artur-official-version -. define marcador .-> mk_artur-accepted-version["Marcador artur-accepted-version"]
+  ix_teresa-hears-luana["teresa-hears-luana · Perguntar sobre a reclamação de Luana · condição {\"notMarkers\":[\"teresa-heard-luana\"]}"]
+  ix_teresa-hears-luana --> ev_ev-teresa-hears-luana
+  ix_teresa-hears-luana -. define marcador .-> mk_teresa-heard-luana["Marcador teresa-heard-luana"]
+  ix_ivo-departure-question["ivo-departure-question · Perguntar se ele escolheu partir · condição {\"notMarkers\":[\"ivo-questioned-departure\"]}"]
+  ix_ivo-departure-question --> ev_ev-ivo-selection
+  ix_ivo-departure-question -. define marcador .-> mk_ivo-questioned-departure["Marcador ivo-questioned-departure"]
+  ix_inspect-departure-notice["inspect-departure-notice · Examinar o aviso de embarque"]
+  ix_inspect-departure-notice --> ev_ev-departure-notice
+  ix_artur-ledger-response["artur-ledger-response · Mostrar a Artur o registro · condição {\"allEvidence\":[\"ev-ledger-entry\"],\"notMarkers\":[\"artur-accepted-version\"]}"]
+  ix_artur-ledger-response --> ev_ev-artur-procedure
+  ix_artur-ledger-response -. define marcador .-> mk_artur-challenged-version["Marcador artur-challenged-version"]
+  ix_inspect-ivo-note["inspect-ivo-note · Examinar o bilhete junto ao degrau · condição {\"allEvidence\":[\"ev-unfinished-step\"]}"]
+  ix_inspect-ivo-note --> ev_ev-ivo-note
+  hy_hypothesis-imposed-departure("hypothesis-imposed-departure · A vila impôs a partida de Ivo para antes do nascimento; ele queria permanecer com a família.")
+  alt_hypothesis-imposed-departure_1["Alternativa 1 · mín. 2 origens"]
+  alt_hypothesis-imposed-departure_1 --> hy_hypothesis-imposed-departure
+  ev_ev-artur-procedure --> alt_hypothesis-imposed-departure_1
+  ev_ev-ivo-selection --> alt_hypothesis-imposed-departure_1
+  alt_hypothesis-imposed-departure_2["Alternativa 2 · mín. 2 origens"]
+  alt_hypothesis-imposed-departure_2 --> hy_hypothesis-imposed-departure
+  ev_ev-teresa-hears-luana --> alt_hypothesis-imposed-departure_2
+  ev_ev-departure-notice --> alt_hypothesis-imposed-departure_2
+  alt_hypothesis-imposed-departure_3["Alternativa 3 · mín. 2 origens"]
+  alt_hypothesis-imposed-departure_3 --> hy_hypothesis-imposed-departure
+  ev_ev-ivo-note --> alt_hypothesis-imposed-departure_3
+  ev_ev-departure-notice --> alt_hypothesis-imposed-departure_3
+  alt_hypothesis-imposed-departure_4["Alternativa 4 · mín. 2 origens"]
+  alt_hypothesis-imposed-departure_4 --> hy_hypothesis-imposed-departure
+  ev_ev-ivo-selection --> alt_hypothesis-imposed-departure_4
+  ev_ev-departure-notice --> alt_hypothesis-imposed-departure_4
+  hy_hypothesis-voluntary-departure("hypothesis-voluntary-departure · Ivo escolheu partir sem pressão da vila e a gravidez apenas coincidiu com a data.")
+  ev_ev-artur-procedure -. contradição .-> hy_hypothesis-voluntary-departure
+  ev_ev-ivo-selection -. contradição .-> hy_hypothesis-voluntary-departure

@@ -1,0 +1,59 @@
+{
+  "blocks": 17,
+  "marked_lots": 13,
+  "max_corner_error_m": 2.244791219388283e-06,
+  "details": [
+    {
+      "id": "Casa_08",
+      "max_corner_error_m": 2.244791219388283e-06
+    },
+    {
+      "id": "Casa_05",
+      "max_corner_error_m": 1.5315320930840622e-06
+    },
+    {
+      "id": "Sala_Comunitaria",
+      "max_corner_error_m": 1.1292731834027641e-06
+    },
+    {
+      "id": "Casa_07",
+      "max_corner_error_m": 1.6148049444865625e-06
+    },
+    {
+      "id": "Loja",
+      "max_corner_error_m": 9.717781085941057e-07
+    },
+    {
+      "id": "Casa_01",
+      "max_corner_error_m": 6.53383037008827e-07
+    },
+    {
+      "id": "Galpao_Cais",
+      "max_corner_error_m": 1.4715906711760289e-06
+    },
+    {
+      "id": "Casa_04",
+      "max_corner_error_m": 5.533064203772122e-07
+    },
+    {
+      "id": "Venda",
+      "max_corner_error_m": 1.3439767670083076e-06
+    },
+    {
+      "id": "Casa_02",
+      "max_corner_error_m": 1.3162164566209609e-06
+    },
+    {
+      "id": "Casa_06",
+      "max_corner_error_m": 1.1450665977757557e-06
+    },
+    {
+      "id": "Igreja",
+      "max_corner_error_m": 2.0404592978714383e-06
+    },
+    {
+      "id": "Casa_10",
+      "max_corner_error_m": 1.3800459525366828e-06
+    }
+  ]
+}

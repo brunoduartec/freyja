@@ -1,0 +1,54 @@
+[
+  {
+    "id": "Cais — praça",
+    "passed": true,
+    "reached": true,
+    "grounded": true,
+    "distance": 0.374549061,
+    "heightError": 0.09499979,
+    "seconds": 13.1539307,
+    "x": -0.331330121,
+    "y": 6.095,
+    "z": -11.1746635,
+    "waypoint": 58
+  },
+  {
+    "id": "Praça — igreja",
+    "passed": true,
+    "reached": true,
+    "grounded": true,
+    "distance": 0.377020478,
+    "heightError": 0.03999996,
+    "seconds": 8.449226,
+    "x": -2.18193316,
+    "y": 15.04,
+    "z": 30.66978,
+    "waypoint": 40
+  },
+  {
+    "id": "Rua leste",
+    "passed": false,
+    "reached": false,
+    "grounded": true,
+    "distance": 52.9365044,
+    "heightError": 11.27018,
+    "seconds": 50.00064,
+    "x": -6.79999876,
+    "y": 3.72982073,
+    "z": -21.7184372,
+    "waypoint": 10
+  },
+  {
+    "id": "Casa isolada",
+    "passed": false,
+    "reached": false,
+    "grounded": true,
+    "distance": 67.41662,
+    "heightError": 13.4538221,
+    "seconds": 50.0076752,
+    "x": -16.0,
+    "y": 4.546178,
+    "z": -19.0,
+    "waypoint": 1
+  }
+]

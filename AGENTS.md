@@ -43,6 +43,10 @@
 
 ## Cenas, prefabs e gráficos
 
+- Use `Freyja/Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity` como cena principal para as próximas alterações no Unity. Trabalhe nela e crie outra cena somente quando o usuário solicitar ou uma necessidade técnica concreta exigir.
+
+- Ao reutilizar os modelos TripoAI da spec 011, consulte `Source/Blender/Ilha_Tripo_011/README.md` para a escala calibrada pelos degraus originais e pelo protagonista de 1,80 m.
+
 - Reutilize prefabs para elementos recorrentes. Evite alterações manuais em YAML de cenas e prefabs; prefira o editor ou suas APIs e valide referências após alterações.
 - Verifique escala de importação, orientação, pivôs, materiais e colisões ao trazer assets do Blender. Use uma convenção consistente de unidades.
 - Mantenha rostos, pistas e pontos de interação legíveis na câmera real do jogo. Valide a direção low poly e os pixels visíveis nessa câmera.
@@ -58,6 +62,8 @@
 - Ao finalizar, informe o que mudou, onde encontrar os artefatos, o que foi verificado e qualquer limitação real. Diferencie verificações executadas de verificações pendentes.
 
 ## Comunicação e comandos
+
+- Salve todas as entregas do Freyja em `/Users/bruno.duartec/Documents/Projects/Freyja`.
 
 - Responda em português, de forma direta e concisa. Preserve detalhes necessários para retomar o trabalho.
 - Leia `/Users/bruno.duartec/.codex/RTK.md` uma vez por sessão antes de usar comandos shell. Use `rtk` em comandos suportados com saída volumosa e `rtk proxy` para conteúdo exato ou comandos sem suporte; recorra ao comando nativo se necessário.

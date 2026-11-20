@@ -1,0 +1,1 @@
+Terrain e TerrainCollider usam TerrenoIlha. Amostras de rota verificadas: 841; maior diferença de cota: 0.000 m. Diferenças de pintura em camadas da praia e pisos: 0. Diferenças de cota no núcleo de praia e pisos: 0. Alterações de grama/terra: 25853 pixels. Instâncias de pedra inativas na cena: 125.

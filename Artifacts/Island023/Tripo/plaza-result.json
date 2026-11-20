@@ -1,0 +1,31 @@
+{
+  "seconds": 3.499704,
+  "tests": [
+    {
+      "id": "Venda",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3726584,
+      "heightError": 0.1597557,
+      "seconds": 1.888216,
+      "x": -8.712932,
+      "y": 7.040244,
+      "z": 0.506211638,
+      "waypoint": 26
+    },
+    {
+      "id": "Oficina",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.375641644,
+      "heightError": 0.190444469,
+      "seconds": 1.601778,
+      "x": -0.9913197,
+      "y": 7.03955555,
+      "z": 3.57319736,
+      "waypoint": 22
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Ida cais–praça | passagem=True | pontos=202/202 | distância=78.6 m | desvio vertical máximo=0.22 m | chão=True | fim=(-0.60, 6.21, -10.80) | alvo=(-0.27, 6.18, -10.63)
+Volta praça–cais | passagem=True | pontos=202/202 | distância=78.2 m | desvio vertical máximo=0.21 m | chão=True | fim=(-33.54, 1.84, -60.83) | alvo=(-33.54, 1.94, -61.18)
+B1 | passagem=True | pontos=30/30 | distância=13.1 m | desvio vertical máximo=0.06 m | chão=True | fim=(-26.26, 3.62, -27.64) | alvo=(-25.97, 3.60, -27.48)
+Armazém do cais (apoio em terra) | passagem=True | pontos=15/15 | distância=4.6 m | desvio vertical máximo=0.06 m | chão=True | fim=(-29.62, 2.04, -40.43) | alvo=(-29.56, 2.10, -40.05)
+Recuperações de sessão: 0

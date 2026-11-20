@@ -162,3 +162,6 @@ __pycache__/
 *.pem
 *.p12
 *.pfx
+
+# Local browser QA logs (delivery captures live in Source/Narrative/)
+.playwright-mcp/

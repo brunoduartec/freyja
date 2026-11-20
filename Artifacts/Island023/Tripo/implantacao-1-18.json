@@ -1,0 +1,144 @@
+{
+  "scene": "Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity",
+  "saved": true,
+  "lots": [
+    {
+      "lot": "B1",
+      "piece": "Tripo08",
+      "x": -31.0,
+      "y": 3.5,
+      "z": -28.0,
+      "yaw": 345.0
+    },
+    {
+      "lot": "B2",
+      "piece": "Tripo03",
+      "x": -30.0,
+      "y": 6.0,
+      "z": -10.0,
+      "yaw": 15.000001
+    },
+    {
+      "lot": "B3",
+      "piece": "Tripo07",
+      "x": -40.0,
+      "y": 9.0,
+      "z": 7.0,
+      "yaw": 20.0000019
+    },
+    {
+      "lot": "B4",
+      "piece": "Tripo01",
+      "x": -24.0,
+      "y": 11.0,
+      "z": 15.0,
+      "yaw": 15.000001
+    },
+    {
+      "lot": "A1",
+      "piece": "Tripo02",
+      "x": -17.0,
+      "y": 14.0,
+      "z": 31.0,
+      "yaw": 9.999999
+    },
+    {
+      "lot": "A2",
+      "piece": "Tripo09",
+      "x": 31.0,
+      "y": 11.0,
+      "z": 22.0,
+      "yaw": 340.0
+    },
+    {
+      "lot": "A3",
+      "piece": "Tripo05",
+      "x": 20.0,
+      "y": 8.0,
+      "z": 10.0,
+      "yaw": 350.0
+    },
+    {
+      "lot": "A4",
+      "piece": "Tripo14",
+      "x": 48.0,
+      "y": 7.0,
+      "z": 5.0,
+      "yaw": 320.0
+    },
+    {
+      "lot": "L1",
+      "piece": "Tripo10",
+      "x": 40.0,
+      "y": 3.5,
+      "z": -24.0,
+      "yaw": 340.0
+    },
+    {
+      "lot": "L2",
+      "piece": "Tripo15",
+      "x": -7.0,
+      "y": 2.8,
+      "z": -31.0,
+      "yaw": 9.999999
+    },
+    {
+      "lot": "L3",
+      "piece": "Tripo06",
+      "x": 48.0,
+      "y": 14.0,
+      "z": 34.0,
+      "yaw": 15.000001
+    },
+    {
+      "lot": "L4 — casa isolada",
+      "piece": "Tripo16",
+      "x": -52.0,
+      "y": 18.0,
+      "z": 43.0,
+      "yaw": 5.0
+    },
+    {
+      "lot": "Venda",
+      "piece": "Tripo12",
+      "x": -10.0,
+      "y": 7.0,
+      "z": 3.0,
+      "yaw": 5.0
+    },
+    {
+      "lot": "Oficina",
+      "piece": "Tripo13",
+      "x": 0.0,
+      "y": 7.0,
+      "z": 6.0,
+      "yaw": 5.0
+    },
+    {
+      "lot": "Salão comunitário",
+      "piece": "Tripo17",
+      "x": 18.0,
+      "y": 6.0,
+      "z": -4.0,
+      "yaw": 340.0
+    },
+    {
+      "lot": "Igreja",
+      "piece": "Tripo04",
+      "x": -2.0,
+      "y": 15.0,
+      "z": 38.0,
+      "yaw": 0.0
+    },
+    {
+      "lot": "Armazém do cais (apoio em terra)",
+      "piece": "Tripo18",
+      "x": -36.0,
+      "y": 2.0,
+      "z": -43.0,
+      "yaw": 0.0
+    }
+  ],
+  "pier": true,
+  "compilationFailed": false
+}

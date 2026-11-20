@@ -1,0 +1,31 @@
+{
+  "seconds": 19.78529,
+  "tests": [
+    {
+      "id": "L2",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.377685815,
+      "heightError": 0.140451908,
+      "seconds": 3.21245956,
+      "x": -5.09022951,
+      "y": 2.839548,
+      "z": -29.7023849,
+      "waypoint": 55
+    },
+    {
+      "id": "Píer à igreja",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3751438,
+      "heightError": 0.09492111,
+      "seconds": 16.5624,
+      "x": -1.66484189,
+      "y": 15.035079,
+      "z": 26.0640621,
+      "waypoint": 320
+    }
+  ]
+}

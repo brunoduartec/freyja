@@ -1,0 +1,70 @@
+{
+  "seconds": 79.58116,
+  "tests": [
+    {
+      "id": "Cais — praça",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.375107527,
+      "heightError": 0.0233149529,
+      "seconds": 10.1669617,
+      "x": -0.3327319,
+      "y": 6.023315,
+      "z": -11.1731911,
+      "waypoint": 167
+    },
+    {
+      "id": "Praça — igreja",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.378921032,
+      "heightError": 0.008314133,
+      "seconds": 6.84670258,
+      "x": -2.18087959,
+      "y": 14.9916859,
+      "z": 30.667038,
+      "waypoint": 114
+    },
+    {
+      "id": "Rua leste",
+      "passed": false,
+      "reached": false,
+      "grounded": true,
+      "distance": 54.3700562,
+      "heightError": 7.4073863,
+      "seconds": 42.00007,
+      "x": 44.9010124,
+      "y": 7.5926137,
+      "z": 3.49730539,
+      "waypoint": 178
+    },
+    {
+      "id": "Casa isolada",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3767879,
+      "heightError": 0.0230884552,
+      "seconds": 10.3419495,
+      "x": -51.68539,
+      "y": 17.9769115,
+      "z": 37.79266,
+      "waypoint": 174
+    },
+    {
+      "id": "Caminho da colina",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.377117068,
+      "heightError": 0.0178527832,
+      "seconds": 10.2006836,
+      "x": 7.37225771,
+      "y": 23.0178528,
+      "z": 60.9396553,
+      "waypoint": 168
+    }
+  ]
+}

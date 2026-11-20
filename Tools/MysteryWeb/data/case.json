@@ -1,0 +1,712 @@
+{
+  "id": "ivo-departure-case",
+  "version": 1,
+  "title": "A partida de Ivo",
+  "introduction": "Vocês acabam de atracar quando Luana aponta para a tira azul presa à manga do pai. «Dizem que ele aceitou ir embora. Mas por que ele deixaria a gente justo agora, antes de o bebê nascer?» Ivo baixa os olhos. Artur fecha o caderno de partidas e pergunta quando vocês vão soltar as amarras. Há tempo de falar com Ivo antes do embarque — ou de olhar o que Artur anotou.",
+  "question": "A partida de Ivo é uma viagem voluntária ou uma escolha imposta pela vila? Como o nascimento do bebê se relaciona com a data?",
+  "authorTruth": "A vila escolheu Ivo para partir e marcou sua saída para antes do nascimento do segundo filho. Ele não escolheu abandonar a família: a tira azul na manga torna a escolha pública, e ele sabe que tentar voltar para conhecer o bebê cobraria uma vida. No caderno, a fórmula pública diz que Ivo pediu para partir; essa afirmação é falsa. Para esta amostra, um aviso público registra a escolha e um bilhete privado de Ivo, escrito antes da perda, contesta a fórmula. A amostra investiga essa decisão local; não explica aqui a maldição inteira nem sua solução.",
+  "characters": [
+    {
+      "id": "artur",
+      "name": "Artur Marçal",
+      "profile": "Vigilante e protetor, trabalhador do cais. Sob pressão, repete perguntas sobre horários e confere o caderno; sua preocupação com Caio pode soar como cobrança.",
+      "relationships": [
+        "Casado com Rosa, pai de Caio e irmão de Raul."
+      ],
+      "routine": "Registra chegadas e partidas no cais e ajuda nas amarrações.",
+      "knowledge": [
+        "Sabe ler o caderno do cais e conhece o procedimento público de partida; copiou a fórmula de registro que lhe entregaram."
+      ],
+      "beliefs": [
+        "A vila precisa controlar as partidas para preservar a vida comunitária."
+      ],
+      "omissions": [
+        "Evita dizer em voz alta quem tomou a decisão sobre Ivo; teme que a responsabilidade recaia sobre sua família."
+      ],
+      "position": {
+        "x": 0.55,
+        "y": 0.77
+      },
+      "portrait": {
+        "asset": "characters-sheet",
+        "rect": {
+          "x": 0.5646,
+          "y": 0.2699,
+          "width": 0.0901,
+          "height": 0.1637
+        },
+        "association": "Trabalhador do cais identificado como Artur no GDD; recorte aproximado do rosto."
+      }
+    },
+    {
+      "id": "teresa",
+      "name": "Teresa Faria",
+      "profile": "Afetuosa e irônica. Empresta livros como quem inicia conversa e lembra os gostos dos vizinhos; intervém com uma pergunta cortante quando pressionam Clara.",
+      "relationships": [
+        "Mãe de Clara e irmã de Amélia."
+      ],
+      "routine": "Organiza a troca de livros entre famílias na sala comunitária.",
+      "knowledge": [
+        "Ouviu Luana contestar a versão de que Ivo partia por vontade própria; não presenciou a decisão."
+      ],
+      "beliefs": [
+        "Uma despedida que afeta uma família não deve ser tratada como mero acerto de horário."
+      ],
+      "omissions": [
+        "Não sabe quem propôs a escolha de Ivo e não afirma ter presenciado a decisão."
+      ],
+      "position": {
+        "x": 0.5,
+        "y": 0.27
+      },
+      "portrait": {
+        "asset": "characters-sheet",
+        "rect": {
+          "x": 0.7279,
+          "y": 0.2869,
+          "width": 0.0915,
+          "height": 0.153
+        },
+        "association": "Mulher de cardigã claro identificada como Teresa no GDD; recorte aproximado do rosto."
+      }
+    },
+    {
+      "id": "ivo",
+      "name": "Ivo Batista",
+      "profile": "Gentil e contido. Desde que recebeu a marca azul, demora a voltar para casa e se ocupa dos degraus até tarde. Fala com carinho da família e silencia quando imagina o bebê crescendo longe.",
+      "relationships": [
+        "Casado com Helena, pai de Luana e à espera do segundo filho."
+      ],
+      "routine": "Conserta muretas, degraus e caminhos da encosta.",
+      "knowledge": [
+        "Sabe que foi marcado para partir antes do nascimento e que voltar para conhecer o bebê custaria uma vida."
+      ],
+      "beliefs": [
+        "A despedida não foi uma escolha sua; ainda assim, não quer que Luana carregue sozinha a discussão com a vila."
+      ],
+      "omissions": [
+        "Evita falar do custo de tentar voltar enquanto Luana está por perto."
+      ],
+      "position": {
+        "x": 0.2,
+        "y": 0.45
+      },
+      "portrait": {
+        "asset": "characters-sheet",
+        "rect": {
+          "x": 0.8373,
+          "y": 0.2572,
+          "width": 0.0957,
+          "height": 0.1796
+        },
+        "association": "Associação visual provisória ao adulto na extrema direita da folha de personagens; identidade não confirmada pelo GDD."
+      }
+    }
+  ],
+  "origins": [
+    {
+      "id": "sleeve-ribbon-observation",
+      "description": "Tira azul presa à manga de Ivo, observada no cais."
+    },
+    {
+      "id": "harbor-ledger-entry",
+      "description": "A entrada de partida no caderno físico mantido por Artur."
+    },
+    {
+      "id": "unfinished-hillside-step",
+      "description": "O degrau da encosta deixado inacabado por Ivo."
+    },
+    {
+      "id": "artur-describes-selection",
+      "description": "A explicação de Artur sobre o registro e a escolha da vila."
+    },
+    {
+      "id": "teresa-hears-luana",
+      "description": "O que Teresa ouviu de Luana sobre a escolha do pai; não presenciou a decisão."
+    },
+    {
+      "id": "public-departure-notice",
+      "description": "Decisão pública da vila, transcrita no aviso. O caderno repete a mesma instituição; os dois não são aceitos juntos como confirmação independente."
+    },
+    {
+      "id": "ivo-personal-account",
+      "description": "Experiência de Ivo sobre a própria escolha; conversa e bilhete repetem a mesma origem informacional."
+    }
+  ],
+  "claims": [
+    {
+      "id": "village-selected-ivo",
+      "text": "A partida foi escolhida pela vila, não por Ivo.",
+      "true": true
+    },
+    {
+      "id": "departure-before-birth",
+      "text": "A data prevista para a partida é anterior ao nascimento do bebê.",
+      "true": true
+    },
+    {
+      "id": "voluntary-departure-claim",
+      "text": "Ivo decidiu partir voluntariamente, sem imposição da vila.",
+      "true": false
+    },
+    {
+      "id": "ledger-is-not-consent",
+      "text": "O caderno registra decisões, mas não prova que elas foram voluntárias.",
+      "true": true
+    },
+    {
+      "id": "repair-interrupted",
+      "text": "O reparo de Ivo na encosta ficou interrompido.",
+      "true": true
+    },
+    {
+      "id": "notice-records-selection",
+      "text": "O aviso público registra Ivo entre as pessoas escolhidas pela vila.",
+      "true": true
+    },
+    {
+      "id": "letter-records-objection",
+      "text": "Um bilhete anterior à perda registra que Ivo não pediu para partir.",
+      "true": true
+    },
+    {
+      "id": "blue-ribbon-visible",
+      "text": "Uma tira azul está presa à manga de Ivo.",
+      "true": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-sleeve-ribbon",
+      "title": "A tira azul",
+      "description": "Uma tira de tecido azul está presa à manga de Ivo. A cor e o nó são visíveis; o significado da marca ainda precisa ser explicado.",
+      "nature": "observation",
+      "source": {
+        "kind": "object",
+        "id": "sleeve-ribbon",
+        "label": "Tira azul na manga de Ivo"
+      },
+      "origin_id": "sleeve-ribbon-observation",
+      "claimIds": [
+        "blue-ribbon-visible"
+      ]
+    },
+    {
+      "id": "ev-ledger-entry",
+      "title": "Nome no caderno do cais",
+      "description": "No caderno de partidas, a linha de Ivo traz a fórmula «a pedido». Você observou uma afirmação escrita; ela não demonstra, por si só, que Ivo consentiu.",
+      "nature": "observation",
+      "source": {
+        "kind": "document",
+        "id": "harbor-ledger",
+        "label": "Caderno de partidas no cais"
+      },
+      "origin_id": "harbor-ledger-entry",
+      "claimIds": [
+        "village-selected-ivo",
+        "voluntary-departure-claim",
+        "ledger-is-not-consent"
+      ]
+    },
+    {
+      "id": "ev-unfinished-step",
+      "title": "Um degrau por terminar",
+      "description": "O reparo do degrau ficou interrompido, com ferramentas e material ao lado. O vestígio não explica sozinho quem decidiu a partida.",
+      "nature": "observation",
+      "source": {
+        "kind": "place",
+        "id": "hillside-steps",
+        "label": "Caminho da encosta"
+      },
+      "origin_id": "unfinished-hillside-step",
+      "claimIds": [
+        "repair-interrupted"
+      ]
+    },
+    {
+      "id": "ev-artur-procedure",
+      "title": "Como a vila registra partidas",
+      "description": "Artur explica que os nomes do caderno correspondem a pessoas escolhidas pela vila. Diz que o registro é tratado como procedimento, embora reconheça que a anotação não mostra se alguém queria partir.",
+      "nature": "testimony",
+      "source": {
+        "kind": "person",
+        "id": "artur",
+        "label": "Artur no cais"
+      },
+      "origin_id": "artur-describes-selection",
+      "claimIds": [
+        "village-selected-ivo",
+        "ledger-is-not-consent"
+      ]
+    },
+    {
+      "id": "ev-teresa-hears-luana",
+      "title": "O que Luana contestou",
+      "description": "Teresa relata ter ouvido Luana dizer que o pai foi escolhido para partir antes do nascimento e que não aceitava chamar aquilo de decisão voluntária. Teresa não presenciou a reunião da vila; trata-se de um relato atribuído a Luana.",
+      "nature": "testimony",
+      "source": {
+        "kind": "person",
+        "id": "teresa",
+        "label": "Teresa na sala comunitária"
+      },
+      "origin_id": "teresa-hears-luana",
+      "claimIds": [
+        "village-selected-ivo",
+        "departure-before-birth",
+        "voluntary-departure-claim"
+      ]
+    },
+    {
+      "id": "ev-ivo-selection",
+      "title": "A escolha não foi dele",
+      "description": "Ivo diz que a vila o marcou para partir antes do nascimento. Ele não descreve quem falou primeiro na decisão, mas distingue a escolha coletiva da vontade dele.",
+      "nature": "testimony",
+      "source": {
+        "kind": "person",
+        "id": "ivo",
+        "label": "Ivo junto aos degraus"
+      },
+      "origin_id": "ivo-personal-account",
+      "claimIds": [
+        "village-selected-ivo",
+        "departure-before-birth",
+        "voluntary-departure-claim"
+      ]
+    },
+    {
+      "id": "ev-departure-notice",
+      "title": "Aviso de embarque",
+      "description": "O aviso público identifica Ivo como escolhido pela vila e marca a saída para antes do nascimento esperado. É um registro separado do caderno do cais.",
+      "nature": "observation",
+      "source": {
+        "kind": "document",
+        "id": "departure-notice",
+        "label": "Aviso público de embarque"
+      },
+      "origin_id": "public-departure-notice",
+      "claimIds": [
+        "notice-records-selection",
+        "departure-before-birth"
+      ]
+    },
+    {
+      "id": "ev-ivo-note",
+      "title": "Bilhete guardado por Ivo",
+      "description": "Um papel assinado por Ivo, datado da véspera da chegada, diz: «Não pedi para partir. A vila me escolheu. Como deixo Helena e Luana antes de conhecer nosso filho?» É um relato escrito atribuído a Ivo.",
+      "nature": "observation",
+      "source": {
+        "kind": "document",
+        "id": "ivo-note",
+        "label": "Bilhete particular de Ivo"
+      },
+      "origin_id": "ivo-personal-account",
+      "claimIds": [
+        "letter-records-objection",
+        "village-selected-ivo"
+      ]
+    }
+  ],
+  "markers": [
+    "artur-challenged-version",
+    "artur-accepted-version",
+    "teresa-heard-luana",
+    "ivo-questioned-departure"
+  ],
+  "interactions": [
+    {
+      "id": "inspect-sleeve-ribbon",
+      "title": "Examinar a tira azul",
+      "point": {
+        "x": 0.17,
+        "y": 0.7,
+        "label": "Ivo e a tira azul"
+      },
+      "lines": [
+        {
+          "speaker": "Observação",
+          "text": "Uma tira azul está amarrada à manga de Ivo. Não há palavras escritas no tecido.",
+          "effects": {
+            "evidence": [
+              "ev-sleeve-ribbon"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "inspect-harbor-ledger",
+      "title": "Ler o caderno do cais",
+      "point": {
+        "x": 0.78,
+        "y": 0.71,
+        "label": "Caderno de partidas"
+      },
+      "lines": [
+        {
+          "speaker": "Observação",
+          "text": "O caderno lista Ivo entre as partidas escolhidas e traz a fórmula «a pedido». O aviso público com a data fica no quadro ao lado.",
+          "effects": {
+            "evidence": [
+              "ev-ledger-entry"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "inspect-hillside-step",
+      "title": "Examinar o reparo",
+      "point": {
+        "x": 0.17,
+        "y": 0.23,
+        "label": "Degraus da encosta"
+      },
+      "lines": [
+        {
+          "speaker": "Observação",
+          "text": "Um degrau que Ivo vinha consertando ficou por terminar. O caminho está aberto, mas o reparo parou no meio.",
+          "effects": {
+            "evidence": [
+              "ev-unfinished-step"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "artur-explains-ledger",
+      "title": "Perguntar sobre a lista de partidas",
+      "characterId": "artur",
+      "condition": {
+        "notMarkers": [
+          "artur-accepted-version",
+          "artur-challenged-version"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "Artur",
+          "text": "O caderno registra quem a vila escolheu para partir. Não sou eu que escolho os nomes."
+        },
+        {
+          "speaker": "Artur",
+          "text": "«A pedido» é a fórmula que mandaram copiar. Não fui eu quem perguntou a Ivo se ele queria partir.",
+          "effects": {
+            "evidence": [
+              "ev-artur-procedure"
+            ],
+            "setMarkers": [
+              "artur-challenged-version"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "artur-official-version",
+      "title": "Dizer que não precisa explicar a partida",
+      "characterId": "artur",
+      "condition": {
+        "notMarkers": [
+          "artur-challenged-version",
+          "artur-accepted-version"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "Artur",
+          "text": "Você diz que não precisa de explicações. Artur volta a conferir as amarras."
+        },
+        {
+          "speaker": "Artur",
+          "text": "Então ficamos por aqui. Não vou reabrir essa conversa depois.",
+          "effects": {
+            "setMarkers": [
+              "artur-accepted-version"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "teresa-hears-luana",
+      "title": "Perguntar sobre a reclamação de Luana",
+      "characterId": "teresa",
+      "condition": {
+        "notMarkers": [
+          "teresa-heard-luana"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "Teresa",
+          "text": "Luana me procurou querendo entender por que o pai foi escolhido para partir antes do bebê nascer."
+        },
+        {
+          "speaker": "Teresa",
+          "text": "Ela ficou furiosa quando chamaram isso de vontade dele. Eu ouvi a filha, não a reunião da vila.",
+          "effects": {
+            "evidence": [
+              "ev-teresa-hears-luana"
+            ],
+            "setMarkers": [
+              "teresa-heard-luana"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ivo-departure-question",
+      "title": "Perguntar se ele escolheu partir",
+      "characterId": "ivo",
+      "condition": {
+        "notMarkers": [
+          "ivo-questioned-departure"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "Ivo",
+          "text": "A tira azul está presa à manga. Ela fala por mim antes que eu consiga responder."
+        },
+        {
+          "speaker": "Ivo",
+          "text": "A vila escolheu minha partida antes do nascimento. Não fui eu que pedi para deixar Helena, Luana e o bebê.",
+          "effects": {
+            "evidence": [
+              "ev-ivo-selection"
+            ],
+            "setMarkers": [
+              "ivo-questioned-departure"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "inspect-departure-notice",
+      "title": "Examinar o aviso de embarque",
+      "point": {
+        "x": 0.82,
+        "y": 0.42,
+        "label": "Quadro de avisos do cais"
+      },
+      "lines": [
+        {
+          "speaker": "Observação",
+          "text": "O aviso identifica Ivo como escolhido pela vila e marca sua saída antes do nascimento esperado.",
+          "effects": {
+            "evidence": [
+              "ev-departure-notice"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "artur-ledger-response",
+      "title": "Mostrar a Artur o registro",
+      "characterId": "artur",
+      "responseToEvidenceId": "ev-ledger-entry",
+      "condition": {
+        "allEvidence": [
+          "ev-ledger-entry"
+        ],
+        "notMarkers": [
+          "artur-accepted-version"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "Artur",
+          "text": "Você mostra a linha «a pedido». Artur demora a responder. «Eu copiei a fórmula; não ouvi Ivo pedir para partir.»",
+          "effects": {
+            "evidence": [
+              "ev-artur-procedure"
+            ],
+            "setMarkers": [
+              "artur-challenged-version"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "inspect-ivo-note",
+      "title": "Examinar o bilhete junto ao degrau",
+      "point": {
+        "x": 0.4,
+        "y": 0.53,
+        "label": "Pedra solta na encosta"
+      },
+      "condition": {
+        "allEvidence": [
+          "ev-unfinished-step"
+        ]
+      },
+      "lines": [
+        {
+          "speaker": "Observação",
+          "text": "Sob a pedra solta, um papel assinado por Ivo traz a data de ontem: «Não pedi para partir. A vila me escolheu. Como deixo Helena e Luana antes de conhecer nosso filho?»",
+          "effects": {
+            "evidence": [
+              "ev-ivo-note"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "hypothesis-imposed-departure",
+      "text": "A vila impôs a partida de Ivo para antes do nascimento; ele queria permanecer com a família.",
+      "alternatives": [
+        {
+          "evidenceIds": [
+            "ev-artur-procedure",
+            "ev-ivo-selection"
+          ],
+          "minOrigins": 2
+        },
+        {
+          "evidenceIds": [
+            "ev-teresa-hears-luana",
+            "ev-departure-notice"
+          ],
+          "minOrigins": 2
+        },
+        {
+          "evidenceIds": [
+            "ev-ivo-note",
+            "ev-departure-notice"
+          ],
+          "minOrigins": 2
+        },
+        {
+          "evidenceIds": [
+            "ev-ivo-selection",
+            "ev-departure-notice"
+          ],
+          "minOrigins": 2
+        }
+      ],
+      "contradictions": [],
+      "conclusion": "As fontes sustentam que a vila escolheu a partida de Ivo para antes do nascimento, contra a vontade dele. Por que um nascimento exige que alguém vá embora? Essa é a próxima pergunta. Fim da amostra; a maldição continua sem solução."
+    },
+    {
+      "id": "hypothesis-voluntary-departure",
+      "text": "Ivo escolheu partir sem pressão da vila e a gravidez apenas coincidiu com a data.",
+      "alternatives": [],
+      "contradictions": [
+        "ev-artur-procedure",
+        "ev-ivo-selection"
+      ],
+      "conclusion": "A partida foi voluntária; esta interpretação não é sustentada pela amostra."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "arrival-no-losses",
+      "title": "Chegada sem perdas",
+      "opening": "Luana pede ajuda no cais; todos os interlocutores estão disponíveis.",
+      "prepareActions": [],
+      "lostSources": []
+    },
+    {
+      "id": "loss-artur",
+      "title": "Artur indisponível",
+      "opening": "O caderno permanece examinável; Artur não está disponível para novas conversas.",
+      "prepareActions": [],
+      "lostSources": [
+        "artur"
+      ]
+    },
+    {
+      "id": "loss-teresa",
+      "title": "Teresa indisponível",
+      "opening": "Luana e o cais ainda podem ser investigados; Teresa não oferece falas atuais.",
+      "prepareActions": [],
+      "lostSources": [
+        "teresa"
+      ]
+    },
+    {
+      "id": "loss-ivo",
+      "title": "Ivo indisponível",
+      "opening": "A tira, o caderno e os degraus permanecem; Ivo não oferece falas atuais.",
+      "prepareActions": [],
+      "lostSources": [
+        "ivo"
+      ]
+    },
+    {
+      "id": "loss-artur-teresa",
+      "title": "Artur e Teresa indisponíveis",
+      "opening": "Documentos, a marca e o caminho da encosta continuam acessíveis.",
+      "prepareActions": [],
+      "lostSources": [
+        "artur",
+        "teresa"
+      ]
+    },
+    {
+      "id": "loss-artur-ivo",
+      "title": "Artur e Ivo indisponíveis",
+      "opening": "Teresa pode relatar o que ouviu; o caderno, a marca e os degraus continuam acessíveis.",
+      "prepareActions": [],
+      "lostSources": [
+        "artur",
+        "ivo"
+      ]
+    },
+    {
+      "id": "loss-teresa-ivo",
+      "title": "Teresa e Ivo indisponíveis",
+      "opening": "Artur e os vestígios do cais e da encosta continuam disponíveis.",
+      "prepareActions": [],
+      "lostSources": [
+        "teresa",
+        "ivo"
+      ]
+    },
+    {
+      "id": "memory-ivo-before-loss",
+      "title": "Relato de Ivo registrado antes da perda",
+      "opening": "O caderno do jogador preserva o depoimento obtido enquanto Ivo estava vivo; a cena não reencena a chegada nem permite novas perguntas a ele.",
+      "prepareActions": [
+        {
+          "type": "talk",
+          "interactionId": "ivo-departure-question"
+        },
+        {
+          "type": "advance"
+        },
+        {
+          "type": "advance"
+        },
+        {
+          "type": "advance"
+        }
+      ],
+      "lostSources": [
+        "ivo"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "map",
+      "path": "assets/map.png",
+      "source": "Referencias/ilha-dos-trinta-opcao-a.png",
+      "description": "Mapa de referência do arquipélago; coordenadas de pontos são normalizadas."
+    },
+    {
+      "id": "characters-sheet",
+      "path": "assets/characters-sheet.png",
+      "source": "Referencias/ilha-dos-trinta-personagens.png",
+      "description": "Folha de personagens. Ivo está associado provisoriamente ao adulto na extrema direita."
+    }
+  ]
+}

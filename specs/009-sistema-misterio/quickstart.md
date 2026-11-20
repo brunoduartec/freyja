@@ -1,6 +1,6 @@
-# Guia de validação futura — MVP web de pistas
+# Guia de validação — MVP web de pistas
 
-**Situação atual:** apenas planejamento. A pasta da aplicação e os scripts abaixo ainda serão criados pelas tarefas. Os comandos desta seção não foram executados como validação do MVP.
+**Situação atual:** aplicação implementada e comandos executados em 13/11/2026. Dezenove testes aprovados, sete configurações de perdas e memória anterior validadas, capturas nas três resoluções previstas. Evidências em `Source/Narrative/mvp-arrival/reviews/checks.md`. A avaliação do usuário permanece pendente.
 
 ## Pré-requisitos
 
@@ -8,7 +8,7 @@ Na raiz do projeto, Node.js 22 e Python 3 disponíveis. Foram observadas as vers
 
 Antes da primeira verificação no navegador, seguir a referência local da skill Sites já selecionada: `/Users/bruno.duartec/.codex/plugins/cache/openai-curated-remote/sites/1.1.6/skills/sites/references/preview/local.md`.
 
-## Comandos previstos após a implementação
+## Comandos locais
 
 ```sh
 node --test Tools/MysteryWeb/tests/*.test.mjs

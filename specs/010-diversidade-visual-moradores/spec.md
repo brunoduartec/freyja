@@ -1,7 +1,7 @@
 # Diversidade visual dos moradores
 
 **Criada em** 2026-11-13  
-**Estado** Escopo aprovado em 2026-11-13. Primeira etapa em produção.
+**Estado** Conjunto aprovado e 16 poses substituídas em `Referencias/Poses-Moradores/` em 2026-11-19. Pranchas de comparação em [Batista, Neves e Costa](revisao/batista-neves-costa.png) e [Pires, Seixas e Gomes](revisao/pires-seixas-gomes.png).
 
 ## Cenários e testes
 
@@ -23,7 +23,7 @@ Ao comparar as novas poses com as referências atuais, a equipe deve reconhecer 
 
 - **FR-001** Recriar e substituir os 16 PNGs das seis casas propostas, nos caminhos e nomes atuais de [Poses-Moradores](../../Referencias/Poses-Moradores/).
 - **FR-002** Preservar pose A, enquadramento, fundo, iluminação, acabamento low poly, proporções, faixa etária, figurino e elementos de identificação, incluindo a tira azul de Ivo e a gravidez visível de Helena.
-- **FR-003** Representar moradores negros e de ascendência leste-asiática com variação natural de pele, feições e cabelo. Preservar o vestuário cotidiano e evitar feições caricatas, adereços usados como marcadores étnicos ou um molde facial repetido por família.
+- **FR-003** Representar moradores negros e de ascendência leste-asiática com variação natural de pele, feições e cabelo. Redesenhar a estrutura do rosto de cada personagem, trabalhando os volumes de nariz, pálpebras, maçãs do rosto ou mandíbula conforme seu desenho individual. Preservar o vestuário cotidiano e evitar feições caricatas, adereços usados como marcadores étnicos ou um molde facial repetido por família.
 - **FR-004** Apresentar uma comparação visual da primeira família para avaliação antes de ampliar para as demais. Após a avaliação do conjunto, substituir as imagens aprovadas.
 
 ## Critérios de sucesso

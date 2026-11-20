@@ -1,0 +1,1 @@
+Terrain e TerrainCollider: mesma cópia. Alteração máxima de cota: 1.41 m. Amostras de altura alteradas fora do perímetro: 0. Diferenças de pintura fora do perímetro: 0. Diferenças nas camadas de areia/pisos no perímetro: 0. Pixels editados de grama/terra: 1198.

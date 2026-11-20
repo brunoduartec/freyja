@@ -1,7 +1,7 @@
 # Implementation Plan: MVP web de pistas — spec 009
 
-**Branch**: `main` | **Feature**: `009-sistema-misterio` | **Date**: 2026-11-13 | **Spec**: [spec.md](spec.md)
-**Input**: recorte web explicitamente solicitado pelo usuário, mantendo a spec 009. Esta entrega contém planejamento e tarefas, sem implementação.
+**Branch**: `009-sistema-misterio` | **Feature**: `009-sistema-misterio` | **Date**: 2026-11-13 | **Spec**: [spec.md](spec.md)
+**Input**: recorte web explicitamente solicitado pelo usuário, mantendo a spec 009. Planejamento seguido de implementação autorizada em 13/11/2026; avaliação do usuário pendente.
 
 ## Summary
 
@@ -52,7 +52,7 @@ specs/009-sistema-misterio/
 └── checklists/requirements.md
 ```
 
-### Source Code (repository root; estrutura futura, ainda não criada)
+### Source Code (repository root; estrutura implementada)
 
 ```text
 Tools/MysteryWeb/
@@ -110,4 +110,4 @@ O mapa visual é referência existente, não uma alteração do layout final da 
 | Busca por estados no pequeno caso | Respeitar condições de aquisição e escolhas incompatíveis | Contar nós/pistas sem provar um percurso |
 | Web estática com assets existentes | Pedido do usuário para testar falas e pistas rapidamente | Framework, backend ou cena Unity para esta validação |
 
-**Estado:** apenas plano. Os comandos e caminhos de aplicação descritos nos demais artefatos são previstos para a implementação; não foram executados nem criados nesta etapa.
+**Estado:** implementação e verificações técnicas concluídas em 13/11/2026. T001–T029 completas; T030 aguarda avaliação do usuário. Evidências: `Source/Narrative/mvp-arrival/reviews/checks.md`, relatório de caminhos e capturas nas três resoluções previstas. Sem implementação da campanha ou integração Unity nesta entrega.

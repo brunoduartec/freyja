@@ -24,7 +24,22 @@ namespace Freyja.Prototype
         [SerializeField] private float maximumPitch = 65f;
         [SerializeField] private bool controlEnabled;
 
+        [SerializeField] private Transform bendView;
+        [SerializeField, Min(0.1f)] private float bendRadius = 10f;
+        [System.Serializable]
+        private struct RouteView
+        {
+            public Vector2 center;
+            [Min(0.1f)] public float radius;
+            public float heading;
+        }
+
+        [SerializeField] private RouteView[] routeViews = System.Array.Empty<RouteView>();
+        private bool manuallyOrbited;
+
         private float yaw = DefaultYaw;
+        [SerializeField] private float initialPitch = DefaultPitch;
+        [SerializeField, Min(0f)] private float shoulderOffset;
         private float pitch = DefaultPitch;
         private float requestedYaw;
         private float requestedPitch;
@@ -34,6 +49,11 @@ namespace Freyja.Prototype
         private Vector3 lastFreeCameraPosition;
         private bool hasLastFreeCameraPosition;
         private bool reportedNoFreeInitialPosition;
+        private bool conversation;
+        private Vector3 conversationPosition;
+        private Quaternion conversationRotation;
+        private float conversationFov;
+        private float explorationFov;
 
         public Transform Target
         {
@@ -80,15 +100,21 @@ namespace Freyja.Prototype
             if (!controlEnabled)
                 return;
 
+            if (!manuallyOrbited && delta.sqrMagnitude > 0f)
+            {
+                requestedYaw = yaw;
+                manuallyOrbited = true;
+            }
             pendingLookInput += delta;
             hasPendingLookInput = true;
         }
 
         public void ResetView(float yawDegrees)
         {
+            manuallyOrbited = false;
             yaw = yawDegrees;
             requestedYaw = yawDegrees;
-            pitch = Mathf.Clamp(DefaultPitch, minimumPitch, maximumPitch);
+            pitch = Mathf.Clamp(initialPitch, minimumPitch, maximumPitch);
             requestedPitch = pitch;
             pendingLookInput = Vector2.zero;
             hasPendingLookInput = false;
@@ -96,10 +122,37 @@ namespace Freyja.Prototype
             SnapToView();
         }
 
+        internal void ShowConversation(Vector3 position, Quaternion rotation, float fov)
+        {
+            if (!conversation)
+                explorationFov = ViewCamera.fieldOfView;
+            conversationPosition = position;
+            conversationRotation = rotation;
+            conversationFov = fov;
+            conversation = true;
+        }
+
+        internal void EndConversation()
+        {
+            if (!conversation) return;
+            conversation = false;
+            ViewCamera.fieldOfView = explorationFov;
+            SnapToView();
+        }
+
         public void Tick(float dt)
         {
             if (target == null)
                 return;
+
+            if (conversation)
+            {
+                float blend = 1f - Mathf.Exp(-14f * Mathf.Max(0f, dt));
+                transform.SetPositionAndRotation(Vector3.Lerp(transform.position, conversationPosition, blend),
+                    Quaternion.Slerp(transform.rotation, conversationRotation, blend));
+                ViewCamera.fieldOfView = Mathf.Lerp(ViewCamera.fieldOfView, conversationFov, blend);
+                return;
+            }
 
             if (controlEnabled && hasPendingLookInput)
             {
@@ -116,11 +169,11 @@ namespace Freyja.Prototype
 
             float safeDt = Mathf.Max(0f, dt);
             float rotationBlend = returnSpeed <= 0f ? 1f : 1f - Mathf.Exp(-returnSpeed * safeDt);
-            yaw = Mathf.LerpAngle(yaw, requestedYaw, rotationBlend);
+            yaw = Mathf.LerpAngle(yaw, FramedYaw(), rotationBlend);
             pitch = Mathf.Lerp(pitch, requestedPitch, rotationBlend);
 
             Quaternion orbitRotation = Quaternion.Euler(pitch, yaw, 0f);
-            Vector3 pivot = target.position + Vector3.up * pivotHeight;
+            Vector3 pivot = GetPivot(orbitRotation);
             Vector3 back = orbitRotation * Vector3.back;
             float desiredDistance = Mathf.Max(0f, distance);
             float probeRadius = GetProbeRadius();
@@ -164,6 +217,20 @@ namespace Freyja.Prototype
             }
         }
 
+        private Vector3 GetPivot(Quaternion rotation)
+        {
+            Vector3 pivot = target.position + Vector3.up * pivotHeight;
+            if (shoulderOffset <= 0f)
+                return pivot;
+
+            Vector3 right = rotation * Vector3.right;
+            float offset = shoulderOffset;
+            if (Physics.SphereCast(pivot, GetProbeRadius(), right, out RaycastHit hit,
+                    offset, obstacleMask, QueryTriggerInteraction.Ignore))
+                offset = Mathf.Max(0f, hit.distance - collisionPadding);
+            return pivot + right * offset;
+        }
+
         private float FindSafeDistance(Vector3 pivot, Vector3 direction, float desiredDistance, float radius)
         {
             if (obstacleMask.value == 0 || desiredDistance <= 0f)
@@ -173,9 +240,24 @@ namespace Freyja.Prototype
                     pivot, radius, direction, out RaycastHit hit, desiredDistance,
                     obstacleMask, QueryTriggerInteraction.Ignore))
             {
-                return Mathf.Clamp(hit.distance - collisionPadding, 0f, desiredDistance);
+                desiredDistance = Mathf.Clamp(hit.distance - collisionPadding, 0f, desiredDistance);
             }
 
+            // On steep slopes a clear pivot can still leave the torso behind a ridge.
+            Vector3 torso = pivot - Vector3.up * Mathf.Min(0.4f, pivotHeight * 0.3f);
+            if (Physics.SphereCast(torso, radius, direction, out hit, desiredDistance,
+                    obstacleMask, QueryTriggerInteraction.Ignore))
+                desiredDistance = Mathf.Max(0f, hit.distance - collisionPadding);
+
+            if (shoulderOffset > 0f)
+            {
+                Vector3 chest = target.position + Vector3.up * Mathf.Max(0f, pivotHeight - 0.35f);
+                Vector3 sightline = pivot + direction * desiredDistance - chest;
+                if (Physics.SphereCast(chest, radius, sightline.normalized, out hit,
+                        sightline.magnitude, obstacleMask, QueryTriggerInteraction.Ignore))
+                    desiredDistance = Mathf.Clamp(Vector3.Dot(hit.point - pivot, direction)
+                        - radius - collisionPadding, 0f, desiredDistance);
+            }
             return desiredDistance;
         }
 
@@ -226,13 +308,54 @@ namespace Freyja.Prototype
             return Mathf.Max(fallbackProbeRadius, nearClipRadius);
         }
 
+        private float FramedYaw()
+        {
+            if (manuallyOrbited)
+                return requestedYaw;
+
+            Vector2 position = new Vector2(target.position.x, target.position.z);
+            float framed = requestedYaw;
+            if (bendView != null)
+            {
+                Vector2 bend = new Vector2(bendView.position.x, bendView.position.z);
+                float approach = 1f - Mathf.SmoothStep(0f, 1f,
+                    Mathf.InverseLerp(65f, 110f, Mathf.Abs(Mathf.DeltaAngle(requestedYaw, 0f))));
+                framed = Mathf.LerpAngle(requestedYaw, bendView.eulerAngles.y,
+                    ViewWeight(position, bend, bendRadius) * approach);
+            }
+
+            float totalWeight = 0f;
+            float correction = 0f;
+            foreach (var view in routeViews)
+            {
+                float weight = ViewWeight(position, view.center, view.radius);
+                if (weight <= 0f)
+                    continue;
+                float delta = Mathf.DeltaAngle(requestedYaw, view.heading);
+                if (Mathf.Abs(delta) > 90f)
+                    delta = Mathf.DeltaAngle(requestedYaw, view.heading + 180f);
+                // At a crossing, keep the player's current view when the route runs across it.
+                weight *= 1f - Mathf.InverseLerp(55f, 85f, Mathf.Abs(delta));
+                correction += delta * weight;
+                totalWeight += weight;
+            }
+            return framed + correction / Mathf.Max(1f, totalWeight);
+        }
+
+        private static float ViewWeight(Vector2 position, Vector2 center, float radius)
+        {
+            float distance = Vector2.Distance(position, center);
+            return Mathf.SmoothStep(0f, 1f, 1f - distance / Mathf.Max(0.1f, radius));
+        }
+
         private void SnapToView()
         {
             if (target == null)
                 return;
 
+            yaw = FramedYaw();
             Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
-            Vector3 pivot = target.position + Vector3.up * pivotHeight;
+            Vector3 pivot = GetPivot(rotation);
             Vector3 back = rotation * Vector3.back;
             float desiredDistance = Mathf.Max(0f, distance);
             float radius = GetProbeRadius();

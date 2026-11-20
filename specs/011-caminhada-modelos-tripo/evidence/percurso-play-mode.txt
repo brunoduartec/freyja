@@ -1,0 +1,18 @@
+0 None pos=(0.000, 9.127, 14.000) walking=False state=Idle capture=True
+1 W pos=(0.000, 9.173, 23.000) walking=True state=Walk capture=True
+2 None pos=(0.000, 9.173, 23.000) walking=False state=Idle capture=True
+3 D pos=(9.001, 8.595, 23.000) walking=True state=Walk capture=True
+4 None pos=(9.001, 8.595, 23.000) walking=False state=Idle capture=True
+5 A pos=(0.000, 9.173, 23.000) walking=True state=Walk capture=True
+6 None pos=(0.000, 9.173, 23.000) walking=False state=Idle capture=True
+7 S pos=(0.000, 9.132, 13.988) walking=True state=Walk capture=True
+8 None pos=(0.000, 9.132, 13.988) walking=False state=Idle capture=True
+9 W pos=(0.000, 9.178, 22.986) walking=True state=Walk capture=True
+10 None pos=(0.000, 9.178, 22.986) walking=False state=Idle capture=True
+11 D pos=(9.005, 8.597, 22.986) walking=True state=Walk capture=True
+12 None pos=(9.005, 8.597, 22.986) walking=False state=Idle capture=True
+13 A pos=(0.005, 9.177, 22.986) walking=True state=Walk capture=True
+14 None pos=(0.005, 9.177, 22.986) walking=False state=Idle capture=True
+15 S pos=(0.005, 9.132, 13.986) walking=True state=Walk capture=True
+16 None pos=(0.005, 9.132, 13.986) walking=False state=Idle capture=True
+captured=True frames=0

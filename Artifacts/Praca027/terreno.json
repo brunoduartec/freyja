@@ -1,0 +1,34 @@
+{
+  "scene": "Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity",
+  "original": "Assets/_Project/Art/Island023Tripo/TerrenoComAcessos.asset",
+  "current": "Assets/_Project/Art/Praca027/TerrenoDaPraca.asset",
+  "doors": [
+    {
+      "lot": "Venda",
+      "threshold": 7.2,
+      "before": 7.000244,
+      "after": 7.000244
+    },
+    {
+      "lot": "Oficina",
+      "threshold": 7.23,
+      "before": 7.000244,
+      "after": 7.000244
+    },
+    {
+      "lot": "Salão comunitário",
+      "threshold": 6.26,
+      "before": 6.00042725,
+      "after": 6.00042725
+    }
+  ],
+  "grade": {
+    "maxSlopeBeforePercent": 78.53326,
+    "maxSlopeAfterPercent": 10.0550861
+  },
+  "snapshots": [
+    "/Users/bruno.duartec/Documents/Projects/Freyja/Artifacts/Praca027/geral-depois.png",
+    "/Users/bruno.duartec/Documents/Projects/Freyja/Artifacts/Praca027/travessia-depois.png"
+  ],
+  "compileFailed": false
+}

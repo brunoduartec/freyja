@@ -1,8 +1,8 @@
 # Feature Specification: Sistema de mistério e investigação
 
-**Feature Branch**: `main` (sincronização inicial); identificador da feature: `009-sistema-misterio`.
+**Feature Branch**: `009-sistema-misterio` (a especificação foi documentada inicialmente em `main`).
 **Created**: 2026-11-13
-**Status**: Planejamento do primeiro MVP web autorizado pelo usuário. Plano e tarefas devem ser concluídos antes da implementação; nenhuma implementação foi autorizada nesta etapa.
+**Status**: Implementação do MVP web autorizada explicitamente pelo usuário em 13/11/2026, após plano e tarefas. Avaliação da amostra pelo usuário permanece pendente.
 **Input**: Investigar referências e propor pistas, conhecimento dos moradores e investigação com mortes variáveis.
 
 ## Clarifications

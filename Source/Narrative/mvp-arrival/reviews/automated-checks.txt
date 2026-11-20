@@ -1,0 +1,120 @@
+Verificação final — 13/11/2026
+$ rtk proxy node --test Tools/MysteryWeb/tests/*.test.mjs
+TAP version 13
+# Subtest: caso entregue é estruturalmente válido
+ok 1 - caso entregue é estruturalmente válido
+  ---
+  duration_ms: 2.8025
+  ...
+# Subtest: referência inexistente e ID duplicado falham com contexto
+ok 2 - referência inexistente e ID duplicado falham com contexto
+  ---
+  duration_ms: 0.400292
+  ...
+# Subtest: origem compartilhada não satisfaz independência e regra vazia falha
+ok 3 - origem compartilhada não satisfaz independência e regra vazia falha
+  ---
+  duration_ms: 0.203125
+  ...
+# Subtest: depoimento não pode ser concedido em fala de outra pessoa
+ok 4 - depoimento não pode ser concedido em fala de outra pessoa
+  ---
+  duration_ms: 0.090625
+  ...
+# Subtest: gramática desconhecida, retrato fora da folha e caminho externo são rejeitados
+ok 5 - gramática desconhecida, retrato fora da folha e caminho externo são rejeitados
+  ---
+  duration_ms: 0.461292
+  ...
+# Subtest: documento falso é permitido como afirmação registrada, sem mudar a verdade autoral
+ok 6 - documento falso é permitido como afirmação registrada, sem mudar a verdade autoral
+  ---
+  duration_ms: 0.083959
+  ...
+# Subtest: evidência autoral não pode ficar sem ação de aquisição
+ok 7 - evidência autoral não pode ficar sem ação de aquisição
+  ---
+  duration_ms: 0.143291
+  ...
+# Subtest: E/OU respeita os requisitos de cada alternativa, sem aceitar mera contagem
+ok 8 - E/OU respeita os requisitos de cada alternativa, sem aceitar mera contagem
+  ---
+  duration_ms: 0.444583
+  ...
+# Subtest: falas só concedem evidência ao alcançar sua posição; apresentação exige item conhecido
+ok 9 - falas só concedem evidência ao alcançar sua posição; apresentação exige item conhecido
+  ---
+  duration_ms: 0.776417
+  ...
+# Subtest: conversa→objeto e objeto→conversa preservam a base factual; repetição é idempotente
+ok 10 - conversa→objeto e objeto→conversa preservam a base factual; repetição é idempotente
+  ---
+  duration_ms: 0.423625
+  ...
+# Subtest: boatos repetidos, documento falso e hipótese sem base não viram prova de si mesmos
+ok 11 - boatos repetidos, documento falso e hipótese sem base não viram prova de si mesmos
+  ---
+  duration_ms: 0.096625
+  ...
+# Subtest: escolha fecha um assunto; alternativa permanece acessível e reinício limpa tudo
+ok 12 - escolha fecha um assunto; alternativa permanece acessível e reinício limpa tudo
+  ---
+  duration_ms: 0.230833
+  ...
+# Subtest: reports a cycle with no seed evidence as unsolved
+ok 13 - reports a cycle with no seed evidence as unsolved
+  ---
+  duration_ms: 1.511834
+  ...
+# Subtest: does not combine evidence from mutually exclusive routes
+ok 14 - does not combine evidence from mutually exclusive routes
+  ---
+  duration_ms: 0.266834
+  ...
+# Subtest: finds an explicitly unsolvable case and reports blocked requirements
+ok 15 - finds an explicitly unsolvable case and reports blocked requirements
+  ---
+  duration_ms: 0.068625
+  ...
+# Subtest: loss before acquisition blocks a source; loss after acquisition preserves its evidence
+ok 16 - loss before acquisition blocks a source; loss after acquisition preserves its evidence
+  ---
+  duration_ms: 0.159125
+  ...
+# Subtest: accepts either independently sourced support alternative
+ok 17 - accepts either independently sourced support alternative
+  ---
+  duration_ms: 1.011125
+  ...
+# Subtest: validates all seven zero, one, and two source loss configurations
+ok 18 - validates all seven zero, one, and two source loss configurations
+  ---
+  duration_ms: 0.616083
+  ...
+# Subtest: validates a prepared memory scenario after the source is lost
+ok 19 - validates a prepared memory scenario after the source is lost
+  ---
+  duration_ms: 0.485125
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 56.268084
+
+Exit code: 0.
+
+$ rtk proxy node Tools/MysteryWeb/scripts/validate.mjs --case Tools/MysteryWeb/data/case.json --all-losses 2
+Validação aprovada: 7 configurações, 10.1 ms.
+Relatório: Source/Narrative/mvp-arrival/validation-report.md
+Exit code: 0.
+
+$ rtk proxy node Tools/MysteryWeb/scripts/export-dossier.mjs --case Tools/MysteryWeb/data/case.json --out Source/Narrative/mvp-arrival
+Dossiê e mapa exportados a partir do JSON final.
+Exit code: 0.
+
+Observação: availableActions inclui avançar e encerrar conversa; a busca usa também o cancelamento disponível na interface.

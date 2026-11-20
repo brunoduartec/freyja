@@ -1,0 +1,46 @@
+{
+    "sourceModel": {
+        "instanceID": 77172
+    },
+    "normalizedPrefab": {
+        "instanceID": 99896
+    },
+    "targetFootprint": {
+        "x": 2.0,
+        "y": 2.0
+    },
+    "orientation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "sourceBounds": {
+        "m_Center": {
+            "x": 0.07368409633636475,
+            "y": 0.648769736289978,
+            "z": -0.07036757469177246
+        },
+        "m_Extent": {
+            "x": 1.0798614025115967,
+            "y": 0.648769736289978,
+            "z": 0.7413148880004883
+        }
+    },
+    "finalBounds": {
+        "m_Center": {
+            "x": 0.0,
+            "y": 0.6007898449897766,
+            "z": 0.0
+        },
+        "m_Extent": {
+            "x": 1.0,
+            "y": 0.6007898449897766,
+            "z": 0.6864907741546631
+        }
+    },
+    "uniformScale": 0.926044762134552,
+    "warnings": [
+        "Proporção diferente do lote; haverá espaço livre.",
+        "Confira visualmente frente e eventual piso/base embutida; não são inferidos automaticamente."
+    ]
+}

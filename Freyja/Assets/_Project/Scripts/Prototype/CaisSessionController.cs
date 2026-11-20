@@ -15,15 +15,20 @@ namespace Freyja.Prototype
         [SerializeField] private InputActionReference lookAction;
         [SerializeField] private InputActionReference releaseAction;
         [SerializeField] private InputActionReference resumeAction;
+        [SerializeField] private InputActionReference sprintAction;
+        [SerializeField] private InputActionReference jumpAction;
         [SerializeField] private LayerMask solidMask;
         [SerializeField] private Text controlsText;
+        [SerializeField] private string controlsTitle = "CAMINHAR PELO CAIS";
         [SerializeField] private float fallHeight = -0.5f;
         [SerializeField] private Bounds recoveryBounds = new Bounds(new Vector3(0, 4, -3), new Vector3(28, 20, 30));
 
-        private InputAction move, look, release, resume;
+        private InputAction move, look, release, resume, sprint, jump;
         private bool focused, captured, initialized, suppressFirstSample;
+        private bool modalOpen;
         private Vector3 safePosition;
         private Quaternion safeRotation;
+        public CaisCameraRig CameraRig => cameraRig;
         public bool IsCaptured => captured;
         public bool HasFocus => focused;
         public bool IsInitialized => initialized;
@@ -32,7 +37,7 @@ namespace Freyja.Prototype
         private void OnEnable()
         {
             focused = Application.isFocused;
-            captured = initialized = false;
+            captured = initialized = modalOpen = false;
             RecoveryCount = 0;
             if (player != null) player.ControlEnabled = false;
             if (cameraRig != null) cameraRig.ControlEnabled = false;
@@ -42,7 +47,11 @@ namespace Freyja.Prototype
             look = lookAction.action.Clone();
             release = releaseAction.action.Clone();
             resume = resumeAction.action.Clone();
+            sprint = sprintAction != null ? sprintAction.action?.Clone() : null;
+            jump = jumpAction != null ? jumpAction.action?.Clone() : null;
             move.Enable(); look.Enable(); release.Enable(); resume.Enable();
+            sprint?.Enable();
+            jump?.Enable();
         }
 
         private void Start()
@@ -84,7 +93,7 @@ namespace Freyja.Prototype
 
         private void Update()
         {
-            if (!initialized) return;
+            if (!initialized || modalOpen) return;
             if (!focused)
             {
                 ReleaseControl();
@@ -108,6 +117,7 @@ namespace Freyja.Prototype
                 return;
             }
             player.SetMoveInput(move.ReadValue<Vector2>());
+            player.SetTraversalInput(sprint?.IsPressed() == true, jump?.WasPressedThisFrame() == true);
             cameraRig.SetLookInput(look.ReadValue<Vector2>());
         }
 
@@ -119,7 +129,7 @@ namespace Freyja.Prototype
 
         public void CaptureControl()
         {
-            if (!initialized || !focused) return;
+            if (!initialized || !focused || modalOpen) return;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             captured = true;
@@ -128,11 +138,24 @@ namespace Freyja.Prototype
             ShowInstructions();
         }
 
+        public void SetModalOpen(bool open)
+        {
+            if (modalOpen == open) return;
+            modalOpen = open;
+            if (open) ReleaseControl();
+            else CaptureControl();
+        }
+
         public void ReleaseControl()
         {
             captured = false;
             suppressFirstSample = true;
-            if (player != null) { player.ControlEnabled = false; player.SetMoveInput(Vector2.zero); }
+            if (player != null)
+            {
+                player.ControlEnabled = false;
+                player.SetMoveInput(Vector2.zero);
+                player.SetTraversalInput(false, false);
+            }
             if (cameraRig != null) { cameraRig.ControlEnabled = false; cameraRig.SetLookInput(Vector2.zero); }
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -167,9 +190,11 @@ namespace Freyja.Prototype
         private void ShowInstructions()
         {
             if (controlsText == null) return;
-            controlsText.text = captured
-                ? "CAMINHAR PELO CAIS\nWASD  caminhar   |   Mouse  olhar   |   Esc  liberar cursor"
-                : "CAMINHAR PELO CAIS\nClique para controlar\nWASD  caminhar   |   Mouse  olhar   |   Esc  liberar cursor";
+            string traversal = (sprint != null ? "   |   Shift esquerdo  correr" : "")
+                + (jump != null ? "   |   Espaço  pular" : "");
+            string instructions = "\nWASD  caminhar   |   Mouse  olhar   |   Esc  liberar cursor" + traversal;
+            controlsText.text = modalOpen ? string.Empty
+                : controlsTitle + (captured ? "" : "\nClique para controlar") + instructions;
         }
 
         private void OnDisable()
@@ -177,7 +202,10 @@ namespace Freyja.Prototype
             initialized = false;
             ReleaseControl();
             move?.Dispose(); look?.Dispose(); release?.Dispose(); resume?.Dispose();
+            sprint?.Dispose();
+            jump?.Dispose();
             move = look = release = resume = null;
+            sprint = jump = null;
         }
     }
 }

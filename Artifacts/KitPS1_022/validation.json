@@ -1,0 +1,65 @@
+{
+  "preserved": true,
+  "objects": true,
+  "baseIntact": true,
+  "undo": true,
+  "reload": true,
+  "pixels": true,
+  "textures": [
+    {
+      "name": "Grass",
+      "width": 64,
+      "height": 64,
+      "filter": "Point"
+    },
+    {
+      "name": "Dirt",
+      "width": 64,
+      "height": 64,
+      "filter": "Point"
+    },
+    {
+      "name": "PathSand",
+      "width": 64,
+      "height": 64,
+      "filter": "Point"
+    },
+    {
+      "name": "BeachSand",
+      "width": 64,
+      "height": 64,
+      "filter": "Point"
+    },
+    {
+      "name": "Stone",
+      "width": 64,
+      "height": 64,
+      "filter": "Point"
+    },
+    {
+      "name": "Brick",
+      "width": 64,
+      "height": 64,
+      "filter": "Point"
+    },
+    {
+      "name": "Bark",
+      "width": 32,
+      "height": 32,
+      "filter": "Point"
+    },
+    {
+      "name": "Leaves",
+      "width": 32,
+      "height": 32,
+      "filter": "Point"
+    },
+    {
+      "name": "Rock",
+      "width": 64,
+      "height": 64,
+      "filter": "Point"
+    }
+  ],
+  "issues": []
+}

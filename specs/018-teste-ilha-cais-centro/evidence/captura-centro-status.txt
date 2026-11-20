@@ -1,0 +1,5 @@
+chegou=False
+segundos=55.00
+quadros=488
+posicao=(43.13, 7.90, 2.59)
+ponto=1

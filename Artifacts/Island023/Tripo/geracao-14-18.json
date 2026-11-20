@@ -1,0 +1,77 @@
+[
+  {
+    "piece": 14,
+    "task_id": "8e2407e4-e4b4-4041-b114-ddcc97c4f309",
+    "type": "image_to_model",
+    "status": "success",
+    "credits_consumed": 30,
+    "output_dir": "Artifacts/TripoAi/tripo-out/freyja-casa-leste-14-8e2407e4",
+    "files": [
+      "model.glb",
+      "rendered_image.webp",
+      "preview.png"
+    ],
+    "model_file": "Artifacts/TripoAi/tripo-out/freyja-casa-leste-14-8e2407e4/model.glb",
+    "preview": "Artifacts/TripoAi/tripo-out/freyja-casa-leste-14-8e2407e4/preview.png"
+  },
+  {
+    "piece": 15,
+    "task_id": "34d75252-6aa7-4a75-b1fa-e54273bea046",
+    "type": "image_to_model",
+    "status": "success",
+    "credits_consumed": 30,
+    "output_dir": "Artifacts/TripoAi/tripo-out/freyja-casa-praia-15-34d75252",
+    "files": [
+      "model.glb",
+      "rendered_image.webp",
+      "preview.png"
+    ],
+    "model_file": "Artifacts/TripoAi/tripo-out/freyja-casa-praia-15-34d75252/model.glb",
+    "preview": "Artifacts/TripoAi/tripo-out/freyja-casa-praia-15-34d75252/preview.png"
+  },
+  {
+    "piece": 16,
+    "task_id": "29ceeaf2-de12-45ae-ac28-70ad6947a811",
+    "type": "image_to_model",
+    "status": "success",
+    "credits_consumed": 30,
+    "output_dir": "Artifacts/TripoAi/tripo-out/freyja-casa-velho-16-29ceeaf2",
+    "files": [
+      "model.glb",
+      "rendered_image.webp",
+      "preview.png"
+    ],
+    "model_file": "Artifacts/TripoAi/tripo-out/freyja-casa-velho-16-29ceeaf2/model.glb",
+    "preview": "Artifacts/TripoAi/tripo-out/freyja-casa-velho-16-29ceeaf2/preview.png"
+  },
+  {
+    "piece": 17,
+    "task_id": "d5caeb7c-6caa-4763-80c1-68b754643edc",
+    "type": "image_to_model",
+    "status": "success",
+    "credits_consumed": 30,
+    "output_dir": "Artifacts/TripoAi/tripo-out/freyja-salao-17-d5caeb7c",
+    "files": [
+      "model.glb",
+      "rendered_image.webp",
+      "preview.png"
+    ],
+    "model_file": "Artifacts/TripoAi/tripo-out/freyja-salao-17-d5caeb7c/model.glb",
+    "preview": "Artifacts/TripoAi/tripo-out/freyja-salao-17-d5caeb7c/preview.png"
+  },
+  {
+    "piece": 18,
+    "task_id": "0a024e2c-69c2-4e16-a8e0-4bc9f92abf43",
+    "type": "image_to_model",
+    "status": "success",
+    "credits_consumed": 30,
+    "output_dir": "Artifacts/TripoAi/tripo-out/freyja-armazem-18-0a024e2c",
+    "files": [
+      "model.glb",
+      "rendered_image.webp",
+      "preview.png"
+    ],
+    "model_file": "Artifacts/TripoAi/tripo-out/freyja-armazem-18-0a024e2c/model.glb",
+    "preview": "Artifacts/TripoAi/tripo-out/freyja-armazem-18-0a024e2c/preview.png"
+  }
+]

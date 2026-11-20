@@ -1,0 +1,12 @@
+B3 base (-35.060, 9.473, 1.270) B3 local (-0.660, 0.473, -3.625) grounded=True
+B3 topo (-34.385, 10.550, 3.094) B3 local (-0.650, 1.550, -1.680) grounded=True
+B3 pausa (-34.385, 10.550, 3.094) B3 local (-0.650, 1.550, -1.680) grounded=True
+B3 retorno (-35.035, 9.489, 1.308) B3 local (-0.650, 0.489, -3.580) grounded=True
+Píer lateral (-29.850, 1.840, -51.850) B3 local (22.404, -7.160, -51.759) grounded=True
+Píer pausa (-30.467, 1.840, -52.994) B3 local (22.215, -7.160, -53.045) grounded=True
+Píer destino (-32.100, 1.840, -56.200) B3 local (21.777, -7.160, -56.616) grounded=True
+Píer retorno (-29.850, 2.030, -40.806) B3 local (18.626, -6.970, -41.381) grounded=True
+Píer lateral (-29.600, 1.840, -51.850) B3 local (22.639, -7.160, -51.673) grounded=True
+Píer pausa (-30.453, 1.840, -53.321) B3 local (22.340, -7.160, -53.347) grounded=True
+Píer destino (-32.091, 1.840, -56.185) B3 local (21.780, -7.160, -56.599) grounded=True
+Píer retorno (-29.600, 2.037, -40.813) B3 local (18.864, -6.963, -41.302) grounded=True

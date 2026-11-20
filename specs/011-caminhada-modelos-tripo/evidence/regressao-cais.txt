@@ -1,0 +1,5 @@
+Inicializada: True
+Captura: True
+W deslocou 1.508 m
+Órbita variou 6.48 graus
+Recuperação voltou a (0.000, 0.940, 7.500)

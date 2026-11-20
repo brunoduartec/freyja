@@ -1,0 +1,18 @@
+{
+  "seconds": 16.5628586,
+  "tests": [
+    {
+      "id": "Píer à igreja",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.37448296,
+      "heightError": 0.09490776,
+      "seconds": 16.5626,
+      "x": -1.66476941,
+      "y": 15.0350924,
+      "z": 26.0647221,
+      "waypoint": 320
+    }
+  ]
+}

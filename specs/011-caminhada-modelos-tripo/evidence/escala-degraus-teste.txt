@@ -1,0 +1,4 @@
+Inicialização True
+Escada 1 início (12.600, 4.327, -1.080) fim (14.378, 5.220, -6.232) velocidade 2.999995
+Escada 2 início (13.932, 2.808, 7.200) fim (15.125, 4.519, 2.499) velocidade 2.999999
+Retorno (0.000, 3.308, 5.040)

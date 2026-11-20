@@ -1,0 +1,1 @@
+Amostras alteradas por setor (oeste, leste, norte, sul, interior): 12931, 14420, 17097, 58, 14905. Diferença máxima de cota por setor: 3,32 m, 4,43 m, 3,24 m, 0,43 m, 0,38 m. Rochas ocultadas nesta entrega: 98. Já estavam inativas 27 instâncias. A vegetação afetada foi reassentada em duas passagens.

@@ -1,0 +1,70 @@
+{
+  "seconds": 24.57079,
+  "tests": [
+    {
+      "id": "Venda",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.379692167,
+      "heightError": 0.1597557,
+      "seconds": 2.233715,
+      "x": -8.681878,
+      "y": 7.040244,
+      "z": 0.496208638,
+      "waypoint": 31
+    },
+    {
+      "id": "Oficina",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3703316,
+      "heightError": 0.1904192,
+      "seconds": 2.1732502,
+      "x": -1.00626183,
+      "y": 7.039581,
+      "z": 3.579681,
+      "waypoint": 29
+    },
+    {
+      "id": "Salão comunitário",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3788372,
+      "heightError": 0.219573021,
+      "seconds": 3.11973476,
+      "x": 18.3869,
+      "y": 6.040427,
+      "z": -7.239365,
+      "waypoint": 44
+    },
+    {
+      "id": "Cais — praça",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.37809056,
+      "heightError": 0.0272536278,
+      "seconds": 10.1667395,
+      "x": -0.3352384,
+      "y": 6.22422647,
+      "z": -11.1748362,
+      "waypoint": 167
+    },
+    {
+      "id": "Praça — igreja",
+      "passed": true,
+      "reached": true,
+      "grounded": true,
+      "distance": 0.3751715,
+      "heightError": 0.00217151642,
+      "seconds": 6.847065,
+      "x": -2.17907786,
+      "y": 14.9921618,
+      "z": 30.6703262,
+      "waypoint": 114
+    }
+  ]
+}

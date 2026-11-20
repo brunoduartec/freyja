@@ -1,0 +1,17 @@
+L3 3.00 início 0
+pausa 0.000 m, apoiado True
+topo 153, apoiado True, clipe em 114 quadros
+volta à base, apoiado True
+B3 3.00 início 163
+pausa 0.000 m, apoiado True
+topo 234, apoiado True, clipe em 57 quadros
+volta à base, apoiado True
+L3 0.75 início 244
+pausa 0.000 m, apoiado True
+topo 534, apoiado True, clipe em 182 quadros
+volta à base, apoiado True
+B3 0.75 início 544
+pausa 0.000 m, apoiado True
+topo 648, apoiado True, clipe em 89 quadros
+volta à base, apoiado True
+Amostras 776, desvio angular máximo 0.00 graus

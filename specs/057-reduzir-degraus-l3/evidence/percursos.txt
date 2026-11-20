@@ -1,0 +1,8 @@
+L3 3.00 início 0
+pausa 0.000 m, apoiado True
+topo 153, apoiado True, clipe em 114 quadros
+volta à base, apoiado True
+L3 0.75 início 163
+pausa 0.000 m, apoiado True
+topo 453, apoiado True, clipe em 182 quadros
+volta à base, apoiado True

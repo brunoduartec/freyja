@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="16" result="Passed" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-17 16:17:31Z" end-time="2026-11-17 16:17:36Z" duration="4.5341563">
+  <test-suite type="TestSuite" id="1000" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-17 16:17:31Z" end-time="2026-11-17 16:17:36Z" duration="4.534156" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1021" name="Freyja.WorldBuilder.Tests.dll" fullname="/Users/bruno.duartec/Documents/Projects/Freyja/Freyja/Library/ScriptAssemblies/Freyja.WorldBuilder.Tests.dll" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-17 16:17:31Z" end-time="2026-11-17 16:17:36Z" duration="4.439461" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="10675" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1022" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-17 16:17:31Z" end-time="2026-11-17 16:17:36Z" duration="4.343448" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1023" name="WorldBuilder" fullname="Freyja.WorldBuilder" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-17 16:17:31Z" end-time="2026-11-17 16:17:36Z" duration="4.242164" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1024" name="Tests" fullname="Freyja.WorldBuilder.Tests" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-17 16:17:31Z" end-time="2026-11-17 16:17:36Z" duration="4.141401" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="GeometryTests" fullname="Freyja.WorldBuilder.Tests.GeometryTests" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-17 16:17:31Z" end-time="2026-11-17 16:17:32Z" duration="0.364561" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1007" name="Coordinates" fullname="Freyja.WorldBuilder.Tests.GeometryTests.Coordinates" methodname="Coordinates" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="9032780" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.016081" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="Determinism" fullname="Freyja.WorldBuilder.Tests.GeometryTests.Determinism" methodname="Determinism" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="1888942563" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.058290" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="HalfGrid" fullname="Freyja.WorldBuilder.Tests.GeometryTests.HalfGrid" methodname="HalfGrid" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="287650720" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.000132" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="Rectangles" fullname="Freyja.WorldBuilder.Tests.GeometryTests.Rectangles" methodname="Rectangles" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="753095173" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.000291" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1005" name="SnapSigned" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.012354" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1002" name="SnapSigned(-1.5f,-2.0f)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned(-1.5f,-2.0f)" methodname="SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="1610133610" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.000182" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1003" name="SnapSigned(1.5f,2.0f)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned(1.5f,2.0f)" methodname="SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="1780357590" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.000025" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1004" name="SnapSigned(-0.4f,0.0f)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned(-0.4f,0.0f)" methodname="SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="30639612" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.000023" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1012" name="StampFlatAndLocal" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.164885" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1009" name="StampFlatAndLocal(0)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal(0)" methodname="StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="1983430955" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.029327" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1010" name="StampFlatAndLocal(45)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal(45)" methodname="StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="2089610036" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.019857" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1011" name="StampFlatAndLocal(90)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal(90)" methodname="StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="388013293" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.016227" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1014" name="IntegrationTests" fullname="Freyja.WorldBuilder.Tests.IntegrationTests" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:36Z" duration="3.676660" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1017" name="ConflictsBlockMutation" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.ConflictsBlockMutation" methodname="ConflictsBlockMutation" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="647539723" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:32Z" duration="0.356984" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1020" name="NormalizerBottomCenter" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.NormalizerBottomCenter" methodname="NormalizerBottomCenter" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="785765897" result="Passed" start-time="2026-11-17 16:17:32Z" end-time="2026-11-17 16:17:33Z" duration="0.332816" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="RebuildPreservesManualAndIdentity" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.RebuildPreservesManualAndIdentity" methodname="RebuildPreservesManualAndIdentity" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="1407898232" result="Passed" start-time="2026-11-17 16:17:33Z" end-time="2026-11-17 16:17:33Z" duration="0.829425" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1018" name="RemovingLotKeepsManualChild" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.RemovingLotKeepsManualChild" methodname="RemovingLotKeepsManualChild" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="147839917" result="Passed" start-time="2026-11-17 16:17:33Z" end-time="2026-11-17 16:17:34Z" duration="0.681200" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="ReplacingHouseKeepsLot" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.ReplacingHouseKeepsLot" methodname="ReplacingHouseKeepsLot" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="2000896588" result="Passed" start-time="2026-11-17 16:17:34Z" end-time="2026-11-17 16:17:35Z" duration="0.722120" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1019" name="UndoRebuildRestoresPosition" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.UndoRebuildRestoresPosition" methodname="UndoRebuildRestoresPosition" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="583249324" result="Passed" start-time="2026-11-17 16:17:35Z" end-time="2026-11-17 16:17:36Z" duration="0.719159" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.
+Saving results to: /Users/bruno.duartec/Documents/Projects/Freyja/Artifacts/WorldBuilder/editmode-results.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
