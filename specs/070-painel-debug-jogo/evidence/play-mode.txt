@@ -1,0 +1,228 @@
+width: 1280
+height: 720
+encoding: png
+bytes: 246046
+source: screen
+savedPath: /tmp/freyja-070-ready.png
+hour: 11.599
+automatic: true
+IsModalOpen: false
+IsCaptured: false
+overlay: false
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+true
+F3
+solta
+hour: 12.740
+automatic: true
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+Meio-dia
+Meio-dia
+hour: 12.000
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+width: 1280
+height: 720
+encoding: png
+bytes: 228470
+source: screen
+savedPath: /Users/bruno.duartec/Documents/Projects/Freyja/specs/070-painel-debug-jogo/evidence/meio-dia.png
+Meia-noite
+Meia-noite
+hour: 12.000
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+width: 1280
+height: 720
+encoding: png
+bytes: 227400
+source: screen
+savedPath: /Users/bruno.duartec/Documents/Projects/Freyja/specs/070-painel-debug-jogo/evidence/meia-noite.png
+Horário
+Horário
+hour: 12.000
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+Colisores
+Colisores
+width: 1280
+height: 720
+encoding: png
+bytes: 238338
+source: screen
+savedPath: /Users/bruno.duartec/Documents/Projects/Freyja/specs/070-painel-debug-jogo/evidence/colisores-pier.png
+Ciclo automático
+Ciclo automático
+hour: 12.264
+automatic: true
+IsModalOpen: true
+IsCaptured: false
+overlay: true
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+hour: 12.532
+automatic: true
+IsModalOpen: true
+IsCaptured: false
+overlay: true
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+F3
+solta
+hour: 13.326
+automatic: true
+IsModalOpen: false
+IsCaptured: true
+overlay: true
+position: (-33.540, 1.765, -61.180)
+sun: 1.16
+lights: 0
+W
+hour: 13.858
+automatic: true
+IsModalOpen: false
+IsCaptured: true
+overlay: true
+position: (-33.175, 1.770, -58.028)
+sun: 1.16
+lights: 0
+solta
+hour: 14.390
+automatic: true
+IsModalOpen: false
+IsCaptured: true
+overlay: true
+position: (-32.794, 1.770, -54.839)
+sun: 1.16
+lights: 0
+F3
+solta
+Colisores
+Colisores
+Fechar
+Fechar
+hour: 16.246
+automatic: true
+IsModalOpen: false
+IsCaptured: true
+overlay: false
+position: (-32.794, 1.770, -54.839)
+sun: 1.16
+lights: 0
+F3
+solta
+Meia-noite
+Meia-noite
+Meia-noite
+hour: 0.000
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-32.794, 1.770, -54.839)
+sun: 0.0
+lights: 16
+hour: 0.000
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-32.794, 1.770, -54.839)
+sun: 0.0
+lights: 16
+width: 1280
+height: 720
+encoding: png
+bytes: 189629
+source: screen
+savedPath: /Users/bruno.duartec/Documents/Projects/Freyja/specs/070-painel-debug-jogo/evidence/meia-noite.png
+Seletor de hora
+Seletor de hora
+Seletor de hora
+hour: 17.799
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-32.794, 1.770, -54.839)
+sun: 0.28064692
+lights: 9
+Meio-dia
+Meio-dia
+Meio-dia
+Colisores
+Colisores
+Colisores
+hour: 12.000
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: true
+position: (-32.794, 1.770, -54.839)
+sun: 1.16
+lights: 0
+F3
+solta
+(-35.076, 9.427, 1.195)
+width: 1280
+height: 720
+encoding: png
+bytes: 336448
+source: screen
+savedPath: /Users/bruno.duartec/Documents/Projects/Freyja/specs/070-painel-debug-jogo/evidence/colisores-escada.png
+F3
+solta
+Colisores
+Colisores
+Colisores
+hour: 12.000
+automatic: false
+IsModalOpen: true
+IsCaptured: false
+overlay: false
+position: (-35.076, 9.427, 1.195)
+sun: 1.16
+lights: 0
+Fechar
+Fechar
+Fechar
+hour: 12.000
+automatic: false
+IsModalOpen: false
+IsCaptured: true
+overlay: false
+position: (-35.076, 9.427, 1.195)
+sun: 1.16
+lights: 0
+entries: []
+cursor: 13052
+session: d905fb09aafa47beb3f85dfe3c4ff0d1
+returned: 0
+dropped: false
+reset: false
+counts: {"error":1976,"warn":9,"log":15}
+groundTruth: {"sampledUtc":"2026-11-20T14:00:20.510372Z","ageMs":218,"compilationFailed":false,"compiling":false,"consoleErrors":0,"consoleWarnings":1,"consoleLogs":0,"seeded":true}

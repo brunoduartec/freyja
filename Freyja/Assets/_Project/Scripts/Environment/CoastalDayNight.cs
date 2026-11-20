@@ -14,6 +14,18 @@ namespace Freyja.Environment
         [SerializeField, Range(0f, 360f)] private float sunriseAzimuth = 155f;
 
         public float Hour => Mathf.Repeat(hour, 24f);
+        public bool AdvancesAutomatically
+        {
+            get => advanceClock;
+            set => advanceClock = value;
+        }
+
+        public void SetHour(float value)
+        {
+            hour = Mathf.Repeat(value, 24f);
+            if (runtimeSky != null)
+                ApplyLighting();
+        }
 
         private static readonly int Zenith = Shader.PropertyToID("_Zenith");
         private static readonly int Horizon = Shader.PropertyToID("_Horizon");

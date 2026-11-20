@@ -30,6 +30,7 @@ namespace Freyja.Prototype
         private Quaternion safeRotation;
         public CaisCameraRig CameraRig => cameraRig;
         public bool IsCaptured => captured;
+        public bool IsModalOpen => modalOpen;
         public bool HasFocus => focused;
         public bool IsInitialized => initialized;
         public int RecoveryCount { get; private set; }
@@ -138,12 +139,12 @@ namespace Freyja.Prototype
             ShowInstructions();
         }
 
-        public void SetModalOpen(bool open)
+        public void SetModalOpen(bool open, bool recaptureOnClose = true)
         {
             if (modalOpen == open) return;
             modalOpen = open;
             if (open) ReleaseControl();
-            else CaptureControl();
+            else if (recaptureOnClose) CaptureControl();
         }
 
         public void ReleaseControl()
