@@ -45,9 +45,9 @@ namespace Freyja.Prototype
                     animator.CrossFadeInFixedTime(nextTraversal, 0.08f);
                 climbing = false;
             }
-            else if (stairs != null && stairs.TryGetAscentAnimationTime(out float phase))
+            else if (stairs != null && stairs.TryGetStairAnimationTime(out float phase, out bool descending))
             {
-                animator.Play(StairAscent, 0, phase);
+                animator.Play(StairAscent, 0, descending ? Mathf.Repeat(1f - phase, 1f) : phase);
                 climbing = true;
             }
             else if (climbing || traversalState != 0)

@@ -38,6 +38,9 @@ namespace Freyja.Prototype
         }
         public Vector3 PlanarVelocity => planarVelocity;
         public float GroundSpeed { get; private set; }
+        public bool HasMoveIntent { get; private set; }
+        internal bool HasStairPose => stairPlacement != null &&
+            stairPlacement.TryGetStairAnimationTime(out _, out _);
         public bool IsRunning => GroundSpeed > moveSpeed * 1.05f && runHeld;
         public bool IsJumping { get; private set; }
         public float VerticalVelocity => verticalVelocity;
@@ -75,6 +78,7 @@ namespace Freyja.Prototype
             planarVelocity = Vector3.zero;
             verticalVelocity = 0f;
             GroundSpeed = 0f;
+            HasMoveIntent = false;
             IsJumping = false;
             SetTraversalInput(false, false);
             body.enabled = wasEnabled;
@@ -83,6 +87,7 @@ namespace Freyja.Prototype
         public void Tick(float deltaTime)
         {
             GroundSpeed = 0f;
+            HasMoveIntent = false;
             if (body == null || !body.enabled || deltaTime <= 0f)
                 return;
 
@@ -107,10 +112,11 @@ namespace Freyja.Prototype
                 }
             }
 
-            planarVelocity = stairPlacement != null && !IsJumping && !startJump
-                ? stairPlacement.LimitAscentSpeed(desiredPlanarVelocity)
+            planarVelocity = stairPlacement != null
+                ? stairPlacement.FilterGroundVelocity(desiredPlanarVelocity, !IsJumping && !startJump)
                 : desiredPlanarVelocity;
-            if (planarVelocity.sqrMagnitude > 0.0001f)
+            HasMoveIntent = planarVelocity.sqrMagnitude > 0.0001f;
+            if (HasMoveIntent)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(planarVelocity, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(

@@ -10,6 +10,8 @@ namespace Freyja.Prototype
         private const float DefaultPivotHeight = 1.35f;
         private const float DefaultPitch = 18f;
         private const float DefaultYaw = 180f;
+        private const float MinimumFramingDistance = 1.35f;
+        private const float StairFollowSpeed = 9f;
 
         [SerializeField] private Transform target;
         [SerializeField] private Camera viewCamera;
@@ -48,6 +50,11 @@ namespace Freyja.Prototype
         private bool hasPendingLookInput;
         private Vector3 lastFreeCameraPosition;
         private bool hasLastFreeCameraPosition;
+        private bool recoveringOrbit;
+        private float previousShoulderOffset;
+        private CaisPlayerController followedPlayer;
+        private float followedHeight;
+        private bool smoothingStairHeight;
         private bool reportedNoFreeInitialPosition;
         private bool conversation;
         private Vector3 conversationPosition;
@@ -58,7 +65,11 @@ namespace Freyja.Prototype
         public Transform Target
         {
             get => target;
-            set => target = value;
+            set
+            {
+                target = value;
+                followedPlayer = target != null ? target.GetComponent<CaisPlayerController>() : null;
+            }
         }
 
         public LayerMask ObstacleMask
@@ -87,6 +98,7 @@ namespace Freyja.Prototype
             if (viewCamera == null)
                 viewCamera = GetComponent<Camera>();
 
+            Target = target;
             ResetView(yaw);
         }
 
@@ -172,54 +184,142 @@ namespace Freyja.Prototype
             yaw = Mathf.LerpAngle(yaw, FramedYaw(), rotationBlend);
             pitch = Mathf.Lerp(pitch, requestedPitch, rotationBlend);
 
-            Quaternion orbitRotation = Quaternion.Euler(pitch, yaw, 0f);
-            Vector3 pivot = GetPivot(orbitRotation);
-            Vector3 back = orbitRotation * Vector3.back;
-            float desiredDistance = Mathf.Max(0f, distance);
-            float probeRadius = GetProbeRadius();
+            float stairBlend = 1f - Mathf.Exp(-StairFollowSpeed * safeDt);
+            ResolveOrbit(rotationBlend, stairBlend, snap: false);
+        }
 
-            if (obstacleMask.value != 0 && Physics.CheckSphere(
-                    pivot, probeRadius, obstacleMask, QueryTriggerInteraction.Ignore))
+        private void ResolveOrbit(float blend, float heightBlend, bool snap)
+        {
+            Quaternion orbit = Quaternion.Euler(pitch, yaw, 0f);
+            Vector3 center = target.position + Vector3.up * pivotHeight;
+            bool onStairs = followedPlayer != null && followedPlayer.HasStairPose;
+            if (snap || (!onStairs && !smoothingStairHeight))
+                followedHeight = center.y;
+            else
+                followedHeight = Mathf.Lerp(followedHeight, center.y, heightBlend);
+            smoothingStairHeight = onStairs || Mathf.Abs(center.y - followedHeight) > 0.005f;
+
+            Vector3 orbitPivot = center;
+            orbitPivot.y = followedHeight;
+            Vector3 shoulder = onStairs ? orbitPivot : GetShoulderPivot(orbitPivot, orbit);
+            float appliedShoulderOffset = Vector3.Distance(shoulder, orbitPivot);
+            bool shoulderChanged = Mathf.Abs(appliedShoulderOffset - previousShoulderOffset) > 0.05f;
+            previousShoulderOffset = appliedShoulderOffset;
+            float desiredDistance = Mathf.Max(0f, distance);
+            float minimumDistance = Mathf.Min(MinimumFramingDistance, desiredDistance);
+            float radius = GetProbeRadius();
+
+            float safeDistance = FindSafeDistance(shoulder, orbit * Vector3.back, desiredDistance, radius,
+                appliedShoulderOffset > 0f);
+            Vector3 position = shoulder + orbit * Vector3.back * safeDistance;
+            Quaternion rotation = orbit;
+            bool adjusted = safeDistance < minimumDistance || !HasClearView(position, radius)
+                || !IsTargetInFrame(position, rotation);
+            if (adjusted)
             {
-                if (!hasLastFreeCameraPosition)
+                if (TryFindClearOrbit(center, orbit, desiredDistance, minimumDistance, radius, out Vector3 centered))
                 {
-                    if (TryFindInitialFreePosition(pivot, orbitRotation, back, desiredDistance, probeRadius, out Vector3 freePosition))
+                    position = centered;
+                }
+                else
+                {
+                    // Keep the logical yaw used by movement while lifting the view above the obstruction.
+                    for (int elevation = 18; elevation <= 36; elevation += 18)
                     {
-                        lastFreeCameraPosition = freePosition;
-                        hasLastFreeCameraPosition = true;
-                        currentDistance = Vector3.Distance(pivot, freePosition);
-                    }
-                    else if (!reportedNoFreeInitialPosition)
-                    {
-                        Debug.LogWarning("CaisCameraRig could not find a free initial camera position; keeping its current position.", this);
-                        reportedNoFreeInitialPosition = true;
+                        Quaternion raised = Quaternion.Euler(Mathf.Min(pitch + elevation, 80f), yaw, 0f);
+                        if (TryFindClearOrbit(center, raised, desiredDistance, minimumDistance, radius, out Vector3 elevated))
+                        {
+                            position = elevated;
+                            rotation = raised;
+                            break;
+                        }
                     }
                 }
 
-                if (hasLastFreeCameraPosition)
-                    transform.SetPositionAndRotation(lastFreeCameraPosition, orbitRotation);
+                if (!HasClearView(position, radius) && hasLastFreeCameraPosition &&
+                    Vector3.Distance(lastFreeCameraPosition, center) <= desiredDistance &&
+                    HasClearView(lastFreeCameraPosition, radius) && IsTargetInFrame(lastFreeCameraPosition, orbit))
+                {
+                    position = lastFreeCameraPosition;
+                }
+            }
+
+            if (!IsPositionFree(position, radius))
+            {
+                if (!reportedNoFreeInitialPosition)
+                {
+                    Debug.LogWarning("CaisCameraRig could not find a free camera position.", this);
+                    reportedNoFreeInitialPosition = true;
+                }
                 return;
             }
 
-            float safeDistance = FindSafeDistance(pivot, back, desiredDistance, probeRadius);
-
-            // Collision response is immediate; only the return to the requested distance is eased.
-            if (safeDistance < currentDistance)
-                currentDistance = safeDistance;
-            else
-                currentDistance = Mathf.Lerp(currentDistance, safeDistance, rotationBlend);
-
-            transform.SetPositionAndRotation(pivot + back * currentDistance, orbitRotation);
-            if (IsPositionFree(transform.position, probeRadius))
+            if (!snap && (adjusted || recoveringOrbit || shoulderChanged))
             {
-                lastFreeCameraPosition = transform.position;
+                Vector3 blendedPosition = Vector3.Lerp(transform.position, position, blend);
+                Quaternion blendedRotation = Quaternion.Euler(
+                    Mathf.LerpAngle(transform.eulerAngles.x, rotation.eulerAngles.x, blend), yaw, 0f);
+                if (Vector3.Distance(blendedPosition, center) >= minimumDistance &&
+                    HasClearView(blendedPosition, radius) && IsTargetInFrame(blendedPosition, blendedRotation))
+                {
+                    recoveringOrbit = adjusted || Vector3.SqrMagnitude(blendedPosition - position) > 0.0025f;
+                    position = blendedPosition;
+                    rotation = blendedRotation;
+                }
+                else
+                {
+                    recoveringOrbit = adjusted;
+                }
+            }
+            else if (!snap && safeDistance > currentDistance)
+            {
+                // An obstruction shortens the orbit immediately. Restore distance gradually.
+                float distanceToApply = Mathf.Max(minimumDistance, Mathf.Lerp(currentDistance, safeDistance, blend));
+                Vector3 closerPosition = shoulder + orbit * Vector3.back * distanceToApply;
+                if (HasClearView(closerPosition, radius) && IsTargetInFrame(closerPosition, orbit))
+                    position = closerPosition;
+            }
+
+            transform.SetPositionAndRotation(position, rotation);
+            currentDistance = Vector3.Distance(adjusted ? center : shoulder, position);
+            if (HasClearView(position, radius))
+            {
+                lastFreeCameraPosition = position;
                 hasLastFreeCameraPosition = true;
             }
         }
 
-        private Vector3 GetPivot(Quaternion rotation)
+        private bool TryFindClearOrbit(Vector3 pivot, Quaternion rotation, float desiredDistance,
+            float minimumDistance, float radius, out Vector3 position)
         {
-            Vector3 pivot = target.position + Vector3.up * pivotHeight;
+            Vector3 back = rotation * Vector3.back;
+            float safeDistance = FindSafeDistance(pivot, back, desiredDistance, radius, offsetShoulder: false);
+            position = pivot + back * safeDistance;
+            return safeDistance >= minimumDistance && HasClearView(position, radius) && IsTargetInFrame(position, rotation);
+        }
+
+        private Vector3 ChestPosition => target.position + Vector3.up * Mathf.Max(0f, pivotHeight - 0.35f);
+
+        private bool HasClearView(Vector3 position, float radius)
+        {
+            return IsPositionFree(position, radius) && !Physics.Linecast(
+                ChestPosition, position, obstacleMask, QueryTriggerInteraction.Ignore);
+        }
+
+        private bool IsTargetInFrame(Vector3 position, Quaternion rotation)
+        {
+            Camera cameraToUse = ViewCamera;
+            if (cameraToUse == null || cameraToUse.orthographic)
+                return true;
+
+            Vector3 chest = Quaternion.Inverse(rotation) * (ChestPosition - position);
+            float verticalLimit = chest.z * Mathf.Tan(cameraToUse.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            return chest.z > cameraToUse.nearClipPlane && Mathf.Abs(chest.y) < verticalLimit
+                && Mathf.Abs(chest.x) < verticalLimit * cameraToUse.aspect;
+        }
+
+        private Vector3 GetShoulderPivot(Vector3 pivot, Quaternion rotation)
+        {
             if (shoulderOffset <= 0f)
                 return pivot;
 
@@ -231,10 +331,13 @@ namespace Freyja.Prototype
             return pivot + right * offset;
         }
 
-        private float FindSafeDistance(Vector3 pivot, Vector3 direction, float desiredDistance, float radius)
+        private float FindSafeDistance(Vector3 pivot, Vector3 direction, float desiredDistance, float radius, bool offsetShoulder)
         {
             if (obstacleMask.value == 0 || desiredDistance <= 0f)
                 return desiredDistance;
+
+            if (!IsPositionFree(pivot, radius))
+                return 0f;
 
             if (Physics.SphereCast(
                     pivot, radius, direction, out RaycastHit hit, desiredDistance,
@@ -249,9 +352,9 @@ namespace Freyja.Prototype
                     obstacleMask, QueryTriggerInteraction.Ignore))
                 desiredDistance = Mathf.Max(0f, hit.distance - collisionPadding);
 
-            if (shoulderOffset > 0f)
+            if (offsetShoulder)
             {
-                Vector3 chest = target.position + Vector3.up * Mathf.Max(0f, pivotHeight - 0.35f);
+                Vector3 chest = ChestPosition;
                 Vector3 sightline = pivot + direction * desiredDistance - chest;
                 if (Physics.SphereCast(chest, radius, sightline.normalized, out hit,
                         sightline.magnitude, obstacleMask, QueryTriggerInteraction.Ignore))
@@ -259,34 +362,6 @@ namespace Freyja.Prototype
                         - radius - collisionPadding, 0f, desiredDistance);
             }
             return desiredDistance;
-        }
-
-        private bool TryFindInitialFreePosition(
-            Vector3 pivot, Quaternion orbitRotation, Vector3 back, float desiredDistance, float radius,
-            out Vector3 freePosition)
-        {
-            // This only runs when the initial pivot is obstructed and no previous free point exists.
-            float[] elevations = { 0f, 15f, 30f, 45f, 60f, 75f };
-            float[] distanceFractions = { 1f, 0.75f, 0.5f, 0.25f };
-            Vector3 right = orbitRotation * Vector3.right;
-
-            for (int elevationIndex = 0; elevationIndex < elevations.Length; elevationIndex++)
-            {
-                Vector3 direction = Quaternion.AngleAxis(elevations[elevationIndex], right) * back;
-                for (int distanceIndex = 0; distanceIndex < distanceFractions.Length; distanceIndex++)
-                {
-                    float candidateDistance = desiredDistance * distanceFractions[distanceIndex];
-                    Vector3 candidate = pivot + direction * candidateDistance;
-                    if (IsPositionFree(candidate, radius))
-                    {
-                        freePosition = candidate;
-                        return true;
-                    }
-                }
-            }
-
-            freePosition = default;
-            return false;
         }
 
         private bool IsPositionFree(Vector3 position, float radius)
@@ -354,37 +429,10 @@ namespace Freyja.Prototype
                 return;
 
             yaw = FramedYaw();
-            Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
-            Vector3 pivot = GetPivot(rotation);
-            Vector3 back = rotation * Vector3.back;
-            float desiredDistance = Mathf.Max(0f, distance);
-            float radius = GetProbeRadius();
-
-            if (obstacleMask.value != 0 && Physics.CheckSphere(
-                    pivot, radius, obstacleMask, QueryTriggerInteraction.Ignore))
-            {
-                if (TryFindInitialFreePosition(pivot, rotation, back, desiredDistance, radius, out Vector3 freePosition))
-                {
-                    lastFreeCameraPosition = freePosition;
-                    hasLastFreeCameraPosition = true;
-                    currentDistance = Vector3.Distance(pivot, freePosition);
-                    transform.SetPositionAndRotation(freePosition, rotation);
-                }
-                else if (!reportedNoFreeInitialPosition)
-                {
-                    Debug.LogWarning("CaisCameraRig could not find a free initial camera position; keeping its current position.", this);
-                    reportedNoFreeInitialPosition = true;
-                }
-                return;
-            }
-
-            currentDistance = FindSafeDistance(pivot, back, desiredDistance, radius);
-            transform.SetPositionAndRotation(pivot + back * currentDistance, rotation);
-            if (IsPositionFree(transform.position, radius))
-            {
-                lastFreeCameraPosition = transform.position;
-                hasLastFreeCameraPosition = true;
-            }
+            hasLastFreeCameraPosition = false;
+            recoveringOrbit = false;
+            reportedNoFreeInitialPosition = false;
+            ResolveOrbit(1f, 1f, snap: true);
         }
     }
 }
