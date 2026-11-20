@@ -1,0 +1,6 @@
+Ponto da captura, seguindo em frente: (-36.364, 1.770, -52.718); mínimo Y=1.770; quadros sem chão=0; recuperações=0
+Oeste: pausa na junção: (-36.728, 1.840, -51.160); mínimo Y=1.770; quadros sem chão=0; recuperações=0
+Oeste: chegou ao cais de pedra: (-36.730, 1.840, -48.510); mínimo Y=1.770; quadros sem chão=0; recuperações=0
+Oeste: retorno ao convés: (-36.730, 1.770, -55.800); mínimo Y=1.770; quadros sem chão=0; recuperações=0
+Leste: cais ao convés: (-32.100, 1.770, -56.200); mínimo Y=1.770; quadros sem chão=0; recuperações=0
+Leste: convés ao cais: (-29.850, 1.840, -46.206); mínimo Y=1.770; quadros sem chão=0; recuperações=0
