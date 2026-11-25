@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Cais ao largo",
+    "reverse": false,
+    "success": true,
+    "reached": 59,
+    "total": 59,
+    "frames": 1475,
+    "distance": 73.75028,
+    "maxPlanarStep": 0.0500040054,
+    "maxVerticalStep": 0.04730165,
+    "end": [
+      -0.216401711,
+      6.21638346,
+      -11.1130333
+    ],
+    "failure": null
+  },
+  {
+    "name": "Cais ao largo",
+    "reverse": true,
+    "success": true,
+    "reached": 59,
+    "total": 59,
+    "frames": 1475,
+    "distance": 73.75027,
+    "maxPlanarStep": 0.0500035472,
+    "maxVerticalStep": 0.0533332825,
+    "end": [
+      -38.11532,
+      -2.96036649,
+      -52.7825279
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo ao salão",
+    "reverse": false,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 327,
+    "distance": 16.3499584,
+    "maxPlanarStep": 0.050000567,
+    "maxVerticalStep": 0.005253315,
+    "end": [
+      15.7568235,
+      6.043633,
+      -9.96925449
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo ao salão",
+    "reverse": true,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 327,
+    "distance": 16.3499966,
+    "maxPlanarStep": 0.05000049,
+    "maxVerticalStep": 0.00462579727,
+    "end": [
+      0.246463954,
+      6.23626661,
+      -10.9824409
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à venda",
+    "reverse": false,
+    "success": true,
+    "reached": 5,
+    "total": 5,
+    "frames": 252,
+    "distance": 12.6000242,
+    "maxPlanarStep": 0.0500004552,
+    "maxVerticalStep": 0.009768486,
+    "end": [
+      -9.620114,
+      6.96189,
+      -2.988938
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à venda",
+    "reverse": true,
+    "success": true,
+    "reached": 5,
+    "total": 5,
+    "frames": 252,
+    "distance": 12.600009,
+    "maxPlanarStep": 0.0500005074,
+    "maxVerticalStep": 0.010122776,
+    "end": [
+      -0.186642289,
+      6.22343874,
+      -10.8189907
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à A1 e moradores",
+    "reverse": false,
+    "success": false,
+    "reached": 29,
+    "total": 34,
+    "frames": 871,
+    "distance": 35.8967133,
+    "maxPlanarStep": 0.0500012338,
+    "maxVerticalStep": 0.08619022,
+    "end": [
+      -0.1781827,
+      12.923914,
+      19.6511784
+    ],
+    "failure": "movement-blocked"
+  },
+  {
+    "name": "Largo à A1 e moradores",
+    "reverse": true,
+    "success": true,
+    "reached": 34,
+    "total": 34,
+    "frames": 888,
+    "distance": 44.39968,
+    "maxPlanarStep": 0.0500014573,
+    "maxVerticalStep": 0.09833336,
+    "end": [
+      0.13079685,
+      6.23328733,
+      -10.7817354
+    ],
+    "failure": null
+  },
+  {
+    "name": "Moradores ao acesso A1",
+    "reverse": false,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 292,
+    "distance": 14.6000195,
+    "maxPlanarStep": 0.0500021242,
+    "maxVerticalStep": 0.0114135742,
+    "end": [
+      -17.9471188,
+      14.3976736,
+      26.2579861
+    ],
+    "failure": null
+  },
+  {
+    "name": "Moradores ao acesso A1",
+    "reverse": true,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 292,
+    "distance": 14.599987,
+    "maxPlanarStep": 0.0500011444,
+    "maxVerticalStep": 0.04594326,
+    "end": [
+      -8.233674,
+      13.6192169,
+      18.8425179
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à A3 e moradores",
+    "reverse": false,
+    "success": true,
+    "reached": 18,
+    "total": 18,
+    "frames": 527,
+    "distance": 26.350069,
+    "maxPlanarStep": 0.0500005521,
+    "maxVerticalStep": 0.0296401978,
+    "end": [
+      16.7780781,
+      8.080539,
+      3.08181643
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à A3 e moradores",
+    "reverse": true,
+    "success": true,
+    "reached": 18,
+    "total": 18,
+    "frames": 527,
+    "distance": 26.3499279,
+    "maxPlanarStep": 0.05000074,
+    "maxVerticalStep": 0.0290632248,
+    "end": [
+      0.124271177,
+      6.232942,
+      -10.7924967
+    ],
+    "failure": null
+  }
+]

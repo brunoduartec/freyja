@@ -1,0 +1,722 @@
+{
+  "credits_available": 630,
+  "estimated_per_character": {
+    "generation": 30,
+    "rig_check": 0,
+    "rig": 25
+  },
+  "estimated_total": 550,
+  "estimated_shortfall": 0,
+  "characters": [
+    {
+      "character": "duda-neves",
+      "house": "A1",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/duda-neves-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "duda-neves",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/duda-neves",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/duda-neves-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/duda-neves-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/duda-neves-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "elisa-neves",
+      "house": "A1",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/elisa-neves-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "elisa-neves",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/elisa-neves",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/elisa-neves-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/elisa-neves-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/elisa-neves-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "joaquim-neves",
+      "house": "A1",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/joaquim-neves-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "joaquim-neves",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/joaquim-neves",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/joaquim-neves-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/joaquim-neves-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/joaquim-neves-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "mauro-neves",
+      "house": "A1",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/mauro-neves-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "mauro-neves",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/mauro-neves",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/mauro-neves-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/mauro-neves-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A1/mauro-neves-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "amelia-faria",
+      "house": "A2",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/amelia-faria-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "amelia-faria",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/amelia-faria",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/amelia-faria-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/amelia-faria-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/amelia-faria-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "sara-faria",
+      "house": "A2",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/sara-faria-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "sara-faria",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/sara-faria",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/sara-faria-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/sara-faria-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/sara-faria-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "tomas-faria",
+      "house": "A2",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/tomas-faria-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "tomas-faria",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/tomas-faria",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/tomas-faria-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/tomas-faria-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A2/tomas-faria-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "helena-batista",
+      "house": "A3",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/helena-batista-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "helena-batista",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/helena-batista",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/helena-batista-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/helena-batista-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/helena-batista-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "ivo-batista",
+      "house": "A3",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/ivo-batista-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "ivo-batista",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/ivo-batista",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/ivo-batista-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/ivo-batista-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/ivo-batista-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    },
+    {
+      "character": "luana-batista",
+      "house": "A3",
+      "command": [
+        "tripo",
+        "make",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/luana-batista-pose-a-meshy.png",
+        "-p",
+        "face_limit=30000",
+        "-p",
+        "texture=true",
+        "-p",
+        "pbr=true",
+        "--then",
+        "rig-check,rig:spec=mixamo,out_format=fbx",
+        "--name",
+        "luana-batista",
+        "--out",
+        "/Users/bruno.duartec/Documents/Projects/Freyja/TripoAi/luana-batista",
+        "--dry-run",
+        "--json"
+      ],
+      "plan": {
+        "dry_run": true,
+        "valid": true,
+        "input": "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/luana-batista-pose-a-meshy.png",
+        "model": "v3.1-20260211",
+        "model_reason": "default high-fidelity → v3.1",
+        "steps": [
+          {
+            "name": "image-to-model",
+            "endpoint": "/v3/generation/image-to-model",
+            "task_type": "image_to_model",
+            "payload": {
+              "input": "<upload:/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/luana-batista-pose-a-meshy.png>",
+              "model": "v3.1-20260211",
+              "face_limit": 30000,
+              "texture": true,
+              "pbr": true
+            }
+          },
+          {
+            "name": "rig-check",
+            "endpoint": "/v3/animations/rig-check",
+            "task_type": "animate_prerigcheck",
+            "payload": {
+              "input": "<upstream>"
+            }
+          },
+          {
+            "name": "rig",
+            "endpoint": "/v3/animations/rig",
+            "task_type": "animate_rig",
+            "payload": {
+              "input": "<upstream>",
+              "spec": "mixamo",
+              "out_format": "fbx",
+              "model": "v2.5-20260210"
+            }
+          }
+        ],
+        "pending_uploads": [
+          "/Users/bruno.duartec/Documents/Projects/Freyja/Referencias/Poses-Moradores/A3/luana-batista-pose-a-meshy.png"
+        ],
+        "deliverables": [],
+        "candidates": 1,
+        "warnings": [],
+        "errors": [],
+        "cost_notes": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Freyja.WorldBuilder.Editor",
+  "references": [
+    "Freyja.WorldBuilder"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

@@ -1,0 +1,9 @@
+Island grass 7: 954 tufts, 35.8 / 36.5 eligible square meters.
+Island grass 1: 196 tufts, 8.4 / 8.7 eligible square meters.
+Island grass 2: 12950 tufts, 370.9 / 370.9 eligible square meters.
+Island grass 3: 11242 tufts, 390.3 / 398.3 eligible square meters.
+Island grass 4: 4439 tufts, 165.9 / 169.3 eligible square meters.
+Island grass 5: 38570 tufts, 1173.2 / 1179.1 eligible square meters.
+Island grass 6: 17946 tufts, 528.7 / 528.7 eligible square meters.
+Island grass 8: 2034 tufts, 73.9 / 75.4 eligible square meters.
+Island grass 9: 10148 tufts, 316.6 / 318.2 eligible square meters.

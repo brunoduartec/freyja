@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Cais ao largo",
+    "reverse": false,
+    "success": true,
+    "reached": 37,
+    "total": 37,
+    "frames": 1557,
+    "distance": 77.85057,
+    "maxPlanarStep": 0.0500034541,
+    "maxVerticalStep": 0.040667057,
+    "end": [
+      -0.247389242,
+      6.21491337,
+      -11.1291513
+    ],
+    "failure": null,
+    "minimumY": 1.83999968,
+    "groundedFrames": 1557,
+    "groundedAtEnd": true
+  },
+  {
+    "name": "Cais ao largo",
+    "reverse": true,
+    "success": true,
+    "reached": 37,
+    "total": 37,
+    "frames": 1557,
+    "distance": 77.83885,
+    "maxPlanarStep": 0.0500030927,
+    "maxVerticalStep": 0.0420105457,
+    "end": [
+      -33.5328369,
+      1.83999991,
+      -60.9361343
+    ],
+    "failure": null,
+    "minimumY": 1.83999968,
+    "groundedFrames": 1554,
+    "groundedAtEnd": true
+  },
+  {
+    "name": "Largo à A1 e moradores",
+    "reverse": false,
+    "success": true,
+    "reached": 31,
+    "total": 31,
+    "frames": 853,
+    "distance": 42.6497536,
+    "maxPlanarStep": 0.0500012338,
+    "maxVerticalStep": 0.08619213,
+    "end": [
+      -7.75542,
+      13.5620022,
+      18.8090458
+    ],
+    "failure": null,
+    "minimumY": 6.22639465,
+    "groundedFrames": 853,
+    "groundedAtEnd": true
+  },
+  {
+    "name": "Largo à A1 e moradores",
+    "reverse": true,
+    "success": true,
+    "reached": 31,
+    "total": 31,
+    "frames": 853,
+    "distance": 42.6497269,
+    "maxPlanarStep": 0.0500008874,
+    "maxVerticalStep": 0.0583333969,
+    "end": [
+      0.125202939,
+      6.232991,
+      -10.7909679
+    ],
+    "failure": null,
+    "minimumY": 6.232991,
+    "groundedFrames": 843,
+    "groundedAtEnd": true
+  }
+]

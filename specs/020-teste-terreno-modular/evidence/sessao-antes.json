@@ -1,0 +1,58 @@
+{
+    "MonoBehaviour": {
+        "m_Enabled": true,
+        "m_EditorHideFlags": 0,
+        "m_Name": "",
+        "m_EditorClassIdentifier": "Assembly-CSharp::Freyja.Prototype.CaisSessionController",
+        "player": {
+            "instanceID": 0
+        },
+        "cameraRig": {
+            "instanceID": 0
+        },
+        "spawnPoint": {
+            "instanceID": 0
+        },
+        "moveAction": {
+            "fileID": 11400000,
+            "guid": "a5e9fee1ac0f9411f8bca99f5b6e3494",
+            "type": 2
+        },
+        "lookAction": {
+            "fileID": 11400000,
+            "guid": "9a77c5a6b81184856885a29d60113377",
+            "type": 2
+        },
+        "releaseAction": {
+            "fileID": 11400000,
+            "guid": "e31d08d238b8847dfb7e337110e3ba01",
+            "type": 2
+        },
+        "resumeAction": {
+            "fileID": 11400000,
+            "guid": "fe50ca0a77a634322a627f9f57c38d45",
+            "type": 2
+        },
+        "solidMask": {
+            "serializedVersion": "2",
+            "m_Bits": 256
+        },
+        "controlsText": {
+            "instanceID": 0
+        },
+        "controlsTitle": "CAMINHAR PELA ILHA",
+        "fallHeight": -2.0,
+        "recoveryBounds": {
+            "m_Center": {
+                "x": 0.0,
+                "y": 10.0,
+                "z": 0.0
+            },
+            "m_Extent": {
+                "x": 90.0,
+                "y": 40.0,
+                "z": 85.0
+            }
+        }
+    }
+}

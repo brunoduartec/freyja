@@ -1,0 +1,10 @@
+Rampa: (-4.767, 1.690, 17.803), erro horizontal=0.000, grounded=True
+Patamar: (-5.608, 1.878, 18.564), erro horizontal=0.000, grounded=True
+Entrada do píer: (-5.972, 1.878, 19.296), erro horizontal=0.000, grounded=True
+Ponta do píer: (-1.641, 1.878, 24.840), erro horizontal=0.000, grounded=True
+Volta do píer: (-6.048, 1.878, 19.199), erro horizontal=0.000, grounded=True
+Interior do galpão: (-8.074, 1.878, 17.432), erro horizontal=0.000, grounded=True
+Saída do galpão: (-6.124, 1.878, 19.102), erro horizontal=0.000, grounded=True
+Descida da rampa: (-4.767, 1.690, 17.803), erro horizontal=0.000, grounded=True
+Retorno ao caminho: (-4.084, 1.447, 17.051), erro horizontal=0.000, grounded=True
+Recuperações durante o ensaio: 0

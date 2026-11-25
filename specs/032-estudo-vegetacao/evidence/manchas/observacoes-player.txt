@@ -1,0 +1,7 @@
+Mac OS X 27.2.1, Apple M4 Pro, Metal
+Camera: 480x270
+Dense: 98479 layout instances. Light: 52443 layout instances.
+Original pose: 21 cells, 9563 instances, 21 batches
+Distance: 0 cells, 0 instances, 0 batches
+Frustum: 0 cells, 0 instances, 0 batches
+Return: 21 cells, 9563 instances, 21 batches

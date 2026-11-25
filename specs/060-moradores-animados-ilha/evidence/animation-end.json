@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Duda Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle02"
+    ],
+    "time": 0.156776771,
+    "footClearance": 0.024848938,
+    "lowestPoint": [
+      -6.95503139,
+      13.4681568,
+      20.17633
+    ],
+    "leftHand": "(-7.07, 14.26, 19.78)",
+    "head": "(-7.00, 14.72, 20.01)"
+  },
+  {
+    "name": "Elisa Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle02"
+    ],
+    "time": 0.346789747,
+    "footClearance": 0.006822586,
+    "lowestPoint": [
+      -6.34466171,
+      6.94168472,
+      -2.75538445
+    ],
+    "leftHand": "(-6.53, 7.71, -3.10)",
+    "head": "(-6.37, 8.23, -2.90)"
+  },
+  {
+    "name": "Joaquim Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle02"
+    ],
+    "time": 1.35463035,
+    "footClearance": 0.0240068436,
+    "lowestPoint": [
+      -8.76326,
+      14.0664511,
+      21.9516163
+    ],
+    "leftHand": "(-8.64, 14.93, 22.01)",
+    "head": "(-8.82, 15.50, 22.22)"
+  },
+  {
+    "name": "Mauro Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle02"
+    ],
+    "time": 0.210909173,
+    "footClearance": 0.02504158,
+    "lowestPoint": [
+      -9.78085,
+      13.8238258,
+      20.35379
+    ],
+    "leftHand": "(-9.93, 14.76, 20.43)",
+    "head": "(-10.01, 15.39, 20.18)"
+  },
+  {
+    "name": "Amélia Faria",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle02"
+    ],
+    "time": 0.156776771,
+    "footClearance": 0.009074211,
+    "lowestPoint": [
+      11.0446405,
+      6.039112,
+      -10.4296026
+    ],
+    "leftHand": "(10.91, 6.88, -10.84)",
+    "head": "(11.00, 7.38, -10.59)"
+  },
+  {
+    "name": "Sara Faria",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle01"
+    ],
+    "time": 1.8627677,
+    "footClearance": 0.02253294,
+    "lowestPoint": [
+      17.5686741,
+      5.95487547,
+      -11.6173563
+    ],
+    "leftHand": "(17.56, 6.82, -11.77)",
+    "head": "(17.46, 7.39, -11.52)"
+  },
+  {
+    "name": "Tomás Faria",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle01"
+    ],
+    "time": 1.35463035,
+    "footClearance": 0.00696468353,
+    "lowestPoint": [
+      7.886375,
+      6.04603,
+      -11.8560524
+    ],
+    "leftHand": "(8.07, 6.69, -12.18)",
+    "head": "(7.95, 7.04, -12.03)"
+  },
+  {
+    "name": "Helena Batista",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle01"
+    ],
+    "time": 0.210909173,
+    "footClearance": 0.00595665,
+    "lowestPoint": [
+      18.1932468,
+      8.004474,
+      3.23614383
+    ],
+    "leftHand": "(18.39, 8.85, 2.96)",
+    "head": "(18.28, 9.42, 3.18)"
+  },
+  {
+    "name": "Ivo Batista",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle02"
+    ],
+    "time": 0.156776771,
+    "footClearance": 0.01737976,
+    "lowestPoint": [
+      10.780962,
+      7.94924068,
+      2.64553857
+    ],
+    "leftHand": "(10.92, 8.88, 2.55)",
+    "head": "(11.00, 9.46, 2.83)"
+  },
+  {
+    "name": "Luana Batista",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle02"
+    ],
+    "time": 1.8627677,
+    "footClearance": 0.02904749,
+    "lowestPoint": [
+      15.0535336,
+      5.96944666,
+      -12.9413548
+    ],
+    "leftHand": "(14.97, 6.86, -12.53)",
+    "head": "(14.97, 7.37, -12.83)"
+  }
+]

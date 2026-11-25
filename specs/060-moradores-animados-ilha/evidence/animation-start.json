@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Duda Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle01"
+    ],
+    "time": 0.0,
+    "leftHand": "(-7.06, 14.26, 19.77)",
+    "head": "(-7.05, 14.73, 20.00)"
+  },
+  {
+    "name": "Elisa Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle02"
+    ],
+    "time": 0.0,
+    "leftHand": "(-6.55, 7.73, -3.10)",
+    "head": "(-6.40, 8.23, -2.89)"
+  },
+  {
+    "name": "Joaquim Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle02"
+    ],
+    "time": 0.0,
+    "leftHand": "(-8.65, 14.96, 21.98)",
+    "head": "(-8.85, 15.51, 22.18)"
+  },
+  {
+    "name": "Mauro Neves",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle01"
+    ],
+    "time": 0.0,
+    "leftHand": "(-9.91, 14.77, 20.48)",
+    "head": "(-9.91, 15.39, 20.19)"
+  },
+  {
+    "name": "Amélia Faria",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle01"
+    ],
+    "time": 0.0,
+    "leftHand": "(11.93, 6.86, -9.85)",
+    "head": "(11.97, 7.38, -9.60)"
+  },
+  {
+    "name": "Sara Faria",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle01"
+    ],
+    "time": 0.0,
+    "leftHand": "(17.56, 6.84, -11.76)",
+    "head": "(17.47, 7.41, -11.52)"
+  },
+  {
+    "name": "Tomás Faria",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle01"
+    ],
+    "time": 0.0,
+    "leftHand": "(8.09, 6.69, -12.16)",
+    "head": "(7.99, 7.05, -12.01)"
+  },
+  {
+    "name": "Helena Batista",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle01"
+    ],
+    "time": 0.0,
+    "leftHand": "(18.38, 8.86, 2.94)",
+    "head": "(18.25, 9.42, 3.17)"
+  },
+  {
+    "name": "Ivo Batista",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanM@Idle01"
+    ],
+    "time": 0.0,
+    "leftHand": "(10.89, 8.89, 2.51)",
+    "head": "(10.88, 9.46, 2.81)"
+  },
+  {
+    "name": "Luana Batista",
+    "valid": true,
+    "human": true,
+    "clip": [
+      "HumanF@Idle02"
+    ],
+    "time": 0.0,
+    "leftHand": "(14.98, 6.86, -12.52)",
+    "head": "(14.97, 7.38, -12.83)"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "size_px": [
+    1536,
+    1024
+  ],
+  "unity_camera": {
+    "position": [
+      0,
+      98.139,
+      -170.526
+    ],
+    "rotation": [
+      28,
+      0,
+      0
+    ],
+    "field_of_view": 34
+  },
+  "visual_registration": {
+    "unity_scale": 1.22,
+    "unity_offset_fraction": [
+      -0.11,
+      -0.219
+    ]
+  },
+  "baseline": "Artifacts/AnaliseVisual/ilha-base-compactacao.png",
+  "reference": "specs/017-referencia-terreno-tripo/vila-casa-isolada.png",
+  "land_m": [
+    132.5,
+    137
+  ]
+}

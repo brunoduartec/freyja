@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Duda Neves",
+    "id": "duda-neves",
+    "position": [
+      -7.000004,
+      13.468173,
+      20.0
+    ],
+    "yaw": 270.0,
+    "height": 1.53,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 29606,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/DudaNeves.prefab"
+  },
+  {
+    "name": "Elisa Neves",
+    "id": "elisa-neves",
+    "position": [
+      -6.40000534,
+      6.941694,
+      -2.90000153
+    ],
+    "yaw": 286.0,
+    "height": 1.6,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 29324,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/ElisaNeves.prefab"
+  },
+  {
+    "name": "Joaquim Neves",
+    "id": "joaquim-neves",
+    "position": [
+      -8.799999,
+      14.066453,
+      22.2000046
+    ],
+    "yaw": 210.0,
+    "height": 1.72,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 28290,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/JoaquimNeves.prefab"
+  },
+  {
+    "name": "Mauro Neves",
+    "id": "mauro-neves",
+    "position": [
+      -10.0,
+      13.8238316,
+      20.1999969
+    ],
+    "yaw": 90.0,
+    "height": 1.8,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 28568,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/MauroNeves.prefab"
+  },
+  {
+    "name": "Amélia Faria",
+    "id": "amelia-faria",
+    "position": [
+      11.0,
+      6.03911972,
+      -10.5999985
+    ],
+    "yaw": 270.0,
+    "height": 1.6,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 29478,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/AmeliaFaria.prefab"
+  },
+  {
+    "name": "Sara Faria",
+    "id": "sara-faria",
+    "position": [
+      17.5,
+      5.95390368,
+      -11.5
+    ],
+    "yaw": 242.0,
+    "height": 1.68,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 29098,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/SaraFaria.prefab"
+  },
+  {
+    "name": "Tomás Faria",
+    "id": "tomas-faria",
+    "position": [
+      8.0,
+      6.0460906,
+      -12.0
+    ],
+    "yaw": 225.0,
+    "height": 1.3,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 29256,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/TomasFaria.prefab"
+  },
+  {
+    "name": "Helena Batista",
+    "id": "helena-batista",
+    "position": [
+      18.2999954,
+      8.004466,
+      3.199997
+    ],
+    "yaw": 235.0,
+    "height": 1.66,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 29394,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/HelenaBatista.prefab"
+  },
+  {
+    "name": "Ivo Batista",
+    "id": "ivo-batista",
+    "position": [
+      11.0,
+      7.94924641,
+      2.800003
+    ],
+    "yaw": 270.0,
+    "height": 1.77,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 28874,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/IvoBatista.prefab"
+  },
+  {
+    "name": "Luana Batista",
+    "id": "luana-batista",
+    "position": [
+      15.0,
+      5.969451,
+      -12.7999992
+    ],
+    "yaw": 62.0,
+    "height": 1.7,
+    "avatarValid": true,
+    "humanoid": true,
+    "triangles": 29294,
+    "prefab": "Assets/_Project/Prefabs/Moradores060/LuanaBatista.prefab"
+  }
+]

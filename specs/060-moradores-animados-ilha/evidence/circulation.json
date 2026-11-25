@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Largo ao salão",
+    "reverse": false,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 327,
+    "distance": 16.3499584,
+    "maxPlanarStep": 0.050000567,
+    "maxVerticalStep": 0.005253315,
+    "end": [
+      15.7568235,
+      6.043633,
+      -9.96925449
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo ao salão",
+    "reverse": true,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 327,
+    "distance": 16.3499966,
+    "maxPlanarStep": 0.05000049,
+    "maxVerticalStep": 0.00462579727,
+    "end": [
+      0.246463954,
+      6.23626661,
+      -10.9824409
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à venda",
+    "reverse": false,
+    "success": true,
+    "reached": 5,
+    "total": 5,
+    "frames": 252,
+    "distance": 12.6000242,
+    "maxPlanarStep": 0.0500004552,
+    "maxVerticalStep": 0.009768486,
+    "end": [
+      -9.620114,
+      6.96189,
+      -2.988938
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à venda",
+    "reverse": true,
+    "success": true,
+    "reached": 5,
+    "total": 5,
+    "frames": 252,
+    "distance": 12.600009,
+    "maxPlanarStep": 0.0500005074,
+    "maxVerticalStep": 0.010122776,
+    "end": [
+      -0.186642289,
+      6.22343874,
+      -10.8189907
+    ],
+    "failure": null
+  },
+  {
+    "name": "Moradores ao acesso A1",
+    "reverse": false,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 292,
+    "distance": 14.6000195,
+    "maxPlanarStep": 0.0500021242,
+    "maxVerticalStep": 0.0114135742,
+    "end": [
+      -17.9471188,
+      14.3976736,
+      26.2579861
+    ],
+    "failure": null
+  },
+  {
+    "name": "Moradores ao acesso A1",
+    "reverse": true,
+    "success": true,
+    "reached": 6,
+    "total": 6,
+    "frames": 292,
+    "distance": 14.599987,
+    "maxPlanarStep": 0.0500011444,
+    "maxVerticalStep": 0.04594326,
+    "end": [
+      -8.233674,
+      13.6192169,
+      18.8425179
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à A3 e moradores",
+    "reverse": false,
+    "success": true,
+    "reached": 18,
+    "total": 18,
+    "frames": 527,
+    "distance": 26.350069,
+    "maxPlanarStep": 0.0500005521,
+    "maxVerticalStep": 0.0296401978,
+    "end": [
+      16.7780781,
+      8.080539,
+      3.08181643
+    ],
+    "failure": null
+  },
+  {
+    "name": "Largo à A3 e moradores",
+    "reverse": true,
+    "success": true,
+    "reached": 18,
+    "total": 18,
+    "frames": 527,
+    "distance": 26.3499279,
+    "maxPlanarStep": 0.05000074,
+    "maxVerticalStep": 0.0290632248,
+    "end": [
+      0.124271177,
+      6.232942,
+      -10.7924967
+    ],
+    "failure": null
+  },
+  {
+    "name": "Cais ao largo",
+    "reverse": false,
+    "success": true,
+    "reached": 37,
+    "total": 37,
+    "frames": 1557,
+    "distance": 77.85057,
+    "maxPlanarStep": 0.0500034541,
+    "maxVerticalStep": 0.040667057,
+    "end": [
+      -0.247389242,
+      6.21491337,
+      -11.1291513
+    ],
+    "failure": null,
+    "minimumY": 1.83999968,
+    "groundedFrames": 1557,
+    "groundedAtEnd": true
+  },
+  {
+    "name": "Cais ao largo",
+    "reverse": true,
+    "success": true,
+    "reached": 37,
+    "total": 37,
+    "frames": 1557,
+    "distance": 77.83885,
+    "maxPlanarStep": 0.0500030927,
+    "maxVerticalStep": 0.0420105457,
+    "end": [
+      -33.5328369,
+      1.83999991,
+      -60.9361343
+    ],
+    "failure": null,
+    "minimumY": 1.83999968,
+    "groundedFrames": 1554,
+    "groundedAtEnd": true
+  },
+  {
+    "name": "Largo à A1 e moradores",
+    "reverse": false,
+    "success": true,
+    "reached": 31,
+    "total": 31,
+    "frames": 853,
+    "distance": 42.6497536,
+    "maxPlanarStep": 0.0500012338,
+    "maxVerticalStep": 0.08619213,
+    "end": [
+      -7.75542,
+      13.5620022,
+      18.8090458
+    ],
+    "failure": null,
+    "minimumY": 6.22639465,
+    "groundedFrames": 853,
+    "groundedAtEnd": true
+  },
+  {
+    "name": "Largo à A1 e moradores",
+    "reverse": true,
+    "success": true,
+    "reached": 31,
+    "total": 31,
+    "frames": 853,
+    "distance": 42.6497269,
+    "maxPlanarStep": 0.0500008874,
+    "maxVerticalStep": 0.0583333969,
+    "end": [
+      0.125202939,
+      6.232991,
+      -10.7909679
+    ],
+    "failure": null,
+    "minimumY": 6.232991,
+    "groundedFrames": 843,
+    "groundedAtEnd": true
+  }
+]

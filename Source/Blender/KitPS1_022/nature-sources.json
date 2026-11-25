@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Nature_Pine",
+    "source": "PineTree_2.blend",
+    "triangles": 1692,
+    "targetHeight": 6
+  },
+  {
+    "name": "Nature_Common",
+    "source": "CommonTree_1.blend",
+    "triangles": 2888,
+    "targetHeight": 5.5
+  }
+]

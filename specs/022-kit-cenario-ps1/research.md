@@ -1,0 +1,2 @@
+# Pesquisa
+Decisão: conservar TerrainData e não redefinir suas camadas em reconstruções normais. Pintura usa ferramenta nativa; reset separado. Base de alturas costeira deve ficar explícita nos dados, mantendo a base 021 inalterada para outros mundos. Alternativa rejeitada: refazer TerrainData a cada rebuild, que perde pintura. Modelos e bitmaps locais permitem controle exato de resolução; não usar geração remota.

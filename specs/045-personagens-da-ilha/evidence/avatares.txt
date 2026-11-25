@@ -1,0 +1,7 @@
+NAME        AVATAR  HUMAN  CLIP
+AmigaCoral  true    true   HumanF@Idle01
+Protagonista  true    true   HumanM@Idle01
+Bento       true    true   HumanM@Walk01_Forward
+Teresa      true    true   HumanF@Idle02
+AmigoVerde  true    true   HumanM@Idle02
+Artur       true    true   HumanM@Idle01

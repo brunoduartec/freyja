@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Elisa Neves · Venda",
+    "start": 5.0,
+    "duration": 4.0
+  },
+  {
+    "title": "Tomás Faria · Largo",
+    "start": 13.0,
+    "duration": 4.0
+  },
+  {
+    "title": "Amélia Faria · Salão comunitário",
+    "start": 20.0,
+    "duration": 4.0
+  },
+  {
+    "title": "Luana Batista · Salão comunitário",
+    "start": 27.0,
+    "duration": 4.0
+  },
+  {
+    "title": "Sara Faria · Salão comunitário",
+    "start": 34.0,
+    "duration": 4.0
+  },
+  {
+    "title": "Ivo Batista · Acesso à A3",
+    "start": 44.0,
+    "duration": 5.0
+  },
+  {
+    "title": "Helena Batista · Casa A3",
+    "start": 52.0,
+    "duration": 5.0
+  },
+  {
+    "title": "Mauro Neves · Área da A1",
+    "start": 70.0,
+    "duration": 4.0
+  },
+  {
+    "title": "Duda Neves · Área da A1",
+    "start": 77.0,
+    "duration": 4.0
+  },
+  {
+    "title": "Joaquim Neves · Área da A1",
+    "start": 84.0,
+    "duration": 5.0
+  }
+]

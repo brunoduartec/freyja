@@ -1,0 +1,5 @@
+Cais à praça ida | passagem=True | amostras com oclusão=0/1571 | pontos=202/202 | distância=78.6 m | desvio vertical máximo=0.22 m | chão=True | fim=(-0.60, 6.21, -10.80) | alvo=(-0.27, 6.18, -10.63)
+Cais à praça volta | passagem=True | amostras com oclusão=0/1571 | pontos=202/202 | distância=78.6 m | desvio vertical máximo=0.20 m | chão=True | fim=(-33.54, 1.84, -60.81) | alvo=(-33.54, 1.94, -61.18)
+B2 ida | passagem=True | amostras com oclusão=0/152 | pontos=20/20 | distância=7.6 m | desvio vertical máximo=0.13 m | chão=True | fim=(-26.47, 6.00, -12.14) | alvo=(-26.57, 6.12, -11.78)
+B2 volta | passagem=True | amostras com oclusão=0/152 | pontos=20/20 | distância=7.6 m | desvio vertical máximo=0.35 m | chão=True | fim=(-24.33, 4.00, -19.03) | alvo=(-24.24, 3.96, -19.39)
+Recuperações de sessão: 0

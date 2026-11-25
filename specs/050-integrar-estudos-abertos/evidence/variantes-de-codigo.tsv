@@ -1,0 +1,14 @@
+Arquivo	Worktrees com versão diferente da base jogável
+Freyja/Assets/_Project/Art/Mar049/ShelteredSea.shader	049-ondulacao-leve-mar
+Freyja/Assets/_Project/Editor/CoastalGrassAuthoring.Island.cs	033-estudo-iluminacao, 035-luzes-noturnas-vila
+Freyja/Assets/_Project/Editor/CoastalGrassAuthoring.cs	029-grama-estilizada
+Freyja/Assets/_Project/Scripts/Environment/CoastalDayNight.cs	033-estudo-iluminacao
+Freyja/Assets/_Project/Scripts/Environment/CoastalGrass.cs	029-grama-estilizada, 033-estudo-iluminacao, 035-luzes-noturnas-vila
+Freyja/Assets/_Project/Scripts/Prototype/CaisCameraRig.cs	Freyja, 012-galpao-pier-blender, 013-integrar-galpao-pier, 020-teste-terreno-modular, 021-world-builder, 022-kit-cenario-ps1, 023-ilha-referencia-editor, 024-bau-tesouro, 025-edificios-restantes-ilha, 026-lagarta-rosa, 027-praca-central-referencia, 028-elementos-ilha-referencia, 029-grama-estilizada, 030-eixo-cais-praca-igreja, 031-estudo-mar, 032-estudo-vegetacao, 033-estudo-iluminacao, 035-luzes-noturnas-vila, 038-luzes-todas-casas, 039-curva-do-cais, 040-percursos-da-ilha, 042-meio-fio-vila, 043-meio-fio-ilha, 044-bento-venda-animado, 045-personagens-da-ilha, 046-referencias-barcos-pier, 047-modelos-barcos-pier, 048-barcos-atracados, 049-ondulacao-leve-mar
+Freyja/Assets/_Project/Scripts/Prototype/CaisPlayerController.cs	Freyja, 012-galpao-pier-blender, 013-integrar-galpao-pier, 020-teste-terreno-modular, 021-world-builder, 022-kit-cenario-ps1, 023-ilha-referencia-editor, 024-bau-tesouro, 025-edificios-restantes-ilha, 026-lagarta-rosa, 027-praca-central-referencia, 028-elementos-ilha-referencia, 029-grama-estilizada, 030-eixo-cais-praca-igreja, 039-curva-do-cais, 040-percursos-da-ilha, 041-camera-exploracao-proxima, 042-meio-fio-vila, 043-meio-fio-ilha, 044-bento-venda-animado, 045-personagens-da-ilha, 046-referencias-barcos-pier, 047-modelos-barcos-pier, 048-barcos-atracados, 049-ondulacao-leve-mar
+Freyja/Assets/_Project/Scripts/Prototype/CaisSessionController.cs	Freyja, 012-galpao-pier-blender, 013-integrar-galpao-pier, 020-teste-terreno-modular, 021-world-builder, 022-kit-cenario-ps1, 023-ilha-referencia-editor, 024-bau-tesouro, 025-edificios-restantes-ilha, 026-lagarta-rosa, 027-praca-central-referencia, 028-elementos-ilha-referencia, 029-grama-estilizada, 030-eixo-cais-praca-igreja, 039-curva-do-cais, 040-percursos-da-ilha, 041-camera-exploracao-proxima, 042-meio-fio-vila, 043-meio-fio-ilha, 044-bento-venda-animado, 045-personagens-da-ilha, 046-referencias-barcos-pier, 047-modelos-barcos-pier, 048-barcos-atracados, 049-ondulacao-leve-mar
+Freyja/Assets/_Project/WorldBuilder/Editor/WorldBuilderWindow.cs	021-world-builder
+Freyja/Assets/_Project/WorldBuilder/Editor/WorldGenerator.cs	021-world-builder
+Freyja/Assets/_Project/WorldBuilder/Editor/WorldValidation.cs	021-world-builder
+Freyja/Assets/_Project/WorldBuilder/Runtime/WorldDefinition.cs	021-world-builder
+Freyja/Assets/_Project/WorldBuilder/Runtime/WorldGeometry.cs	021-world-builder

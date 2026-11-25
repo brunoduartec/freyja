@@ -1,0 +1,10 @@
+50.10316 Barco do pescador (-28.2500, -0.2888, -55.2500) (-0.0168, 0.9999, -0.0036) colliders=0 | Bote dos visitantes (-38.5500, -0.1370, -60.3000) (-0.0139, 0.9999, -0.0017) colliders=0 coast=CoastDistance
+52.22514 Barco do pescador (-28.2500, -0.3069, -55.2500) (0.0060, 1.0000, 0.0070) colliders=0 | Bote dos visitantes (-38.5500, -0.1934, -60.3000) (-0.0087, 1.0000, 0.0024) colliders=0 coast=CoastDistance
+54.34805 Barco do pescador (-28.2500, -0.2247, -55.2500) (0.0077, 1.0000, -0.0010) colliders=0 | Bote dos visitantes (-38.5500, -0.1308, -60.3000) (0.0213, 0.9998, 0.0046) colliders=0 coast=CoastDistance
+56.46693 Barco do pescador (-28.2500, -0.3053, -55.2500) (-0.0130, 0.9999, -0.0099) colliders=0 | Bote dos visitantes (-38.5500, -0.1459, -60.3000) (-0.0140, 0.9998, -0.0125) colliders=0 coast=CoastDistance
+58.58779 Barco do pescador (-28.2500, -0.3208, -55.2500) (0.0095, 0.9999, 0.0093) colliders=0 | Bote dos visitantes (-38.5500, -0.2196, -60.3000) (-0.0018, 1.0000, 0.0050) colliders=0 coast=CoastDistance
+60.71004 Barco do pescador (-28.2500, -0.2182, -55.2500) (-0.0006, 1.0000, 0.0032) colliders=0 | Bote dos visitantes (-38.5500, -0.1175, -60.3000) (0.0135, 0.9998, 0.0117) colliders=0 coast=CoastDistance
+62.81793 Barco do pescador (-28.2500, -0.2952, -55.2500) (-0.0106, 0.9999, -0.0101) colliders=0 | Bote dos visitantes (-38.5500, -0.1352, -60.3000) (-0.0167, 0.9998, -0.0140) colliders=0 coast=CoastDistance
+64.93672 Barco do pescador (-28.2500, -0.3128, -55.2500) (0.0154, 0.9999, 0.0041) colliders=0 | Bote dos visitantes (-38.5500, -0.2182, -60.3000) (0.0091, 1.0000, -0.0008) colliders=0 coast=CoastDistance
+67.06184 Barco do pescador (-28.2500, -0.2433, -55.2500) (-0.0062, 1.0000, 0.0025) colliders=0 | Bote dos visitantes (-38.5500, -0.1315, -60.3000) (0.0082, 0.9999, 0.0104) colliders=0 coast=CoastDistance
+69.17836 Barco do pescador (-28.2500, -0.3001, -55.2500) (-0.0106, 0.9999, -0.0023) colliders=0 | Bote dos visitantes (-38.5500, -0.1472, -60.3000) (-0.0220, 0.9997, -0.0057) colliders=0 coast=CoastDistance

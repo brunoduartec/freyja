@@ -1,0 +1,7 @@
+Cais à praça ida | passagem=True | amostras com oclusão=0/1571 | pontos=202/202 | distância=78.6 m | desvio vertical máximo=0.22 m | chão=True | fim=(-0.60, 6.21, -10.80) | alvo=(-0.27, 6.18, -10.63)
+Cais à praça volta | passagem=True | amostras com oclusão=0/1571 | pontos=202/202 | distância=78.6 m | desvio vertical máximo=0.20 m | chão=True | fim=(-33.54, 1.84, -60.81) | alvo=(-33.54, 1.94, -61.18)
+Venda ida | passagem=True | amostras com oclusão=0/227 | pontos=32/32 | distância=11.4 m | desvio vertical máximo=0.16 m | chão=True | fim=(-6.98, 7.04, -1.35) | alvo=(-6.96, 7.20, -0.99)
+Venda volta | passagem=True | amostras com oclusão=0/227 | pontos=32/32 | distância=11.4 m | desvio vertical máximo=0.16 m | chão=True | fim=(-0.27, 6.30, -9.44) | alvo=(0.00, 6.26, -9.66)
+Salão comunitário ida | passagem=True | amostras com oclusão=0/348 | pontos=45/45 | distância=17.4 m | desvio vertical máximo=0.22 m | chão=True | fim=(15.32, 6.04, -7.91) | alvo=(15.22, 6.26, -7.56)
+Salão comunitário volta | passagem=True | amostras com oclusão=0/348 | pontos=45/45 | distância=17.4 m | desvio vertical máximo=0.22 m | chão=True | fim=(0.37, 6.31, -9.66) | alvo=(0.00, 6.26, -9.66)
+Recuperações de sessão: 0

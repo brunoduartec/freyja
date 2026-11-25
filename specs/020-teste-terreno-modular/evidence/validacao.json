@@ -1,0 +1,11 @@
+{
+  "initialized": true,
+  "spawn": "(192.000, 1.035, -6.000)",
+  "recovered": true,
+  "recoveryCount": 1,
+  "height": 1.8,
+  "radius": 0.3,
+  "plotHeightMaxError": 0.000183105469,
+  "heightDifference": 3.0,
+  "gameView": 480
+}

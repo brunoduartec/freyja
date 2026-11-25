@@ -1,0 +1,30 @@
+{
+  "path": "Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity",
+  "present": true,
+  "vegetationColliders": 0,
+  "route": "Píer à igreja",
+  "tests": [
+    {
+      "dense": false,
+      "reached": 321,
+      "total": 321,
+      "end": "(-1.661, 15.040, 26.227)",
+      "next": "(-1.660, 15.130, 26.439)",
+      "elapsed": 40.632885,
+      "maxHeightError": 0.1623764,
+      "grounded": true,
+      "doorDistance": 0.2303824
+    },
+    {
+      "dense": true,
+      "reached": 321,
+      "total": 321,
+      "end": "(-1.661, 15.040, 26.227)",
+      "next": "(-1.660, 15.130, 26.439)",
+      "elapsed": 40.632885,
+      "maxHeightError": 0.1623764,
+      "grounded": true,
+      "doorDistance": 0.2303824
+    }
+  ]
+}

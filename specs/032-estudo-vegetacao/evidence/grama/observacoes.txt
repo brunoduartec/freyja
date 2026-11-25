@@ -1,0 +1,15 @@
+01-cais: 2 cells, 4 instances, 1 batches, camera (-33.5, 6.3, -67.5)
+02-subida: 17 cells, 6278 instances, 27 batches, camera (-45.0, 7.8, -29.4)
+03-praca: 8 cells, 429 instances, 4 batches, camera (-0.7, 10.6, -22.5)
+04-igreja: 13 cells, 1307 instances, 6 batches, camera (9.4, 19.0, 15.6)
+05-quintais: 17 cells, 1243 instances, 6 batches, camera (36.5, 14.0, -1.8)
+06-encosta: 14 cells, 1955 instances, 9 batches, camera (-44.6, 21.4, 23.3)
+07-casa-isolada: 6 cells, 1264 instances, 7 batches, camera (-29.4, 22.0, 24.8)
+08-crista: 7 cells, 767 instances, 4 batches, camera (20.4, 22.9, 30.4)
+09-praia: 4 cells, 549 instances, 3 batches, camera (-21.7, 5.7, -47.6)
+walk on southern approach: 3.01 m, grounded 691/694
+fixed pose: 17 cells, 6278 instances, 27 batches
+distance only: 0 cells, 0 instances, 0 batches
+frustum only: 0 cells, 0 instances, 0 batches
+return: 17 cells, 6278 instances, 27 batches
+Apple M4 Pro Metal 480x270

@@ -1,0 +1,60 @@
+{
+  "bytes" : 41398119,
+  "chapters" : [
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-00.png",
+      "seconds" : 7,
+      "title" : "Elisa Neves · Venda"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-01.png",
+      "seconds" : 15,
+      "title" : "Tomás Faria · Largo"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-02.png",
+      "seconds" : 22,
+      "title" : "Amélia Faria · Salão comunitário"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-03.png",
+      "seconds" : 29,
+      "title" : "Luana Batista · Salão comunitário"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-04.png",
+      "seconds" : 36,
+      "title" : "Sara Faria · Salão comunitário"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-05.png",
+      "seconds" : 46.5,
+      "title" : "Ivo Batista · Acesso à A3"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-06.png",
+      "seconds" : 54.5,
+      "title" : "Helena Batista · Casa A3"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-07.png",
+      "seconds" : 72,
+      "title" : "Mauro Neves · Área da A1"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-08.png",
+      "seconds" : 79,
+      "title" : "Duda Neves · Área da A1"
+    },
+    {
+      "image" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/.utmp\/060-moradores-animados-ilha\/specs\/060-moradores-animados-ilha\/evidence\/video-decoded-09.png",
+      "seconds" : 86.5,
+      "title" : "Joaquim Neves · Área da A1"
+    }
+  ],
+  "duration" : 95,
+  "fps" : 30,
+  "height" : 720,
+  "path" : "\/Users\/bruno.duartec\/Documents\/Projects\/Freyja\/Artifacts\/Videos\/Freyja-Moradores-A1-A2-A3-2026-11-19.mp4",
+  "width" : 1280
+}

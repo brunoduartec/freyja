@@ -1,0 +1,31 @@
+Worktree	Arquivos Unity examinados	Arquivos ausentes após união	Arquivos de especificação exclusivos	Produção exclusiva incorporada	Pastas exclusivas não ativas
+012-galpao-pier-blender	144	0	7	{'Source': 3}	
+013-integrar-galpao-pier	162	0	9	{}	
+020-teste-terreno-modular	149	0	19	{'Source': 3, 'Tools': 4}	
+021-world-builder	157	0	10	{'Tools': 2, 'docs': 2}	
+022-kit-cenario-ps1	329	0	8	{'Source': 4, 'Tools': 4, 'Artifacts': 100}	
+023-ilha-referencia-editor	248	0	7	{'Source': 2, 'Tools': 9}	
+024-bau-tesouro	139	0	0	{}	
+025-edificios-restantes-ilha	182	0	7	{}	
+026-lagarta-rosa	139	0	7	{'Source': 2, 'TripoAi': 10}	
+027-praca-central-referencia	152	0	7	{'Tools': 4}	
+028-elementos-ilha-referencia	139	0	2	{}	
+029-grama-estilizada	156	0	25	{'Source': 1}	
+030-eixo-cais-praca-igreja	157	0	8	{'Tools': 4}	
+031-estudo-mar	984	13	17	{}	Freyja/Assets/_Project/Art, Freyja/Assets/_Project/Art/SeaStudy031
+032-estudo-vegetacao	1035	0	53	{}	
+033-estudo-iluminacao	1015	0	16	{}	
+035-luzes-noturnas-vila	1023	0	15	{}	
+038-luzes-todas-casas	1036	0	34	{}	
+039-curva-do-cais	144	0	10	{}	
+040-percursos-da-ilha	144	0	23	{}	
+041-camera-exploracao-proxima	141	0	8	{}	
+042-meio-fio-vila	152	0	11	{}	
+043-meio-fio-ilha	152	0	20	{}	
+044-bento-venda-animado	150	0	9	{}	
+045-personagens-da-ilha	172	0	11	{}	
+046-referencias-barcos-pier	139	0	4	{}	
+047-modelos-barcos-pier	139	0	15	{}	
+048-barcos-atracados	139	0	2	{}	
+049-ondulacao-leve-mar	148	0	6	{}	
+Freyja	139	0	0	{}	

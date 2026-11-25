@@ -1,0 +1,7 @@
+18.08119 Bote dos visitantes (-38.5500, -0.1481, -60.3000) (0.0157, 0.9998, 0.0154) colliders=0 | Barco do pescador (-28.2500, -0.2373, -55.2500) (0.0034, 1.0000, 0.0077) colliders=0 coast=CoastDistance
+19.18352 Bote dos visitantes (-38.5500, -0.1019, -60.3000) (-0.0005, 1.0000, 0.0061) colliders=0 | Barco do pescador (-28.2500, -0.2319, -55.2500) (-0.0119, 0.9999, -0.0014) colliders=0 coast=CoastDistance
+20.28109 Bote dos visitantes (-38.5500, -0.1179, -60.3000) (-0.0175, 0.9998, -0.0077) colliders=0 | Barco do pescador (-28.2500, -0.2760, -55.2500) (-0.0141, 0.9999, -0.0071) colliders=0 coast=CoastDistance
+21.37543 Bote dos visitantes (-38.5500, -0.1736, -60.3000) (-0.0141, 0.9998, -0.0123) colliders=0 | Barco do pescador (-28.2500, -0.3154, -55.2500) (0.0002, 1.0000, -0.0048) colliders=0 coast=CoastDistance
+22.47094 Bote dos visitantes (-38.5500, -0.2070, -60.3000) (0.0069, 1.0000, -0.0050) colliders=0 | Barco do pescador (-28.2500, -0.3081, -55.2500) (0.0154, 0.9999, 0.0011) colliders=0 coast=CoastDistance
+23.57249 Bote dos visitantes (-38.5500, -0.1859, -60.3000) (0.0217, 0.9998, 0.0049) colliders=0 | Barco do pescador (-28.2500, -0.2695, -55.2500) (0.0139, 0.9999, 0.0033) colliders=0 coast=CoastDistance
+24.67031 Bote dos visitantes (-38.5500, -0.1417, -60.3000) (0.0122, 0.9999, 0.0069) colliders=0 | Barco do pescador (-28.2500, -0.2513, -55.2500) (-0.0031, 1.0000, 0.0003) colliders=0 coast=CoastDistance

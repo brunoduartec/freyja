@@ -1,0 +1,3 @@
+Venda ida | passagem=True | amostras com oclusão=0/227 | pontos=32/32 | distância=11.4 m | desvio vertical máximo=0.16 m | chão=True | fim=(-6.98, 7.04, -1.35) | alvo=(-6.96, 7.20, -0.99)
+Venda volta | passagem=True | amostras com oclusão=0/227 | pontos=32/32 | distância=11.4 m | desvio vertical máximo=0.16 m | chão=True | fim=(-0.27, 6.30, -9.44) | alvo=(0.00, 6.26, -9.66)
+Recuperações de sessão: 0

@@ -1,0 +1,106 @@
+{
+  "file": "/Users/bruno.duartec/Documents/Projects/Freyja/.utmp/022-kit-cenario-ps1/Source/Blender/KitPS1_022/KitPS1_022.blend",
+  "camera": "Camera.001",
+  "models": [
+    {
+      "name": "Rock_1",
+      "triangles": 20,
+      "uvLayers": 1
+    },
+    {
+      "name": "Rock_2",
+      "triangles": 20,
+      "uvLayers": 1
+    },
+    {
+      "name": "Rock_3",
+      "triangles": 20,
+      "uvLayers": 1
+    },
+    {
+      "name": "Nature_Pine",
+      "triangles": 1692,
+      "uvLayers": 1
+    },
+    {
+      "name": "Nature_Common",
+      "triangles": 2888,
+      "uvLayers": 1
+    }
+  ],
+  "textures": [
+    {
+      "name": "PS1_Bark",
+      "size": [
+        32,
+        32
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_BeachSand",
+      "size": [
+        64,
+        64
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_Brick",
+      "size": [
+        64,
+        64
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_Dirt",
+      "size": [
+        64,
+        64
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_Grass",
+      "size": [
+        64,
+        64
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_Leaves",
+      "size": [
+        32,
+        32
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_PathSand",
+      "size": [
+        64,
+        64
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_Rock",
+      "size": [
+        64,
+        64
+      ],
+      "packed": true
+    },
+    {
+      "name": "PS1_Stone",
+      "size": [
+        64,
+        64
+      ],
+      "packed": true
+    }
+  ],
+  "point": true
+}

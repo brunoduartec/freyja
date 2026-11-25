@@ -1,0 +1,13 @@
+{
+  "name": "Freyja.WorldBuilder.Tests",
+  "references": [
+    "Freyja.WorldBuilder",
+    "Freyja.WorldBuilder.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

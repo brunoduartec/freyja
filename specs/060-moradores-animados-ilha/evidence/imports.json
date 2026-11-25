@@ -1,0 +1,122 @@
+[
+  {
+    "name": "DudaNeves",
+    "height": 1.52999854,
+    "minY": 6.556511E-07,
+    "triangles": 29606,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanF@Idle01",
+      "HumanF@Idle02"
+    ]
+  },
+  {
+    "name": "ElisaNeves",
+    "height": 1.59999919,
+    "minY": 5.96046448E-08,
+    "triangles": 29324,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanF@Idle02",
+      "HumanF@Idle01"
+    ]
+  },
+  {
+    "name": "JoaquimNeves",
+    "height": 1.71999884,
+    "minY": 2.98023224E-07,
+    "triangles": 28290,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanM@Idle02",
+      "HumanM@Idle01"
+    ]
+  },
+  {
+    "name": "MauroNeves",
+    "height": 1.8,
+    "minY": 1.78813934E-07,
+    "triangles": 28568,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanM@Idle01",
+      "HumanM@Idle02"
+    ]
+  },
+  {
+    "name": "AmeliaFaria",
+    "height": 1.59999943,
+    "minY": 1.78813934E-07,
+    "triangles": 29478,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanF@Idle01",
+      "HumanF@Idle02"
+    ]
+  },
+  {
+    "name": "SaraFaria",
+    "height": 1.67999959,
+    "minY": 3.57627869E-07,
+    "triangles": 29098,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanF@Idle01",
+      "HumanF@Talk01"
+    ]
+  },
+  {
+    "name": "TomasFaria",
+    "height": 1.29999971,
+    "minY": 5.364418E-07,
+    "triangles": 29256,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanM@Idle01",
+      "HumanM@Idle02"
+    ]
+  },
+  {
+    "name": "HelenaBatista",
+    "height": 1.66,
+    "minY": 0.0,
+    "triangles": 29394,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanF@Idle01",
+      "HumanF@Idle01"
+    ]
+  },
+  {
+    "name": "IvoBatista",
+    "height": 1.76999855,
+    "minY": 4.172325E-07,
+    "triangles": 28874,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanM@Idle01",
+      "HumanM@Idle02"
+    ]
+  },
+  {
+    "name": "LuanaBatista",
+    "height": 1.69999957,
+    "minY": 6.556511E-07,
+    "triangles": 29294,
+    "valid": true,
+    "human": true,
+    "clips": [
+      "HumanF@Idle02",
+      "HumanF@Talk01"
+    ]
+  }
+]

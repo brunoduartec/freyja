@@ -1,0 +1,10 @@
+{
+  "name": "Freyja.WorldBuilder.PlayTests",
+  "references": [
+    "Freyja.WorldBuilder"
+  ],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

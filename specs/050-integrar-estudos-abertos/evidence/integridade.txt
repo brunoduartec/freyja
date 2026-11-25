@@ -1,0 +1,5 @@
+objects: 2139
+fixtures: 16
+animators: 6
+problems: []
+grass: ["Coastal Grass — Ilha"]

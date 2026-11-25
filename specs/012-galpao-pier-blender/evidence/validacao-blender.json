@@ -1,0 +1,61 @@
+{
+  "mesh_objects": 147,
+  "faces": 884,
+  "triangles": 1772,
+  "size_m": [
+    5.952,
+    14.7615,
+    5.7041
+  ],
+  "floor_z_range_m": [
+    1.394,
+    1.4
+  ],
+  "walk_samples": 271,
+  "clearance_m": 2.635,
+  "textures": {
+    "01 Pedra calcária": {
+      "px": [
+        128,
+        128
+      ],
+      "filter": "Closest",
+      "packed": true
+    },
+    "02 Terracota": {
+      "px": [
+        128,
+        128
+      ],
+      "filter": "Closest",
+      "packed": true
+    },
+    "03 Madeira": {
+      "px": [
+        128,
+        128
+      ],
+      "filter": "Closest",
+      "packed": true
+    },
+    "04 Lajotas": {
+      "px": [
+        128,
+        128
+      ],
+      "filter": "Closest",
+      "packed": true
+    }
+  },
+  "fbx_dimensions_m": [
+    5.952,
+    14.7615,
+    5.7041
+  ],
+  "fbx_textures": [
+    "Galpao_Lajotas.png",
+    "Galpao_Madeira.png",
+    "Galpao_Pedra.png",
+    "Galpao_Terracota.png"
+  ]
+}

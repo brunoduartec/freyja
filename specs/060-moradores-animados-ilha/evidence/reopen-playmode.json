@@ -1,0 +1,95 @@
+{
+  "count": 10,
+  "animators": [
+    {
+      "name": "Duda Neves",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanF@Idle01"
+      ],
+      "time": 0.5088845
+    },
+    {
+      "name": "Elisa Neves",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanF@Idle02"
+      ],
+      "time": 0.675002456
+    },
+    {
+      "name": "Joaquim Neves",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanM@Idle02"
+      ],
+      "time": 0.841118634
+    },
+    {
+      "name": "Mauro Neves",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanM@Idle01"
+      ],
+      "time": 1.00723946
+    },
+    {
+      "name": "Amélia Faria",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanF@Idle01"
+      ],
+      "time": 0.5088845
+    },
+    {
+      "name": "Sara Faria",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanF@Idle01"
+      ],
+      "time": 0.9911753
+    },
+    {
+      "name": "Tomás Faria",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanM@Idle01"
+      ],
+      "time": 0.841118634
+    },
+    {
+      "name": "Helena Batista",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanF@Idle01"
+      ],
+      "time": 1.00723946
+    },
+    {
+      "name": "Ivo Batista",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanM@Idle01"
+      ],
+      "time": 0.5088845
+    },
+    {
+      "name": "Luana Batista",
+      "valid": true,
+      "human": true,
+      "clip": [
+        "HumanF@Idle02"
+      ],
+      "time": 0.9911753
+    }
+  ]
+}

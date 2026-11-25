@@ -1,0 +1,1 @@
+Rebuild preserva camadas e alphamaps existentes; reset de pintura somente explícito. Objetos manuais permanecem. Modelos novos têm pivô no chão e texturas de até 64 pixels. Alterações apenas dentro do grupo do trecho.

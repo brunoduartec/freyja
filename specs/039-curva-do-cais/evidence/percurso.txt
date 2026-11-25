@@ -1,0 +1,3 @@
+Ida | passagem=True | amostras com oclusão=0/530 | pontos=146/146 | distância=60.4 m | desvio vertical máximo=0.10 m | chão=True | fim=(-26.29, 3.62, -27.65) | alvo=(-25.97, 3.60, -27.48)
+Volta | passagem=True | amostras com oclusão=0/529 | pontos=146/146 | distância=60.4 m | desvio vertical máximo=0.10 m | chão=True | fim=(-33.54, 1.84, -60.83) | alvo=(-33.54, 1.94, -61.18)
+Recuperações de sessão: 0

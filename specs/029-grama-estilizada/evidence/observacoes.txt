@@ -1,0 +1,11 @@
+walk 1: distance from start=3.91 m, grounded=1016/1016
+walk -1: distance from start=0.00 m, grounded=1016/1016
+01-aproximacao: 10 cells, 1193 instances, 6 batches, position=(-43.8, 7.8, -28.6)
+02-giro: 4 cells, 336 instances, 3 batches, position=(-29.0, 5.7, -23.2)
+03-vista-aberta: 13 cells, 1191 instances, 6 batches, position=(-13.1, 8.6, -14.8)
+reference from fixed pose: 4 cells, 336 instances, 3 batches
+distance only: 0 cells, 0 instances, 0 batches
+frustum only: 0 cells, 0 instances, 0 batches
+return: 4 cells, 336 instances, 3 batches
+draw-call recorder: True
+gpu: Apple M4 Pro, Metal, texture: 480x270

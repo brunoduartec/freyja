@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4bd7849a7cd841dbb20f0ac813a894a, type: 3}
+  m_Name: DemoWorld
+  m_EditorClassIdentifier: Freyja.WorldBuilder::Freyja.WorldBuilder.WorldDefinition
+  worldId: freyja-demo-021
+  seed: 1138
+  size: {x: 160, y: 160}
+  terrainHeight: 32
+  originY: -4
+  resolution: 257
+  amplitude: 6
+  gridStep: 1
+  lots:
+  - id: casa-1
+    center: {x: -16, y: -15}
+    size: {x: 12, y: 14}
+    footprint: {x: 9, y: 11}
+    yaw: 90
+    setback: 0.5
+    blend: 2
+    manualHeight: 1
+    foundationY: 1.2732143
+    prefab: {fileID: 3361904482242445119, guid: f09f5b35d48ac45ecbe1b9b235dfb93b, type: 3}
+  - id: casa-2
+    center: {x: -16, y: 12}
+    size: {x: 12, y: 14}
+    footprint: {x: 9, y: 11}
+    yaw: 90
+    setback: 0.5
+    blend: 2
+    manualHeight: 1
+    foundationY: 2.6714287
+    prefab: {fileID: 6571480064431167422, guid: 3c7274e9e57874ab8a6517f890655e00, type: 3}
+  - id: casa-3
+    center: {x: 16, y: 12}
+    size: {x: 12, y: 14}
+    footprint: {x: 9, y: 11}
+    yaw: -90
+    setback: 0.5
+    blend: 2
+    manualHeight: 1
+    foundationY: 2.6714287
+    prefab: {fileID: 5876490315900531562, guid: 1f6b494536f234ca1b2eb910bc1b3be0, type: 3}
+  roads:
+  - id: rua-principal
+    start: {x: 0, y: -28}
+    end: {x: 0, y: 28}
+    width: 5
+    startY: 0.6
+    endY: 3.5
+  grass: {fileID: 8574412962073106934, guid: e9282bb32967f4b6f9e48f8ad4d4b71e, type: 2}
+  roadMaterial: {fileID: 2100000, guid: b86cce731955146a8a4d6408d0a2a890, type: 2}
+  foundationMaterial: {fileID: 2100000, guid: 50e90b9f5098447ad9d574596434d162, type: 2}
