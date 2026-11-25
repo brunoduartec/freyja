@@ -231,6 +231,68 @@ namespace Freyja.Editor
             return false;
         }
 
+        public static bool[] FilterGrassSites(Transform island, Vector3[] roots, bool authoredCoastal)
+        {
+            var terrain = island.GetComponentInChildren<Terrain>();
+            TerrainData data = terrain.terrainData;
+            Vector3 origin = terrain.transform.position;
+            Vector3 terrainSize = data.size;
+            var layerNames = data.terrainLayers.Select(layer => layer.name).ToArray();
+            int grass = Array.IndexOf(layerNames, "Grass");
+            int sand = Array.IndexOf(layerNames, "BeachSand");
+            string[] paved = { "TerraBatida", "LajesDaPraca", "LajesNaTerra" };
+            int[] pavedLayers = paved.Select(name => Array.IndexOf(layerNames, name)).Where(index => index >= 0).ToArray();
+            if (grass < 0 || sand < 0)
+                throw new InvalidOperationException("The production terrain needs Grass and BeachSand layers for placement.");
+            float[,,] weights = data.GetAlphamaps(0, 0, data.alphamapWidth, data.alphamapHeight);
+
+            Transform tracks = island.Cast<Transform>().Single(child => child.name.StartsWith("Ruas e caminhos", StringComparison.Ordinal));
+            Transform accesses = island.Cast<Transform>().Single(child => child.name.StartsWith("Acessos", StringComparison.Ordinal));
+            Transform buildings = island.Cast<Transform>().Single(child => child.name.StartsWith("Construções", StringComparison.Ordinal));
+            var paths = tracks.GetComponentsInChildren<MeshFilter>().Concat(accesses.GetComponentsInChildren<MeshFilter>())
+                .SelectMany(mesh => ProjectTriangles(mesh, 0.30f)).ToArray();
+            var doors = buildings.GetComponentsInChildren<Transform>().Where(child => child.name == "Door023")
+                .Select(child => Xz(child.position)).ToList();
+            var localPaths = new Dictionary<Vector2Int, PathTriangle[]>();
+
+            Physics.SyncTransforms();
+            var accepted = new bool[roots.Length];
+            for (int i = 0; i < roots.Length; i++)
+            {
+                Vector3 root = roots[i];
+                float u = (root.x - origin.x) / terrainSize.x;
+                float v = (root.z - origin.z) / terrainSize.z;
+                if (u < 0 || v < 0 || u > 1 || v > 1 || root.y < 1.4f)
+                    continue;
+
+                int x = Mathf.RoundToInt(u * (data.alphamapWidth - 1));
+                int z = Mathf.RoundToInt(v * (data.alphamapHeight - 1));
+                float pavement = 0;
+                foreach (int layer in pavedLayers)
+                    pavement += weights[z, x, layer];
+                if (pavement >= 0.27f || !authoredCoastal && (weights[z, x, grass] < 0.32f || weights[z, x, sand] > 0.36f))
+                    continue;
+
+                if (data.GetSteepness(u, v) > 53 ||
+                    !Physics.Raycast(root + Vector3.up * 3f, Vector3.down, out RaycastHit hit, 3.35f, ~0, QueryTriggerInteraction.Ignore) ||
+                    hit.collider.gameObject != terrain.gameObject || Mathf.Abs(root.y - hit.point.y) > 0.17f)
+                    continue;
+
+                Vector2 point = Xz(root);
+                var cell = new Vector2Int(Mathf.FloorToInt(point.x / 8), Mathf.FloorToInt(point.y / 8));
+                if (!localPaths.TryGetValue(cell, out PathTriangle[] candidates))
+                {
+                    Vector2 min = new Vector2(cell.x, cell.y) * 8;
+                    Vector2 max = min + Vector2.one * 8;
+                    candidates = paths.Where(path => path.Overlaps(min, max)).ToArray();
+                    localPaths.Add(cell, candidates);
+                }
+                if (!NearAccess(point, doors) && !candidates.Any(path => path.Contains(point)))
+                    accepted[i] = true;
+            }
+            return accepted;
+        }
+
         private static bool NearAccess(Vector2 point, List<Vector2> accesses)
         {
             foreach (Vector2 access in accesses)

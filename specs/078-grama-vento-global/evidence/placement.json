@@ -1,0 +1,112 @@
+[
+  {
+    "name": "mesma seed, mesmos lotes",
+    "passed": true,
+    "detail": 116214
+  },
+  {
+    "name": "seed diferente altera seleção",
+    "passed": true,
+    "detail": 116227
+  },
+  {
+    "name": "seed original recupera seleção",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "exclusão remove ponto",
+    "passed": true,
+    "detail": {
+      "before": 116214,
+      "during": 116195,
+      "affected": 2,
+      "ms": 0.6915
+    }
+  },
+  {
+    "name": "reconstrução localizada",
+    "passed": true,
+    "detail": {
+      "affected": 2,
+      "totalRegions": 132,
+      "changed": 2
+    }
+  },
+  {
+    "name": "mover restaura origem e exclui destino",
+    "passed": true,
+    "detail": {
+      "affected": 6,
+      "ms": 3.04
+    }
+  },
+  {
+    "name": "remover restaura todos os lotes",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "direções nula e inválida mantêm orientação",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "bounds cobrem deslocamento máximo",
+    "passed": true,
+    "detail": {
+      "outside": 0,
+      "invertedBounds": 0
+    }
+  },
+  {
+    "name": "altura, inclinação e nível de água",
+    "passed": true,
+    "detail": {
+      "invalidSurface": 0,
+      "maxHeightError": 0.155593872,
+      "maxSlope": 52.9930725
+    }
+  },
+  {
+    "name": "raízes únicas nos limites das regiões",
+    "passed": true,
+    "detail": {
+      "duplicates": 0,
+      "roots": 116214
+    }
+  },
+  {
+    "name": "desativar controlador limpa o vento",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "reativar controlador republica o vento",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "três perfis presentes",
+    "passed": true,
+    "detail": [
+      31354,
+      76263,
+      8597
+    ]
+  },
+  {
+    "name": "zero relva antiga em renderers ativos",
+    "passed": true,
+    "detail": 0
+  },
+  {
+    "name": "ruído espacial contínuo, com variação de densidade",
+    "passed": true,
+    "detail": {
+      "min": 0.416,
+      "max": 1.0,
+      "seamDifference": 0.00199043751
+    }
+  }
+]

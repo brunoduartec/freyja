@@ -1,0 +1,9 @@
+{
+  "result": "Succeeded",
+  "totalErrors": 0,
+  "totalWarnings": 345,
+  "bytes": 430731938,
+  "seconds": 9.653398,
+  "target": "StandaloneOSX Development",
+  "execution": "arm64 Metal"
+}

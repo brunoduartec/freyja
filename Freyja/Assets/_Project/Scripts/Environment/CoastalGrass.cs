@@ -7,9 +7,9 @@ namespace Freyja.Environment
 {
     [DefaultExecutionOrder(500)]
     [DisallowMultipleComponent]
-    public sealed class CoastalGrass : MonoBehaviour
+    public sealed partial class CoastalGrass : MonoBehaviour
     {
-        public enum RenderMode { Optimized, Off, AllInstances }
+        public enum RenderMode { Optimized, Off, AllInstances, Legacy }
 
         [SerializeField] private Camera gameplayCamera;
         [SerializeField] private CoastalGrassLayout layout;
@@ -42,6 +42,10 @@ namespace Freyja.Environment
         public int SubmittedCells { get; private set; }
         public int SubmittedInstances { get; private set; }
         public int SubmittedBatches { get; private set; }
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        public bool MeasureRenderAllocations { get; set; }
+        public long RenderAllocatedBytes { get; private set; }
+#endif
 
         private void Awake()
         {
@@ -51,6 +55,10 @@ namespace Freyja.Environment
             submissions = new Submission[tuftMeshes?.Length ?? 0];
             for (int index = 0; index < submissions.Length; index++)
                 submissions[index] = new Submission();
+
+            InitializeLitRendering();
+            if (!SystemInfo.supportsInstancing)
+                Debug.LogWarning("Coastal grass requires GPU mesh instancing. Terrain ground cover remains visible.", this);
         }
 
         private static MaterialPropertyBlock CreateFade(float start, float end)
@@ -62,6 +70,10 @@ namespace Freyja.Environment
 
         private void LateUpdate()
         {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            RenderAllocatedBytes = 0;
+#endif
+            SubmittedTriangles = 0;
             SubmittedCells = 0;
             SubmittedInstances = 0;
             SubmittedBatches = 0;
@@ -71,13 +83,25 @@ namespace Freyja.Environment
                 submissions.Length == 0 || !SystemInfo.supportsInstancing)
                 return;
 
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            long before = MeasureRenderAllocations ? GC.GetAllocatedBytesForCurrentThread() : 0;
+#endif
             using (RenderMarker.Auto())
-                Submit();
+            {
+                if (litMaterial && mode != RenderMode.Legacy)
+                    SubmitLit();
+                else
+                    Submit();
+            }
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if (MeasureRenderAllocations)
+                RenderAllocatedBytes = GC.GetAllocatedBytesForCurrentThread() - before;
+#endif
         }
 
         private void Submit()
         {
-            bool optimized = mode == RenderMode.Optimized;
+            bool optimized = mode != RenderMode.AllInstances;
             Vector3 cameraPosition = gameplayCamera.transform.position;
             if (optimized)
                 GeometryUtility.CalculateFrustumPlanes(gameplayCamera, planes);

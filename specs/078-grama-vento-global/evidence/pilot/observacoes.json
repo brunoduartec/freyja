@@ -1,0 +1,74 @@
+[
+  {
+    "sample": "01-sol",
+    "frame": 32068,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.550000, 45.823800)"
+  },
+  {
+    "sample": "02-sem-sombra",
+    "frame": 32587,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.550000, 46.478760)"
+  },
+  {
+    "sample": "03-luz-local-desligada",
+    "frame": 33133,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.550000, 47.135310)"
+  },
+  {
+    "sample": "04-luz-local-ligada",
+    "frame": 33605,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 36,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.550000, 47.788370)"
+  },
+  {
+    "sample": "05-calmaria",
+    "frame": 37104,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.000000, 48.127130)"
+  },
+  {
+    "sample": "06-calmaria",
+    "frame": 37646,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.000000, 48.127130)"
+  },
+  {
+    "sample": "07-vento-forte",
+    "frame": 41061,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.999993, 54.813320)"
+  },
+  {
+    "sample": "08-vento-forte",
+    "frame": 41611,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(0.800000, 0.600000, 0.999995, 55.930390)"
+  },
+  {
+    "sample": "09-mudanca-de-direcao",
+    "frame": 42153,
+    "SubmittedInstances": 8268,
+    "SubmittedBatches": 20,
+    "SubmittedTriangles": 99072,
+    "wind": "(-0.402074, 0.915607, 0.999997, 57.045440)"
+  }
+]
