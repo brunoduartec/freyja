@@ -9,7 +9,7 @@ namespace Freyja.EditorTools
 {
     public static class IslandDialogueSetup
     {
-        private const string SceneName = "Ilha_Tripo_Caminhada_011";
+        private const string SceneName = "Ilha_Principal";
         private const string NunoPrefabPath = "Assets/_Project/Prefabs/Moradores060/NunoPires.prefab";
 
         [MenuItem("Freyja/Diálogos/Instalar piloto")]

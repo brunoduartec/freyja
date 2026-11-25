@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public static class IslandWaypointSetup
 {
-    private const string ScenePath = "Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity";
+    private const string ScenePath = "Assets/_Project/Scenes/Ilha_Principal.unity";
     private const string DataPath = "Assets/_Project/Data/IlhaWaypointNavigation.asset";
     private const string NetworkName = "Waypoints da ilha";
     private const int Walkable = 1;

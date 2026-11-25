@@ -1,6 +1,6 @@
 # Freyja World Builder — primeira versão
 
-Abra **Tools > Freyja > World Builder** no Unity. O plugin está em `Assets/_Project/WorldBuilder`; a demonstração usa a cena principal `Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity`.
+Abra **Tools > Freyja > World Builder** no Unity. O plugin está em `Assets/_Project/WorldBuilder`. A demonstração e seu backup se referem à cena histórica `Ilha_Tripo_Caminhada_011`, disponível no histórico do Git. A cena oficial é `Assets/_Project/Scenes/Ilha_Principal.unity`.
 
 ## Montar e editar
 1. Clique **Criar / abrir demonstração** e **Ativar demonstração na cena**. Isso preserva o estado dos ambientes anteriores.

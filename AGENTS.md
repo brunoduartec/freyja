@@ -10,7 +10,7 @@ Freyja é um jogo 3D de investigação narrativa, low poly com pixels visíveis 
 
 ## Unity e Blender
 
-- A raiz Unity é `Freyja/` e a cena principal é `Freyja/Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity`. Crie outra cena somente por pedido ou necessidade técnica concreta. Respeite `ProjectVersion.txt` (6000.3.25f1), Built-in, manifesto e lock de pacotes. Atualizações de dependências exigem escopo aprovado.
+- A raiz Unity é `Freyja/` e a cena principal é `Freyja/Assets/_Project/Scenes/Ilha_Principal.unity`. Crie outra cena somente por pedido ou necessidade técnica concreta. Respeite `ProjectVersion.txt` (6000.3.25f1), Built-in, manifesto e lock de pacotes. Atualizações de dependências exigem escopo aprovado.
 - Use os MCPs globais do Unity e Blender quando disponíveis. Para ativar a integração ou confirmar projeto e cena, consulte `Tools/MCP/README.md`. Se o MCP falhar, indique a limitação e prossiga por CLI ou arquivos no escopo possível. Reserve a afirmação de validação no Editor para checagens executadas nele.
 - Mantenha conteúdo próprio em `Assets/_Project/`, conteúdo de terceiros separado e fontes editáveis em `Source/Blender/`. Versione assets com seus `.meta`, `Packages/` e `ProjectSettings/`, preservando GUIDs, serialização de texto e metadados visíveis. Mantenha caches, logs, builds e arquivos gerados de IDE fora do Git.
 - Use `freyja-unity-edit` ao editar C#, cenas ou prefabs e `freyja-blender-export` ao preparar exports. Mudanças de código exigem checar compilação e Console. Mudanças de cena ou interação exigem Play Mode. Use a câmera real quando a mudança afetar a aparência. Planeje verificações adicionais conforme o risco.

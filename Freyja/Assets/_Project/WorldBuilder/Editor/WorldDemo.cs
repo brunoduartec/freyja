@@ -24,7 +24,7 @@ namespace Freyja.WorldBuilder.Editor
         static Component Session()=>UnityEngine.Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include,FindObjectsSortMode.None).FirstOrDefault(c=>c.GetType().Name=="CaisSessionController");
         static void Check()
         {
-            if(EditorApplication.isPlaying||SceneManager.GetActiveScene().name!="Ilha_Tripo_Caminhada_011")throw new InvalidOperationException("Abra a cena principal e saia de Play Mode.");
+            if(EditorApplication.isPlaying||SceneManager.GetActiveScene().name!="Ilha_Tripo_Caminhada_011")throw new InvalidOperationException("A demonstração requer a cena histórica Ilha_Tripo_Caminhada_011 aberta em Edit Mode.");
         }
         static Material Mat(string name,Color color)
         {

@@ -19,7 +19,13 @@ public static class Terrain020Preview
     }
     static CaisSessionController Session()=>UnityEngine.Object.FindFirstObjectByType<CaisSessionController>();
     static GameObject FindRoot(string name)=>SceneManager.GetActiveScene().GetRootGameObjects().FirstOrDefault(g=>g.name==name);
-    static void Check(){if(EditorApplication.isPlaying)throw new InvalidOperationException("Saia de Play Mode antes de alternar o terreno.");if(SceneManager.GetActiveScene().name!="Ilha_Tripo_Caminhada_011")throw new InvalidOperationException("Abra a cena principal.");}
+    static void Check()
+    {
+        if (EditorApplication.isPlaying)
+            throw new InvalidOperationException("Saia de Play Mode antes de alternar o terreno.");
+        if (SceneManager.GetActiveScene().name != "Ilha_Tripo_Caminhada_011")
+            throw new InvalidOperationException("O teste 020 requer a cena histórica Ilha_Tripo_Caminhada_011.");
+    }
     static void MovePlayer(Vector3 p,Quaternion r)
     {
         var player=GameObject.Find("PlayerPrototype");var body=player.GetComponent<CharacterController>();bool enabled=body.enabled;
@@ -53,8 +59,9 @@ public static class Terrain020Preview
     [MenuItem("Freyja/Terreno 020/Restaurar ilha")]
     public static void Restore()
     {
-        Check();if(!File.Exists(Data))return;var state=JsonUtility.FromJson<State>(File.ReadAllText(Data));
-        var root=FindRoot(Root);if(root)root.SetActive(false);
+        Check();var root=FindRoot(Root);if(!root || !File.Exists(Data))return;
+        var state=JsonUtility.FromJson<State>(File.ReadAllText(Data));
+        root.SetActive(false);
         for(int i=0;i<state.roots.Length;i++){var old=FindRoot(state.roots[i]);if(old)old.SetActive(state.active[i]);}
         var so=new SerializedObject(Session());GlobalObjectId.TryParse(state.spawnId,out var id);
         so.FindProperty("spawnPoint").objectReferenceValue=GlobalObjectId.GlobalObjectIdentifierToObjectSlow(id);

@@ -11,7 +11,7 @@ namespace Freyja.Editor
 {
     public static partial class CoastalGrassAuthoring
     {
-        private const string ScenePath = "Assets/_Project/Scenes/Ilha_Tripo_Caminhada_011.unity";
+        private const string ScenePath = "Assets/_Project/Scenes/Ilha_Principal.unity";
         private const string ArtPath = "Assets/_Project/Art/Grass029/";
         private const float CellSize = 8;
         private const float Spacing = 0.23f;
@@ -28,7 +28,7 @@ namespace Freyja.Editor
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene.path != ScenePath || EditorApplication.isPlayingOrWillChangePlaymode)
-                throw new InvalidOperationException("Open Ilha_Tripo_Caminhada_011 in Edit Mode.");
+                throw new InvalidOperationException("Open Ilha_Principal in Edit Mode.");
 
             GameObject[] roots = scene.GetRootGameObjects();
             var island = roots.Single(root => root.name == "Island023" && root.activeInHierarchy).transform;
@@ -63,7 +63,6 @@ namespace Freyja.Editor
 
             var path = pathMeshes.SelectMany(filter => ProjectTriangles(filter, pathPadding)).ToArray();
             var noGrass = accessMarkers.Select(access => Xz(access.position)).ToList();
-            noGrass.AddRange(roots.Where(root => root.name == "WalkEndpoint").Select(root => Xz(root.transform.position)));
             Physics.SyncTransforms();
             CoastalGrassLayout.Cell[] cells = wholeIsland
                 ? BuildIslandCells(terrain, meshes, path, noGrass)
