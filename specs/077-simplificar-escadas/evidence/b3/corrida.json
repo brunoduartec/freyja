@@ -1,0 +1,203 @@
+{
+  "caseName": "corrida",
+  "recoveries": 0,
+  "captures": 26,
+  "results": [
+    {
+      "name": "base",
+      "reached": true,
+      "frames": 30,
+      "seconds": 0.4691162,
+      "initial": "(-3.750, 0.401, -0.595)",
+      "end": "(-3.750, 0.401, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.05678749,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "entrada",
+      "reached": true,
+      "frames": 11,
+      "seconds": 0.23500824,
+      "initial": "(-3.750, 0.401, -0.595)",
+      "end": "(-2.858, 0.856, -0.595)",
+      "span": "(0.892, 0.455, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.4000597,
+      "minCamera": 5.05684328,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pausa-entrada",
+      "reached": true,
+      "frames": 27,
+      "seconds": 0.460670471,
+      "initial": "(-2.858, 0.856, -0.595)",
+      "end": "(-2.858, 0.856, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.014895,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "subida",
+      "reached": true,
+      "frames": 4,
+      "seconds": 0.204269409,
+      "initial": "(-2.858, 0.856, -0.595)",
+      "end": "(-2.187, 1.292, -0.595)",
+      "span": "(0.671, 0.436, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.400068,
+      "minCamera": 5.014895,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pausa-meio",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.61680603,
+      "initial": "(-2.187, 1.292, -0.595)",
+      "end": "(-2.187, 1.292, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.014895,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "transicao-superior",
+      "reached": true,
+      "frames": 7,
+      "seconds": 0.167770386,
+      "initial": "(-2.187, 1.292, -0.595)",
+      "end": "(-1.680, 1.550, -0.595)",
+      "span": "(0.507, 0.258, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.400058,
+      "minCamera": 5.014895,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "patamar",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.5662384,
+      "initial": "(-1.680, 1.550, -0.595)",
+      "end": "(-1.680, 1.550, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.03397,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "lateral-patamar",
+      "reached": true,
+      "frames": 4,
+      "seconds": 0.116920471,
+      "initial": "(-1.680, 1.550, -0.595)",
+      "end": "(-1.680, 1.550, -0.446)",
+      "span": "(0.000, 0.000, 0.149)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.000111,
+      "minCamera": 5.03397,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "recentraliza",
+      "reached": true,
+      "frames": 4,
+      "seconds": 0.117034912,
+      "initial": "(-1.680, 1.550, -0.446)",
+      "end": "(-1.680, 1.550, -0.596)",
+      "span": "(0.000, 0.000, 0.150)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00016165,
+      "minCamera": 5.03397,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "descida",
+      "reached": true,
+      "frames": 23,
+      "seconds": 0.432868958,
+      "initial": "(-1.680, 1.550, -0.596)",
+      "end": "(-3.660, 0.463, -0.596)",
+      "span": "(1.980, 1.087, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.40006447,
+      "minCamera": 4.702978,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "retorno",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.5833435,
+      "initial": "(-3.660, 0.463, -0.596)",
+      "end": "(-3.660, 0.463, -0.596)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.900143,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    }
+  ]
+}

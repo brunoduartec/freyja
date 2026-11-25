@@ -8,6 +8,7 @@ namespace Freyja.Prototype
     {
         private const float Gravity = -18f;
         private const float GroundAdhesionVelocity = -2f;
+        private const float StairContactBias = 0.5f;
 
         [SerializeField] private Transform cameraTransform;
         [SerializeField] private float moveSpeed = 3f;
@@ -15,10 +16,12 @@ namespace Freyja.Prototype
         [SerializeField, Min(0.01f)] private float jumpHeight = 0.55f;
         [SerializeField] private float rotationSpeed = 540f;
         [SerializeField] private StairFootPlacement stairPlacement;
+        [SerializeField] private MeshCollider[] stairRamps = System.Array.Empty<MeshCollider>();
 
         private CharacterController body;
         private Vector2 moveInput;
         private Vector3 planarVelocity;
+        private Vector3 stairGroundNormal;
         private float verticalVelocity;
         private bool missingCameraReported;
         private bool runHeld;
@@ -39,12 +42,27 @@ namespace Freyja.Prototype
         public Vector3 PlanarVelocity => planarVelocity;
         public float GroundSpeed { get; private set; }
         public bool HasMoveIntent { get; private set; }
-        internal bool HasStairPose => stairPlacement != null &&
-            stairPlacement.TryGetStairAnimationTime(out _, out _);
+        internal bool IsOnStairRamp => body != null && body.isGrounded && stairGroundNormal.y > 0f;
+        internal bool IsOnStairs => IsOnStairRamp
+            || (stairPlacement != null && stairPlacement.TryGetStairAnimationTime(out _, out _));
         public bool IsRunning => GroundSpeed > moveSpeed * 1.05f && runHeld;
         public bool IsJumping { get; private set; }
         public float VerticalVelocity => verticalVelocity;
         public CharacterController Body => body;
+
+        internal bool IsNearStairRamp()
+        {
+            if (body == null)
+                return false;
+
+            float reachSquared = body.radius * body.radius;
+            foreach (MeshCollider ramp in stairRamps)
+            {
+                if (ramp != null && ramp.enabled && ramp.bounds.SqrDistance(transform.position) <= reachSquared)
+                    return true;
+            }
+            return false;
+        }
 
         private void Awake()
         {
@@ -76,6 +94,7 @@ namespace Freyja.Prototype
             transform.SetPositionAndRotation(feetPosition, rotation);
             moveInput = Vector2.zero;
             planarVelocity = Vector3.zero;
+            stairGroundNormal = Vector3.zero;
             verticalVelocity = 0f;
             GroundSpeed = 0f;
             HasMoveIntent = false;
@@ -135,8 +154,24 @@ namespace Freyja.Prototype
             else
                 verticalVelocity += Gravity * deltaTime;
 
-            Vector3 displacement = (planarVelocity + Vector3.up * verticalVelocity) * deltaTime;
+            float moveVertical = verticalVelocity;
+            if (body.isGrounded && !IsJumping && planarVelocity.sqrMagnitude > 0f)
+            {
+                // Use the ramp face ahead of the capsule. At a landing edge, Move
+                // can report the rounded contact instead of the slope normal.
+                Vector3 normal = FindStairRampAhead(planarVelocity * deltaTime);
+                if (normal.y <= 0f)
+                    normal = stairGroundNormal;
+                if (normal.y > 0f)
+                {
+                    float rampVertical = -Vector3.Dot(normal, planarVelocity) / normal.y;
+                    moveVertical = Mathf.Min(moveVertical, rampVertical - StairContactBias);
+                }
+            }
+
+            Vector3 displacement = (planarVelocity + Vector3.up * moveVertical) * deltaTime;
             Vector3 previousPosition = transform.position;
+            stairGroundNormal = Vector3.zero;
             CollisionFlags collisions = body.Move(displacement);
             if ((collisions & CollisionFlags.Above) != 0 && verticalVelocity > 0f)
                 verticalVelocity = 0f;
@@ -155,6 +190,37 @@ namespace Freyja.Prototype
             }
         }
 
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            if (hit.collider is MeshCollider ramp && System.Array.IndexOf(stairRamps, ramp) >= 0
+                && hit.normal.y >= Mathf.Cos(body.slopeLimit * Mathf.Deg2Rad)
+                && hit.point.y <= transform.position.y + body.radius)
+            {
+                stairGroundNormal = hit.normal;
+            }
+        }
+
+        private Vector3 FindStairRampAhead(Vector3 displacement)
+        {
+            // The surface under the center can be lower than the rounded capsule's contact.
+            float reach = displacement.magnitude * Mathf.Tan(body.slopeLimit * Mathf.Deg2Rad)
+                + body.radius + body.skinWidth;
+            Vector3 foot = transform.position + displacement;
+            var ray = new Ray(foot + Vector3.up * body.skinWidth, Vector3.down);
+            foreach (MeshCollider ramp in stairRamps)
+            {
+                if (ramp == null || !ramp.enabled || !ramp.gameObject.activeInHierarchy)
+                    continue;
+
+                Bounds bounds = ramp.bounds;
+                bounds.Expand(Vector3.up * (reach + body.skinWidth) * 2f);
+                if (bounds.Contains(ray.origin) && ramp.Raycast(ray, out RaycastHit hit, reach + body.skinWidth)
+                    && hit.normal.y >= Mathf.Cos(body.slopeLimit * Mathf.Deg2Rad))
+                    return hit.normal;
+            }
+            return Vector3.zero;
+        }
+
         private void Update()
         {
             Tick(Time.deltaTime);
@@ -165,6 +231,7 @@ namespace Freyja.Prototype
             GroundSpeed = 0f;
             moveInput = Vector2.zero;
             planarVelocity = Vector3.zero;
+            stairGroundNormal = Vector3.zero;
             verticalVelocity = 0f;
             IsJumping = false;
             SetTraversalInput(false, false);

@@ -3844,6 +3844,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7be2705b444ec4f2ca9285a53c65a3a2, type: 3}
   m_PrefabInstance: {fileID: 153702279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &155006265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155006266}
+  - component: {fileID: 155006267}
+  m_Layer: 8
+  m_Name: "Rampa de colis\xE3o B3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &155006266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155006265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1046778946}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &155006267
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155006265}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 28fff94e2e47e4ec9a8e27ea02b25c02, type: 2}
 --- !u!1 &155799592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7985,7 +8039,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 1.05, z: 1.42}
   m_Center: {x: -3.2900002, y: 0.365, z: -2.06}
@@ -10870,7 +10924,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.39, y: 0.87, z: 0.365}
   m_Center: {x: -0.5949981, y: 0.31499958, z: -2.9774995}
@@ -15791,7 +15845,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 2.7870002, z: 1.42}
   m_Center: {x: -0.77000016, y: 1.2335, z: -2.06}
@@ -17003,7 +17057,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 0.66400003, z: 1.42}
   m_Center: {x: -3.8500001, y: 0.172, z: -2.06}
@@ -20332,7 +20386,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 2.401, z: 1.42}
   m_Center: {x: -1.3300002, y: 1.0404999, z: -2.06}
@@ -21447,7 +21501,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 1.629, z: 1.42}
   m_Center: {x: -2.4500003, y: 0.6545, z: -2.06}
@@ -34462,7 +34516,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.39, y: 1.06, z: 0.365}
   m_Center: {x: -0.5949994, y: 0.40999985, z: -2.6125002}
@@ -34595,6 +34649,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3292169387468787140, guid: 14e8aac9effa74366a7cdf889d61c674, type: 3}
       insertIndex: -1
       addedObject: {fileID: 614680793}
+    - targetCorrespondingSourceObject: {fileID: 3292169387468787140, guid: 14e8aac9effa74366a7cdf889d61c674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 155006266}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e8aac9effa74366a7cdf889d61c674, type: 3}
 --- !u!4 &1046778946 stripped
@@ -36182,7 +36239,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.39, y: 1.4399999, z: 0.365}
   m_Center: {x: -0.5949986, y: 0.6000004, z: -1.8824995}
@@ -39652,7 +39709,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 2.594, z: 1.42}
   m_Center: {x: -1.0500002, y: 1.137, z: -2.06}
@@ -41766,7 +41823,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.39, y: 1.25, z: 0.365}
   m_Center: {x: -0.5950008, y: 0.5050001, z: -2.2475004}
@@ -42957,6 +43014,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7375825850859601060, guid: 11e6761b87ce5474a8bfa6bf73582022, type: 3}
   m_PrefabInstance: {fileID: 1279807147}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1283513358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1283513359}
+  - component: {fileID: 1283513360}
+  m_Layer: 8
+  m_Name: "Rampa de colis\xE3o L3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1283513359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283513358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780644987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1283513360
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283513358}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 66ef08eefe09145ccb563655e65f8884, type: 2}
 --- !u!1 &1285635172
 GameObject:
   m_ObjectHideFlags: 0
@@ -43006,7 +43117,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 0.471, z: 1.42}
   m_Center: {x: -4.13, y: 0.0755, z: -2.06}
@@ -44447,7 +44558,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 2.015, z: 1.42}
   m_Center: {x: -1.8900002, y: 0.8475, z: -2.06}
@@ -44615,7 +44726,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 0.857, z: 1.42}
   m_Center: {x: -3.5700002, y: 0.26850003, z: -2.06}
@@ -48998,7 +49109,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 2.2080002, z: 1.42}
   m_Center: {x: -1.6100001, y: 0.94400007, z: -2.06}
@@ -49980,7 +50091,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 1.822, z: 1.42}
   m_Center: {x: -2.17, y: 0.75100005, z: -2.06}
@@ -56178,7 +56289,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 1.436, z: 1.42}
   m_Center: {x: -2.7300003, y: 0.558, z: -2.06}
@@ -58939,6 +59050,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3292169387468787140, guid: 14e8aac9effa74366a7cdf889d61c674, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1177658785}
+    - targetCorrespondingSourceObject: {fileID: 3292169387468787140, guid: 14e8aac9effa74366a7cdf889d61c674, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1283513359}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e8aac9effa74366a7cdf889d61c674, type: 3}
 --- !u!4 &1780644987 stripped
@@ -60887,7 +61001,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 1.243, z: 1.42}
   m_Center: {x: -3.0100002, y: 0.46150005, z: -2.06}
@@ -62375,7 +62489,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.28, y: 0.278, z: 1.42}
   m_Center: {x: -4.4100003, y: -0.020999998, z: -2.06}
@@ -65376,14 +65490,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003091030}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ee7edfb5cfc4ca5b5f9feb5b8cf4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Freyja.Prototype.StairFootPlacement
   stairFlights:
   - {fileID: 740745232}
-  - {fileID: 1592744065}
   player: {fileID: 2853086456103773349}
 --- !u!1 &2004026394
 GameObject:
@@ -69977,9 +70090,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 366683659}
     - target: {fileID: 1567742980027145233, guid: ec07383c1b5754a6586cfc27e356da2f, type: 3}
+      propertyPath: stairRamps.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567742980027145233, guid: ec07383c1b5754a6586cfc27e356da2f, type: 3}
       propertyPath: m_EditorClassIdentifier
       value: Assembly-CSharp::Freyja.Prototype.CaisPlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 1567742980027145233, guid: ec07383c1b5754a6586cfc27e356da2f, type: 3}
+      propertyPath: 'stairRamps.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1283513360}
+    - target: {fileID: 1567742980027145233, guid: ec07383c1b5754a6586cfc27e356da2f, type: 3}
+      propertyPath: 'stairRamps.Array.data[1]'
+      value: 
+      objectReference: {fileID: 155006267}
     - target: {fileID: 3309713057787208031, guid: ec07383c1b5754a6586cfc27e356da2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.54

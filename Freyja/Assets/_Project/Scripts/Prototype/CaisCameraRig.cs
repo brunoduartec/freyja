@@ -192,12 +192,14 @@ namespace Freyja.Prototype
         {
             Quaternion orbit = Quaternion.Euler(pitch, yaw, 0f);
             Vector3 center = target.position + Vector3.up * pivotHeight;
-            bool onStairs = followedPlayer != null && followedPlayer.HasStairPose;
-            if (snap || (!onStairs && !smoothingStairHeight))
+            bool onStairs = followedPlayer != null && followedPlayer.IsOnStairs;
+            bool onRamp = followedPlayer != null && followedPlayer.IsOnStairRamp;
+            bool smoothStairHeight = onStairs && !onRamp;
+            if (snap || onRamp || (!smoothStairHeight && !smoothingStairHeight))
                 followedHeight = center.y;
             else
                 followedHeight = Mathf.Lerp(followedHeight, center.y, heightBlend);
-            smoothingStairHeight = onStairs || Mathf.Abs(center.y - followedHeight) > 0.005f;
+            smoothingStairHeight = smoothStairHeight || Mathf.Abs(center.y - followedHeight) > 0.005f;
 
             Vector3 orbitPivot = center;
             orbitPivot.y = followedHeight;
@@ -223,11 +225,20 @@ namespace Freyja.Prototype
                 }
                 else
                 {
+                    bool nearRamp = onRamp || (followedPlayer != null && followedPlayer.IsNearStairRamp());
                     // Keep the logical yaw used by movement while lifting the view above the obstruction.
                     for (int elevation = 18; elevation <= 36; elevation += 18)
                     {
                         Quaternion raised = Quaternion.Euler(Mathf.Min(pitch + elevation, 80f), yaw, 0f);
-                        if (TryFindClearOrbit(center, raised, desiredDistance, minimumDistance, radius, out Vector3 elevated))
+                        bool found = TryFindClearOrbit(center, raised, desiredDistance, minimumDistance, radius, out Vector3 elevated);
+                        if (!found && nearRamp)
+                        {
+                            // A guard can overlap the orbit probe at the character while
+                            // the raised camera position and its sightline are both clear.
+                            elevated = center + raised * Vector3.back * desiredDistance;
+                            found = HasClearView(elevated, radius) && IsTargetInFrame(elevated, raised);
+                        }
+                        if (found)
                         {
                             position = elevated;
                             rotation = raised;

@@ -129,7 +129,7 @@ namespace Freyja.Prototype
         public Vector3 FilterGroundVelocity(Vector3 velocity, bool allowStairMovement)
         {
             activeFlight = -1;
-            if (!allowStairMovement || velocity.sqrMagnitude < 0.0001f)
+            if (!isActiveAndEnabled || !allowStairMovement || velocity.sqrMagnitude < 0.0001f)
                 return velocity;
 
             int flight = FindNearbyFlight(requireGrounded: false);
@@ -185,7 +185,7 @@ namespace Freyja.Prototype
             normalizedTime = 0f;
             int flight = activeFlight >= 0 ? activeFlight : plantedFlight;
             goingDown = activeFlight >= 0 ? descending : plantedDescending;
-            if (flight < 0 || flight != FindNearbyFlight() ||
+            if (!isActiveAndEnabled || flight < 0 || flight != FindNearbyFlight() ||
                 (activeFlight < 0 && !IsHoldingStairPose(flight)))
                 return false;
 

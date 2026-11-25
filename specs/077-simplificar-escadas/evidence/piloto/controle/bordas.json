@@ -1,0 +1,150 @@
+{
+  "caseName": "bordas",
+  "recoveries": 0,
+  "captures": 0,
+  "results": [
+    {
+      "name": "base--1",
+      "reached": true,
+      "frames": 21,
+      "seconds": 0.3514881,
+      "initial": "(-5.100, -0.133, -2.380)",
+      "end": "(-5.100, -0.133, -2.380)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.804441,
+      "offscreen": 0,
+      "animations": [
+        "Stairs",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "borda--1",
+      "reached": true,
+      "frames": 177,
+      "seconds": 3.0175457,
+      "initial": "(-5.100, -0.133, -2.380)",
+      "end": "(-1.496, 2.280, -2.260)",
+      "span": "(3.604, 2.413, 0.120)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 2.99995065,
+      "minCamera": 0.09353609,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Stairs"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "saída--1",
+      "reached": true,
+      "frames": 230,
+      "seconds": 3.85017967,
+      "initial": "(-1.496, 2.280, -2.260)",
+      "end": "(-4.953, -0.072, -2.260)",
+      "span": "(3.457, 2.352, 0.000)",
+      "maxAirborne": 0.06771558,
+      "maxSpeed": 3.000194,
+      "minCamera": 0.124696136,
+      "offscreen": 227,
+      "animations": [
+        "Stairs"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "base-1",
+      "reached": true,
+      "frames": 18,
+      "seconds": 0.316371918,
+      "initial": "(-5.100, 0.035, -1.740)",
+      "end": "(-5.100, 0.035, -1.740)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.01162624,
+      "offscreen": 0,
+      "animations": [
+        "Stairs",
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "borda-1",
+      "reached": true,
+      "frames": 173,
+      "seconds": 2.94986916,
+      "initial": "(-5.100, 0.035, -1.740)",
+      "end": "(-1.490, 2.280, -1.740)",
+      "span": "(3.610, 2.246, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00011659,
+      "minCamera": 4.915869,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Stairs"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "saída-1",
+      "reached": true,
+      "frames": 231,
+      "seconds": 3.8834,
+      "initial": "(-1.490, 2.280, -1.740)",
+      "end": "(-4.962, 0.047, -1.740)",
+      "span": "(3.472, 2.234, 0.000)",
+      "maxAirborne": 0.0167006738,
+      "maxSpeed": 3.00006938,
+      "minCamera": 5.01365948,
+      "offscreen": 0,
+      "animations": [
+        "Stairs"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pé-lateral",
+      "reached": true,
+      "frames": 18,
+      "seconds": 0.3166275,
+      "initial": "(-3.350, 0.027, -3.170)",
+      "end": "(-3.350, 0.027, -3.170)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 3.9412868,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "contra-guarda",
+      "reached": true,
+      "frames": 66,
+      "seconds": 1.15019035,
+      "initial": "(-3.350, 0.027, -3.170)",
+      "end": "(-3.350, 0.033, -3.160)",
+      "span": "(0.000, 0.006, 0.010)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.5673317,
+      "minCamera": 5.021181,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    }
+  ]
+}

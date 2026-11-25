@@ -1,0 +1,168 @@
+{
+  "caseName": "corrida",
+  "recoveries": 0,
+  "captures": 30,
+  "results": [
+    {
+      "name": "base",
+      "reached": true,
+      "frames": 30,
+      "seconds": 0.518859863,
+      "initial": "(-5.100, -0.053, -2.060)",
+      "end": "(-5.100, -0.053, -2.060)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.014957,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "entrada",
+      "reached": true,
+      "frames": 11,
+      "seconds": 0.233329773,
+      "initial": "(-5.100, -0.053, -2.060)",
+      "end": "(-4.200, 0.316, -2.060)",
+      "span": "(0.900, 0.370, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.40013742,
+      "minCamera": 4.90809727,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pausa-entrada",
+      "reached": true,
+      "frames": 27,
+      "seconds": 0.4664955,
+      "initial": "(-4.200, 0.316, -2.060)",
+      "end": "(-4.200, 0.316, -2.060)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.981036,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "subida",
+      "reached": true,
+      "frames": 16,
+      "seconds": 0.30008316,
+      "initial": "(-4.200, 0.316, -2.060)",
+      "end": "(-2.852, 1.304, -2.060)",
+      "span": "(1.348, 0.988, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.400143,
+      "minCamera": 4.84584665,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pausa-meio",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.5998688,
+      "initial": "(-2.852, 1.304, -2.060)",
+      "end": "(-2.852, 1.304, -2.060)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.931052,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "transicao-superior",
+      "reached": true,
+      "frames": 30,
+      "seconds": 0.550087,
+      "initial": "(-2.852, 1.304, -2.060)",
+      "end": "(-0.243, 2.860, -2.060)",
+      "span": "(2.609, 1.556, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.400158,
+      "minCamera": 4.834821,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "varanda",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.5998306,
+      "initial": "(-0.243, 2.860, -2.060)",
+      "end": "(-0.243, 2.860, -2.060)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.972359,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "descida",
+      "reached": true,
+      "frames": 54,
+      "seconds": 0.9501953,
+      "initial": "(-0.243, 2.860, -2.060)",
+      "end": "(-5.012, -0.031, -2.060)",
+      "span": "(4.769, 2.891, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 5.400193,
+      "minCamera": 5.03640938,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Run"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "retorno",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.5664902,
+      "initial": "(-5.012, -0.031, -2.060)",
+      "end": "(-5.012, -0.031, -2.060)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.01207,
+      "offscreen": 0,
+      "animations": [
+        "Run",
+        "Idle"
+      ],
+      "grounded": true
+    }
+  ]
+}

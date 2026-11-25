@@ -1,0 +1,149 @@
+{
+  "caseName": "bordas",
+  "recoveries": 0,
+  "captures": 0,
+  "results": [
+    {
+      "name": "base--1",
+      "reached": true,
+      "frames": 21,
+      "seconds": 0.3521824,
+      "initial": "(-5.100, -0.133, -2.380)",
+      "end": "(-5.100, -0.133, -2.380)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.750949,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "borda--1",
+      "reached": true,
+      "frames": 76,
+      "seconds": 1.31634521,
+      "initial": "(-5.100, -0.133, -2.380)",
+      "end": "(-1.453, 2.329, -2.258)",
+      "span": "(3.647, 2.462, 0.122)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00019813,
+      "minCamera": 0.702287257,
+      "offscreen": 67,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "saída--1",
+      "reached": true,
+      "frames": 71,
+      "seconds": 1.19977379,
+      "initial": "(-1.453, 2.329, -2.258)",
+      "end": "(-4.953, -0.072, -2.258)",
+      "span": "(3.500, 2.401, 0.000)",
+      "maxAirborne": 0.03392383,
+      "maxSpeed": 3.000155,
+      "minCamera": 0.6999311,
+      "offscreen": 68,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "base-1",
+      "reached": true,
+      "frames": 18,
+      "seconds": 0.3167591,
+      "initial": "(-5.100, 0.035, -1.740)",
+      "end": "(-5.100, 0.035, -1.740)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.011456,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "borda-1",
+      "reached": true,
+      "frames": 74,
+      "seconds": 1.26656342,
+      "initial": "(-5.100, 0.035, -1.740)",
+      "end": "(-1.450, 2.331, -1.740)",
+      "span": "(3.650, 2.296, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.0001843,
+      "minCamera": 4.837212,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "saída-1",
+      "reached": true,
+      "frames": 71,
+      "seconds": 1.21638107,
+      "initial": "(-1.450, 2.331, -1.740)",
+      "end": "(-4.950, 0.046, -1.740)",
+      "span": "(3.500, 2.287, 0.000)",
+      "maxAirborne": 0.03375887,
+      "maxSpeed": 3.00021362,
+      "minCamera": 4.98662043,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pé-lateral",
+      "reached": true,
+      "frames": 18,
+      "seconds": 0.366867065,
+      "initial": "(-3.350, 0.027, -3.170)",
+      "end": "(-3.350, 0.027, -3.170)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 3.92265654,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "contra-guarda",
+      "reached": true,
+      "frames": 66,
+      "seconds": 1.13329315,
+      "initial": "(-3.350, 0.027, -3.170)",
+      "end": "(-3.350, 0.033, -3.160)",
+      "span": "(0.000, 0.006, 0.010)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.590466142,
+      "minCamera": 5.037689,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "l3": {
+    "Setup": true,
+    "up": {
+      "accepted": true,
+      "projected": true,
+      "start": "(35.047, 14.159, 26.012)",
+      "end": "(40.507, 16.835, 24.453)",
+      "height": 2.67566681,
+      "distance": 0.137692258
+    },
+    "down": {
+      "accepted": true,
+      "projected": true,
+      "start": "(40.507, 16.835, 24.453)",
+      "end": "(35.156, 14.239, 25.981)",
+      "height": -2.5955677,
+      "distance": 0.1390433
+    }
+  },
+  "b3": {
+    "Setup": true,
+    "up": {
+      "accepted": true,
+      "projected": true,
+      "start": "(-35.007, 9.483, 1.224)",
+      "end": "(-34.372, 10.468, 2.972)",
+      "height": 0.9855604,
+      "distance": 0.138757274
+    },
+    "down": {
+      "accepted": true,
+      "projected": true,
+      "start": "(-34.372, 10.468, 2.972)",
+      "end": "(-34.962, 9.528, 1.348)",
+      "height": -0.940615654,
+      "distance": 0.13973324
+    }
+  }
+}

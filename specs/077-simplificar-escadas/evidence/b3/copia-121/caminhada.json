@@ -1,0 +1,203 @@
+{
+  "caseName": "caminhada",
+  "recoveries": 0,
+  "captures": 0,
+  "results": [
+    {
+      "name": "base",
+      "reached": true,
+      "frames": 30,
+      "seconds": 0.502759,
+      "initial": "(-3.750, 0.597, -0.595)",
+      "end": "(-3.750, 0.597, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.056844,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "entrada",
+      "reached": true,
+      "frames": 18,
+      "seconds": 0.3161564,
+      "initial": "(-3.750, 0.597, -0.595)",
+      "end": "(-2.899, 0.829, -0.595)",
+      "span": "(0.851, 0.232, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00001121,
+      "minCamera": 4.91172171,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pausa-entrada",
+      "reached": true,
+      "frames": 27,
+      "seconds": 0.483448982,
+      "initial": "(-2.899, 0.829, -0.595)",
+      "end": "(-2.899, 0.829, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.94551134,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "subida",
+      "reached": true,
+      "frames": 10,
+      "seconds": 0.21680069,
+      "initial": "(-2.899, 0.829, -0.595)",
+      "end": "(-2.449, 1.121, -0.595)",
+      "span": "(0.450, 0.292, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00000644,
+      "minCamera": 5.01468658,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "pausa-meio",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.599966049,
+      "initial": "(-2.449, 1.121, -0.595)",
+      "end": "(-2.449, 1.121, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.0148797,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "transicao-superior",
+      "reached": true,
+      "frames": 17,
+      "seconds": 0.3332863,
+      "initial": "(-2.449, 1.121, -0.595)",
+      "end": "(-1.649, 1.550, -0.595)",
+      "span": "(0.800, 0.429, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00000644,
+      "minCamera": 4.942422,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "patamar",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.6005049,
+      "initial": "(-1.649, 1.550, -0.595)",
+      "end": "(-1.649, 1.550, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.00113153,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "lateral-patamar",
+      "reached": true,
+      "frames": 4,
+      "seconds": 0.116170883,
+      "initial": "(-1.649, 1.550, -0.595)",
+      "end": "(-1.649, 1.550, -0.445)",
+      "span": "(0.000, 0.000, 0.150)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00000381,
+      "minCamera": 5.05681944,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "recentraliza",
+      "reached": true,
+      "frames": 4,
+      "seconds": 0.116425514,
+      "initial": "(-1.649, 1.550, -0.445)",
+      "end": "(-1.649, 1.550, -0.595)",
+      "span": "(0.000, 0.000, 0.150)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00000644,
+      "minCamera": 5.056836,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "descida",
+      "reached": true,
+      "frames": 41,
+      "seconds": 0.7497721,
+      "initial": "(-1.649, 1.550, -0.595)",
+      "end": "(-3.649, 0.602, -0.595)",
+      "span": "(2.000, 0.948, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00001025,
+      "minCamera": 5.056842,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "retorno",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.617060661,
+      "initial": "(-3.649, 0.602, -0.595)",
+      "end": "(-3.649, 0.602, -0.595)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.056844,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    }
+  ]
+}

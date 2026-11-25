@@ -1,0 +1,150 @@
+{
+  "caseName": "diagonais",
+  "recoveries": 0,
+  "captures": 0,
+  "results": [
+    {
+      "name": "base--1",
+      "reached": true,
+      "frames": 21,
+      "seconds": 0.3516693,
+      "initial": "(-3.750, 0.380, -0.855)",
+      "end": "(-3.750, 0.380, -0.855)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.056844,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "diagonal--1",
+      "reached": true,
+      "frames": 20,
+      "seconds": 0.366447449,
+      "initial": "(-3.750, 0.380, -0.855)",
+      "end": "(-2.824, 0.878, -0.633)",
+      "span": "(0.926, 0.498, 0.222)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00009632,
+      "minCamera": 5.056844,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "continua--1",
+      "reached": true,
+      "frames": 10,
+      "seconds": 0.217300415,
+      "initial": "(-2.824, 0.878, -0.633)",
+      "end": "(-2.372, 1.171, -0.633)",
+      "span": "(0.452, 0.293, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00004888,
+      "minCamera": 5.094019,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "inversao--1",
+      "reached": true,
+      "frames": 27,
+      "seconds": 0.466659546,
+      "initial": "(-2.372, 1.171, -0.633)",
+      "end": "(-3.672, 0.456, -0.633)",
+      "span": "(1.300, 0.715, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00006413,
+      "minCamera": 4.89269972,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "base-1",
+      "reached": true,
+      "frames": 18,
+      "seconds": 0.365905762,
+      "initial": "(-3.750, 0.422, -0.335)",
+      "end": "(-3.750, 0.422, -0.335)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 4.817797,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "diagonal-1",
+      "reached": true,
+      "frames": 20,
+      "seconds": 0.350791931,
+      "initial": "(-3.750, 0.422, -0.335)",
+      "end": "(-2.824, 0.878, -0.557)",
+      "span": "(0.926, 0.456, 0.222)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.0000205,
+      "minCamera": 5.054181,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "continua-1",
+      "reached": true,
+      "frames": 10,
+      "seconds": 0.183311462,
+      "initial": "(-2.824, 0.878, -0.557)",
+      "end": "(-2.374, 1.170, -0.557)",
+      "span": "(0.450, 0.292, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00005722,
+      "minCamera": 5.132744,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "inversao-1",
+      "reached": true,
+      "frames": 27,
+      "seconds": 0.46595,
+      "initial": "(-2.374, 1.170, -0.557)",
+      "end": "(-3.674, 0.461, -0.557)",
+      "span": "(1.300, 0.709, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00003386,
+      "minCamera": 4.889064,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "caseName": "salto",
+  "recoveries": 0,
+  "captures": 0,
+  "results": [
+    {
+      "name": "piso",
+      "reached": true,
+      "frames": 30,
+      "seconds": 0.485836029,
+      "initial": "(-5.250, -0.062, -2.060)",
+      "end": "(-5.250, -0.062, -2.060)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.01494455,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "salto-em-terreno",
+      "reached": true,
+      "frames": 69,
+      "seconds": 1.19942474,
+      "initial": "(-5.250, -0.062, -2.060)",
+      "end": "(-5.250, -0.044, -2.060)",
+      "span": "(0.000, 0.588, 0.000)",
+      "maxAirborne": 0.50001055,
+      "maxSpeed": 0.0,
+      "minCamera": 4.988496,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Jump"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "afastar",
+      "reached": true,
+      "frames": 33,
+      "seconds": 0.600204468,
+      "initial": "(-5.250, -0.044, -2.060)",
+      "end": "(-6.850, -0.064, -2.060)",
+      "span": "(1.600, 0.024, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.0001657,
+      "minCamera": 5.01489925,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    }
+  ]
+}

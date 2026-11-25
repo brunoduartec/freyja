@@ -1,0 +1,184 @@
+{
+  "caseName": "regressao",
+  "recoveries": 2,
+  "captures": 0,
+  "results": [
+    {
+      "name": "convés",
+      "reached": true,
+      "frames": 24,
+      "seconds": 0.3881073,
+      "initial": "(-32.100, 1.765, -56.200)",
+      "end": "(-32.100, 1.765, -56.200)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.05684376,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "piso-plano",
+      "reached": true,
+      "frames": 58,
+      "seconds": 1.01623535,
+      "initial": "(-32.100, 1.765, -56.200)",
+      "end": "(-32.100, 1.770, -53.354)",
+      "span": "(0.000, 0.005, 2.846)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00019932,
+      "minCamera": 5.05684328,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "junção-cais",
+      "reached": true,
+      "frames": 218,
+      "seconds": 3.64912415,
+      "initial": "(-29.850, 1.785, -51.850)",
+      "end": "(-29.850, 2.027, -41.004)",
+      "span": "(0.000, 0.242, 10.846)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00020218,
+      "minCamera": 2.985237,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "inclinação-igreja",
+      "reached": true,
+      "frames": 73,
+      "seconds": 1.23403931,
+      "initial": "(-1.660, 14.631, 22.500)",
+      "end": "(-1.660, 15.036, 26.101)",
+      "span": "(0.000, 0.405, 3.601)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00009561,
+      "minCamera": 4.976988,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "base-soleira",
+      "reached": true,
+      "frames": 21,
+      "seconds": 0.36680603,
+      "initial": "(4.000, 27.035, -6.000)",
+      "end": "(4.000, 27.035, -6.000)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.056842,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "soleira-16-cm",
+      "reached": true,
+      "frames": 37,
+      "seconds": 0.66619873,
+      "initial": "(4.000, 27.035, -6.000)",
+      "end": "(5.800, 27.200, -6.000)",
+      "span": "(1.800, 0.165, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 3.00002623,
+      "minCamera": 5.056842,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "base-queda",
+      "reached": true,
+      "frames": 21,
+      "seconds": 0.366943359,
+      "initial": "(-32.100, 1.765, -56.200)",
+      "end": "(-32.100, 1.765, -56.200)",
+      "span": "(0.000, 0.000, 0.000)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.05684376,
+      "offscreen": 0,
+      "animations": [
+        "Walk",
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "borda-livre-píer",
+      "reached": true,
+      "frames": 40,
+      "seconds": 0.7332916,
+      "initial": "(-32.100, 1.765, -56.200)",
+      "end": "(-30.150, 0.972, -56.200)",
+      "span": "(1.950, 0.474, 0.000)",
+      "maxAirborne": 0.133582249,
+      "maxSpeed": 3.000079,
+      "minCamera": 5.05684328,
+      "offscreen": 0,
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "grounded": false
+    },
+    {
+      "name": "gravidade-pós-borda",
+      "reached": true,
+      "frames": 39,
+      "seconds": 0.666564941,
+      "initial": "(-30.150, 0.972, -56.200)",
+      "end": "(-33.540, 1.765, -61.180)",
+      "span": "(3.390, 2.231, 4.980)",
+      "maxAirborne": 0.216389358,
+      "maxSpeed": 0.0,
+      "minCamera": 5.05684328,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    },
+    {
+      "name": "recuperação-sessão",
+      "reached": true,
+      "frames": 1,
+      "seconds": 0.0658416748,
+      "initial": "(-32.100, -0.610, -56.200)",
+      "end": "(-33.540, 1.765, -61.180)",
+      "span": "(1.440, 2.375, 4.980)",
+      "maxAirborne": 0.0,
+      "maxSpeed": 0.0,
+      "minCamera": 5.05684376,
+      "offscreen": 0,
+      "animations": [
+        "Idle"
+      ],
+      "grounded": true
+    }
+  ]
+}
