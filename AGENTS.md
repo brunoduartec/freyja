@@ -7,6 +7,7 @@ Freyja é um jogo 3D de investigação narrativa, low poly com pixels visíveis 
 - Trabalhe em iterações curtas e avaliáveis. Use `speckit-specify` para cada entrega, apresente uma spec curta e aguarde aprovação explícita antes de planejar, gerar tarefas ou implementar. “Pode seguir”, após avaliar a entrega anterior, autoriza preparar a próxima spec. Execute `speckit-plan`, `speckit-tasks` e `speckit-implement` após a aprovação. Ao concluir a entrega, aguarde nova avaliação.
 - Verifique Git e branches locais/remotas antes de uma nova spec. Prefira `main` atualizada quando for possível preservar o trabalho em andamento. Rode `.specify/scripts/bash/create-new-feature.sh --dry-run --json --short-name <nome-curto> "<descrição>"`, crie ou selecione a branch sequencial retornada e repita o comando sem `--dry-run`. Confirme a correspondência da branch, da pasta em `specs/` e de `.specify/feature.json`. Retome specs existentes na branch correspondente. Preserve o histórico e as mudanças de outras entregas.
 - Leia `spec.md`, `plan.md` e `tasks.md` aplicáveis. Atualize tarefas concluídas com evidência e indique arquivos, verificações e limitações ao entregar. Salve as entregas na raiz deste repositório.
+- Sempre que uma spec for concluída e validada, integre a branch da entrega à `main` antes de encerrar a tarefa. Verifique o resultado da integração e preserve as alterações locais de outras entregas.
 
 ## Unity e Blender
 
