@@ -13,9 +13,9 @@ internal static class Program
         {
             if (args.Contains("--test")) return Tests.Run();
             var data=Load(DataPath);
-            if(args.Contains("--validate")){ Console.WriteLine("OK: " + data.NpcSchedules.Count + " NPCs, " + data.Activities.Count + " atividades, " + data.Overrides.Count + " overrides"); return 0; }
+            if(args.Contains("--validate")){ var recipes=RecipeCatalog.Load(DataPath,data.Activities); Console.WriteLine("OK: " + data.NpcSchedules.Count + " NPCs, " + data.Activities.Count + " atividades, " + data.Overrides.Count + " overrides, "+recipes.Count+" receitas executáveis"); return 0; }
             if(args.Contains("--query")){ int i=Array.IndexOf(args,"--query"); var flags=new Dictionary<string,bool>(StringComparer.Ordinal);if(args.Length>i+5)foreach(var item in args[i+5].Split(',')){var pair=item.Split('=');if(pair.Length!=2||!Boolean.TryParse(pair[1],out var value))throw new ArgumentException("Flag esperada no formato nome=true|false: "+item);flags.Add(pair[0],value);}var r=new ScheduleResolver(data).Resolve(args[i+1],new GameTimeSnapshot(int.Parse(args[i+2]),GameTimeSnapshot.ParseMinute(args[i+3],false),0),new WorldContextSnapshot(args.Length>i+4?args[i+4]:"clear",flags)); Console.WriteLine("Day "+r.Intent.AbsoluteDay+" "+r.Intent.NpcId+" "+r.Intent.ActivityId+" "+(r.Intent.TargetId??"-")+" priority="+r.Intent.Priority+" valid="+r.Intent.ValidFrom+".."+r.Intent.ValidUntil+" "+r.Intent.Origin.ToString().ToLowerInvariant()+":"+r.Intent.SourceId+":"+r.Intent.EntryId+" trace="+r.Trace.Reason);foreach(var diagnostic in r.Trace.Diagnostics)Console.Error.WriteLine("WARN "+diagnostic); return 0; }
-            if(args.Contains("--simulate-week")){ Simulate(data); return 0; }
+            if(args.Contains("--simulate-week")){ ExecutionWeekSimulator.Run(data,DataPath,Console.Out); return 0; }
             Console.WriteLine("Uso: --validate | --test | --query <npcId> <dia> <HH:mm> [clima] [flag=true,...] | --simulate-week"); return 2;
         }
         catch(Exception ex){ Console.Error.WriteLine("ERROR: "+ex.Message); return 1; }

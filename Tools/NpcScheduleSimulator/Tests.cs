@@ -93,6 +93,7 @@ internal static class Tests
         File.WriteAllText(Path.Combine(conflictRoot,"overrides","demo_rain_conflict.json"),"{\"schemaVersion\":1,\"id\":\"demo_rain_conflict\",\"npcId\":\"demo_fisherman\",\"priority\":50,\"conditions\":{\"weather\":[\"rain\"]},\"entries\":[{\"id\":\"conflict_block\",\"start\":\"08:00\",\"end\":\"09:00\",\"activityId\":\"repair\",\"targetId\":\"home\"}]}");
         var previousError=Console.Error;using(var diagnostics=new StringWriter()){try{Console.SetError(diagnostics);Program.Load(conflictRoot);Is(diagnostics.ToString().Contains("possível conflito de prioridade 50 entre demo_rain_conflict e demo_rain_repair",StringComparison.Ordinal),"static same-priority conflict warning is ordinal");}finally{Console.SetError(previousError);}}Directory.Delete(conflictRoot,true);
         var simA=CaptureSimulation(data);var simB=CaptureSimulation(data);Is(simA==simB,"two full week simulations have identical transitions");Is(simA.Split('\n').Count(x=>x.StartsWith("Day ",StringComparison.Ordinal))==296,"week emits transitions rather than minute ticks");
+        count+=ExecutionTests.Run(data);
         Console.WriteLine("PASS: "+count+" assertions");return 0;
     }
     private static string CaptureSimulation(ResolvedScheduleData data){var saved=Console.Out;using(var output=new StringWriter()){try{Console.SetOut(output);Program.Simulate(data);return output.ToString();}finally{Console.SetOut(saved);}}}

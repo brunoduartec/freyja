@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:freyja:npc-activity-recipes:v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "recipes"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "recipes": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["activityId", "steps"],
+        "properties": {
+          "activityId": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+          "steps": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object", "additionalProperties": false,
+              "required": ["action"],
+              "properties": {
+                "action": { "enum": ["find_target", "find_waypoints", "reserve_slot", "move_to", "align_to", "occupy_slot", "play_animation", "wait", "release_slot"] },
+                "capability": { "type": "string", "minLength": 1 },
+                "target": { "type": "string", "minLength": 1 },
+                "point": { "type": "string", "minLength": 1 },
+                "animation": { "type": "string", "minLength": 1 },
+                "until": { "enum": ["schedule_end", "duration"] },
+                "durationSeconds": { "type": "integer", "exclusiveMinimum": 0 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "recipes": [
+    {
+      "activityId": "idle",
+      "steps": [
+        { "action": "move_to", "point": "target" },
+        { "action": "wait", "until": "schedule_end" }
+      ]
+    },
+    {
+      "activityId": "wander",
+      "steps": [
+        { "action": "find_waypoints" },
+        { "action": "move_to", "point": "next" },
+        { "action": "wait", "until": "duration", "durationSeconds": 3600 }
+      ]
+    },
+    {
+      "activityId": "sit",
+      "steps": [
+        { "action": "find_target", "capability": "sit", "target": "intent_target" },
+        { "action": "reserve_slot" },
+        { "action": "move_to", "point": "approach" },
+        { "action": "align_to", "point": "pose" },
+        { "action": "occupy_slot" },
+        { "action": "play_animation", "animation": "sit_down" },
+        { "action": "wait", "until": "schedule_end" },
+        { "action": "play_animation", "animation": "stand_up" },
+        { "action": "release_slot" }
+      ]
+    }
+  ]
+}

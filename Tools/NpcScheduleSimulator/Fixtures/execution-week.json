@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "npcSchedules": [
+    {
+      "npcId": "demo_farmer",
+      "entries": [
+        { "id": "early", "start": "00:00", "end": "08:00", "activityId": "idle" },
+        { "id": "sit_morning", "start": "08:00", "end": "10:00", "activityId": "sit", "targetId": "village_square" },
+        { "id": "walk_day", "start": "10:00", "end": "18:00", "activityId": "wander", "targetId": "village_square" },
+        { "id": "home_evening", "start": "18:00", "end": "24:00", "activityId": "idle" }
+      ]
+    },
+    {
+      "npcId": "demo_fisherman",
+      "entries": [
+        { "id": "early", "start": "00:00", "end": "08:00", "activityId": "idle" },
+        { "id": "sit_morning", "start": "08:00", "end": "10:00", "activityId": "sit", "targetId": "village_square" },
+        { "id": "walk_day", "start": "10:00", "end": "18:00", "activityId": "wander", "targetId": "beach" },
+        { "id": "home_evening", "start": "18:00", "end": "24:00", "activityId": "idle" }
+      ]
+    },
+    {
+      "npcId": "demo_resident",
+      "entries": [
+        { "id": "early", "start": "00:00", "end": "08:00", "activityId": "idle" },
+        { "id": "sit_morning", "start": "08:00", "end": "10:00", "activityId": "sit", "targetId": "beach" },
+        { "id": "walk_day", "start": "10:00", "end": "18:00", "activityId": "wander", "targetId": "home" },
+        { "id": "home_evening", "start": "18:00", "end": "24:00", "activityId": "idle" }
+      ]
+    }
+  ]
+}

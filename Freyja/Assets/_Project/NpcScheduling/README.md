@@ -67,3 +67,18 @@ Esse adaptador deve reavaliar quando contexto mudar e confirmar separadamente qu
 ## Integração futura
 
 Mapeie relógio/calendário do jogo para `GameTimeSnapshot`, clima e flags explícitas para `WorldContextSnapshot`; valide o mapeamento em uma feature separada. Depois, um adaptador Unity pode receber `ActivityIntent`, resolver os destinos simbólicos com dados autorizados e delegar ao executor apropriado. Esta entrega não assume que qualquer destino ou executor já exista.
+
+## Execução simulada de atividades
+
+O Schedule Core continua decidindo a intenção. O executor a consome por tick e, neste harness, usa adaptadores simulados. Somente `idle`, `wander` e `sit` têm receitas executáveis; os outros IDs do catálogo são declarações sem executor.
+
+- `Data/execution/recipes.json`: receitas lineares schema v1. Cada `activityId` já deve existir no catálogo e os passos usam operações whitelist. `recipes.schema.json` descreve a forma JSON; a validação semântica adicional ocorre no loader.
+- `idle`: move ao destino lógico quando existe e aguarda a janela; sem alvo, espera no local.
+- `wander`: escolhe pontos autorizados deterministicamente numa região, move e aguarda intervalos; não reserva slot.
+- `sit`: procura candidatos `sit`, reserva um slot exclusivo, move até aproximação, alinha, ocupa, toca `sit_down`, aguarda o fim da intenção, toca `stand_up` e libera. Na interrupção, tenta restaurar a pose e liberar.
+- As operações recebem ticks síncronos; tempo operacional monotônico controla timeout de adaptador e `GameTimeSnapshot` controla janelas de agenda. Não há espera real.
+- Uma identidade de execução representa a ocorrência do bloco, não o minuto consultado. Resolução repetida da mesma agenda mantém o executionId; validade atualizada atualiza o prazo, e nova ocorrência/intenção inicia transição após cleanup.
+- Cleanup tenta liberar recursos adquiridos em ordem inversa. Eventos `activity_*`, `step_*` e `resource_*` são diagnósticos simulados, separados das mudanças da agenda.
+- Os fakes do harness modelam dois bancos com dois slots cada, três NPCs fictícios e regiões `village_square`, `beach` e `home`; caminho, animação, reserva e cleanup podem falhar.
+
+O comando `dotnet run --project Tools/NpcScheduleSimulator -- --simulate-week` executa sete dias, imprime mudanças de intenção e eventos simulados, e inclui cenários dirigidos de disputa, cancelamento e falha. `--validate` também verifica o carregamento das receitas; `--test` executa regressões do Schedule Core e do executor. Não use a saída como prova de presença, movimento físico, Smart Object real, animação, testemunho ou pista narrativa. A integração Unity futura deve conectar os ports ao movimento/animação/Smart Objects, validar no Editor e gerar `.meta` para os novos scripts; nenhum desses passos foi validado nesta etapa.

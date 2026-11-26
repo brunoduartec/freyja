@@ -1,4 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net11.0</TargetFramework><ImplicitUsings>disable</ImplicitUsings><Nullable>disable</Nullable></PropertyGroup>
-  <ItemGroup><Compile Include="../../Freyja/Assets/_Project/Scripts/NpcScheduling/Core/*.cs" Link="Core/%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup>
+    <Compile Include="../../Freyja/Assets/_Project/Scripts/NpcScheduling/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+    <Compile Include="../../Freyja/Assets/_Project/Scripts/NpcScheduling/Execution/*.cs" Link="Execution/%(Filename)%(Extension)" />
+  </ItemGroup>
 </Project>
