@@ -15,6 +15,6 @@ Branch `086-npc-schedule-core`; checkout disponível em macOS arm64 com .NET SDK
 
 ## Limites e pendências
 
-Os 65 assertions exercitam o parser e loader reais, não mocks. O loader usa `StrictJson`, parser pequeno em C# puro compartilhado no Core e sem I/O; JSON Schema 2020-12 descreve os quatro documentos, e o loader faz validação semântica cruzada. A validação física de destinos e a compilação no perfil Unity continuam pendentes.
+Os 68 assertions exercitam o parser e loader reais, não mocks. O loader usa `StrictJson`, parser pequeno em C# puro compartilhado no Core e sem I/O; JSON Schema 2020-12 descreve os quatro documentos, e o loader faz validação semântica cruzada. A validação física de destinos e a compilação no perfil Unity continuam pendentes.
 
-As pastas sob `Assets` ainda não têm `.meta`: não inventei GUIDs. Ao retornar ao Mac, importar no Editor para gerar os metadados e confirmar compilação. Também conferir as alterações/branch pré-existentes de Smart Objects, mapear destinos lógicos e só planejar executor físico em uma entrega separada. Não há integração ao `main` ou push nesta branch.
+As pastas sob `Assets` ainda não têm `.meta`: não inventei GUIDs. Ao retornar ao Mac, importar no Editor para gerar os metadados e confirmar compilação. Também conferir as alterações/branch pré-existentes de Smart Objects, mapear destinos lógicos e só planejar executor físico em uma entrega separada. O commit desta entrega foi sincronizado à `main` local por cherry-pick; não houve push.
