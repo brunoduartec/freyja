@@ -1,0 +1,19 @@
+# Integração provisória do sistema de água
+
+**Data:** 25/11/2026 · **Branch:** `079-sistema-agua`
+
+Por pedido explícito do usuário para integrar o estado provisório, `Island023/Mar` na cena `Ilha_Principal` passou a usar `Water079/IslandWaterMain.mat`. O arquivo é uma cópia independente de `Mar049/Mar.mat`: preserva o material original, reutiliza `Mar049/CoastDistance` da costa real e usa o shader `Freyja/Island Water 079`. A referência da cena usa o GUID `53e4b6c9d6fad44b381db82251819141`; o par `.meta` foi criado pelo Unity e mantém esse GUID.
+
+A câmera existente `Cais Gameplay Camera` mantém seu alvo `Mundo_480x270` (480×270) e recebe `Water079/PrototypeDepth` para solicitar Depth e DepthNormals em execução. O Game View em Play Mode foi capturado em `Artifacts/water-validation/integracao-ilha-principal.png`. A imagem mostra o mar no píer, ondulações e espuma visível na borda do píer e junto ao casco. A verificação MCP anterior à troca de branch confirmou o projeto Unity `Freyja/`, Unity `6000.3.25f1`, a cena `Ilha_Principal` ativa, a referência do material e os modos `Depth, DepthNormals`; nessa sessão, o Editor reportava `compiling=false` e o Console atual tinha zero erros. Esta evidência veio do Editor originalmente aberto, antes da restauração deste worktree isolado; não foi aberta uma segunda instância para repetir o teste.
+
+O shader da praia e os materiais do terreno não foram trocados. `PrototypeSand.shader` depende da fórmula de margem da praia em `WaterShowcase`, então a cobertura costeira colorida, umidade e cáusticas projetadas na areia não foram aplicadas à praia real. As cáusticas disponíveis no shader da água ficam condicionadas à profundidade de cena e à luz; não houve avaliação separada do seu resultado na câmera principal. Ondas, profundidade, transparência e espuma permanecem uma integração provisória, sem declarar aprovação global de AC-01–14, perfil de desempenho, sequência temporal ou compatibilidade com outras câmeras.
+
+## Conferência posterior em Editor isolado — 25/11/2026
+
+O Editor Unity `6000.3.25f1` foi aberto com `unity open` apontando explicitamente para `../079-sistema-agua/Freyja`, sem usar o Main Editor da branch 080. A cena `Assets/_Project/Scenes/Ilha_Principal.unity` abriu limpa. O Editor confirmou `/Island023/Mar` → `Water079/IslandWaterMain.mat` → shader `Freyja/Island Water 079`, e `Cais Gameplay Camera` → `Mundo_480x270.renderTexture` (480×270). A captura de Play Mode, `Artifacts/water-validation/079-main-play.png`, demonstra a água visível no enquadramento do jogo, incluindo espuma no píer e no bote. Ela complementa a evidência anterior, sem provar todos os requisitos de AC-11 ou sanar os gates isolados.
+
+Durante a inicialização do Editor isolado, o Console registrou uma `ArgumentOutOfRangeException` em `UnityEditor.Search.SearchDatabase.EnumerateAll` durante `SearchInit.IndexationOnStartup`. O erro é interno ao Unity Search e não traz chamadas do shader ou dos scripts de água; permanece registrado sem atribuição causal. A cena seguiu limpa, e Play Mode foi encerrado. A inspeção independente e as limitações continuam em `docs/water/validacao.md`.
+
+## Alterações da cena preservadas
+
+Antes de salvar a água, a cena principal já estava marcada como modificada no Editor. A serialização resultante contém objetos de iluminação e outros ajustes que não foram criados pela integração da água; eles foram mantidos. `Terreno.asset` também aparece alterado após o salvamento global dos assets, embora não tenha sido editado diretamente para integrar a água. O estado recuperado completo está preservado no arquivo-irmão `../079-recovered-before-minimize.tar`, fora do worktree. Não foi removido conteúdo da cena ou terreno para reduzir esse diff, pois a origem preexistente não pode ser descartada com segurança.
