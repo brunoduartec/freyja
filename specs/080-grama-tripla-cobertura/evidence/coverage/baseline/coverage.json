@@ -1,0 +1,101 @@
+{
+  "engine": "6000.3.25f1",
+  "camera": "Cais Gameplay Camera",
+  "renderTexture": [
+    480,
+    270
+  ],
+  "stage": "baseline",
+  "fov": 58.0,
+  "hour": 12.0,
+  "wind": "Calm",
+  "observations": [
+    {
+      "name": "campo-oeste",
+      "camera": "(-36.09734, 5.29301, -32.87177)",
+      "player": "(-35.00000, 3.24715, -28.00000)",
+      "cameraFollowDistance": 5.39665127,
+      "recoveries": 0,
+      "yaw": 335.0,
+      "fov": 58.0,
+      "hour": 12.0,
+      "wind": "Calm",
+      "bakedRoots": 116214
+    },
+    {
+      "name": "campo-oeste",
+      "changedPixels": 11190,
+      "roiPixels": 97440,
+      "coverageRatio": 0.11483990147783252,
+      "roi": "bottom 75%",
+      "rgbEuclideanThreshold8Bit": 20
+    },
+    {
+      "name": "campo-leste",
+      "camera": "(-29.96299, 7.52439, -17.03859)",
+      "player": "(-26.00000, 5.47853, -14.00000)",
+      "cameraFollowDistance": 5.39664936,
+      "recoveries": 0,
+      "yaw": 60.0,
+      "fov": 58.0,
+      "hour": 12.0,
+      "wind": "Calm",
+      "bakedRoots": 116214
+    },
+    {
+      "name": "campo-leste",
+      "changedPixels": 6049,
+      "roiPixels": 97440,
+      "coverageRatio": 0.062079228243021346,
+      "roi": "bottom 75%",
+      "rgbEuclideanThreshold8Bit": 20
+    },
+    {
+      "name": "encosta-oeste",
+      "camera": "(-27.68308, 20.97690, 28.62758)",
+      "player": "(-24.00000, 18.93103, 32.00000)",
+      "cameraFollowDistance": 5.39665174,
+      "recoveries": 0,
+      "yaw": 55.0,
+      "fov": 58.0,
+      "hour": 12.0,
+      "wind": "Calm",
+      "bakedRoots": 116214
+    },
+    {
+      "name": "encosta-oeste",
+      "changedPixels": 21694,
+      "roiPixels": 97440,
+      "coverageRatio": 0.22263957307060755,
+      "roi": "bottom 75%",
+      "rgbEuclideanThreshold8Bit": 20
+    },
+    {
+      "name": "encosta-leste",
+      "camera": "(9.92436, 20.46161, 42.14096)",
+      "player": "(8.00000, 18.71748, 40.00000)",
+      "cameraFollowDistance": 3.36583424,
+      "recoveries": 0,
+      "yaw": 235.0,
+      "fov": 58.0,
+      "hour": 12.0,
+      "wind": "Calm",
+      "bakedRoots": 116214
+    },
+    {
+      "name": "encosta-leste",
+      "changedPixels": 15107,
+      "roiPixels": 97440,
+      "coverageRatio": 0.15503899835796386,
+      "roi": "bottom 75%",
+      "rgbEuclideanThreshold8Bit": 20
+    }
+  ],
+  "roi": "bottom 75% (y >= height / 4)",
+  "aggregateChangedPixels": 54040,
+  "aggregateRoiPixels": 389760,
+  "aggregateCoverageRatio": 0.13864942528735633,
+  "baselineCoverageRatio": null,
+  "coverageIncreaseRatio": null,
+  "passesCoverageTarget": null
+}

@@ -135,13 +135,17 @@ namespace Freyja.Environment
                 bool authored = i >= layout.Cells.Length;
                 CoastalGrassLayout.Cell cell = authored ? extraCells[i - layout.Cells.Length] : layout.Cells[i];
                 Bounds bounds = cell.Bounds;
+                GrassDensityLayout.Tuft[] extraTufts = hasDensity && !authored
+                    ? densityLayout.GetTufts(i) : Array.Empty<GrassDensityLayout.Tuft>();
+                foreach (GrassDensityLayout.Tuft tuft in extraTufts)
+                    bounds.Encapsulate(tuft.Root);
                 bounds.Expand(1.6f);
                 regions[i] = new Region
                 {
                     Bounds = bounds,
                     Source = cell,
                     AuthoredCoastal = authored,
-                    ExtraTufts = hasDensity && !authored ? densityLayout.GetTufts(i) : Array.Empty<GrassDensityLayout.Tuft>()
+                    ExtraTufts = extraTufts
                 };
             }
             RebuildPlacement();

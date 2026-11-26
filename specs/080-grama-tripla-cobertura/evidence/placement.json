@@ -1,0 +1,131 @@
+[
+  {
+    "name": "alta contém aproximadamente três vezes a referência 078",
+    "passed": true,
+    "detail": {
+      "initialCount": 331934,
+      "target": 348642,
+      "minimum": 313778,
+      "maximum": 383506
+    }
+  },
+  {
+    "name": "mesma seed, mesmos lotes",
+    "passed": true,
+    "detail": 331934
+  },
+  {
+    "name": "seed diferente altera seleção",
+    "passed": true,
+    "detail": 331941
+  },
+  {
+    "name": "seed original recupera seleção",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "exclusão remove ponto",
+    "passed": true,
+    "detail": {
+      "before": 331934,
+      "during": 331902,
+      "affected": 2,
+      "ms": 0.8022
+    }
+  },
+  {
+    "name": "reconstrução localizada",
+    "passed": true,
+    "detail": {
+      "affected": 2,
+      "totalRegions": 132,
+      "changed": 2
+    }
+  },
+  {
+    "name": "mover restaura origem e exclui destino",
+    "passed": true,
+    "detail": {
+      "affected": 6,
+      "ms": 5.4939
+    }
+  },
+  {
+    "name": "remover restaura todos os lotes",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "direções nula e inválida mantêm orientação",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "bounds cobrem deslocamento máximo",
+    "passed": true,
+    "detail": {
+      "outside": 0,
+      "invertedBounds": 0
+    }
+  },
+  {
+    "name": "altura, inclinação e nível de água",
+    "passed": true,
+    "detail": {
+      "invalidSurface": 0,
+      "maxHeightError": 0.155593872,
+      "maxSlope": 52.999485
+    }
+  },
+  {
+    "name": "raízes únicas nos limites das regiões",
+    "passed": true,
+    "detail": {
+      "duplicates": 0,
+      "roots": 331934
+    }
+  },
+  {
+    "name": "suplementos não duplicados nem sobre máscaras inválidas",
+    "passed": true,
+    "detail": {
+      "supplementCount": 297427,
+      "duplicates": 0,
+      "invalidSupplementMask": 0
+    }
+  },
+  {
+    "name": "desativar controlador limpa o vento",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "reativar controlador republica o vento",
+    "passed": true,
+    "detail": null
+  },
+  {
+    "name": "três perfis presentes",
+    "passed": true,
+    "detail": [
+      87698,
+      214946,
+      29290
+    ]
+  },
+  {
+    "name": "zero relva antiga em renderers ativos",
+    "passed": true,
+    "detail": 0
+  },
+  {
+    "name": "ruído espacial contínuo, com variação de densidade",
+    "passed": true,
+    "detail": {
+      "min": 0.416,
+      "max": 1.0,
+      "seamDifference": 0.00199043751
+    }
+  }
+]

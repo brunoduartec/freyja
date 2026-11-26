@@ -61,6 +61,8 @@ int CountMatrix(Vector3 point)
 }
 
 int initialCount = grass.BakedInstances;
+Verify("alta contém aproximadamente três vezes a referência 078", initialCount >= 313778 && initialCount <= 383506,
+    new { initialCount, target = 348642, minimum = 313778, maximum = 383506 });
 ulong[] initial = Digests();
 grass.RebuildPlacement();
 Verify("mesma seed, mesmos lotes", initial.SequenceEqual(Digests()), initialCount);
@@ -172,6 +174,27 @@ foreach (var region in regions)
 Verify("bounds cobrem deslocamento máximo", outside == 0 && invertedBounds == 0, new { outside, invertedBounds });
 Verify("altura, inclinação e nível de água", invalidSurface == 0, new { invalidSurface, maxHeightError, maxSlope });
 Verify("raízes únicas nos limites das regiões", duplicates == 0, new { duplicates, roots = roots.Count });
+var extraField = regions.GetType().GetElementType().GetField("ExtraTufts");
+var maskAsset = (GrassSurfaceMask)grassSettings.FindProperty("surfaceMask").objectReferenceValue;
+var maskLookup = maskAsset ? (HashSet<Vector2Int>)typeof(GrassSurfaceMask)
+    .GetMethod("BuildLookup", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(maskAsset, null) : null;
+var baseRoots = new HashSet<Vector2Int>(layout.Cells.SelectMany(cell => cell.Batches).SelectMany(batch => batch.Instances)
+    .Select(matrix => new Vector2Int(Mathf.RoundToInt(matrix.GetColumn(3).x * 1024), Mathf.RoundToInt(matrix.GetColumn(3).z * 1024))));
+int invalidSupplementMask = 0;
+int supplementCount = 0;
+var supplementRoots = new HashSet<Vector2Int>();
+foreach (object region in regions)
+foreach (GrassDensityLayout.Tuft tuft in (GrassDensityLayout.Tuft[])extraField.GetValue(region))
+{
+    supplementCount++;
+    var key = new Vector2Int(Mathf.RoundToInt(tuft.Root.x * 1024), Mathf.RoundToInt(tuft.Root.z * 1024));
+    if (!supplementRoots.Add(key) || baseRoots.Contains(key))
+        duplicates++;
+    if (maskLookup != null && maskLookup.Contains(key))
+        invalidSupplementMask++;
+}
+Verify("suplementos não duplicados nem sobre máscaras inválidas", duplicates == 0 && invalidSupplementMask == 0,
+    new { supplementCount, duplicates, invalidSupplementMask });
 var windId = Shader.PropertyToID("_FreyjaWind");
 wind.enabled = false;
 Verify("desativar controlador limpa o vento", Shader.GetGlobalVector(windId) == Vector4.zero);
@@ -182,7 +205,7 @@ int legacy = UnityEngine.Object.FindObjectsByType<MeshRenderer>(FindObjectsInact
     .Count(renderer => renderer.enabled && renderer.sharedMaterials.Any(material => material && material.shader.name == "Freyja/Coastal Grass"));
 Verify("zero relva antiga em renderers ativos", legacy == 0, legacy);
 
-var folder = Path.GetFullPath(Path.Combine(Application.dataPath, "../../specs/078-grama-vento-global/evidence"));
+var folder = Path.GetFullPath(Path.Combine(Application.dataPath, "../../specs/080-grama-tripla-cobertura/evidence"));
 Directory.CreateDirectory(folder);
 var noise = (GrassDensityLayout)grassSettings.FindProperty("densityLayout").objectReferenceValue;
 if (noise)
