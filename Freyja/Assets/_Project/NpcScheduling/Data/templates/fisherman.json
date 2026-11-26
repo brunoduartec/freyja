@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "fisherman",
+  "entries": [
+    {
+      "id": "sleep_early",
+      "start": "00:00",
+      "end": "06:00",
+      "activityId": "sleep",
+      "targetId": "home"
+    },
+    {
+      "id": "breakfast",
+      "start": "06:00",
+      "end": "07:00",
+      "activityId": "eat",
+      "targetId": "home"
+    },
+    {
+      "id": "morning_work",
+      "start": "07:00",
+      "end": "12:00",
+      "activityId": "fish",
+      "targetId": "pier"
+    },
+    {
+      "id": "lunch",
+      "start": "12:00",
+      "end": "13:00",
+      "activityId": "eat",
+      "targetId": "home"
+    },
+    {
+      "id": "afternoon_work",
+      "start": "13:00",
+      "end": "17:00",
+      "activityId": "sell_goods",
+      "targetId": "fish_market"
+    },
+    {
+      "id": "social",
+      "start": "17:00",
+      "end": "20:00",
+      "activityId": "chat",
+      "targetId": "village_square"
+    },
+    {
+      "id": "rest",
+      "start": "20:00",
+      "end": "22:00",
+      "activityId": "rest",
+      "targetId": "home"
+    },
+    {
+      "id": "sleep_night",
+      "start": "22:00",
+      "end": "24:00",
+      "activityId": "sleep",
+      "targetId": "home"
+    }
+  ]
+}

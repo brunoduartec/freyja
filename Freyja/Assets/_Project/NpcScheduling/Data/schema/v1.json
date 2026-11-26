@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:freyja:npc-scheduling:v1",
+  "title": "Freyja NPC Scheduling Data v1",
+  "description": "Each file is one of the four root document types. Cross-file references, interval overlap and target requirements are checked by the executable loader.",
+  "oneOf": [
+    { "$ref": "#/$defs/activityCatalog" },
+    { "$ref": "#/$defs/template" },
+    { "$ref": "#/$defs/npcSchedule" },
+    { "$ref": "#/$defs/override" }
+  ],
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "timeStart": { "type": "string", "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]$" },
+    "timeEnd": { "type": "string", "pattern": "^(?:(?:[01][0-9]|2[0-3]):[0-5][0-9]|24:00)$" },
+    "entry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "start", "end", "activityId"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "start": { "$ref": "#/$defs/timeStart" },
+        "end": { "$ref": "#/$defs/timeEnd" }, "activityId": { "$ref": "#/$defs/id" },
+        "targetId": { "$ref": "#/$defs/id" }
+      }
+    },
+    "activities": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "targetKind"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "targetKind": { "enum": ["none", "location", "object"] },
+          "label": { "type": "string" }
+        }
+      }
+    },
+    "activityCatalog": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "activities"],
+      "properties": { "schemaVersion": { "const": 1 }, "activities": { "$ref": "#/$defs/activities" } }
+    },
+    "template": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "id", "entries"],
+      "properties": { "schemaVersion": { "const": 1 }, "id": { "$ref": "#/$defs/id" }, "entries": { "type": "array", "items": { "$ref": "#/$defs/entry" } } }
+    },
+    "npcSchedule": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "npcId"],
+      "anyOf": [{ "required": ["templateId"] }, { "required": ["entries"] }],
+      "properties": {
+        "schemaVersion": { "const": 1 }, "npcId": { "$ref": "#/$defs/id" },
+        "templateId": { "$ref": "#/$defs/id" },
+        "entries": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "replaceEntries": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "removeEntries": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+        "addEntries": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+      }
+    },
+    "conditions": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "days": { "type": "array", "minItems": 1, "items": { "type": "integer", "minimum": 1 }, "uniqueItems": true },
+        "weekdays": { "type": "array", "minItems": 1, "items": { "type": "integer", "minimum": 0, "maximum": 6 }, "uniqueItems": true },
+        "weather": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "flags": { "type": "object", "minProperties": 1, "propertyNames": { "$ref": "#/$defs/id" }, "additionalProperties": { "type": "boolean" } }
+      }
+    },
+    "override": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schemaVersion", "id", "npcId", "priority", "entries"],
+      "properties": {
+        "schemaVersion": { "const": 1 }, "id": { "$ref": "#/$defs/id" },
+        "npcId": { "$ref": "#/$defs/id" }, "priority": { "enum": [50, 70, 90] },
+        "conditions": { "$ref": "#/$defs/conditions" },
+        "entries": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/entry" } }
+      }
+    }
+  }
+}

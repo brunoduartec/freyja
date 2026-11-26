@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "activities": [
+    {
+      "id": "idle",
+      "targetKind": "none",
+      "label": "Demo idle"
+    },
+    {
+      "id": "wander",
+      "targetKind": "location",
+      "label": "Demo wander"
+    },
+    {
+      "id": "sit",
+      "targetKind": "location",
+      "label": "Demo sit"
+    },
+    {
+      "id": "sleep",
+      "targetKind": "location",
+      "label": "Demo sleep"
+    },
+    {
+      "id": "eat",
+      "targetKind": "location",
+      "label": "Demo eat"
+    },
+    {
+      "id": "rest",
+      "targetKind": "location",
+      "label": "Demo rest"
+    },
+    {
+      "id": "chat",
+      "targetKind": "location",
+      "label": "Demo chat"
+    },
+    {
+      "id": "fish",
+      "targetKind": "location",
+      "label": "Demo fish"
+    },
+    {
+      "id": "sell_goods",
+      "targetKind": "location",
+      "label": "Demo sell goods"
+    },
+    {
+      "id": "water_crops",
+      "targetKind": "location",
+      "label": "Demo water crops"
+    },
+    {
+      "id": "harvest",
+      "targetKind": "location",
+      "label": "Demo harvest"
+    },
+    {
+      "id": "feed_animals",
+      "targetKind": "location",
+      "label": "Demo feed animals"
+    },
+    {
+      "id": "milk_cow",
+      "targetKind": "object",
+      "label": "Demo milk cow"
+    },
+    {
+      "id": "repair",
+      "targetKind": "location",
+      "label": "Demo repair"
+    },
+    {
+      "id": "secret_meeting",
+      "targetKind": "location",
+      "label": "Demo secret meeting"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "demo_rain_repair",
+  "npcId": "demo_fisherman",
+  "priority": 50,
+  "conditions": {
+    "weather": [
+      "rain"
+    ]
+  },
+  "entries": [
+    {
+      "id": "rain_work",
+      "start": "07:00",
+      "end": "12:00",
+      "activityId": "repair",
+      "targetId": "home"
+    }
+  ]
+}
