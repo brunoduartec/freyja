@@ -11,6 +11,7 @@ O [GDD](../GDD.md) guarda as decisões gerais. Cada pasta de feature contém `sp
 | [003 · Ilha bruta caminhável](003-ilha-bruta/spec.md) | Cena e modelo prontos para avaliação; testes técnicos registrados | Cais e caminhada das entregas anteriores |
 | [004 · Relevo da ilha e recanto isolado](004-relevo-ilha/spec.md) | Encerrada a pedido do usuário; entrega parcial e validação limitada | Ilha bruta da 003 |
 | [005 · Relevo idêntico à referência](005-relevo-fiel-referencia/spec.md) | Primeira maquete apresentada; aguardando avaliação antes de integrar e validar caminhada | Reaproveitamento compatível da 004 e seis referências de exatidão |
+| [086 · Núcleo de agendas NPC](086-npc-schedule-core/spec.md) | Core e simulador validados em .NET; importação e compilação Unity pendentes | Executor físico em entrega separada |
 | [Backlog · Primeiro encontro com Artur](backlog/encontro-com-artur/spec.md) | Proposta adiada | Cais e caminhada |
 | Backlog · Vila explorável e rotinas | Proposta futura; sem spec própria | Cais, caminhada e validação visual |
 | Backlog · Arquivos, partidas e dedução da regra | Proposta futura; sem numeração de spec reservada | 001 e lugares relevantes da 003 |

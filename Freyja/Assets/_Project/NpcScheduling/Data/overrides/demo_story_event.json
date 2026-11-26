@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "demo_story_event",
+  "npcId": "demo_fisherman",
+  "priority": 90,
+  "conditions": {
+    "days": [
+      4
+    ],
+    "flags": {
+      "demo_secret_meeting_unlocked": true
+    }
+  },
+  "entries": [
+    {
+      "id": "secret_meeting",
+      "start": "23:00",
+      "end": "23:45",
+      "activityId": "secret_meeting",
+      "targetId": "hill_ruins"
+    }
+  ]
+}

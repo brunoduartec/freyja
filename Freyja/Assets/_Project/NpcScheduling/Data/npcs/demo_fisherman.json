@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "npcId": "demo_fisherman",
+  "templateId": "fisherman",
+  "replaceEntries": [
+    {
+      "id": "social",
+      "start": "17:00",
+      "end": "20:00",
+      "activityId": "rest",
+      "targetId": "home"
+    }
+  ]
+}

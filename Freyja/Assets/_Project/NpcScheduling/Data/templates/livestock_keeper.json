@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "livestock_keeper",
+  "entries": [
+    {
+      "id": "sleep",
+      "start": "00:00",
+      "end": "05:30",
+      "activityId": "sleep",
+      "targetId": "home"
+    },
+    {
+      "id": "breakfast",
+      "start": "05:30",
+      "end": "06:00",
+      "activityId": "eat",
+      "targetId": "home"
+    },
+    {
+      "id": "feeding",
+      "start": "06:00",
+      "end": "10:00",
+      "activityId": "feed_animals",
+      "targetId": "farm"
+    },
+    {
+      "id": "work",
+      "start": "10:00",
+      "end": "12:00",
+      "activityId": "milk_cow",
+      "targetId": "demo_cow"
+    },
+    {
+      "id": "lunch",
+      "start": "12:00",
+      "end": "13:00",
+      "activityId": "eat",
+      "targetId": "home"
+    },
+    {
+      "id": "care",
+      "start": "13:00",
+      "end": "17:00",
+      "activityId": "feed_animals",
+      "targetId": "farm"
+    },
+    {
+      "id": "social",
+      "start": "17:00",
+      "end": "19:00",
+      "activityId": "chat",
+      "targetId": "village_square"
+    },
+    {
+      "id": "rest",
+      "start": "19:00",
+      "end": "22:00",
+      "activityId": "rest",
+      "targetId": "home"
+    },
+    {
+      "id": "night_sleep",
+      "start": "22:00",
+      "end": "24:00",
+      "activityId": "sleep",
+      "targetId": "home"
+    }
+  ]
+}
