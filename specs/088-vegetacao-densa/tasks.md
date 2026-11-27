@@ -31,13 +31,13 @@
 - [x] T010 [US2] Compor jardins e bordas de caminho, praça e entorno de edifícios públicos sem bloquear acessos, NPCs ou marcos em `Ilha_Principal.unity`.
 - [x] T011 [US2] Compor núcleos e clareiras nas encostas; incluir `Tree_Cypress` e `Tree_Pine` existentes na crista noroeste e vegetação baixa fora de lotes produtivos, rotas e pontos de interação em `Ilha_Principal.unity`.
 - [x] T012 [US2] Ruínas: não aplicável à cena atual. A busca na cena e nos assets próprios/terceiros não encontrou objeto ou modelo de ruína; não foi inventado um local para plantio.
-- [x] T013 [US2] Validar os setores e o teste arbóreo pela câmera real de dia/noite; capturas densas em `evidence/revalidation-dense/`. Igreja, caminhos, NPC e água permanecem legíveis; costa foi reduzida após a revisão. `CharacterController` percorreu dois trechos gramados de 6 m na rodada anterior.
+- [x] T013 [US2] Validar os setores e o teste arbóreo pela câmera real de dia/noite; capturas finais integradas em `evidence/revalidation-main/` (pares de coral, norte, leste, igreja e costa). Igreja, caminhos, NPC e água permanecem legíveis; costa foi reduzida após a revisão. `CharacterController` percorreu dois trechos gramados de 6 m na rodada anterior.
 
 ## Phase 4 — Entrega
 
 - [x] T014 [P] Registrar ativos usados, setores, contagens, snapshots de performance, Console e limitações em `specs/088-vegetacao-densa/validacao.md`.
 - [x] T015 Conferir cena salva/limpa, Console, colliders e ausência de novos assets/metas/GUIDs; auditoria final: 632 flores, 11 arbustos, 2 árvores novas, 645 objetos estáticos e zero colliders.
-- [x] T016 Integrar `088-vegetacao-densa` em `main` por fast-forward no commit `8094021`; arquivos não rastreados das tarefas de NPC permaneceram fora da integração.
+- [x] T016 Integrar `088-vegetacao-densa` em `main` por fast-forward; o estado final atualizado e a documentação estão no commit `0dd8270`. Arquivos não rastreados das tarefas de NPC permaneceram fora da integração.
 
 ## Dependências
 

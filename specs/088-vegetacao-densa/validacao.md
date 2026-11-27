@@ -10,17 +10,18 @@
 
 ## Revisão visual em Play Mode
 
-Capturas da `Cais Gameplay Camera` em 1280×720, com hora fixada em 12h/22h, estão em `evidence/revalidation-dense/`: pares de coral, norte, leste, igreja e costa (`coast-final-day/night.png` registra a correção final). A planta superior atualizada, com posições reais da cena, está em `evidence/vegetation-map.png` e no vetor fonte `vegetation-map.svg`.
+Capturas da `Cais Gameplay Camera` em 1280×720, com hora fixada em 12h/22h, estão em `evidence/revalidation-main/`: pares de coral, norte, leste, igreja e costa. Após a revisão final, `coral-day/night.png` foram recapturadas com o pinheiro de primeiro plano reduzido. As capturas intermediárias da rodada densa permanecem em `evidence/revalidation-dense/`. A planta superior atualizada, com posições reais da cena, está em `evidence/vegetation-map.png` e no vetor fonte `vegetation-map.svg`.
 
 - A solicitação de mais flores acrescentou 499 instâncias à primeira distribuição. A inspeção mostrou a faixa costeira densa demais para o ressalto estreito; removi 34 flores desse acréscimo e recuei 22 outras para pontos gramados internos. A cena final mantém 28 flores na costa; água, margem e caminho ficam legíveis nas capturas finais.
 - Coral, crista norte, encosta leste e jardim da igreja agora formam campos mais cheios. Caminhos permanecem aparentes; a porta da igreja, NPCs, entradas e marcos continuam livres nas capturas.
-- As árvores novas têm escala compatível e não ocultam rota ou marcos; uma copa sobreposta foi afastada antes desta revisão.
+- Um pinheiro preexistente à frente do campo coral ainda oculta uma seção central do canteiro. Reduzi sua escala local de 0,917 para 0,68; as capturas finais confirmam o avatar inteiro, flores dos dois lados e caminho livre. A copa continua parcialmente sobreposta ao campo, sem ocultá-lo por inteiro.
+- As duas árvores novas têm escala compatível e não ocultam rota ou marcos.
 - À noite as pétalas ficam pouco contrastadas, sobretudo longe das luzes já existentes. A iluminação e o ciclo atual permanecem intactos; nenhuma luminária foi adicionada.
-- Console no Editor 7800: sem erros novos de compilação ou runtime durante as capturas; houve um aviso recorrente do Unity AI Toolkit sobre indisponibilidade da Account API. A cópia para a branch `088-vegetacao-densa` foi salva por Unity batch mode (`VEGETATION_IMPORT_DONE`, 645 objetos, 9 grupos); não houve erro `CS` nem novo arquivo de modelo/material.
+- Console no Editor 7801: sem erros novos de compilação ou runtime durante as capturas; houve um aviso recorrente do Unity AI Toolkit sobre indisponibilidade da Account API. A cópia para a branch `088-vegetacao-densa` foi salva por Unity batch mode (`VEGETATION_IMPORT_DONE`, 645 objetos, 9 grupos); não houve erro `CS` nem novo arquivo de modelo/material.
 
 ## Performance observada
 
-`diagnostics get_performance` na rodada densa, antes de retirar 34 flores costeiras, marcou **4.094 draw calls, 533 batches, 4,81 M triângulos, CPU 5,78 ms e GPU 3,63 ms**. Como a medição foi no Editor e variava com câmera/estado, ela não é comparável às leituras anteriores (1.852–2.360 draw calls). A medição da cena final, já com 34 instâncias a menos, não foi repetida; benchmark de build com câmera/configuração fixa permanece pendente.
+Na cena final em Play Mode, o Editor registrou **2.562 draw calls, 223 batches, 1,91 M triângulos, 2,93 M vértices, CPU 8,68 ms e GPU 5,76 ms** (524 MB alocados, 1,038 GB reservados). A leitura varia com câmera e estado do Editor; não há baseline comparável que permita atribuir custo à vegetação. Benchmark de build com câmera/configuração fixa permanece pendente.
 
 Essas leituras não permitem atribuir custo às plantas nem provar desempenho final. As instâncias usam batching estático e não têm colliders; não foi criado sistema próprio de instancing. Um benchmark de build com câmera/configuração fixas continua pendente.
 
@@ -29,4 +30,4 @@ Essas leituras não permitem atribuir custo às plantas nem provar desempenho fi
 - A cena `Ilha_Principal` não contém objeto ou setor identificável como ruína (busca na cena e referência ao GDD). A vegetação das ruínas não foi colocada arbitrariamente; T012 depende de o local existir/ser identificado.
 - Não foram acrescentadas outras árvores além do par Cypress/Pine validado na crista noroeste; o restante das clareiras mantém os pinheiros que já existiam.
 - O `CaisPlayerController`/`CharacterController` percorreu 6 m em cada um de dois trechos gramados e permaneceu grounded. O movimento foi dirigido via API do próprio controller, sem input manual de teclado; não há colliders decorativos.
-- A branch `088-vegetacao-densa` partiu do `main` local `73803dd`; os transforms, rotações, escalas e materiais da cena visualmente validada foram reaplicados à `Ilha_Principal` dessa branch. As capturas foram feitas na cópia de validação 086; a cópia 088 não recebeu uma segunda captura, pois a mudança de integração apenas reproduz os mesmos objetos e transforms. O fast-forward para `main` foi concluído no commit `8094021`; alterações locais não rastreadas de NPC permaneceram fora do merge.
+- A branch `088-vegetacao-densa` partiu do `main` local `73803dd`; os transforms, rotações, escalas e materiais da cena visualmente validada foram reaplicados à `Ilha_Principal` dessa branch. A integração entrou em `main` por fast-forward (`8094021`, documentação final em `0dd8270`); alterações locais não rastreadas de NPC permaneceram fora do merge. A revisão integrada do campo coral está em `evidence/revalidation-main/coral-day.png` e `coral-night.png`; sem alterações na cena durante essa sessão de captura.
