@@ -17,7 +17,7 @@
 - `IslandWaypointWalker` preserva o `NavMeshAgent` existente e agora valida caminho completo, tolerâncias horizontal/vertical, invalidação, cancelamento por operação, progresso, watchdog, lifecycle e telemetria. Watchdog usa `Time.unscaledDeltaTime` enquanto o jogo está ativo e pausa quando `Time.timeScale == 0`.
 - `NpcNavigationDemoHarness` oferece três fixtures, alvos, sequência finita de região, aproximação externa, comandos para cancelar/reemitir ticket e diagnósticos sob demanda. Não escolhe nem reserva Smart Objects, não cria pathfinder/agent paralelo, e registra transições sem log por frame.
 - Fontes da branch foram copiadas temporariamente ao único projeto Unity conectado para importação e compilação. Após a alteração final do watchdog, Unity MCP recompile retornou `failed=false`, `errors=[]`, `compilationFailed=false`.
-- Estado Unity observado ao encerrar os testes anteriores: `compilationFailed=false`, 0 erros atuais e 1 aviso atual no ground truth do Console. O buffer contém mensagens históricas de outras execuções; não são atribuídas à feature sem evidência temporal.
+- Na última consulta, Unity reportou `compilationFailed=false` e não estava compilando. O ground truth do Console listou 2 erros e 2 avisos, mas `get(since=10919)` retornou zero novas entradas; como o buffer retém histórico e esses contadores não identificam a origem, não afirmo Console limpo nem atribuo esses erros à entrega. A recompile após o ajuste final retornou `failed=false`, `errors=[]`.
 
 ## Play Mode — três NPCs simultâneos
 
@@ -54,7 +54,7 @@ As capturas individuais mostram as cápsulas de teste com o cenário e o destino
 ## Testes automatizados
 
 - Unity Smart Objects Edit Mode: **12 aprovados, 0 falhos, 0 ignorados**.
-- Unity Smart Objects Play Mode: **3 aprovados, 0 falhos, 0 ignorados**.
+- Unity Smart Objects Play Mode: **3 aprovados, 0 falhos, 0 ignorados**. As duas suites foram executadas antes da última troca de `Time.deltaTime` por `Time.unscaledDeltaTime`; a alteração final foi recompilada e o watchdog/pausa foram repetidos em Play Mode, mas as suites Smart Objects não foram repetidas depois desse ajuste.
 - A integração 090/.NET passou build com 0 avisos/erros, `--test`: **153 assertions**, e `--validate`: 5 NPCs, 15 atividades, 3 overrides e 3 receitas. Simulação semanal reportou 1.021 eventos, 19 cancelamentos, 16 reservas/releases, 0 claims residuais e 2 falhas de receita; é simulação, não teste físico.
 - Não há assembly de teste de navegação. Os assemblies Smart Objects existentes referenciam `Freyja.SmartObjects.Runtime`, não a classe Prototype em `Assembly-CSharp`; testes automatizados diretos exigiriam mudança arquitetural fora do escopo. Não foram criados testes de navegação em outro framework.
 - Uma execução Unity completa anterior excedeu 300 s e foi cancelada; não é contabilizada como aprovada. Schedule/Activity Core não têm suites Unity disponíveis; Activity Core foi coberto pelo harness .NET 090.
@@ -76,7 +76,7 @@ As capturas individuais mostram as cápsulas de teste com o cenário e o destino
 | NAV-11 | **PARTIAL** | Desativação do walker e destruição do alvo testadas; unload de cena e destruição do GameObject do NPC em rota não isolados. |
 | NAV-12 | **PASS** | Pause/resume repetido após ajuste final e recompile; 1,2 s pausado não acumularam watchdog e `timeScale=2` manteve limite em segundos reais. |
 | NAV-13 | **PARTIAL** | Rota Crista → patamar da igreja chegou com mudança de elevação no NavMesh existente; escada/cais específico não foi isolado. |
-| NAV-14 | **PARTIAL** | Smart Objects Edit 12/12 e Play 3/3; Activity .NET 153 assertions. Suite Unity completa expirou e não há suites Unity para Schedule/Activity. |
+| NAV-14 | **PARTIAL** | Smart Objects Edit 12/12 e Play 3/3 antes do último ajuste de tempo; recompile e watchdog físicos passaram depois dele. Activity .NET 153 assertions. Suite Unity completa expirou e não há suites Unity para Schedule/Activity. |
 
 ## Configuração do harness
 
