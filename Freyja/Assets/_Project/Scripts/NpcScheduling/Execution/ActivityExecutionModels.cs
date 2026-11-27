@@ -111,5 +111,11 @@ namespace Freyja.NpcScheduling.Execution
         bool Cancel(ActivityOperation operation, string npcId, string executionId, double nowSeconds);
     }
 
+    /// <summary>Optional adapter hook for targetless move steps such as an NPC's configured home.</summary>
+    public interface ITargetlessActivityPointProvider
+    {
+        bool TryGetTargetlessPoint(string activityId, string action, string npcId, out string pointId);
+    }
+
     public interface IActivityEventSink { void Emit(ActivityExecutionEvent activityEvent); }
 }

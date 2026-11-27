@@ -13,7 +13,7 @@ internal static class ExecutionTests
 
     public static int Run(ResolvedScheduleData data)
     {
-        count=0;var recipes=RecipeCatalog.Load(Program.DataPath,data.Activities);
+        count=0;TestWorldClockProjection();TestWorldIntegrationSchedules();var recipes=RecipeCatalog.Load(Program.DataPath,data.Activities);
         Is(recipes.Count==3&&recipes.ContainsKey("idle")&&recipes.ContainsKey("wander")&&recipes.ContainsKey("sit")&&!recipes.ContainsKey("fish"),"only idle wander sit have recipes");
         Is(RecipeCatalogRejectsUnknownOperation(data),"recipe whitelist rejects unknown operation");
 
@@ -25,6 +25,12 @@ internal static class ExecutionTests
         var third=coordinator.Tick(refreshed,new GameTimeSnapshot(1,50,0),2);
         Is(third.ExecutionId==first.ExecutionId&&third.State!=ActivityState.Completed,"validity refresh keeps running commitment");
         Is(ports.ActiveClaims==0,"idle without target does not reserve resources");
+        var homePorts=new FakeActivityPorts{EnableTargetlessHomeMapping=true,IdleDestinationPointId="npc_home_a"};
+        var homeRunner=new ActivityCoordinator("home_npc",recipes,homePorts,new RecordingActivitySink());
+        homeRunner.Tick(Intent("home_npc","idle",null,1,0,60,"home_idle"),new GameTimeSnapshot(1,1,0),0);
+        Is(homePorts.LastOperation!=null&&homePorts.LastOperation.Action=="move_to"&&
+            homePorts.LastOperation.Point=="npc_home_a"&&homePorts.LastOperation.Target=="npc_home_a",
+            "targetless idle asks its adapter for the configured home point");
         var minuteSchedule=new ResolvedScheduleData(data.Activities,
             new Dictionary<string,IList<ScheduleEntry>>{{"minute_npc",new[]{new ScheduleEntry("all_morning",0,60,"idle",null)}}},
             new List<ScheduleOverride>());
@@ -60,6 +66,48 @@ internal static class ExecutionTests
         TestOperationToken(recipes);
         TestWeek(data);
         return count;
+    }
+
+    private static void TestWorldClockProjection()
+    {
+        var projection=new WorldClockProjection();
+        Is(projection.TryProject(12.75,out GameTimeSnapshot midday,out string reason)&&reason==null&&
+            midday.AbsoluteDay==1&&midday.MinuteOfDay==765&&midday.Weekday==0,"clock projection starts on session day one and floors minutes");
+        Is(projection.TryProject(12.75,out GameTimeSnapshot same,out reason)&&same.AbsoluteDay==1&&same.MinuteOfDay==765,
+            "unchanged hour does not create a new day");
+        Is(projection.TryProject(23.999,out GameTimeSnapshot late,out reason)&&late.MinuteOfDay==1439,
+            "late-day hour clamps to the final valid minute");
+        Is(projection.TryProject(0.01,out GameTimeSnapshot midnight,out reason)&&midnight.AbsoluteDay==2&&midnight.MinuteOfDay==0,
+            "late-evening to early-morning wrap increments the session day");
+        Is(projection.TryProject(8,out GameTimeSnapshot morning,out reason)&&morning.AbsoluteDay==2&&morning.MinuteOfDay==480,
+            "clock advances normally after midnight");
+        Is(!projection.TryProject(7,out _,out reason)&&reason=="clock_regressed",
+            "backward set outside midnight is diagnosed without replay");
+        Is(projection.TryProject(8.1,out GameTimeSnapshot afterReset,out reason)&&afterReset.AbsoluteDay==2&&afterReset.MinuteOfDay==486,
+            "valid forward time resumes after a rejected backward set");
+        Is(!projection.TryProject(Double.NaN,out _,out reason)&&reason=="invalid_clock_hour"&&
+            !projection.TryProject(Double.PositiveInfinity,out _,out reason)&&reason=="invalid_clock_hour"&&
+            !projection.TryProject(-0.01,out _,out reason)&&reason=="invalid_clock_hour"&&
+            !projection.TryProject(24,out _,out reason)&&reason=="invalid_clock_hour",
+            "invalid or unnormalized clock hours are rejected");
+    }
+
+    private static void TestWorldIntegrationSchedules()
+    {
+        string fixtureDirectory=Path.Combine(Program.DataPath,"npcs","world_integration");
+        string[] files=Directory.GetFiles(fixtureDirectory,"*.json");
+        Is(files.Length==3,"three world integration routine JSON files exist");
+        ResolvedScheduleData fixtures=Program.Load(Program.DataPath,files);
+        string[] ids={"world_ivo","world_helena","world_luana"};
+        Is(ids.All(fixtures.NpcSchedules.ContainsKey),"all world integration NPC IDs load without C# changes");
+        IList<ScheduleEntry>[] schedules=ids.Select(id=>fixtures.NpcSchedules[id]).ToArray();
+        Is(schedules.Select(entries=>String.Join("|",entries.Select(entry=>entry.Id+":"+entry.Start+"-"+entry.End+":"+entry.ActivityId+":"+(entry.TargetId??"-"))))
+            .Distinct(StringComparer.Ordinal).Count()==3,"world integration schedules are individually distinct");
+        Is(schedules.SelectMany(entries=>entries).All(entry=>(entry.ActivityId=="idle"&&entry.TargetId==null)||
+            ((entry.ActivityId=="wander"||entry.ActivityId=="sit")&&(entry.TargetId=="village_square"||entry.TargetId=="beach"))),
+            "world integration routines use only idle/wander/sit and explicit supported regions");
+        ScheduleEntry[] sitEntries=schedules.Select(entries=>entries.Single(entry=>entry.ActivityId=="sit")).ToArray();
+        Is(sitEntries.Max(entry=>entry.Start)<sitEntries.Min(entry=>entry.End),"all three sit windows overlap for contention");
     }
 
     private static void TestSitSuccess(IDictionary<string,ActivityRecipe> recipes)

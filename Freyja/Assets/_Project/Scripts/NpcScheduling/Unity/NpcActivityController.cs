@@ -24,19 +24,34 @@ namespace Freyja.NpcScheduling.Unity
         private ActivityIntent currentIntent;
         private double lastOperationalSeconds;
         private bool hasSnapshot;
+        private bool initializationPending;
         private string initializationError;
         private string lastReportedError;
 
         public bool IsReady => coordinator != null;
         public string InitializationError => initializationError;
+        public string NpcId => npcId;
+        public ActivityIntent CurrentIntent => currentIntent;
+        public ActivitySnapshot CurrentActivitySnapshot => coordinator == null ? null : coordinator.Snapshot;
+        public GameTimeSnapshot CurrentWorldTime => hasSnapshot ? lastTime : null;
+        public bool HasWorldSnapshot => hasSnapshot;
+        public bool IsInitializationPending => initializationPending;
 
         private void OnEnable()
         {
-            if(coordinator==null)Initialize();
+            initializationPending=coordinator==null;
+        }
+
+        private void Update()
+        {
+            if(!initializationPending||coordinator!=null)return;
+            initializationPending=false;
+            Initialize();
         }
 
         private void OnDisable()
         {
+            initializationPending=false;
             if(coordinator!=null&&hasSnapshot)
             {
                 coordinator.Cancel("host_disabled",lastTime,lastOperationalSeconds);

@@ -5,15 +5,17 @@ using Freyja.NpcScheduling.Execution;
 using Freyja.Prototype;
 using Freyja.SmartObjects;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Freyja.NpcScheduling.Unity
 {
     [DisallowMultipleComponent]
-    public sealed class NpcUnityActivityPorts : MonoBehaviour, IActivityPorts
+    public sealed class NpcUnityActivityPorts : MonoBehaviour, IActivityPorts, ITargetlessActivityPointProvider
     {
         [SerializeField,Min(0.01f)] private float moveTimeoutSeconds = 90f;
         [SerializeField,Min(0.01f)] private float arrivalTolerance = 0.3f;
         [SerializeField,Min(0.01f)] private float alignmentTolerance = 1.35f;
+        [SerializeField] private string idleDestinationPointId;
 
         private sealed class Claim
         {
@@ -57,11 +59,22 @@ namespace Freyja.NpcScheduling.Unity
         {
             npcId=actorId; owner=reservationOwner; locations=locationRegistry; animations=animatorBindings; actor=actorTransform;
             walker=actorTransform!=null?actorTransform.GetComponent<IslandWaypointWalker>():null;
+            if(String.IsNullOrWhiteSpace(idleDestinationPointId))
+                throw new InvalidOperationException("missing_idle_destination_point_id");
             if(String.IsNullOrWhiteSpace(npcId)||owner==null||locations==null||animations==null||actor==null||walker==null)
                 throw new InvalidOperationException("activity_ports_dependency_missing: requires owner, location registry, animator bindings, actor and existing IslandWaypointWalker");
             if(!locations.UsesNetwork(walker.Network))
                 throw new InvalidOperationException("location_registry_waypoint_network_mismatch");
             if(!owner.isActiveAndEnabled||!walker.isActiveAndEnabled)throw new InvalidOperationException("activity_ports_component_disabled");
+        }
+
+        public bool TryGetTargetlessPoint(string activityId,string action,string requestedNpcId,out string pointId)
+        {
+            pointId=null;
+            if(!IsNpc(requestedNpcId)||!String.Equals(activityId,"idle",StringComparison.Ordinal)||
+                !String.Equals(action,"move_to",StringComparison.Ordinal)||String.IsNullOrWhiteSpace(idleDestinationPointId))return false;
+            pointId=idleDestinationPointId;
+            return true;
         }
 
         public IList<ActivityCandidate> FindTargets(string targetId,string capability,string requestedNpcId)
@@ -73,6 +86,7 @@ namespace Freyja.NpcScheduling.Unity
             foreach(SmartObjectCandidate item in found)
             {
                 if(item.Object==null||item.Slot==null||item.Slot.Approach==null||item.Slot.Pose==null)continue;
+                if(!HasCompletePath(item.Slot.Approach))continue;
                 string key="candidate_"+(++candidateSequence).ToString("D8");
                 string approach=key+"_approach",pose=key+"_pose";
                 candidates.Add(key,item);
@@ -81,6 +95,18 @@ namespace Freyja.NpcScheduling.Unity
                 results.Add(new ActivityCandidate(key,item.Object.ObjectId,approach,pose,Math.Sqrt(item.DistanceSquared)));
             }
             return results;
+        }
+
+        private bool HasCompletePath(Transform destination)
+        {
+            if(destination==null||walker==null)return false;
+            NavMeshAgent agent=walker.GetComponent<NavMeshAgent>();
+            if(agent==null)return false;
+            int areaMask=agent.areaMask;
+            if(!NavMesh.SamplePosition(actor.position,out NavMeshHit start,0.75f,areaMask)||
+                !NavMesh.SamplePosition(destination.position,out NavMeshHit end,0.2f,areaMask))return false;
+            var path=new NavMeshPath();
+            return NavMesh.CalculatePath(start.position,end.position,areaMask,path)&&path.status==NavMeshPathStatus.PathComplete;
         }
 
         public IList<string> FindWaypoints(string regionId,string requestedNpcId)
@@ -208,7 +234,8 @@ namespace Freyja.NpcScheduling.Unity
 
         private void BeginMove(Operation operation,string targetId,string pointId)
         {
-            string resolved=pointId=="target"?targetId:pointId;
+            string resolved=pointId=="target"?
+                (String.IsNullOrWhiteSpace(targetId)?idleDestinationPointId:targetId):pointId;
             if(!TryResolvePoint(resolved,out Transform target)){SetFailed(operation,"destination_unavailable");return;}
             if(!walker.TryBeginMove(target,out long ticket)){SetFailed(operation,"path_unavailable");return;}
             operation.Target=target;operation.MoveTicket=ticket;

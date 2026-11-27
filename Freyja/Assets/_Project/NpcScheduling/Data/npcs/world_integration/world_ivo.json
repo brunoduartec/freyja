@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "npcId": "world_ivo",
+  "entries": [
+    { "id": "home_morning", "start": "00:00", "end": "07:00", "activityId": "idle" },
+    { "id": "square_morning", "start": "07:00", "end": "11:00", "activityId": "wander", "targetId": "village_square" },
+    { "id": "square_sit", "start": "11:00", "end": "13:00", "activityId": "sit", "targetId": "village_square" },
+    { "id": "beach_afternoon", "start": "13:00", "end": "18:00", "activityId": "wander", "targetId": "beach" },
+    { "id": "home_evening", "start": "18:00", "end": "24:00", "activityId": "idle" }
+  ]
+}

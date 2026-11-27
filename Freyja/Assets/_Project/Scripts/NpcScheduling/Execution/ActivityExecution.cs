@@ -147,7 +147,13 @@ namespace Freyja.NpcScheduling.Execution
                             if(waypoints==null||waypoints.Count==0){reason="target_unavailable";return OperationStatus.Failed;}
                             point=waypoints[waypointIndex%waypoints.Count];waypointIndex++;
                         }
-                        else if(step.Point=="target" && String.IsNullOrEmpty(intent.TargetId))return OperationStatus.Succeeded;
+                        else if(step.Point=="target" && String.IsNullOrEmpty(intent.TargetId))
+                        {
+                            if(!(ports is ITargetlessActivityPointProvider provider)||
+                                !provider.TryGetTargetlessPoint(intent.ActivityId,step.Action,intent.NpcId,out string targetlessPoint)||
+                                String.IsNullOrWhiteSpace(targetlessPoint))return OperationStatus.Succeeded;
+                            target=point=targetlessPoint;
+                        }
                     }
                     if(step.Action=="align_to")point=candidate==null?step.Point:candidate.PosePoint;
                     operation=ports.Begin(step.Action,intent.NpcId,ExecutionId,target,point,step.Animation,now);
