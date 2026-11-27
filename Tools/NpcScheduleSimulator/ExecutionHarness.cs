@@ -26,7 +26,7 @@ internal sealed class RecordingActivitySink : IActivityEventSink
     private static string Camel(ExecutionEventKind k){return Char.ToLowerInvariant(k.ToString()[0])+k.ToString().Substring(1);}
 }
 
-internal sealed class FakeActivityPorts : IActivityPorts
+internal sealed class FakeActivityPorts : IActivityPorts, ITargetlessActivityPointProvider
 {
     private sealed class Claim { public ActivityCandidate Candidate; public string Npc,Execution; public bool Occupied,Invalid; }
     private readonly Dictionary<string,Claim> claims=new Dictionary<string,Claim>(StringComparer.Ordinal);
@@ -38,6 +38,8 @@ internal sealed class FakeActivityPorts : IActivityPorts
     public double StandUpDurationSeconds=0.5;
     public double SitAnimationDurationSeconds=-1;
     public bool FailPath,RejectAnimation,FailCleanup,FailOperationCancel,FailPoseRestore,InvalidateNextReservation;
+    public bool EnableTargetlessHomeMapping;
+    public string IdleDestinationPointId="home_a";
     public int ActiveClaims { get { return claims.Count; } }
     public int ActiveOperationCount { get { return activeOps.Count; } }
     public IList<string> ActiveOperationIds { get { return activeOps.OrderBy(x=>x,StringComparer.Ordinal).ToList(); } }
@@ -56,6 +58,8 @@ internal sealed class FakeActivityPorts : IActivityPorts
         for(int i=0;i<2;i++){string id=bank+"_slot_"+(i+1);list.Add(new ActivityCandidate(id,target,id+"_approach",id+"_pose",(npc.Length+i)%4));}
         return list;
     }
+    public bool TryGetTargetlessPoint(string activity,string action,string npc,out string point)
+    {point=null;if(!EnableTargetlessHomeMapping||activity!="idle"||action!="move_to"||string.IsNullOrWhiteSpace(IdleDestinationPointId))return false;point=IdleDestinationPointId;return true;}
     public IList<string> FindWaypoints(string region,string npc)
     {
         if(region=="village_square")return new[]{"square_a","square_b","square_c"};

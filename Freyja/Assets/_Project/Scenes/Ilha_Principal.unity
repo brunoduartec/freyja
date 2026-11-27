@@ -42758,10 +42758,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2265145618601765656, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 685979439}
+    - targetCorrespondingSourceObject: {fileID: 2265145618601765656, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685979443}
+    - targetCorrespondingSourceObject: {fileID: 2265145618601765656, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685979442}
+    - targetCorrespondingSourceObject: {fileID: 2265145618601765656, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685979441}
+    - targetCorrespondingSourceObject: {fileID: 2265145618601765656, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685979444}
+    - targetCorrespondingSourceObject: {fileID: 6403296712924619686, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1707088202}
   m_SourcePrefab: {fileID: 100100000, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
 --- !u!4 &685979437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5520100957653678859, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
+  m_PrefabInstance: {fileID: 685979436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &685979438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6403296712924619686, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
   m_PrefabInstance: {fileID: 685979436}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &685979439
@@ -42781,6 +42801,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &685979440
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -42803,6 +42828,67 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!114 &685979441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172298121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ea4a07591d4eb8965021dbed2dc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcUnityActivityPorts
+  moveTimeoutSeconds: 90
+  arrivalTolerance: 0.3
+  alignmentTolerance: 1.6
+  idleDestinationPointId: world_ivo_home
+--- !u!114 &685979442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172298121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66d988bf1a6479e8fcebd794f9caf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.Prototype.NpcAnimationDriver
+  profile: {fileID: 11400000, guid: cbf235cb6914648e9b4134dddbfc9bcd, type: 2}
+  walker: {fileID: 685979439}
+  animator: {fileID: 1707088201}
+--- !u!114 &685979443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172298121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0850000000000000000000000000006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Freyja.SmartObjects.Runtime::Freyja.SmartObjects.SmartObjectReservationOwner
+--- !u!114 &685979444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172298121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe6091be4808418a99836278ee4024d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcActivityController
+  npcId: world_ivo
+  dataProvider: {fileID: 1453852830}
+  locations: {fileID: 1453852831}
+  activityPorts: {fileID: 685979441}
+  animatorBindings: {fileID: 1707088202}
+  logTransitions: 1
 --- !u!1001 &686169945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48263,6 +48349,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &771549087
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -48462,10 +48553,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2433990629126586114, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
       insertIndex: -1
       addedObject: {fileID: 774740934}
+    - targetCorrespondingSourceObject: {fileID: 2433990629126586114, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774740940}
+    - targetCorrespondingSourceObject: {fileID: 2433990629126586114, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774740939}
+    - targetCorrespondingSourceObject: {fileID: 2433990629126586114, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774740938}
+    - targetCorrespondingSourceObject: {fileID: 2433990629126586114, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774740936}
+    - targetCorrespondingSourceObject: {fileID: 846974103914695380, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774740937}
   m_SourcePrefab: {fileID: 100100000, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
 --- !u!4 &774740932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7277352207870789064, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
+  m_PrefabInstance: {fileID: 774740931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &774740933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 846974103914695380, guid: 7831c11f1bf0c498d8983444e83c5515, type: 3}
   m_PrefabInstance: {fileID: 774740931}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &774740934
@@ -48485,6 +48596,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &774740935
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -48507,6 +48623,82 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!114 &774740936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476910519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe6091be4808418a99836278ee4024d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcActivityController
+  npcId: world_luana
+  dataProvider: {fileID: 1453852830}
+  locations: {fileID: 1453852831}
+  activityPorts: {fileID: 774740938}
+  animatorBindings: {fileID: 774740937}
+  logTransitions: 1
+--- !u!114 &774740937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774740933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0471c17ecddfa46fbb55f06a9aa023b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcAnimatorBindings
+  animator: {fileID: 368855778}
+  profile: {fileID: 11400000, guid: cbf235cb6914648e9b4134dddbfc9bcd, type: 2}
+  bindings: []
+--- !u!114 &774740938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476910519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ea4a07591d4eb8965021dbed2dc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcUnityActivityPorts
+  moveTimeoutSeconds: 90
+  arrivalTolerance: 0.3
+  alignmentTolerance: 1.6
+  idleDestinationPointId: world_luana_home
+--- !u!114 &774740939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476910519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66d988bf1a6479e8fcebd794f9caf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.Prototype.NpcAnimationDriver
+  profile: {fileID: 11400000, guid: cbf235cb6914648e9b4134dddbfc9bcd, type: 2}
+  walker: {fileID: 774740934}
+  animator: {fileID: 368855778}
+--- !u!114 &774740940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476910519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0850000000000000000000000000006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Freyja.SmartObjects.Runtime::Freyja.SmartObjects.SmartObjectReservationOwner
 --- !u!1001 &776490408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62057,6 +62249,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a506acdb66d04e9aba8462fbe7ee98f, type: 3}
   m_PrefabInstance: {fileID: 978640231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &979045359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 979045360}
+  m_Layer: 0
+  m_Name: Home Point - Ivo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &979045360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979045359}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: 7.9492464, z: 2.800003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1453852828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &979497254
 GameObject:
   m_ObjectHideFlags: 0
@@ -63060,6 +63283,11 @@ MonoBehaviour:
   locomotionController: {fileID: 0}
   locomotionIdle: {fileID: 0}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1001378404
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -69294,6 +69522,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1079183430
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -78212,7 +78445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Freyja.Environment.CoastalDayNight
   sun: {fileID: 1210352133}
   sky: {fileID: 2100000, guid: 53c83a2308a874ebf80041b7740f2869, type: 2}
-  hour: 22
+  hour: 10.5
   cycleSeconds: 96
   advanceClock: 0
   sunriseAzimuth: 155
@@ -84807,6 +85040,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1318473348
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -87557,10 +87795,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3697980494592841954, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1353667870}
+    - targetCorrespondingSourceObject: {fileID: 3697980494592841954, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353667875}
+    - targetCorrespondingSourceObject: {fileID: 3697980494592841954, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353667874}
+    - targetCorrespondingSourceObject: {fileID: 3697980494592841954, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353667873}
+    - targetCorrespondingSourceObject: {fileID: 3697980494592841954, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353667876}
+    - targetCorrespondingSourceObject: {fileID: 3068951912756679253, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353667872}
   m_SourcePrefab: {fileID: 100100000, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
 --- !u!4 &1353667868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4884030729946521238, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
+  m_PrefabInstance: {fileID: 1353667867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1353667869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3068951912756679253, guid: 5c338800dda994fb6bc250ce7cb9351e, type: 3}
   m_PrefabInstance: {fileID: 1353667867}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1353667870
@@ -87580,6 +87838,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1353667871
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -87602,6 +87865,82 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1353667872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353667869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0471c17ecddfa46fbb55f06a9aa023b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcAnimatorBindings
+  animator: {fileID: 469223814}
+  profile: {fileID: 11400000, guid: cbf235cb6914648e9b4134dddbfc9bcd, type: 2}
+  bindings: []
+--- !u!114 &1353667873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259181604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ea4a07591d4eb8965021dbed2dc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcUnityActivityPorts
+  moveTimeoutSeconds: 90
+  arrivalTolerance: 0.3
+  alignmentTolerance: 1.6
+  idleDestinationPointId: world_helena_home
+--- !u!114 &1353667874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259181604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66d988bf1a6479e8fcebd794f9caf6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.Prototype.NpcAnimationDriver
+  profile: {fileID: 11400000, guid: cbf235cb6914648e9b4134dddbfc9bcd, type: 2}
+  walker: {fileID: 1353667870}
+  animator: {fileID: 469223814}
+--- !u!114 &1353667875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259181604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0850000000000000000000000000006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Freyja.SmartObjects.Runtime::Freyja.SmartObjects.SmartObjectReservationOwner
+--- !u!114 &1353667876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259181604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe6091be4808418a99836278ee4024d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcActivityController
+  npcId: world_helena
+  dataProvider: {fileID: 1453852830}
+  locations: {fileID: 1453852831}
+  activityPorts: {fileID: 1353667873}
+  animatorBindings: {fileID: 1353667872}
+  logTransitions: 1
 --- !u!1001 &1354872755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88505,6 +88844,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1365401326
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -91890,6 +92234,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a506acdb66d04e9aba8462fbe7ee98f, type: 3}
   m_PrefabInstance: {fileID: 1434791569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1435310007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435310008}
+  m_Layer: 0
+  m_Name: Home Point - Helena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1435310008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435310007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.299995, y: 8.004466, z: 3.199997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1453852828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1436781210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93136,6 +93511,117 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a506acdb66d04e9aba8462fbe7ee98f, type: 3}
   m_PrefabInstance: {fileID: 1452806160}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1453852827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453852828}
+  - component: {fileID: 1453852831}
+  - component: {fileID: 1453852830}
+  - component: {fileID: 1453852829}
+  m_Layer: 0
+  m_Name: NPC World Integration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1453852828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453852827}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 979045360}
+  - {fileID: 1435310008}
+  - {fileID: 1906680175}
+  m_Father: {fileID: 1508762167}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1453852829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453852827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01cc4863d246646b8a5b426f50f64827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcWorldRuntimeDriver
+  clock: {fileID: 1210352135}
+  hosts:
+  - {fileID: 685979444}
+  - {fileID: 1353667876}
+  - {fileID: 774740936}
+  weather: clear
+  runtimeStatus: 
+--- !u!114 &1453852830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453852827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b92aa1a2e444ed18082c39ffbfa72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcScheduleTextAssetProvider
+  activityCatalog: {fileID: 4900000, guid: 7f114e5a1c78d4b1b8120f64e6aaf1a9, type: 3}
+  templates: []
+  npcSchedules:
+  - {fileID: 4900000, guid: 2019e8cc398864d8585083d372d7acc7, type: 3}
+  - {fileID: 4900000, guid: 356435ecc8c51476dbb1a51eb0a99a50, type: 3}
+  - {fileID: 4900000, guid: 1fb130156bcab46f58f49d2001811fa5, type: 3}
+  overrides: []
+  activityRecipes: {fileID: 4900000, guid: 38ac62a08a8e14ba28de896743f1a547, type: 3}
+--- !u!114 &1453852831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453852827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9d6585a087c4506ae77b42294d3f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcLocationRegistry
+  waypointNetwork: {fileID: 1508762166}
+  points:
+  - pointId: world_ivo_home
+    regionId: home
+    point: {fileID: 979045360}
+  - pointId: world_helena_home
+    regionId: home
+    point: {fileID: 1435310008}
+  - pointId: world_luana_home
+    regionId: home
+    point: {fileID: 1906680175}
+  - pointId: square_largo
+    regionId: village_square
+    point: {fileID: 2067735300}
+  - pointId: square_venda
+    regionId: '"unused_access"'
+    point: {fileID: 551380677}
+  - pointId: beach_east_path
+    regionId: beach
+    point: {fileID: 1877085683}
+  - pointId: beach_east_access
+    regionId: '"unused_access"'
+    point: {fileID: 1814282928}
 --- !u!1 &1454053981
 GameObject:
   m_ObjectHideFlags: 0
@@ -94991,6 +95477,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7be2705b444ec4f2ca9285a53c65a3a2, type: 3}
   m_PrefabInstance: {fileID: 1497346432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1497803572
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1025368706416140895, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_Name
+      value: "NPC Integration Bench \u2014 West"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826857540638633650, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231411237303213380, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889978010082357576, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: objectId
+      value: npc_world_bench_west
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889978010082357576, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: regionId
+      value: village_square
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047106471086706630, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208180696929889695, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
 --- !u!1001 &1498146865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95864,6 +96431,7 @@ Transform:
   - {fileID: 1380092907}
   - {fileID: 949154398}
   - {fileID: 681447808}
+  - {fileID: 1453852828}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509288634
@@ -101316,6 +101884,11 @@ MonoBehaviour:
   locomotionController: {fileID: 0}
   locomotionIdle: {fileID: 0}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1591678893
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -105234,6 +105807,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1648237454
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -107160,6 +107738,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1690033608
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -108038,6 +108621,21 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 393757203770762086, guid: 1c7454b1464f64940a8585f7c956067e, type: 3}
   m_PrefabInstance: {fileID: 685979436}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1707088202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685979438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0471c17ecddfa46fbb55f06a9aa023b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Freyja.NpcScheduling.Unity.NpcAnimatorBindings
+  animator: {fileID: 1707088201}
+  profile: {fileID: 11400000, guid: cbf235cb6914648e9b4134dddbfc9bcd, type: 2}
+  bindings: []
 --- !u!1001 &1708525564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109975,6 +110573,11 @@ MonoBehaviour:
   locomotionController: {fileID: 0}
   locomotionIdle: {fileID: 0}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1741398944
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -111635,6 +112238,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &1775199299
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -119579,6 +120187,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 949154398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1906680174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906680175}
+  m_Layer: 0
+  m_Name: Home Point - Luana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1906680175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906680174}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: 5.969451, z: -12.799999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1453852828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1907667686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124835,6 +125474,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 949154398}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2009272150
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1025368706416140895, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_Name
+      value: "NPC Integration Bench \u2014 East"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826857540638633650, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6231411237303213380, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889978010082357576, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: objectId
+      value: npc_world_bench_east
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889978010082357576, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: regionId
+      value: village_square
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047106471086706630, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7208180696929889695, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676506519183253534, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3171e242cb0794fcba01f8d25888fa45, type: 3}
 --- !u!1 &2011337012
 GameObject:
   m_ObjectHideFlags: 0
@@ -127865,6 +128585,11 @@ MonoBehaviour:
   locomotionController: {fileID: 0}
   locomotionIdle: {fileID: 0}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &2063349047
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -131948,6 +132673,11 @@ MonoBehaviour:
   locomotionController: {fileID: 9100000, guid: ecc1a4fed4e7f40c89d29a0a304ce5cc, type: 2}
   locomotionIdle: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
   destination: {fileID: 0}
+  horizontalArrivalTolerance: 0.2
+  verticalArrivalTolerance: 0.25
+  noProgressTimeout: 4
+  pathPendingTimeout: 4
+  progressDistanceEpsilon: 0.03
 --- !u!195 &2138917912
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -132621,3 +133351,5 @@ SceneRoots:
   - {fileID: 2118786611}
   - {fileID: 701419659}
   - {fileID: 1508762167}
+  - {fileID: 1497803572}
+  - {fileID: 2009272150}
