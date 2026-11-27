@@ -54,7 +54,9 @@ internal static class ExecutionWeekSimulator
             }
         }
         var shutdownTime=new GameTimeSnapshot(7,1439,0);
-        foreach(string npc in Npcs){var current=resolver.Resolve(npc,shutdownTime,new WorldContextSnapshot("clear",null)).Intent;coordinators[npc].Cancel("simulation_shutdown",shutdownTime,now);}
+        foreach(string npc in Npcs)coordinators[npc].Cancel("simulation_shutdown",shutdownTime,now);
+        for(int tick=1;tick<=40&&ports.ActiveClaims>0;tick++)
+            foreach(string npc in Npcs)coordinators[npc].RetryResidualCleanup(shutdownTime,now+tick*.25);
         sink.Write(output);
         output.WriteLine("SIM_WEEK days=7 npc=3 events="+sink.Events.Count+" failures="+sink.Events.Count(x=>x.Kind==ExecutionEventKind.ActivityFailed)+" cancellations="+sink.Events.Count(x=>x.Kind==ExecutionEventKind.ActivityCancelled)+" reservations="+sink.Events.Count(x=>x.Kind==ExecutionEventKind.ResourceReserved)+" releases="+sink.Events.Count(x=>x.Kind==ExecutionEventKind.ResourceReleased)+" residualClaims="+ports.ActiveClaims+" physicalValidation=false");
         return new ExecutionWeekResult(ports.ActiveClaims,sink.Events.Count,
@@ -76,6 +78,7 @@ internal static class ExecutionWeekSimulator
         int held=ports.ActiveClaims;
         output.WriteLine("SIM_SCENARIO full_bank target=village_square claimed="+held+" capacity=2 thirdFailed="+sink.Events.Any(x=>x.Kind==ExecutionEventKind.ActivityFailed)+" exclusive=true");
         var cleanup=new GameTimeSnapshot(1,490,0);foreach(var c in coordinators)c.Cancel("scenario_cleanup",cleanup,10);
+        for(int tick=1;tick<=40&&ports.ActiveClaims>0;tick++)foreach(var c in coordinators)c.RetryResidualCleanup(cleanup,10+tick*.25);
         output.WriteLine("SIM_SCENARIO full_bank_cleanup residualClaims="+ports.ActiveClaims);
     }
 

@@ -87,9 +87,9 @@ namespace Freyja.NpcScheduling.Execution
         {
             if(IsTerminal)return; reason=code??"external_cancel";
             lastOperationalSeconds=now;lastGameMinute=checked((gameTime.AbsoluteDay-1)*1440+gameTime.MinuteOfDay);
-            TryCancelOperation();
-            if(occupied&&!operationCancelPending){try{ports.RestorePose(intent.NpcId,ExecutionId,effectiveTarget);}catch{reason="pose_restore_failed";}}
-            Cleanup(now,gameTime);
+            TryCancelOperation(now);
+            if(occupied&&!operationCancelPending)PollPoseRestore(now);
+            if(!occupied)Cleanup(now,gameTime);
             State=ActivityState.Cancelled; Emit(ExecutionEventKind.ActivityCancelled,null,operationCancelPending?"operation_cancel_failed":reason);
         }
 
@@ -172,14 +172,15 @@ namespace Freyja.NpcScheduling.Execution
         private void Fail(string code,double now,GameTimeSnapshot time)
         {
             if(IsTerminal)return;reason=code;
-            TryCancelOperation();
-            if(occupied&&!operationCancelPending){try{ports.RestorePose(intent.NpcId,ExecutionId,effectiveTarget);}catch{reason="pose_restore_failed";}}
-            Cleanup(now,time);State=ActivityState.Failed;Emit(ExecutionEventKind.ActivityFailed,null,operationCancelPending?"operation_cancel_failed":resources.Count>0?"cleanup_failed":reason);
+            TryCancelOperation(now);
+            if(occupied&&!operationCancelPending)PollPoseRestore(now);
+            if(!occupied)Cleanup(now,time);
+            State=ActivityState.Failed;Emit(ExecutionEventKind.ActivityFailed,null,operationCancelPending?"operation_cancel_failed":occupied?reason:resources.Count>0?"cleanup_failed":reason);
         }
-        private bool TryCancelOperation()
+        private bool TryCancelOperation(double now)
         {
             if(operation==null){operationCancelPending=false;return true;}
-            bool cancelled=false;try{cancelled=ports.Cancel(operation,intent.NpcId,ExecutionId);}catch{cancelled=false;}
+            bool cancelled=false;try{cancelled=ports.Cancel(operation,intent.NpcId,ExecutionId,now);}catch{cancelled=false;}
             if(!cancelled){operationCancelPending=true;reason="operation_cancel_failed";return false;}
             operation=null;operationCancelPending=false;return true;
         }
@@ -203,12 +204,11 @@ namespace Freyja.NpcScheduling.Execution
         public bool RetryCleanup(double now,GameTimeSnapshot time)
         {
             if(!IsTerminal)return false;
-            if(operationCancelPending&&!TryCancelOperation())return false;
+            if(operationCancelPending&&!TryCancelOperation(now))return false;
             if(occupied)
             {
-                try{ports.RestorePose(intent.NpcId,ExecutionId,effectiveTarget);}
-                catch{reason="pose_restore_failed";return false;}
-                occupied=false;
+                OperationStatus restore=PollPoseRestore(now);
+                if(restore!=OperationStatus.Succeeded)return false;
             }
             bool all=true;
             for(int i=resources.Count-1;i>=0;i--){string token=resources[i];bool released=false;try{released=ports.Release(token,intent.NpcId,ExecutionId);}catch{}if(released){resources.RemoveAt(i);occupied=false;Emit(ExecutionEventKind.ResourceReleased,"cleanup_retry",null);}else all=false;}
@@ -216,10 +216,29 @@ namespace Freyja.NpcScheduling.Execution
             return all;
         }
         private string CurrentToken(){return resources.Count==0?null:resources[resources.Count-1];}
+        private OperationStatus PollPoseRestore(double now)
+        {
+            if(operation==null)
+            {
+                try{operation=ports.Begin("play_animation",intent.NpcId,ExecutionId,effectiveTarget,null,"stand_up",now);}
+                catch{operation=null;}
+                if(operation==null){reason="pose_restore_failed";return OperationStatus.Failed;}
+            }
+            ActivityOperation cleanup=operation;
+            ActivityOperationResult result;
+            try{result=ports.Poll(cleanup,intent.NpcId,ExecutionId,now);}
+            catch{reason="pose_restore_failed";return OperationStatus.Running;}
+            if(result==null){reason="pose_restore_failed";return OperationStatus.Running;}
+            if(result.Status==OperationStatus.Running)return OperationStatus.Running;
+            operation=null;
+            if(result.Status!=OperationStatus.Succeeded){reason=result.ReasonCode??"pose_restore_failed";return OperationStatus.Failed;}
+            occupied=false;
+            return OperationStatus.Succeeded;
+        }
         private static bool HasExpired(ActivityIntent i,GameTimeSnapshot time)
         {return time.AbsoluteDay>i.AbsoluteDay || time.AbsoluteDay==i.AbsoluteDay&&time.MinuteOfDay>=i.ValidUntil;}
         private ActivitySnapshot MakeSnapshot()
-        {return new ActivitySnapshot{NpcId=intent.NpcId,ExecutionId=ExecutionId,IntendedActivityId=IntendedActivityId,ExecutedActivityId=ExecutedActivityId,TargetId=intent.TargetId,EffectiveTargetId=effectiveTarget,State=State,CurrentOperation=CurrentAction,ReasonCode=reason,StartedAtSeconds=startedSeconds,FinishedAtSeconds=IsTerminal?lastOperationalSeconds:0,ResourceId=CurrentToken(),ResidualOperationId=operationCancelPending&&operation!=null?operation.Id:null,IsFallback=IsFallback};}
+        {return new ActivitySnapshot{NpcId=intent.NpcId,ExecutionId=ExecutionId,IntendedActivityId=IntendedActivityId,ExecutedActivityId=ExecutedActivityId,TargetId=intent.TargetId,EffectiveTargetId=effectiveTarget,State=State,CurrentOperation=CurrentAction,ReasonCode=reason,StartedAtSeconds=startedSeconds,FinishedAtSeconds=IsTerminal?lastOperationalSeconds:0,ResourceId=CurrentToken(),ResidualOperationId=operation!=null&&(operationCancelPending||occupied)?operation.Id:null,IsFallback=IsFallback};}
         private void Emit(ExecutionEventKind kind,string step,string code)
         {if(sink==null)return;int day=lastGameMinute/1440+1;int minute=lastGameMinute%1440;sink.Emit(new ActivityExecutionEvent{Kind=kind,NpcId=intent.NpcId,ExecutionId=ExecutionId,IntendedActivityId=IntendedActivityId,ExecutedActivityId=ExecutedActivityId,TargetId=effectiveTarget??intent.TargetId,Step=step,ReasonCode=code,AbsoluteDay=day,MinuteOfDay=minute,OperationalSeconds=lastOperationalSeconds});}
     }
@@ -313,7 +332,8 @@ namespace Freyja.NpcScheduling.Execution
         }
         public bool RetryResidualCleanup(GameTimeSnapshot time,double now)
         {
-            if(!cleanupBlocked||active==null||!active.RetryCleanup(now,time))return false;
+            if(active==null||!active.Snapshot.HasResidualOwnership)return false;
+            if(!active.RetryCleanup(now,time)){cleanupBlocked=true;return false;}
             cleanupBlocked=false;terminalOccurrence=Occurrence(activeIntent);active=null;activeIntent=null;pendingIntent=null;normalExitPending=false;
             if(!detached)fallbackUsed=false;
             return true;
