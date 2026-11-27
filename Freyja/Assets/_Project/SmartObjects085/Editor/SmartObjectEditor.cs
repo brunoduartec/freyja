@@ -154,9 +154,28 @@ namespace Freyja.SmartObjects.Editor
         private void OnSceneGUI()
         {
             var smartObject = (SmartObject)target;
+            var sceneView = SceneView.currentDrawingSceneView;
+            Transform viewTransform = sceneView != null && sceneView.camera != null
+                ? sceneView.camera.transform
+                : null;
+            Vector3 screenRight = viewTransform != null ? viewTransform.right : Vector3.right;
+            Vector3 screenUp = viewTransform != null ? viewTransform.up : Vector3.up;
+            var labelStyle = new GUIStyle(EditorStyles.whiteMiniLabel)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 12,
+                wordWrap = false,
+                fontStyle = FontStyle.Bold
+            };
+            int slotIndex = 0;
             foreach (InteractionSlot slot in smartObject.Slots)
             {
-                if (slot == null) continue;
+                if (slot == null)
+                {
+                    slotIndex++;
+                    continue;
+                }
+
                 Color stateColor = slot.State switch
                 {
                     InteractionSlotState.Available => new Color(0.2f, 0.9f, 0.35f),
@@ -170,7 +189,9 @@ namespace Freyja.SmartObjects.Editor
                     Handles.color = stateColor;
                     Handles.SphereHandleCap(0, slot.Approach.position, Quaternion.identity, 0.22f, EventType.Repaint);
                     Handles.ArrowHandleCap(0, slot.Approach.position, slot.Approach.rotation, 0.48f, EventType.Repaint);
-                    Handles.Label(slot.Approach.position + Vector3.up * 0.28f, $"{slot.SlotId} · aproximação");
+                    float lane = (slotIndex - (smartObject.Slots.Count - 1) * 0.5f) * 3.8f;
+                    Vector3 approachLabel = slot.Approach.position + screenRight * lane + screenUp * 0.48f;
+                    Handles.Label(approachLabel, $"{slot.SlotId}\nAproximação", labelStyle);
                 }
 
                 if (slot.Pose != null)
@@ -178,16 +199,29 @@ namespace Freyja.SmartObjects.Editor
                     Handles.color = new Color(0.2f, 0.75f, 1f);
                     Handles.RectangleHandleCap(0, slot.Pose.position, slot.Pose.rotation, 0.28f, EventType.Repaint);
                     Handles.ArrowHandleCap(0, slot.Pose.position, slot.Pose.rotation, 0.42f, EventType.Repaint);
-                    Handles.Label(slot.Pose.position + Vector3.up * 0.25f, $"{slot.SlotId} · pose final");
                     if (slot.Approach != null)
+                    {
+                        float lane = (slotIndex - (smartObject.Slots.Count - 1) * 0.5f) * 3.8f;
+                        Vector3 poseLabel = slot.Pose.position + screenRight * lane - screenUp * 0.58f;
+                        Handles.Label(poseLabel, $"{slot.SlotId}\nPose final", labelStyle);
                         Handles.color = new Color(stateColor.r, stateColor.g, stateColor.b, 0.65f);
-                    if (slot.Approach != null)
                         Handles.DrawLine(slot.Approach.position, slot.Pose.position);
+                    }
                 }
+
+                slotIndex++;
             }
 
             Handles.color = Color.white;
-            Handles.Label(smartObject.transform.position + Vector3.up * 1.35f, $"Smart Object · {smartObject.ObjectId}");
+            Handles.BeginGUI();
+            var idStyle = new GUIStyle(EditorStyles.helpBox)
+            {
+                alignment = TextAnchor.MiddleLeft,
+                fontSize = 12,
+                fontStyle = FontStyle.Bold
+            };
+            GUI.Label(new Rect(105f, 12f, 430f, 26f), $"Smart Object ID: {smartObject.ObjectId}", idStyle);
+            Handles.EndGUI();
         }
 
         [MenuItem("Freyja/Smart Objects/Validar objetos na cena aberta")]

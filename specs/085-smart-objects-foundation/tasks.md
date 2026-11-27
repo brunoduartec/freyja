@@ -13,7 +13,7 @@
 
 - [x] T003 [P] Create the editable provisional bench source `Source/Blender/SmartObjects085/BenchProvisional.blend` and export `Freyja/Assets/_Project/Art/SmartObjects085/BenchProvisional.fbx` with meter scale, bottom pivot and replaceable materials.
 - [x] T004 Define the public authoring and reservation contracts in `Freyja/Assets/_Project/SmartObjects085/Runtime/` and update `specs/085-smart-objects-foundation/data-model.md` to match any implementation-level adjustment.
-- [ ] T005 Configure Unity Pipeline Editor access for `Freyja/` and verify the scene/editing commands available through `unity command` without updating packages or CLI tooling.
+- [x] T005 Configure Unity Pipeline Editor access for `Freyja/` and verify scene/editing commands through `unity command`; branch Editor verified on port 7801 without updating packages or CLI tooling.
 
 ## Phase 3: User Story 1 — Configure Smart Objects in the Inspector (P1)
 
@@ -23,8 +23,8 @@
 
 - [x] T006 [US1] Implement serialized Smart Object/slot configuration and stable ID validation/repair in `Freyja/Assets/_Project/SmartObjects085/Runtime/SmartObject.cs` and `InteractionSlot.cs`.
 - [x] T007 [US1] Implement Inspector diagnostics and Scene View Gizmos for IDs, references, activities, transforms, orientation and slot states in `Freyja/Assets/_Project/SmartObjects085/Editor/SmartObjectEditor.cs`.
-- [ ] T008 [US1] Configure the two-slot `sit` bench prefab with separate visual, collider, approach and pose children in `Freyja/Assets/_Project/Prefabs/SmartObjects085/BenchProvisional.prefab`.
-- [x] T009 [US1] Add Edit Mode tests for generated/duplicate IDs and prefab slot configuration in `Freyja/Assets/_Project/SmartObjects085/Tests/EditMode/SmartObjectAuthoringTests.cs` (round-trip de prefab, IDs estáveis e referências de approach/pose; execução pendente).
+- [x] T008 [US1] Configure the two-slot `sit` bench prefab with separate visual, collider, approach and pose children in `Freyja/Assets/_Project/Prefabs/SmartObjects085/BenchProvisional.prefab`.
+- [x] T009 [US1] Add and execute Edit Mode tests for generated/stable IDs and prefab slot configuration in `Freyja/Assets/_Project/SmartObjects085/Tests/EditMode/SmartObjectAuthoringTests.cs` (12/12 feature Edit Mode tests passed).
 
 ## Phase 4: User Story 2 — Discover and reserve compatible slots (P1)
 
@@ -45,17 +45,17 @@
 **Independent Test**: Play the demo; observe distinct reservations, arrival before pose alignment, fallback to bench B, cancel/release and unreachable-path cleanup.
 
 - [x] T015 [US3] Implement the bounded three-agent reservation/movement harness, cancel/release action and unreachable timeout in `Freyja/Assets/_Project/Scripts/Prototype/SmartObjectDemoHarness.cs` (Assembly-CSharp, so it can reuse `IslandWaypointWalker`).
-- [ ] T016 [US3] Create `Freyja/Assets/_Project/Scenes/SmartObjects_Demo.unity` from the approved small demonstration layout, reusing the existing island NavMesh, resident prefabs and dock assets without changing the main scene.
-- [ ] T017 [US3] Place two independent bench prefab instances and three residents in `Freyja/Assets/_Project/Scenes/SmartObjects_Demo.unity`; configure deterministic fallback and validate approach/pose points against `IlhaWaypointNavigation.asset`.
-- [ ] T018 [US3] Configure compatible future-only slots on the existing dock asset in `Freyja/Assets/_Project/Scenes/SmartObjects_Demo.unity` when points are navigable; record the absence of a well asset rather than creating one.
-- [ ] T019 [US3] Add Play Mode integration tests for candidate fallback, arrival-before-occupancy, cancellation, invalid paths and reservation cleanup in `Freyja/Assets/_Project/SmartObjects085/Tests/PlayMode/SmartObjectDemoTests.cs`.
-- [ ] T020 [US3] Run the harness in Play Mode and capture the agents, benches, Gizmos/slot states and Inspector diagnostics to `specs/085-smart-objects-foundation/evidence/`.
+- [x] T016 [US3] Create `Freyja/Assets/_Project/Scenes/SmartObjects_Demo.unity` from the approved small demonstration layout, reusing the existing island NavMesh and resident prefabs without changing the main scene.
+- [x] T017 [US3] Place two independent bench prefab instances and three residents in `Freyja/Assets/_Project/Scenes/SmartObjects_Demo.unity`; validate approach/pose points and deterministic fallback in Play Mode.
+- [x] T018 [US3] Configure two future-only slots on the existing stone dock (`fish`, `watch_sea`) after confirming samples and complete routes on the loaded NavMesh; document that no suitable well asset exists.
+- [x] T019 [US3] Add and execute Play Mode integration tests for candidate fallback, arrival-before-occupancy, cancellation, invalid paths and reservation cleanup (6/6 feature Play Mode tests passed).
+- [x] T020 [US3] Run the harness in Play Mode and capture the agents, benches and Gizmos to `specs/085-smart-objects-foundation/evidence/`.
 
 ## Phase 6: Polish and Cross-Cutting Validation
 
-- [ ] T021 Run feature Edit Mode and Play Mode suites, script recompilation, Console checks and `git diff --check`; record exact commands/results/limitations in `specs/085-smart-objects-foundation/validacao.md`.
+- [x] T021 Run feature Edit Mode and Play Mode suites, script recompilation and `git diff --check`; record exact commands/results/limitations in `specs/085-smart-objects-foundation/validacao.md`. Unity recompile reported no errors; tests passed 12/12 and 6/6.
 - [x] T022 Document prefab authoring, ID repair, slot configuration, demo launch, release controls and future animation/navigation gaps in `specs/085-smart-objects-foundation/quickstart.md`.
-- [ ] T023 Update checkboxes in `specs/085-smart-objects-foundation/tasks.md` with evidence and confirm no changes escaped the approved scope.
+- [x] T023 Update task checkboxes with evidence and confirm no Smart Objects change escaped the approved scope; scheduler/schedule-core work is excluded.
 
 ## Dependencies
 

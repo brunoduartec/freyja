@@ -53,6 +53,8 @@ namespace Freyja.SmartObjects.Tests
             Create("same", "", "two", "sit", Vector3.one);
             Assert.That(SmartObjectRegistry.TryGetById("same", out _), Is.False);
             Assert.That(SmartObjectRegistry.FindCandidates(Vector3.zero, "sit").Count, Is.Zero);
+            // Edit Mode does not dispatch OnDisable for ordinary runtime scripts.
+            SmartObjectRegistry.Unregister(first);
             Object.DestroyImmediate(first.gameObject);
             Assert.That(SmartObjectRegistry.TryGetById("same", out SmartObject remaining), Is.True);
         }
@@ -160,12 +162,13 @@ namespace Freyja.SmartObjects.Tests
             Assert.That(string.IsNullOrWhiteSpace(obj.ObjectId), Is.False);
             string stable = obj.ObjectId;
             go.transform.position = new Vector3(120f, 3f, -18f);
-            obj.SendMessage("OnValidate");
+            ValidateInEditor(obj);
             Assert.That(obj.ObjectId, Is.EqualTo(stable));
 
             var other = new GameObject("other-generated-id");
             created.Add(other);
             SmartObject second = other.AddComponent<SmartObject>();
+            ValidateInEditor(second);
             Assert.That(second.ObjectId, Is.Not.EqualTo(stable));
         }
 
@@ -185,6 +188,10 @@ namespace Freyja.SmartObjects.Tests
             Set(obj, "regionId", region);
             Set(obj, "slots", new List<InteractionSlot> { slot });
             go.SetActive(true);
+            // Edit Mode does not run MonoBehaviour.OnEnable for ordinary runtime scripts.
+            // Lifecycle registration is covered in Play Mode tests; register explicitly here
+            // so these tests focus on discovery/reservation behavior.
+            SmartObjectRegistry.Register(obj);
             return obj;
         }
 
@@ -210,5 +217,8 @@ namespace Freyja.SmartObjects.Tests
         {
             target.GetType().GetField(field, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).SetValue(target, value);
         }
+
+        private static void ValidateInEditor(SmartObject smartObject) =>
+            typeof(SmartObject).GetMethod("OnValidate", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).Invoke(smartObject, null);
     }
 }

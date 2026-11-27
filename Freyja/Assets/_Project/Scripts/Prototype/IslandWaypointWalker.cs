@@ -40,7 +40,9 @@ namespace Freyja.Prototype
             if (!isActiveAndEnabled || agent == null || network == null || !network.IsReady)
                 return false;
 
-            if (waypoint == null || !waypoint.IsChildOf(network.transform) ||
+            // Smart Object approach Transforms can live under their own prefabs, not under the waypoint network.
+            // They are valid destinations when both endpoints sample onto the loaded NavMesh and a complete path exists.
+            if (waypoint == null ||
                 !NavMesh.SamplePosition(waypoint.position, out var end, 0.2f, agent.areaMask) ||
                 !NavMesh.SamplePosition(transform.position, out var start, 0.35f, agent.areaMask) ||
                 !NavMesh.CalculatePath(start.position, end.position, agent.areaMask, path) ||

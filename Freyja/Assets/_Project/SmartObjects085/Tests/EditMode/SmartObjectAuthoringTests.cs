@@ -75,9 +75,9 @@ namespace Freyja.SmartObjects.Tests
             SmartObject smartObject = root.AddComponent<SmartObject>();
             Set(smartObject, "slots", new List<InteractionSlot> { Slot("", approach, pose) });
 
-            smartObject.SendMessage("OnValidate");
+            ValidateInEditor(smartObject);
             string id = smartObject.Slots[0].SlotId;
-            smartObject.SendMessage("OnValidate");
+            ValidateInEditor(smartObject);
 
             Assert.That(string.IsNullOrWhiteSpace(id), Is.False);
             Assert.That(smartObject.Slots[0].SlotId, Is.EqualTo(id));
@@ -102,5 +102,8 @@ namespace Freyja.SmartObjects.Tests
 
         private static void Set(object target, string field, object value) =>
             target.GetType().GetField(field, BindingFlags.Instance | BindingFlags.NonPublic).SetValue(target, value);
+
+        private static void ValidateInEditor(SmartObject smartObject) =>
+            typeof(SmartObject).GetMethod("OnValidate", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(smartObject, null);
     }
 }
