@@ -1,0 +1,16 @@
+{
+  "projectFileVersion": 4,
+  "sourceFiles": [
+    "Demo.yarn"
+  ],
+  "excludeFiles": [],
+  "baseLanguage": "pt-BR",
+  "localisation": {
+    "pt-BR": {
+      "strings": "../../Localization/pt-BR.csv"
+    },
+    "en-US": {
+      "strings": "../../Localization/en-US.csv"
+    }
+  }
+}

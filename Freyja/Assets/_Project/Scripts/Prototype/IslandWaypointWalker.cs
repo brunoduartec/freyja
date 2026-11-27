@@ -3,6 +3,8 @@ using UnityEngine.AI;
 
 namespace Freyja.Prototype
 {
+    public enum WaypointMoveStatus { Unknown, Running, Succeeded, Failed, Cancelled }
+
     [RequireComponent(typeof(NavMeshAgent))]
     public sealed class IslandWaypointWalker : MonoBehaviour
     {
@@ -22,8 +24,12 @@ namespace Freyja.Prototype
         private AnimatorOverrideController walkingController;
         private bool animating;
         private float blockedTime;
+        private long moveSequence;
+        private long activeMoveId;
+        private WaypointMoveStatus moveStatus;
 
         public bool IsWalking => agent != null && agent.enabled && agent.isOnNavMesh && agent.hasPath;
+        public IslandWaypointNetwork Network => network;
 
         private void Awake()
         {
@@ -36,6 +42,37 @@ namespace Freyja.Prototype
         private void WalkToDestination() => TryMoveTo(destination);
 
         public bool TryMoveTo(Transform waypoint)
+        {
+            return TryBeginMove(waypoint,out _);
+        }
+
+        public bool TryBeginMove(Transform waypoint,out long operationId)
+        {
+            operationId=++moveSequence;
+            activeMoveId=operationId;
+            moveStatus=WaypointMoveStatus.Running;
+            if(!TryMoveToInternal(waypoint))
+            {
+                moveStatus=WaypointMoveStatus.Failed;
+                operationId=activeMoveId;
+                return false;
+            }
+            return true;
+        }
+
+        public WaypointMoveStatus GetMoveStatus(long operationId)
+        {
+            return operationId==activeMoveId?moveStatus:WaypointMoveStatus.Unknown;
+        }
+
+        public bool CancelMove(long operationId)
+        {
+            if(operationId!=activeMoveId)return false;
+            if(moveStatus==WaypointMoveStatus.Running)FinishMove(WaypointMoveStatus.Cancelled);
+            return true;
+        }
+
+        private bool TryMoveToInternal(Transform waypoint)
         {
             if (!isActiveAndEnabled || agent == null || network == null || !network.IsReady)
                 return false;
@@ -65,6 +102,12 @@ namespace Freyja.Prototype
 
         public void Stop()
         {
+            if(moveStatus==WaypointMoveStatus.Running)moveStatus=WaypointMoveStatus.Cancelled;
+            StopAgent();
+        }
+
+        private void StopAgent()
+        {
             if (agent != null && agent.enabled)
             {
                 if (agent.isOnNavMesh)
@@ -72,6 +115,12 @@ namespace Freyja.Prototype
                 agent.enabled = false;
             }
             SetWalkingAnimation(false);
+        }
+
+        private void FinishMove(WaypointMoveStatus status)
+        {
+            moveStatus=status;
+            StopAgent();
         }
 
         private void OnDisable() => Stop();
@@ -87,13 +136,23 @@ namespace Freyja.Prototype
 
         private void Update()
         {
-            if (agent == null || !agent.enabled || !agent.isOnNavMesh || agent.pathPending)
+            if(moveStatus!=WaypointMoveStatus.Running)return;
+            if(agent==null||!agent.enabled||!agent.isOnNavMesh)
+            {
+                FinishMove(WaypointMoveStatus.Failed);
+                return;
+            }
+            if(agent.pathPending)
                 return;
 
-            if (!agent.hasPath || agent.pathStatus != NavMeshPathStatus.PathComplete ||
-                agent.remainingDistance <= agent.stoppingDistance + 0.02f)
+            if (!agent.hasPath || agent.pathStatus != NavMeshPathStatus.PathComplete)
             {
-                Stop();
+                FinishMove(WaypointMoveStatus.Failed);
+                return;
+            }
+            if(agent.remainingDistance<=agent.stoppingDistance+0.02f)
+            {
+                FinishMove(WaypointMoveStatus.Succeeded);
                 return;
             }
 
@@ -103,7 +162,7 @@ namespace Freyja.Prototype
             blockedTime = blocked ? blockedTime + Time.deltaTime : 0f;
             SetWalkingAnimation(!blocked && agent.velocity.sqrMagnitude > 0.01f);
             if (blockedTime >= 2f)
-                Stop();
+                FinishMove(WaypointMoveStatus.Failed);
         }
 
         private bool IsObstructed(Vector3 direction)

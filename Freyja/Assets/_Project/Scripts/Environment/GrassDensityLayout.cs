@@ -43,8 +43,13 @@ namespace Freyja.Environment
         [SerializeField] private CoastalGrassLayout source;
         [SerializeField] private Region[] regions = Array.Empty<Region>();
 
+#if UNITY_EDITOR
+        public bool Matches(CoastalGrassLayout layout) => source == layout && regions.Length == layout.Cells.Length;
+        public Tuft[] GetTufts(int region) => regions[region].Tufts;
+#else
         internal bool Matches(CoastalGrassLayout layout) => source == layout && regions.Length == layout.Cells.Length;
         internal Tuft[] GetTufts(int region) => regions[region].Tufts;
+#endif
 
 #if UNITY_EDITOR
         public void Configure(CoastalGrassLayout layout, Region[] newRegions)

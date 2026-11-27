@@ -178,6 +178,21 @@ namespace Freyja.Environment
         }
 
 #if UNITY_EDITOR
+        private System.Collections.Generic.HashSet<Vector2Int> editorBlockedRoots;
+        public CoastalGrassLayout EditorLayout => layout;
+        public CoastalGrassLayout EditorAuthoredLayout => authoredLayout;
+        public GrassDensityLayout EditorDensityLayout => densityLayout;
+        public bool EditorIsBlocked(Vector3 position)
+        {
+            if (!surfaceMask) return false;
+            editorBlockedRoots ??= surfaceMask.BuildLookup();
+            return editorBlockedRoots.Contains(GrassSurfaceMask.ToKey(position));
+        }
+        public void EditorRebuildPlacement()
+        {
+            if (regions != null) placementDirty = true;
+        }
+
         public void Configure(Camera camera, CoastalGrassLayout bakedLayout, Material material, Mesh[] meshes)
         {
             gameplayCamera = camera;

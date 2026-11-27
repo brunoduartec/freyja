@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -38,6 +39,7 @@ namespace Freyja.Environment
             public CoastalGrassLayout.Cell Source;
             public bool AuthoredCoastal;
             public GrassDensityLayout.Tuft[] ExtraTufts;
+            public CoastalGrassLayout.ManualEdit[] ManualTufts;
             public Matrix4x4[][] Batches;
         }
 
@@ -91,6 +93,7 @@ namespace Freyja.Environment
         private readonly Vector4[] lightPositions = new Vector4[MaxLights];
         private readonly Vector4[] lightColors = new Vector4[MaxLights];
         private readonly float[] lightDistances = new float[MaxLights];
+        private readonly HashSet<CoastalGrassLayout.RootKey> suppressedRoots = new();
 
         public int SubmittedTriangles { get; private set; }
         public int RebuiltRegions { get; private set; }
@@ -129,7 +132,21 @@ namespace Freyja.Environment
 
             CoastalGrassLayout.Cell[] extraCells = authoredLayout ? authoredLayout.Cells : Array.Empty<CoastalGrassLayout.Cell>();
             hasDensity = densityLayout && densityLayout.Matches(layout);
-            regions = new Region[layout.Cells.Length + extraCells.Length];
+            var manualByCell = new Dictionary<Vector2Int, List<CoastalGrassLayout.ManualEdit>>();
+            suppressedRoots.Clear();
+            var sourceEdits = new Dictionary<CoastalGrassLayout.RootKey, CoastalGrassLayout.ManualEdit>();
+            foreach (CoastalGrassLayout.ManualEdit edit in layout.ManualEdits)
+                if (edit.Kind == CoastalGrassLayout.ManualKind.Add)
+                    AddManualToCell(manualByCell, edit);
+                else sourceEdits[edit.Source] = edit;
+            foreach (var pair in sourceEdits)
+            {
+                suppressedRoots.Add(pair.Key);
+                if (pair.Value.Kind == CoastalGrassLayout.ManualKind.Replace)
+                    AddManualToCell(manualByCell, pair.Value);
+            }
+
+            regions = new Region[layout.Cells.Length + extraCells.Length + manualByCell.Count];
             for (int i = 0; i < regions.Length; i++)
             {
                 bool authored = i >= layout.Cells.Length;
@@ -148,7 +165,25 @@ namespace Freyja.Environment
                     ExtraTufts = extraTufts
                 };
             }
+            int regionIndex = layout.Cells.Length + extraCells.Length;
+            foreach (var pair in manualByCell)
+            {
+                var bounds = new Bounds(pair.Value[0].Root, Vector3.one * 0.1f);
+                foreach (CoastalGrassLayout.ManualEdit edit in pair.Value)
+                    bounds.Encapsulate(edit.Root);
+                bounds.Expand(1.6f);
+                regions[regionIndex++] = new Region { Bounds = bounds, ExtraTufts = Array.Empty<GrassDensityLayout.Tuft>(), ManualTufts = pair.Value.ToArray() };
+            }
             RebuildPlacement();
+        }
+
+        private static void AddManualToCell(Dictionary<Vector2Int, List<CoastalGrassLayout.ManualEdit>> cells,
+            CoastalGrassLayout.ManualEdit edit)
+        {
+            var key = new Vector2Int(Mathf.FloorToInt(edit.Root.x / 8f), Mathf.FloorToInt(edit.Root.z / 8f));
+            if (!cells.TryGetValue(key, out List<CoastalGrassLayout.ManualEdit> list))
+                cells.Add(key, list = new List<CoastalGrassLayout.ManualEdit>());
+            list.Add(edit);
         }
 
         private void OnValidate() => placementDirty = true;
@@ -170,11 +205,16 @@ namespace Freyja.Environment
             Region region = regions[index];
             var batches = new List<Matrix4x4>[Profiles * Stages];
             float coverage = quality switch { Quality.Low => 0.4f, Quality.Medium => 0.7f, _ => 0.98f };
+            if (region.Source != null)
             foreach (CoastalGrassLayout.Batch source in region.Source.Batches)
             {
                 foreach (Matrix4x4 matrix in source.Instances)
                 {
                     Vector3 root = matrix.GetColumn(3);
+                    var rootKey = new CoastalGrassLayout.RootKey(region.AuthoredCoastal
+                        ? CoastalGrassLayout.ManualSource.Authored : CoastalGrassLayout.ManualSource.Layout, source.MeshIndex, root);
+                    if (suppressedRoots.Contains(rootKey))
+                        continue;
                     if (!region.AuthoredCoastal && blockedRoots != null && blockedRoots.Contains(GrassSurfaceMask.ToKey(root)))
                         continue;
                     float score = PlacementScore(root, variationSeed);
@@ -199,6 +239,9 @@ namespace Freyja.Environment
             {
                 foreach (GrassDensityLayout.Tuft tuft in region.ExtraTufts)
                 {
+                    var rootKey = new CoastalGrassLayout.RootKey(CoastalGrassLayout.ManualSource.Density, tuft.MeshIndex, tuft.Root);
+                    if (suppressedRoots.Contains(rootKey))
+                        continue;
                     float score = PlacementScore(tuft.Root, variationSeed);
                     if (score >= extraCoverage || IsExcluded(tuft.Root))
                         continue;
@@ -210,6 +253,20 @@ namespace Freyja.Environment
                     if (score < extraCoverage * 0.30f)
                         (batches[section + DetailVariants] ??= new()).Add(matrix);
                 }
+            }
+
+            if (region.ManualTufts != null)
+            foreach (CoastalGrassLayout.ManualEdit tuft in region.ManualTufts)
+            {
+                if (tuft.MeshIndex < 0 || tuft.MeshIndex >= DetailVariants)
+                    continue;
+                if (IsExcluded(tuft.Root))
+                    continue;
+                int profile = SelectProfile(tuft.Root.y, PlacementScore(tuft.Root, variationSeed));
+                int section = profile * Stages;
+                (batches[section + tuft.MeshIndex] ??= new()).Add(tuft.Matrix);
+                (batches[section + DetailVariants] ??= new()).Add(tuft.Matrix);
+                (batches[section + DetailVariants + 1] ??= new()).Add(tuft.Matrix);
             }
 
             region.Batches ??= new Matrix4x4[batches.Length][];

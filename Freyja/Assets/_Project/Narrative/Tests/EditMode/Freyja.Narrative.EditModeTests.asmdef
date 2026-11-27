@@ -1,0 +1,14 @@
+{
+  "name": "Freyja.Narrative.EditModeTests",
+  "references": [
+    "Freyja.Narrative",
+    "Freyja.Narrative.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

@@ -1,0 +1,90 @@
+title: Declarations
+---
+<<declare $demo_has_boat = false>>
+<<declare $demo_has_helena = false>>
+<<declare $demo_ivo_knows_boat = false>>
+<<declare $demo_ivo_knows_helena = false>>
+<<declare $demo_ivo_departure_revealed = false>>
+<<declare $demo_clock_topic_available = false>>
+===
+
+title: Demo_Nuno
+tags: demo npc_nuno
+---
+Nuno: Se é sobre o barco, fale baixo, por favor. #line:demo.nuno.greeting
+-> Quando sai o próximo barco? #line:demo.nuno.ask_schedule
+    Nuno: O barco do continente volta antes do nascimento. #line:demo.nuno.schedule_1
+    Nuno: Artur e eu combinamos de pôr Ivo a bordo nessa viagem. #line:demo.nuno.schedule_2
+    <<discover "demo.clue.boat_schedule" "depoimento">>
+-> Quem decidiu a viagem? #line:demo.nuno.ask_decision
+    Nuno: Foi uma conversa entre moradores, não uma ordem escrita. #line:demo.nuno.decision
+-> O que ouviu de Helena? #line:demo.nuno.ask_helena
+    Nuno: Sei que ela espera um bebê e queria o pai por perto. #line:demo.nuno.helena
+    <<discover "demo.clue.helena_birth" "depoimento">>
+-> Encerrar conversa. #line:demo.nuno.exit
+    <<stop>>
+===
+
+title: Demo_Luana
+tags: demo npc_luana
+---
+Luana: Se está procurando meu pai, deve estar nos degraus. #line:demo.luana.greeting
+-> Como está Helena? #line:demo.luana.ask_helena
+    Luana: Minha mãe está grávida. #line:demo.luana.helena_1
+    Luana: Queria que meu pai estivesse aqui quando o bebê nascer. #line:demo.luana.helena_2
+    Luana: Agora todo mundo só fala de quando ele vai embora. #line:demo.luana.helena_3
+    <<discover "demo.clue.helena_birth" "depoimento">>
+-> Quando o barco volta? #line:demo.luana.ask_boat
+    Luana: Ouvi que volta antes do nascimento, mas não vi a escala. #line:demo.luana.boat
+    <<discover "demo.clue.boat_schedule" "depoimento">>
+-> O que sabe sobre a escolha? #line:demo.luana.ask_choice
+    Luana: Meu pai não escolheu a data; a vila conversou sobre ela. #line:demo.luana.choice
+    <<discover "demo.clue.village_decision" "depoimento">>
+-> Encerrar conversa. #line:demo.luana.exit
+    <<stop>>
+===
+
+title: Demo_Ivo
+tags: demo npc_ivo
+---
+Ivo: Cuidado com a beirada. Ainda falta firmar umas pedras. #line:demo.ivo.greeting
+-> O que está fazendo? #line:demo.ivo.ask_repair
+    Ivo: Consertando os degraus para Helena e Luana. #line:demo.ivo.repair
+    <<discover "demo.clue.stair_repair" "depoimento">>
+-> O que é a tira azul na sua manga? #line:demo.ivo.ask_ribbon
+    Ivo: Uma tira de pano azul ficou presa enquanto eu trabalhava. #line:demo.ivo.ribbon
+    <<discover "demo.clue.blue_ribbon" "observacao">>
+<<if $demo_has_boat && !$demo_ivo_knows_boat>>
+-> Contar a escala do barco a Ivo. #line:demo.ivo.share_boat
+    Ivo: Nuno já tinha comentado comigo, mas obrigado por confirmar. #line:demo.ivo.thanks_boat
+    <<communicate "demo.ivo" "demo.clue.boat_schedule">>
+    <<set $demo_ivo_knows_boat = true>>
+<<endif>>
+<<if $demo_has_helena && !$demo_ivo_knows_helena>>
+-> Contar a conversa sobre Helena a Ivo. #line:demo.ivo.share_helena
+    Ivo: Eu queria estar com ela quando o bebê chegasse. #line:demo.ivo.thanks_helena
+    <<communicate "demo.ivo" "demo.clue.helena_birth">>
+    <<set $demo_ivo_knows_helena = true>>
+<<endif>>
+-> Como soube da viagem? #line:demo.ivo.ask_trip
+    Ivo: Nuno me contou que o barco volta antes do nascimento. #line:demo.ivo.trip
+    <<discover "demo.clue.boat_schedule" "depoimento">>
+<<if $demo_clock_topic_available>>
+-> Conversar sobre o barco desta manhã. #line:demo.ivo.ask_clock
+    Ivo: A hora da viagem se aproxima; vou terminar os degraus antes do embarque. #line:demo.ivo.clock_response
+    <<checkpoint "demo.ivo.clock_talk">>
+<<endif>>
+-> O que sabe sobre a vila? #line:demo.ivo.ask_village
+    Ivo: A vila conversou sobre minha partida, mas não ouvi todos os motivos. #line:demo.ivo.village
+    <<discover "demo.clue.village_decision" "depoimento">>
+<<if $demo_ivo_knows_boat && $demo_ivo_knows_helena && !$demo_ivo_departure_revealed>>
+-> Por que precisa partir antes do nascimento? #line:demo.ivo.ask_context
+    Ivo: A vila já me escolheu para partir antes. #line:demo.ivo.context_1
+    Ivo: Queria estar aqui com Helena quando o bebê chegasse. #line:demo.ivo.context_2
+    <<effect_once "demo.ivo.departure_question">>
+    <<checkpoint "demo.ivo.departure_revealed">>
+    <<set $demo_ivo_departure_revealed = true>>
+<<endif>>
+-> Encerrar conversa. #line:demo.ivo.exit
+    <<stop>>
+===

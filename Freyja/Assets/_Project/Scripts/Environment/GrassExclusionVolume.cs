@@ -52,7 +52,7 @@ namespace Freyja.Environment
                 grass.AddExclusion(this);
         }
 
-        internal bool Contains(Vector3 point)
+        public bool Contains(Vector3 point)
         {
             if (!Coverage.Contains(point))
                 return false;
@@ -61,6 +61,14 @@ namespace Freyja.Environment
             Vector3 half = lastSize * 0.5f;
             return Mathf.Abs(local.x) <= half.x && Mathf.Abs(local.y) <= half.y && Mathf.Abs(local.z) <= half.z;
         }
+
+#if UNITY_EDITOR
+        public bool EditorContains(Vector3 point)
+        {
+            CacheShape();
+            return Contains(point);
+        }
+#endif
 
         private void CacheShape()
         {

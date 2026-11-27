@@ -91,6 +91,12 @@ namespace Freyja.Editor
 
             string fieldName = wholeIsland ? "Coastal Grass — Ilha" : "Coastal Grass — Cais";
             var grass = island.GetComponentInChildren<CoastalGrass>(true);
+            if (grass && grass.EditorLayout && grass.EditorLayout != layout && grass.EditorLayout.ManualEdits.Length > 0)
+            {
+                layout.SetManualEdits(grass.EditorLayout.ManualEdits);
+                EditorUtility.SetDirty(layout);
+                AssetDatabase.SaveAssetIfDirty(layout);
+            }
             if (!grass)
             {
                 GameObject field = new(fieldName);

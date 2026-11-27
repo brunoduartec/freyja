@@ -1,0 +1,11 @@
+{
+  "name": "Freyja.Narrative.Editor",
+  "references": [
+    "Freyja.Narrative",
+    "YarnSpinner.Unity"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}

@@ -1,0 +1,39 @@
+﻿id,text,comment
+line:demo.nuno.greeting,"If this is about the boat, please keep your voice down.",node=Demo_Nuno;kind=line;speaker=Nuno;source_hash=4c256a98f7ebe65c59691c6d2b4bce41f4fd749383263501ae2abbe105e31308
+line:demo.nuno.ask_schedule,When does the next boat leave?,node=Demo_Nuno;kind=option;speaker=;source_hash=658f718c5d74046aec6cd3d55dbba4e11484c881d5ae02e6305a1d3783d0b0a2
+line:demo.nuno.schedule_1,The boat from the mainland returns before the baby is born.,node=Demo_Nuno;kind=line;speaker=Nuno;source_hash=3002d9cd382bd0095b662e8606634041bc3682691d3ff43dbba4d8b82514e64b
+line:demo.nuno.schedule_2,Artur and I agreed to put Ivo on that trip.,node=Demo_Nuno;kind=line;speaker=Nuno;source_hash=f7ddfe5f9289276ad364394ba338be19a72bca36aa9f41e3ed560dc07ad4dae9
+line:demo.nuno.ask_decision,Who decided on the trip?,node=Demo_Nuno;kind=option;speaker=;source_hash=779f7344da84e39c663c4032106a8e651d9af46829bcfa5de89d5a112cce55cd
+line:demo.nuno.decision,"It was a conversation among villagers, not a written order.",node=Demo_Nuno;kind=line;speaker=Nuno;source_hash=cd53e348bc3f804673c8b160eee37b5ccf7c914888303f0ea9aa5d8e75e2b87e
+line:demo.nuno.ask_helena,What did you hear from Helena?,node=Demo_Nuno;kind=option;speaker=;source_hash=7972b7606d8691a326f039cb5d903c4f0b10ec6badb6213b27af221e85b96fe4
+line:demo.nuno.helena,I know she is expecting a baby and wanted the father nearby.,node=Demo_Nuno;kind=line;speaker=Nuno;source_hash=2f6186081ca54d6c6c949a1a5bbad924ae9dd3a436ade78e0cb276b8ea010909
+line:demo.nuno.exit,End the conversation.,node=Demo_Nuno;kind=option;speaker=;source_hash=28ccc05914934156811c525d3295992531ac6254164f20489d20c6f877870d59
+line:demo.luana.greeting,"If you're looking for my father, he should be on the steps.",node=Demo_Luana;kind=line;speaker=Luana;source_hash=077262e88cf68a456050ebb7116851d83a9c0c8b87d4eda490b0dd662281030d
+line:demo.luana.ask_helena,How is Helena?,node=Demo_Luana;kind=option;speaker=;source_hash=b91ac48b954c2874e4dca291ee8b2c8c8594834b424269e53bf23c4c23e7f2f8
+line:demo.luana.helena_1,My mother is expecting a baby.,node=Demo_Luana;kind=line;speaker=Luana;source_hash=d9650a4019b7066e2bc8754346c681ea4b2b76314bf78b19eef73ebeacc04b69
+line:demo.luana.helena_2,She wanted my father here when the baby is born.,node=Demo_Luana;kind=line;speaker=Luana;source_hash=2225d9f31223bc2a53c94aa7b06a0681aac5714b03931357104797fb6c9f9568
+line:demo.luana.helena_3,Now everyone only talks about when he will leave.,node=Demo_Luana;kind=line;speaker=Luana;source_hash=0399f81ac83bf27a7f4742bc031c0f464b6eda82a0171040fb418644272b460f
+line:demo.luana.ask_boat,When does the boat return?,node=Demo_Luana;kind=option;speaker=;source_hash=6333b55b368c7efb28c0ed140db33a565ff667f33bdd9181eee1c8802c4eedc7
+line:demo.luana.boat,"I heard it returns before the baby is born, but I have not seen the schedule.",node=Demo_Luana;kind=line;speaker=Luana;source_hash=237d400c4d18f09c6df49f3df5ceff82462698a39fa71c7dd914c930a4eed27d
+line:demo.luana.ask_choice,What do you know about the decision?,node=Demo_Luana;kind=option;speaker=;source_hash=ecf101a04476a3da02d4e2377caa0823432e704c44b3bc714fb31da4b4995a88
+line:demo.luana.choice,My father did not choose the date; the village discussed it.,node=Demo_Luana;kind=line;speaker=Luana;source_hash=ef639e5b5500ab5dd175f83d0c16b391ba69c04f9132ca598f7b9418f4dc9244
+line:demo.luana.exit,End the conversation.,node=Demo_Luana;kind=option;speaker=;source_hash=28ccc05914934156811c525d3295992531ac6254164f20489d20c6f877870d59
+line:demo.ivo.greeting,Careful near the edge. Some stones still need securing.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=cebd3634717757c5ab81bd36e4e426d4108dc7b4edbee818a6f9bb41db697e30
+line:demo.ivo.ask_repair,What are you working on?,node=Demo_Ivo;kind=option;speaker=;source_hash=ad73ce86dfa67b36ac87ee621640030791bb25d985442c44ed9d85d1dcf35b35
+line:demo.ivo.repair,I am fixing the steps for Helena and Luana.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=055bd3466406028d8ac60c48df5b3d22409b622e1e06240aba889a83bb67aa53
+line:demo.ivo.ask_ribbon,What is the blue strip on your sleeve?,node=Demo_Ivo;kind=option;speaker=;source_hash=787c1f17b957315059a85fec983c590b9109e054b327b6bb48bf5612d340e819
+line:demo.ivo.ribbon,A strip of blue cloth got caught while I was working.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=c2d583e9db282a507c2ee629f4264012f7ae0a9bf776393fb3385a07910b40b6
+line:demo.ivo.share_boat,Tell Ivo about the boat schedule.,node=Demo_Ivo;kind=option;speaker=;source_hash=23970939484e502f24ff1f00841fbce1826e9a4998b4e3b799c3fd1d872921da
+line:demo.ivo.thanks_boat,"Nuno had mentioned it, but thank you for confirming.",node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=02d8782958ebd39068bbffaeae5dec6a4c5c98e4978b3aee4b057a2e59e69771
+line:demo.ivo.share_helena,Tell Ivo what you heard about Helena.,node=Demo_Ivo;kind=option;speaker=;source_hash=025f4a77c689aeddcde3267cb7b672d11c239d4e7e11163d41193aa2c65c5e51
+line:demo.ivo.thanks_helena,I wanted to be with her when the baby arrived.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=6466898bd84e27c23e7276ea3adba0cec58447058356b0e547b2931fd08915b5
+line:demo.ivo.ask_trip,How did you hear about the trip?,node=Demo_Ivo;kind=option;speaker=;source_hash=74e3f3b333c0f50df12727619774142fe3cd3fe9f500528b36e7fdf2edb31b5a
+line:demo.ivo.trip,Nuno told me the boat returns before the baby is born.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=429ba5bce54961edc9b49121cd74eb5cf0c06db8cd3a95706c96bc41203c6059
+line:demo.ivo.ask_clock,Talk about this morning’s boat.,node=Demo_Ivo;kind=option;speaker=;source_hash=6f8850be0a03344c8a6113c6b80f938dacf4eba1aec327a2e38fb455968dfec0
+line:demo.ivo.clock_response,The time for the trip is approaching; I will finish the steps before boarding.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=e07b1318cd63ce49fa9b6167c7ffee0d90eb919a3831fe6af43c8021ad074c4b
+line:demo.ivo.ask_village,What do you know about the village?,node=Demo_Ivo;kind=option;speaker=;source_hash=feb47970e074b2a57a989775a1336203c4644769f9628d578e2f149bd81553c7
+line:demo.ivo.village,"The village discussed my departure, but I did not hear every reason.",node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=0d0e0c8415337470010854bac13044f608dddc443795ef4d65876fe3c7f8b7d6
+line:demo.ivo.ask_context,Why do you have to leave before the baby is born?,node=Demo_Ivo;kind=option;speaker=;source_hash=314d0a48c9c032f79c5ad0745b66465c7b2680f34ef693ebd7f2527fe8f67e0e
+line:demo.ivo.context_1,The village has already chosen me to leave beforehand.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=d12f56785877e758f6ed02a6423e92a0529633bfd5f72a003e0c6ac766f88fd8
+line:demo.ivo.context_2,I wanted to be here with Helena when the baby arrived.,node=Demo_Ivo;kind=line;speaker=Ivo;source_hash=91e0e6d30ed1e332946aa6b5c9512bce77cc902606eda51bd6ec5da2e5ff1695
+line:demo.ivo.exit,End the conversation.,node=Demo_Ivo;kind=option;speaker=;source_hash=28ccc05914934156811c525d3295992531ac6254164f20489d20c6f877870d59

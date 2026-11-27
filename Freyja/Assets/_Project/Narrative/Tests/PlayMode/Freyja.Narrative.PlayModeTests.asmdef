@@ -1,0 +1,11 @@
+{
+  "name": "Freyja.Narrative.PlayModeTests",
+  "references": [
+    "Freyja.Narrative",
+    "YarnSpinner.Unity"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}
