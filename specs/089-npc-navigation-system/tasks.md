@@ -1,6 +1,6 @@
 # Tasks: NPC Navigation System
 
-**Input**: Design documents from `specs/089-npc-navigation-system/`  
+**Input**: Design documents from `specs/089-npc-navigation-system/`
 **Prerequisites**: `plan.md`, `spec.md`, `research.md`, `data-model.md`, `contracts/navigation-operation.md`, `quickstart.md`
 
 ## Phase 1: Setup and preflight
@@ -79,4 +79,3 @@
 2. Reuse the operation implementation in `IslandWaypointWalker`; fill only missing acceptance behavior.
 3. Validate movement and cancellation for one NPC, then regions/approaches, then three simultaneous NPCs.
 4. Run regressions and complete the evidence matrix. Do not report blocked or unrun cases as passed.
-

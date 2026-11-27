@@ -8,14 +8,14 @@ Complete the existing NavMesh-based NPC movement path and its operation reportin
 
 ## Technical Context
 
-**Language/Version**: C# supported by Unity `6000.3.25f1`  
-**Primary Dependencies**: Existing `UnityEngine.AI` module, current waypoint/NavMesh data, existing Smart Objects; no new package  
-**Storage**: Unity assets and scene-authored fixture references; operation state is runtime only  
-**Testing**: Unity Console compile state, focused Edit Mode tests, Play Mode movement through the connected Editor MCP  
-**Target Platform**: Unity Editor / Built-in pipeline  
-**Project Type**: Unity 3D game  
-**Performance Goals**: Three agents operate concurrently with bounded polling/watchdogs and no global per-frame path recalculation  
-**Constraints**: Preserve local and concurrent work; do not edit Activity Core or Smart Object shared contracts; no terrain/player-control changes, package upgrades, animation system, Tripo use, or automatic merge/commit  
+**Language/Version**: C# supported by Unity `6000.3.25f1`
+**Primary Dependencies**: Existing `UnityEngine.AI` module, current waypoint/NavMesh data, existing Smart Objects; no new package
+**Storage**: Unity assets and scene-authored fixture references; operation state is runtime only
+**Testing**: Unity Console compile state, focused Edit Mode tests, Play Mode movement through the connected Editor MCP
+**Target Platform**: Unity Editor / Built-in pipeline
+**Project Type**: Unity 3D game
+**Performance Goals**: Three agents operate concurrently with bounded polling/watchdogs and no global per-frame path recalculation
+**Constraints**: Preserve local and concurrent work; do not edit Activity Core or Smart Object shared contracts; no terrain/player-control changes, package upgrades, animation system, Tripo use, or automatic merge/commit
 **Scale/Scope**: A small, removable demonstration using three agents and existing navigation data; no island-wide re-bake unless a specific test proves it necessary
 
 ## Constitution Check

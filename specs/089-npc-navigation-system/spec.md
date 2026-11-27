@@ -1,8 +1,8 @@
 # Feature Specification: NPC Navigation System
 
-**Feature Branch**: `089-npc-navigation-system`  
-**Created**: 2026-11-27  
-**Status**: Approved for planning  
+**Feature Branch**: `089-npc-navigation-system`
+**Created**: 2026-11-27
+**Status**: Approved for planning
 **Input**: User-approved specification in `.codex-attachments/.../freyja-npc-navigation-system.md`.
 
 ## User Scenarios & Testing

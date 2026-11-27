@@ -28,4 +28,3 @@
 ## Evidence capture
 
 Save reports and captures under `specs/089-npc-navigation-system/evidence/`. Include Unity version, scene path, operation IDs, NPC IDs, start/end world positions, actual elapsed time, test results, and any routes not run. Keep the original Console log available when diagnosing failures. Fill the NAV-01–NAV-14 matrix in the delivery report; mark missing prerequisites `BLOCKED` and unexecuted routes `NOT RUN`.
-

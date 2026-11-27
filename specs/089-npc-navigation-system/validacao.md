@@ -1,7 +1,7 @@
 # Validação — NPC Navigation System
 
-**Data:** 2026-11-27  
-**Branch/worktree:** `089-npc-navigation-system` — `/Users/bruno.duartec/Documents/Projects/Freyja-089-npc-navigation-system`  
+**Data:** 2026-11-27
+**Branch/worktree:** `089-npc-navigation-system` — `/Users/bruno.duartec/Documents/Projects/Freyja-089-npc-navigation-system`
 **Estado:** implementação executada e validada parcialmente; os limites não exercitados permanecem listados. A integração 090 foi commitada em `9c82ab1`; somente o `IslandWaypointWalker` foi estendido nesta feature. Contratos do Activity Core e o adapter não foram alterados.
 
 ## Ambiente e preflight

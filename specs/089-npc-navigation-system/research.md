@@ -42,4 +42,3 @@
 - Confirm final `IslandWaypointWalker` operation API and whether it meets NAV-01–NAV-07 before editing movement code.
 - Confirm whether the active demo scene exposes three NPC fixtures and a real Smart Object with two approach slots.
 - Establish a trustworthy Console compile baseline. The current MCP console reports no compile-failure flag but has accumulated errors, several from pipeline socket disconnects after an oversized hierarchy response; this is not evidence of a clean baseline.
-

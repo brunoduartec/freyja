@@ -4,7 +4,7 @@ This feature-owned contract describes expected behavior. It does not edit or rep
 
 ## Begin
 
-Input: NPC/owner identity, unique operation identity, and one resolved world point or Transform.  
+Input: NPC/owner identity, unique operation identity, and one resolved world point or Transform.
 Output: accepted/running, or a terminal failure with a reason.
 
 - Validate component and agent lifecycle, target validity, and ownership before starting.
@@ -14,7 +14,7 @@ Output: accepted/running, or a terminal failure with a reason.
 
 ## Poll
 
-Input: exact owner and operation identity.  
+Input: exact owner and operation identity.
 Output: state, available path/progress/locomotion diagnostics, and optional terminal reason.
 
 - A stale identity returns a stale/not-owned result and has no side effects.
@@ -25,7 +25,7 @@ Output: state, available path/progress/locomotion diagnostics, and optional term
 
 ## Cancel
 
-Input: exact owner and operation identity.  
+Input: exact owner and operation identity.
 Output: whether that operation was cancelled or was already terminal.
 
 - Repeated cancellation is safe.
@@ -42,4 +42,3 @@ Output: whether that operation was cancelled or was already terminal.
 ## Existing Activity Core mapping (conditional)
 
 The committed `IActivityPorts` contract maps movement through `Begin("move_to", ..., point, ...)`, `Poll(ActivityOperation, ...)`, and `Cancel(ActivityOperation, ...)`. However, the active Unity Integration worktree has uncommitted signature changes and an untracked `NpcUnityActivityPorts` adapter. Do not implement or edit that adapter until the activity session hands off its final contract. If the current adapter can consume the completed walker operation API, reuse it and add no second adapter.
-

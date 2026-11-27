@@ -38,4 +38,3 @@ Terminal results are immutable for that operation identity. Calls bearing a stal
 - A finite set of destination/region Transform markers.
 - Optional real Smart Object slot references; temporary markers are labeled as fixtures.
 - Test phase/command values may be serialized as authoring inputs; operation ID, status, telemetry, and last result are runtime-only.
-

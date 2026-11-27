@@ -1,7 +1,7 @@
 # Specification Quality Checklist: NPC Navigation System
 
-**Purpose**: Validate specification completeness and quality before planning  
-**Created**: 2026-11-27  
+**Purpose**: Validate specification completeness and quality before planning
+**Created**: 2026-11-27
 **Feature**: [spec.md](../spec.md)
 
 ## Content Quality
