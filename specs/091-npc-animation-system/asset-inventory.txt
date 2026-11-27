@@ -1,0 +1,321 @@
+Unity Animation Asset Inventory
+Generated UTC: 2026-11-27T17:53:24.4322460Z
+Unity: 6000.3.25f1
+
+## Resident prefabs
+- Assets/_Project/Prefabs/Moradores060/AmeliaFaria.prefab
+  animator=AmeliaFaria/AmeliaFaria enabled=True rootMotion=False avatar=AmeliaFariaAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/AmeliaFaria/AmeliaFaria.controller
+- Assets/_Project/Prefabs/Moradores060/DudaNeves.prefab
+  animator=DudaNeves/DudaNeves enabled=True rootMotion=False avatar=DudaNevesAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/DudaNeves/DudaNeves.controller
+- Assets/_Project/Prefabs/Moradores060/ElisaNeves.prefab
+  animator=ElisaNeves/ElisaNeves enabled=True rootMotion=False avatar=ElisaNevesAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/ElisaNeves/ElisaNeves.controller
+- Assets/_Project/Prefabs/Moradores060/HelenaBatista.prefab
+  animator=HelenaBatista/HelenaBatista enabled=True rootMotion=False avatar=HelenaBatistaAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/HelenaBatista/HelenaBatista.controller
+- Assets/_Project/Prefabs/Moradores060/IvoBatista.prefab
+  animator=IvoBatista/IvoBatista enabled=True rootMotion=False avatar=IvoBatistaAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/IvoBatista/IvoBatista.controller
+- Assets/_Project/Prefabs/Moradores060/JoaquimNeves.prefab
+  animator=JoaquimNeves/JoaquimNeves enabled=True rootMotion=False avatar=JoaquimNevesAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/JoaquimNeves/JoaquimNeves.controller
+- Assets/_Project/Prefabs/Moradores060/LuanaBatista.prefab
+  animator=LuanaBatista/LuanaBatista enabled=True rootMotion=False avatar=LuanaBatistaAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/LuanaBatista/LuanaBatista.controller
+- Assets/_Project/Prefabs/Moradores060/MauroNeves.prefab
+  animator=MauroNeves/MauroNeves enabled=True rootMotion=False avatar=MauroNevesAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/MauroNeves/MauroNeves.controller
+- Assets/_Project/Prefabs/Moradores060/NunoPires.prefab
+  animator=NunoPires/NunoPires enabled=True rootMotion=False avatar=NunoPiresAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/NunoPires/NunoPires.controller
+- Assets/_Project/Prefabs/Moradores060/SaraFaria.prefab
+  animator=SaraFaria/SaraFaria enabled=True rootMotion=False avatar=SaraFariaAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/SaraFaria/SaraFaria.controller
+- Assets/_Project/Prefabs/Moradores060/TomasFaria.prefab
+  animator=TomasFaria/TomasFaria enabled=True rootMotion=False avatar=TomasFariaAvatar:valid=True:human=True controller=Assets/_Project/Art/Moradores060/TomasFaria/TomasFaria.controller
+
+## Animator Controllers
+- Assets/_Project/Art/Moradores060/AmeliaFaria/AmeliaFaria.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanF@Idle01
+  state=  Base Layer/Variacao motion=HumanF@Idle02
+- Assets/_Project/Art/Moradores060/DudaNeves/DudaNeves.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanF@Idle01
+  state=  Base Layer/Variacao motion=HumanF@Idle02
+- Assets/_Project/Art/Moradores060/ElisaNeves/ElisaNeves.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanF@Idle02
+  state=  Base Layer/Variacao motion=HumanF@Idle01
+- Assets/_Project/Art/Moradores060/HelenaBatista/HelenaBatista.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanF@Idle01
+  state=  Base Layer/Variacao motion=HumanF@Idle01
+- Assets/_Project/Art/Moradores060/IvoBatista/IvoBatista.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanM@Idle01
+  state=  Base Layer/Variacao motion=HumanM@Idle02
+- Assets/_Project/Art/Moradores060/JoaquimNeves/JoaquimNeves.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanM@Idle02
+  state=  Base Layer/Variacao motion=HumanM@Idle01
+- Assets/_Project/Art/Moradores060/LuanaBatista/LuanaBatista.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanF@Idle02
+  state=  Base Layer/Variacao motion=HumanF@Talk01
+- Assets/_Project/Art/Moradores060/MauroNeves/MauroNeves.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanM@Idle01
+  state=  Base Layer/Variacao motion=HumanM@Idle02
+- Assets/_Project/Art/Moradores060/NunoPires/NunoPires.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanM@Idle01
+  state=  Base Layer/Variacao motion=HumanM@Idle02
+- Assets/_Project/Art/Moradores060/SaraFaria/SaraFaria.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanF@Idle01
+  state=  Base Layer/Variacao motion=HumanF@Talk01
+- Assets/_Project/Art/Moradores060/TomasFaria/TomasFaria.controller
+  params=
+  state=  Base Layer/Repouso motion=HumanM@Idle01
+  state=  Base Layer/Variacao motion=HumanM@Idle02
+
+## Animation clips (seat/stand, locomotion or idle names)
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: __preview__HumanArmature|Man_Idle duration=4.167s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: __preview__HumanArmature|Man_Run duration=1.000s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: __preview__HumanArmature|Man_RunningJump duration=1.250s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: __preview__HumanArmature|Man_Sitting duration=8.333s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: __preview__HumanArmature|Man_Standing duration=1.000s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: __preview__HumanArmature|Man_Walk duration=1.042s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: HumanArmature|Man_Standing duration=0.833s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: HumanArmature|Man_Sitting duration=8.333s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: HumanArmature|Man_RunningJump duration=1.250s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: HumanArmature|Man_Walk duration=1.042s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: HumanArmature|Man_Run duration=0.875s loop=False importRig=Generic
+- Assets/_Project/Art/Characters/Player004/Player004_Male_Casual.fbx :: HumanArmature|Man_Idle duration=4.167s loop=False importRig=Generic
+- Assets/_Project/Art/Ilha_Tripo_011/Protagonista.fbx :: __preview__Idle duration=2.000s loop=False importRig=Human
+- Assets/_Project/Art/Ilha_Tripo_011/Protagonista.fbx :: __preview__Walk duration=1.000s loop=False importRig=Human
+- Assets/_Project/Art/Ilha_Tripo_011/Protagonista.fbx :: Idle duration=2.000s loop=True importRig=Human
+- Assets/_Project/Art/Ilha_Tripo_011/Protagonista.fbx :: Walk duration=1.000s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle01-Idle02.fbx :: __preview__HumanF@Idle01-Idle02 duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle01-Idle02.fbx :: HumanF@Idle01-Idle02 duration=0.667s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle01.fbx :: HumanF@Idle01 duration=2.700s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle01.fbx :: __preview__HumanF@Idle01 duration=2.700s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle02-Idle01.fbx :: __preview__HumanF@Idle02-Idle01 duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle02-Idle01.fbx :: HumanF@Idle02-Idle01 duration=0.767s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle02.fbx :: HumanF@Idle02 duration=2.700s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Idle02.fbx :: __preview__HumanF@Idle02 duration=2.700s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Backward [RM].fbx :: __preview__HumanF@Run01_Backward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Backward [RM].fbx :: HumanF@Run01_Backward [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Backward.fbx :: __preview__HumanF@Run01_Backward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Backward.fbx :: HumanF@Run01_Backward duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardLeft [RM].fbx :: __preview__HumanF@Run01_BackwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardLeft [RM].fbx :: HumanF@Run01_BackwardLeft [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardLeft.fbx :: __preview__HumanF@Run01_BackwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardLeft.fbx :: HumanF@Run01_BackwardLeft duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardRight [RM].fbx :: __preview__HumanF@Run01_BackwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardRight [RM].fbx :: HumanF@Run01_BackwardRight [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardRight.fbx :: __preview__HumanF@Run01_BackwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_BackwardRight.fbx :: HumanF@Run01_BackwardRight duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Forward [RM].fbx :: __preview__HumanF@Run01_Forward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Forward [RM].fbx :: HumanF@Run01_Forward [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Forward.fbx :: __preview__HumanF@Run01_Forward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Forward.fbx :: HumanF@Run01_Forward duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardLeft [RM].fbx :: __preview__HumanF@Run01_ForwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardLeft [RM].fbx :: HumanF@Run01_ForwardLeft [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardLeft.fbx :: __preview__HumanF@Run01_ForwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardLeft.fbx :: HumanF@Run01_ForwardLeft duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardRight [RM].fbx :: __preview__HumanF@Run01_ForwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardRight [RM].fbx :: HumanF@Run01_ForwardRight [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardRight.fbx :: __preview__HumanF@Run01_ForwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_ForwardRight.fbx :: HumanF@Run01_ForwardRight duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Left [RM].fbx :: __preview__HumanF@Run01_Left [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Left [RM].fbx :: HumanF@Run01_Left [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Left.fbx :: __preview__HumanF@Run01_Left duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Left.fbx :: HumanF@Run01_Left duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Right [RM].fbx :: __preview__HumanF@Run01_Right [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Right [RM].fbx :: HumanF@Run01_Right [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Right.fbx :: __preview__HumanF@Run01_Right duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Run01_Right.fbx :: HumanF@Run01_Right duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Backward [RM].fbx :: __preview__HumanF@Walk01_Backward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Backward [RM].fbx :: HumanF@Walk01_Backward [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Backward.fbx :: __preview__HumanF@Walk01_Backward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Backward.fbx :: HumanF@Walk01_Backward duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardLeft [RM].fbx :: __preview__HumanF@Walk01_BackwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardLeft [RM].fbx :: HumanF@Walk01_BackwardLeft [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardLeft.fbx :: __preview__HumanF@Walk01_BackwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardLeft.fbx :: HumanF@Walk01_BackwardLeft duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardRight [RM].fbx :: __preview__HumanF@Walk01_BackwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardRight [RM].fbx :: HumanF@Walk01_BackwardRight [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardRight.fbx :: __preview__HumanF@Walk01_BackwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_BackwardRight.fbx :: HumanF@Walk01_BackwardRight duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Forward [RM].fbx :: __preview__HumanF@Walk01_Forward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Forward [RM].fbx :: HumanF@Walk01_Forward [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Forward.fbx :: __preview__HumanF@Walk01_Forward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Forward.fbx :: HumanF@Walk01_Forward duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardLeft [RM].fbx :: __preview__HumanF@Walk01_ForwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardLeft [RM].fbx :: HumanF@Walk01_ForwardLeft [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardLeft.fbx :: __preview__HumanF@Walk01_ForwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardLeft.fbx :: HumanF@Walk01_ForwardLeft duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardRight [RM].fbx :: __preview__HumanF@Walk01_ForwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardRight [RM].fbx :: HumanF@Walk01_ForwardRight [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardRight.fbx :: __preview__HumanF@Walk01_ForwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_ForwardRight.fbx :: HumanF@Walk01_ForwardRight duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Left [RM].fbx :: __preview__HumanF@Walk01_Left [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Left [RM].fbx :: HumanF@Walk01_Left [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Left.fbx :: __preview__HumanF@Walk01_Left duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Left.fbx :: HumanF@Walk01_Left duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Right [RM].fbx :: __preview__HumanF@Walk01_Right [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Right [RM].fbx :: HumanF@Walk01_Right [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Right.fbx :: __preview__HumanF@Walk01_Right duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanF@Walk01_Right.fbx :: HumanF@Walk01_Right duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle01-Idle02.fbx :: __preview__HumanM@Idle01-Idle02 duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle01-Idle02.fbx :: HumanM@Idle01-Idle02 duration=0.667s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle01.fbx :: HumanM@Idle01 duration=2.700s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle01.fbx :: __preview__HumanM@Idle01 duration=2.700s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle02-Idle01.fbx :: __preview__HumanM@Idle02-Idle01 duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle02-Idle01.fbx :: HumanM@Idle02-Idle01 duration=0.767s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle02.fbx :: HumanM@Idle02 duration=2.700s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Idle02.fbx :: __preview__HumanM@Idle02 duration=2.700s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Backward [RM].fbx :: __preview__HumanM@Run01_Backward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Backward [RM].fbx :: HumanM@Run01_Backward [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Backward.fbx :: __preview__HumanM@Run01_Backward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Backward.fbx :: HumanM@Run01_Backward duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardLeft [RM].fbx :: __preview__HumanM@Run01_BackwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardLeft [RM].fbx :: HumanM@Run01_BackwardLeft [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardLeft.fbx :: __preview__HumanM@Run01_BackwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardLeft.fbx :: HumanM@Run01_BackwardLeft duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardRight [RM].fbx :: __preview__HumanM@Run01_BackwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardRight [RM].fbx :: HumanM@Run01_BackwardRight [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardRight.fbx :: __preview__HumanM@Run01_BackwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_BackwardRight.fbx :: HumanM@Run01_BackwardRight duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Forward [RM].fbx :: __preview__HumanM@Run01_Forward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Forward [RM].fbx :: HumanM@Run01_Forward [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Forward.fbx :: HumanM@Run01_Forward duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Forward.fbx :: __preview__HumanM@Run01_Forward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardLeft [RM].fbx :: __preview__HumanM@Run01_ForwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardLeft [RM].fbx :: HumanM@Run01_ForwardLeft [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardLeft.fbx :: __preview__HumanM@Run01_ForwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardLeft.fbx :: HumanM@Run01_ForwardLeft duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardRight [RM].fbx :: __preview__HumanM@Run01_ForwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardRight [RM].fbx :: HumanM@Run01_ForwardRight [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardRight.fbx :: __preview__HumanM@Run01_ForwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_ForwardRight.fbx :: HumanM@Run01_ForwardRight duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Left [RM].fbx :: __preview__HumanM@Run01_Left [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Left [RM].fbx :: HumanM@Run01_Left [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Left.fbx :: __preview__HumanM@Run01_Left duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Left.fbx :: HumanM@Run01_Left duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Right [RM].fbx :: __preview__HumanM@Run01_Right [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Right [RM].fbx :: HumanM@Run01_Right [RM] duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Right.fbx :: __preview__HumanM@Run01_Right duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Run01_Right.fbx :: HumanM@Run01_Right duration=0.600s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Backward [RM].fbx :: __preview__HumanM@Walk01_Backward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Backward [RM].fbx :: HumanM@Walk01_Backward [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Backward.fbx :: __preview__HumanM@Walk01_Backward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Backward.fbx :: HumanM@Walk01_Backward duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardLeft [RM].fbx :: __preview__HumanM@Walk01_BackwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardLeft [RM].fbx :: HumanM@Walk01_BackwardLeft [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardLeft.fbx :: __preview__HumanM@Walk01_BackwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardLeft.fbx :: HumanM@Walk01_BackwardLeft duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardRight [RM].fbx :: __preview__HumanM@Walk01_BackwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardRight [RM].fbx :: HumanM@Walk01_BackwardRight [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardRight.fbx :: __preview__HumanM@Walk01_BackwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_BackwardRight.fbx :: HumanM@Walk01_BackwardRight duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Forward [RM].fbx :: __preview__HumanM@Walk01_Forward [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Forward [RM].fbx :: HumanM@Walk01_Forward [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Forward.fbx :: HumanM@Walk01_Forward duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Forward.fbx :: __preview__HumanM@Walk01_Forward duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardLeft [RM].fbx :: __preview__HumanM@Walk01_ForwardLeft [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardLeft [RM].fbx :: HumanM@Walk01_ForwardLeft [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardLeft.fbx :: __preview__HumanM@Walk01_ForwardLeft duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardLeft.fbx :: HumanM@Walk01_ForwardLeft duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardRight [RM].fbx :: __preview__HumanM@Walk01_ForwardRight [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardRight [RM].fbx :: HumanM@Walk01_ForwardRight [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardRight.fbx :: __preview__HumanM@Walk01_ForwardRight duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_ForwardRight.fbx :: HumanM@Walk01_ForwardRight duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Left [RM].fbx :: __preview__HumanM@Walk01_Left [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Left [RM].fbx :: HumanM@Walk01_Left [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Left.fbx :: __preview__HumanM@Walk01_Left duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Left.fbx :: HumanM@Walk01_Left duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Right [RM].fbx :: __preview__HumanM@Walk01_Right [RM] duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Right [RM].fbx :: HumanM@Walk01_Right [RM] duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Right.fbx :: __preview__HumanM@Walk01_Right duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Kevin Iglesias/Human Basic Motions FREE/HumanM@Walk01_Right.fbx :: HumanM@Walk01_Right duration=0.800s loop=True importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|A_TPose duration=2.500s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Crouch_Fwd_Loop duration=2.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Crouch_Idle_Loop duration=2.933s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Dance_Loop duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Death01 duration=2.400s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Driving_Loop duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Fixing_Kneeling duration=5.200s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Hit_Chest duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Hit_Head duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Idle_Loop duration=2.500s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Idle_Talking_Loop duration=2.933s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Idle_Torch_Loop duration=1.267s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Interact duration=2.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Jog_Fwd_Loop duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Jump_Land duration=1.267s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Jump_Loop duration=2.500s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Jump_Start duration=1.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|PickUp_Table duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Pistol_Aim_Down duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Pistol_Aim_Neutral duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Pistol_Aim_Up duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Pistol_Idle_Loop duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Pistol_Reload duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Pistol_Shoot duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Punch_Cross duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Punch_Jab duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Push_Loop duration=2.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Roll duration=1.467s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Sitting_Enter duration=1.300s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Sitting_Exit duration=1.033s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Sitting_Idle_Loop duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Sitting_Talking_Loop duration=2.933s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Spell_Simple_Enter duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Spell_Simple_Exit duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Spell_Simple_Idle_Loop duration=2.100s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Spell_Simple_Shoot duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Sprint_Loop duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Swim_Fwd_Loop duration=1.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Swim_Idle_Loop duration=3.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Sword_Attack duration=1.533s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Sword_Idle duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Walk_Formal_Loop duration=1.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: __preview__Armature|Walk_Loop duration=1.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|A_TPose duration=2.500s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Crouch_Fwd_Loop duration=2.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Crouch_Idle_Loop duration=2.933s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Dance_Loop duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Death01 duration=2.400s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Driving_Loop duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Fixing_Kneeling duration=5.200s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Hit_Chest duration=0.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Hit_Head duration=0.433s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Idle_Loop duration=2.500s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Idle_Talking_Loop duration=2.933s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Idle_Torch_Loop duration=1.267s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Interact duration=2.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Jog_Fwd_Loop duration=0.933s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Jump_Land duration=1.267s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Jump_Loop duration=2.500s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Jump_Start duration=1.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|PickUp_Table duration=0.833s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Pistol_Aim_Down duration=0.167s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Pistol_Aim_Neutral duration=0.167s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Pistol_Aim_Up duration=0.167s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Pistol_Idle_Loop duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Pistol_Reload duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Pistol_Shoot duration=0.633s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Punch_Cross duration=1.000s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Punch_Jab duration=0.867s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Push_Loop duration=2.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Roll duration=1.467s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Sitting_Enter duration=1.300s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Sitting_Exit duration=1.033s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Sitting_Idle_Loop duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Sitting_Talking_Loop duration=2.933s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Spell_Simple_Enter duration=0.533s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Spell_Simple_Exit duration=0.433s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Spell_Simple_Idle_Loop duration=2.100s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Spell_Simple_Shoot duration=0.500s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Sprint_Loop duration=0.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Swim_Fwd_Loop duration=1.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Swim_Idle_Loop duration=3.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Sword_Attack duration=1.533s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Sword_Idle duration=1.667s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Walk_Formal_Loop duration=1.333s loop=False importRig=Human
+- Assets/ThirdParty/Quaternius/Universal Animation Library/UAL1_Standard.fbx :: Armature|Walk_Loop duration=1.333s loop=False importRig=Human

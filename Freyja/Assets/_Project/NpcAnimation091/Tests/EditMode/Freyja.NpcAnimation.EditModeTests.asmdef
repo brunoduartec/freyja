@@ -1,0 +1,15 @@
+{
+  "name": "Freyja.NpcAnimation.EditModeTests",
+  "rootNamespace": "Freyja.NpcAnimation.Tests",
+  "references": ["Freyja.NpcAnimation.Runtime"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

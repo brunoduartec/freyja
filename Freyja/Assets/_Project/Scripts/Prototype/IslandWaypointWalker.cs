@@ -12,9 +12,10 @@ namespace Freyja.Prototype
         private static readonly int WalkRate = Animator.StringToHash("WalkRate");
 
         [SerializeField] private IslandWaypointNetwork network;
-        [SerializeField] private Animator animator;
-        [SerializeField] private RuntimeAnimatorController locomotionController;
-        [SerializeField] private AnimationClip locomotionIdle;
+        // Retained for older serialized actors while animation ownership moves to the shared driver.
+        [SerializeField, HideInInspector] private Animator animator;
+        [SerializeField, HideInInspector] private RuntimeAnimatorController locomotionController;
+        [SerializeField, HideInInspector] private AnimationClip locomotionIdle;
         [SerializeField] private Transform destination;
         [SerializeField, Min(0.01f)] private float horizontalArrivalTolerance = 0.2f;
         [SerializeField, Min(0.01f)] private float verticalArrivalTolerance = 0.25f;
@@ -64,12 +65,12 @@ namespace Freyja.Prototype
         public float ElapsedSeconds => elapsedSeconds;
         public string LastReason => lastReason;
 
-        private void Awake()
+        private void Awake() => EnsureNavigationComponentsInitialized();
+
+        private void OnEnable()
         {
-            path = new NavMeshPath();
-            agent = GetComponent<NavMeshAgent>();
-            if (agent.enabled)
-                agent.enabled = false;
+            EnsureNavigationComponentsInitialized();
+            if (moveStatus != WaypointMoveStatus.Running) StopAgent();
         }
 
         [ContextMenu("Caminhar até destino")]
@@ -82,6 +83,7 @@ namespace Freyja.Prototype
 
         public bool TryBeginMove(Transform waypoint, out long operationId)
         {
+            EnsureNavigationComponentsInitialized();
             if (moveStatus == WaypointMoveStatus.Running)
                 FinishMove(WaypointMoveStatus.Cancelled, "replaced_by_new_operation");
 
@@ -128,6 +130,7 @@ namespace Freyja.Prototype
 
         private bool TryMoveToInternal(Transform waypoint)
         {
+            EnsureNavigationComponentsInitialized();
             if (!isActiveAndEnabled || waypoint == null || agent == null ||
                 !agent.gameObject.activeInHierarchy)
             {
@@ -142,7 +145,7 @@ namespace Freyja.Prototype
             }
 
             if (!NavMesh.SamplePosition(waypoint.position, out var end, 0.2f, agent.areaMask) ||
-                !NavMesh.SamplePosition(transform.position, out var start, 0.35f, agent.areaMask))
+                !NavMesh.SamplePosition(transform.position, out var start, 0.75f, agent.areaMask))
             {
                 lastReason = "path_invalid";
                 return false;
@@ -164,6 +167,13 @@ namespace Freyja.Prototype
 
             effectivePosition = end.position;
             agent.enabled = true;
+            // A Smart Object pose can sit inside the carved footprint of a seat. Reposition the
+            // disabled agent to the nearest valid NavMesh point before assigning the exit path.
+            if (!agent.Warp(start.position))
+            {
+                lastReason = "agent_warp_failed";
+                return false;
+            }
             if (!agent.isOnNavMesh || !agent.SetPath(path))
             {
                 lastReason = "agent_unavailable";
@@ -193,7 +203,14 @@ namespace Freyja.Prototype
                 agent.enabled = false;
             }
 
+            movementDirection = Vector3.zero;
             SetWalkingAnimation(false);
+        }
+
+        private void EnsureNavigationComponentsInitialized()
+        {
+            if (path == null) path = new NavMeshPath();
+            if (agent == null) agent = GetComponent<NavMeshAgent>();
         }
 
         private void FinishMove(WaypointMoveStatus status, string reason)
@@ -293,7 +310,7 @@ namespace Freyja.Prototype
 
         private void SetWalkingAnimation(bool walking)
         {
-            if (animator == null || animating == walking)
+            if (GetComponent<NpcAnimationDriver>() != null || animator == null || animating == walking)
                 return;
 
             if (walking && locomotionController != null && walkingController == null)

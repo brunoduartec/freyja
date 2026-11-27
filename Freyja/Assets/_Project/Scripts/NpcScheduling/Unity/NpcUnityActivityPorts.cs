@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Freyja.NpcScheduling.Execution;
 using Freyja.Prototype;
 using Freyja.SmartObjects;
@@ -12,13 +13,14 @@ namespace Freyja.NpcScheduling.Unity
     {
         [SerializeField,Min(0.01f)] private float moveTimeoutSeconds = 90f;
         [SerializeField,Min(0.01f)] private float arrivalTolerance = 0.3f;
-        [SerializeField,Min(0.01f)] private float alignmentTolerance = 0.6f;
+        [SerializeField,Min(0.01f)] private float alignmentTolerance = 1.35f;
 
         private sealed class Claim
         {
             public ReservationHandle Handle;
             public SmartObjectReservationOwner Owner;
             public string NpcId, ExecutionId;
+            public bool IsOccupied;
         }
         private sealed class Operation
         {
@@ -35,6 +37,8 @@ namespace Freyja.NpcScheduling.Unity
         private readonly Dictionary<string,Transform> smartObjectPoints=new Dictionary<string,Transform>(StringComparer.Ordinal);
         private readonly Dictionary<string,Claim> claims=new Dictionary<string,Claim>(StringComparer.Ordinal);
         private readonly Dictionary<string,Operation> operations=new Dictionary<string,Operation>(StringComparer.Ordinal);
+        private readonly ConditionalWeakTable<ActivityOperation,TerminalOperation> terminalOperations =
+            new ConditionalWeakTable<ActivityOperation,TerminalOperation>();
         private string npcId;
         private SmartObjectReservationOwner owner;
         private NpcLocationRegistry locations;
@@ -42,6 +46,11 @@ namespace Freyja.NpcScheduling.Unity
         private IslandWaypointWalker walker;
         private Transform actor;
         private long candidateSequence,operationSequence,claimSequence;
+
+        private sealed class TerminalOperation
+        {
+            public string ExecutionId;
+        }
 
         public void Initialize(string actorId,SmartObjectReservationOwner reservationOwner,
             NpcLocationRegistry locationRegistry,NpcAnimatorBindings animatorBindings,Transform actorTransform)
@@ -100,7 +109,9 @@ namespace Freyja.NpcScheduling.Unity
         public bool Occupy(string token,string requestedNpcId,string executionId)
         {
             if(!TryGetClaim(token,requestedNpcId,executionId,out Claim claim)||!claim.Handle.IsValid)return false;
-            return claim.Handle.TryOccupy();
+            bool occupied=claim.Handle.TryOccupy();
+            if(occupied)claim.IsOccupied=true;
+            return occupied;
         }
 
         public bool Release(string token,string requestedNpcId,string executionId)
@@ -155,9 +166,16 @@ namespace Freyja.NpcScheduling.Unity
 
             if(active.Value.Action=="play_animation")
             {
-                if(!animations.TryPoll(active.AnimationTicket,nowSeconds,out bool completed,out string reason))
+                if(!animations.TryPoll(active.AnimationTicket,active.Value,active.NpcId,active.ExecutionId,
+                    nowSeconds,out bool completed,out string reason))
                 {SetFailed(active,reason??"animation_failed");return FailAndForget(active,active.Reason);}
                 if(!completed)return ActivityOperationResult.Running;
+                if(active.Value.Animation=="sit_down"&&
+                    !animations.TryStartPoseHold("sit_idle",active.Value,active.NpcId,active.ExecutionId,out reason))
+                {
+                    SetFailed(active,reason??"animation_binding_missing");
+                    return FailAndForget(active,active.Reason);
+                }
                 active.Status=OperationStatus.Succeeded;
                 return SucceedAndForget(active);
             }
@@ -167,21 +185,24 @@ namespace Freyja.NpcScheduling.Unity
 
         public bool Cancel(ActivityOperation operation,string requestedNpcId,string executionId,double nowSeconds)
         {
-            if(!TryGetOperation(operation,requestedNpcId,executionId,out Operation active))return operation==null;
-            if(active.Status!=OperationStatus.Running){operations.Remove(active.Value.Id);return true;}
+            if(!TryGetOperation(operation,requestedNpcId,executionId,out Operation active))
+                return operation==null||IsNpc(requestedNpcId)&&terminalOperations.TryGetValue(operation,out TerminalOperation terminal)&&
+                    String.Equals(terminal.ExecutionId,executionId,StringComparison.Ordinal);
+            if(active.Status!=OperationStatus.Running)
+            {operations.Remove(active.Value.Id);RememberTerminal(active);return true;}
             if(active.Value.Action=="move_to")
             {
                 if(!walker.CancelMove(active.MoveTicket))return false;
-                active.Status=OperationStatus.Cancelled; operations.Remove(active.Value.Id); return true;
+                active.Status=OperationStatus.Cancelled; operations.Remove(active.Value.Id); RememberTerminal(active); return true;
             }
             if(active.Value.Action=="play_animation")
             {
-                if(animations.TryPoll(active.AnimationTicket,nowSeconds,out bool completed,out _ )&& !completed)return false;
-                // A completed or expired ticket no longer owns the animator operation. Core
-                // cleanup immediately starts its own bounded stand_up operation.
-                active.Status=OperationStatus.Cancelled; operations.Remove(active.Value.Id); return true;
+                bool preservePose=HasOccupiedClaim(executionId);
+                if(!animations.TryCancel(active.AnimationTicket,active.Value,active.NpcId,active.ExecutionId,
+                    nowSeconds,preservePose))return false;
+                active.Status=OperationStatus.Cancelled; operations.Remove(active.Value.Id); RememberTerminal(active); return true;
             }
-            active.Status=OperationStatus.Cancelled; operations.Remove(active.Value.Id);
+            active.Status=OperationStatus.Cancelled; operations.Remove(active.Value.Id); RememberTerminal(active);
             return true;
         }
 
@@ -208,7 +229,8 @@ namespace Freyja.NpcScheduling.Unity
 
         private void BeginAnimation(Operation operation,string animationId,double nowSeconds)
         {
-            if(!animations.TryBegin(animationId,operationSequence,nowSeconds,out NpcAnimationTicket ticket,out string reason))
+            if(!animations.TryBegin(animationId,operation.Value,operation.NpcId,operation.ExecutionId,nowSeconds,
+                out NpcAnimationTicket ticket,out string reason))
             {SetFailed(operation,reason??"animation_not_started");return;}
             operation.AnimationTicket=ticket;
         }
@@ -239,6 +261,13 @@ namespace Freyja.NpcScheduling.Unity
             return false;
         }
 
+        private bool HasOccupiedClaim(string executionId)
+        {
+            foreach(Claim claim in claims.Values)
+                if(claim.NpcId==npcId&&claim.ExecutionId==executionId&&claim.IsOccupied)return true;
+            return false;
+        }
+
         private bool IsOwnedClaimValid(string executionId)
         {
             foreach(Claim claim in claims.Values)if(claim.NpcId==npcId&&claim.ExecutionId==executionId)return claim.Handle.IsValid;
@@ -253,6 +282,11 @@ namespace Freyja.NpcScheduling.Unity
         }
 
         private bool IsNpc(string value)=>String.Equals(value,npcId,StringComparison.Ordinal);
+        private void RememberTerminal(Operation operation)
+        {
+            if(operation?.Value==null||terminalOperations.TryGetValue(operation.Value,out _))return;
+            terminalOperations.Add(operation.Value,new TerminalOperation{ExecutionId=operation.ExecutionId});
+        }
         private static void SetFailed(Operation operation,string reason){operation.Status=OperationStatus.Failed;operation.Reason=reason;}
         private ActivityOperationResult FailMovementAndForget(Operation operation,string reason)
         {
@@ -262,8 +296,8 @@ namespace Freyja.NpcScheduling.Unity
         private ActivityOperationResult FailAndForgetAfterSet(Operation operation,string reason)
         {SetFailed(operation,reason);return FailAndForget(operation,reason);}
         private ActivityOperationResult FailAndForget(Operation operation,string reason)
-        { operations.Remove(operation.Value.Id); return ActivityOperationResult.Failed(reason??"operation_failed"); }
+        { operations.Remove(operation.Value.Id); RememberTerminal(operation); return ActivityOperationResult.Failed(reason??"operation_failed"); }
         private ActivityOperationResult SucceedAndForget(Operation operation)
-        { operations.Remove(operation.Value.Id); return ActivityOperationResult.Succeeded(operation.Value.Target); }
+        { operations.Remove(operation.Value.Id); RememberTerminal(operation); return ActivityOperationResult.Succeeded(operation.Value.Target); }
     }
 }

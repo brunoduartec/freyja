@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="40" result="Passed" total="40" passed="40" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:14Z" duration="4.2382824">
+  <test-suite type="TestSuite" id="1099" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="40" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:14Z" duration="4.238282" total="40" passed="40" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1047" name="Freyja.NpcAnimation.EditModeTests.dll" fullname="/Users/bruno.duartec/Documents/Projects/Freyja-091-npc-animation-system/Freyja/Library/ScriptAssemblies/Freyja.NpcAnimation.EditModeTests.dll" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.059484" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28937" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1048" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.059217" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1049" name="NpcAnimation" fullname="Freyja.NpcAnimation" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.058963" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1050" name="Tests" fullname="Freyja.NpcAnimation.Tests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.058708" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1031" name="NpcAnimationOperationIdentityTests" fullname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests" classname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.002569" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1033" name="CancelIsExactAndIdempotent" fullname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests.CancelIsExactAndIdempotent" methodname="CancelIsExactAndIdempotent" classname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests" runstate="Runnable" seed="1573530765" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000951" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1034" name="LateCancelOfCompletedTicketIsNoOp" fullname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests.LateCancelOfCompletedTicketIsNoOp" methodname="LateCancelOfCompletedTicketIsNoOp" classname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests" runstate="Runnable" seed="485396926" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000097" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="StaleOperationCannotPollCompleteOrCancelReplacement" fullname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests.StaleOperationCannotPollCompleteOrCancelReplacement" methodname="StaleOperationCannotPollCompleteOrCancelReplacement" classname="Freyja.NpcAnimation.Tests.NpcAnimationOperationIdentityTests" runstate="Runnable" seed="2070313374" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000088" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1035" name="NpcAnimationProfileTests" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.055770" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1040" name="DuplicateSemanticActionFailsValidation" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.DuplicateSemanticActionFailsValidation" methodname="DuplicateSemanticActionFailsValidation" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="433573658" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.001579" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1039" name="MissingSeatedActionFailsWithStableReason" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.MissingSeatedActionFailsWithStableReason" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.002109" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1036" name="MissingSeatedActionFailsWithStableReason(&quot;sit_down&quot;)" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.MissingSeatedActionFailsWithStableReason(&quot;sit_down&quot;)" methodname="MissingSeatedActionFailsWithStableReason" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="670153666" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000190" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1037" name="MissingSeatedActionFailsWithStableReason(&quot;sit_idle&quot;)" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.MissingSeatedActionFailsWithStableReason(&quot;sit_idle&quot;)" methodname="MissingSeatedActionFailsWithStableReason" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="186866003" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000044" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1038" name="MissingSeatedActionFailsWithStableReason(&quot;stand_up&quot;)" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.MissingSeatedActionFailsWithStableReason(&quot;stand_up&quot;)" methodname="MissingSeatedActionFailsWithStableReason" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="2091354299" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000050" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1041" name="NonHumanoidOrMissingAvatarIsRejectedBeforeControllerUse" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.NonHumanoidOrMissingAvatarIsRejectedBeforeControllerUse" methodname="NonHumanoidOrMissingAvatarIsRejectedBeforeControllerUse" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="1135314113" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000542" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1046" name="SpeedResolutionUsesActualVelocityAndIdleGate" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.SpeedResolutionUsesActualVelocityAndIdleGate" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.003457" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1042" name="SpeedResolutionUsesActualVelocityAndIdleGate(False,False,1.0f,0.05f,0.0f)" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.SpeedResolutionUsesActualVelocityAndIdleGate(False,False,1.0f,0.05f,0.0f)" methodname="SpeedResolutionUsesActualVelocityAndIdleGate" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="863056276" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000726" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1043" name="SpeedResolutionUsesActualVelocityAndIdleGate(True,True,1.0f,0.05f,0.0f)" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.SpeedResolutionUsesActualVelocityAndIdleGate(True,True,1.0f,0.05f,0.0f)" methodname="SpeedResolutionUsesActualVelocityAndIdleGate" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="856913995" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000056" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1044" name="SpeedResolutionUsesActualVelocityAndIdleGate(True,False,0.04f,0.05f,0.0f)" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.SpeedResolutionUsesActualVelocityAndIdleGate(True,False,0.04f,0.05f,0.0f)" methodname="SpeedResolutionUsesActualVelocityAndIdleGate" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="2052890528" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000072" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1045" name="SpeedResolutionUsesActualVelocityAndIdleGate(True,False,1.25f,0.05f,1.25f)" fullname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests.SpeedResolutionUsesActualVelocityAndIdleGate(True,False,1.25f,0.05f,1.25f)" methodname="SpeedResolutionUsesActualVelocityAndIdleGate" classname="Freyja.NpcAnimation.Tests.NpcAnimationProfileTests" runstate="Runnable" seed="658634235" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000039" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1065" name="Freyja.SmartObjects.EditModeTests.dll" fullname="/Users/bruno.duartec/Documents/Projects/Freyja-091-npc-animation-system/Freyja/Library/ScriptAssemblies/Freyja.SmartObjects.EditModeTests.dll" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.168534" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28937" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1066" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.166023" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1067" name="SmartObjects" fullname="Freyja.SmartObjects" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.165282" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1068" name="Tests" fullname="Freyja.SmartObjects.Tests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.165012" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1051" name="SmartObjectAuthoringTests" fullname="Freyja.SmartObjects.Tests.SmartObjectAuthoringTests" classname="Freyja.SmartObjects.Tests.SmartObjectAuthoringTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.149502" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1053" name="EmptySlotIdIsGeneratedOnceAndPersistsAcrossValidation" fullname="Freyja.SmartObjects.Tests.SmartObjectAuthoringTests.EmptySlotIdIsGeneratedOnceAndPersistsAcrossValidation" methodname="EmptySlotIdIsGeneratedOnceAndPersistsAcrossValidation" classname="Freyja.SmartObjects.Tests.SmartObjectAuthoringTests" runstate="Runnable" seed="1796752575" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.075417" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1052" name="PrefabRoundTripKeepsObjectAndSlotIdsAndChildReferences" fullname="Freyja.SmartObjects.Tests.SmartObjectAuthoringTests.PrefabRoundTripKeepsObjectAndSlotIdsAndChildReferences" methodname="PrefabRoundTripKeepsObjectAndSlotIdsAndChildReferences" classname="Freyja.SmartObjects.Tests.SmartObjectAuthoringTests" runstate="Runnable" seed="1556794191" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.073409" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1054" name="SmartObjectRegistryTests" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.015113" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1058" name="DisabledObjectsAndSlotsAreNotOffered" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.DisabledObjectsAndSlotsAreNotOffered" methodname="DisabledObjectsAndSlotsAreNotOffered" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="1366516068" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000685" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1057" name="DuplicateIdsAreDiagnosedAndNeverReplaceLookup" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.DuplicateIdsAreDiagnosedAndNeverReplaceLookup" methodname="DuplicateIdsAreDiagnosedAndNeverReplaceLookup" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="1714360467" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.001310" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Duplicate SmartObject ID 'same' detected; registry lookup excludes this ID until repaired.
+]]></output>
+              </test-case>
+              <test-case id="1059" name="DuplicateLocalSlotIdsAreExcludedFromDiscoveryAndReservation" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.DuplicateLocalSlotIdsAreExcludedFromDiscoveryAndReservation" methodname="DuplicateLocalSlotIdsAreExcludedFromDiscoveryAndReservation" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="513117274" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000414" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1064" name="EmptyObjectIdentityIsGeneratedOnce" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.EmptyObjectIdentityIsGeneratedOnce" methodname="EmptyObjectIdentityIsGeneratedOnce" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="2132072243" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000233" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1061" name="ExclusiveClaimCompatibilityOccupancyAndStaleHandles" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.ExclusiveClaimCompatibilityOccupancyAndStaleHandles" methodname="ExclusiveClaimCompatibilityOccupancyAndStaleHandles" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="1197275363" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000298" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1062" name="MissingSlotAndInvalidOwnerAreRejected" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.MissingSlotAndInvalidOwnerAreRejected" methodname="MissingSlotAndInvalidOwnerAreRejected" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="2026296982" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000114" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1056" name="OrdersByDistanceThenObjectIdThenLocalSlotId" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.OrdersByDistanceThenObjectIdThenLocalSlotId" methodname="OrdersByDistanceThenObjectIdThenLocalSlotId" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="775760191" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000267" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1055" name="RegistersAndFindsByIdRegionAndActivity" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.RegistersAndFindsByIdRegionAndActivity" methodname="RegistersAndFindsByIdRegionAndActivity" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="1680417405" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000166" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1063" name="SlotDisableInvalidatesItsCurrentHandle" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.SlotDisableInvalidatesItsCurrentHandle" methodname="SlotDisableInvalidatesItsCurrentHandle" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="582745187" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000139" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1060" name="ThreeRequestsUseTwoNearSlotsThenFallBackToNextObject" fullname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests.ThreeRequestsUseTwoNearSlotsThenFallBackToNextObject" methodname="ThreeRequestsUseTwoNearSlotsThenFallBackToNextObject" classname="Freyja.SmartObjects.Tests.SmartObjectRegistryTests" runstate="Runnable" seed="1295583062" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000477" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1089" name="Freyja.WorldBuilder.Tests.dll" fullname="/Users/bruno.duartec/Documents/Projects/Freyja-091-npc-animation-system/Freyja/Library/ScriptAssemblies/Freyja.WorldBuilder.Tests.dll" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:14Z" duration="4.008574" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28937" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1090" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:14Z" duration="4.000597" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1091" name="WorldBuilder" fullname="Freyja.WorldBuilder" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:14Z" duration="3.996004" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1092" name="Tests" fullname="Freyja.WorldBuilder.Tests" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:14Z" duration="3.995711" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1069" name="GeometryTests" fullname="Freyja.WorldBuilder.Tests.GeometryTests" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.126804" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1075" name="Coordinates" fullname="Freyja.WorldBuilder.Tests.GeometryTests.Coordinates" methodname="Coordinates" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="1790323910" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000870" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1081" name="Determinism" fullname="Freyja.WorldBuilder.Tests.GeometryTests.Determinism" methodname="Determinism" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="1584618981" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.073537" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1074" name="HalfGrid" fullname="Freyja.WorldBuilder.Tests.GeometryTests.HalfGrid" methodname="HalfGrid" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="1083958921" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000167" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1076" name="Rectangles" fullname="Freyja.WorldBuilder.Tests.GeometryTests.Rectangles" methodname="Rectangles" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="2089032971" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000579" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1073" name="SnapSigned" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.002300" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1070" name="SnapSigned(-1.5f,-2.0f)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned(-1.5f,-2.0f)" methodname="SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="517400665" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000089" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1071" name="SnapSigned(1.5f,2.0f)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned(1.5f,2.0f)" methodname="SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="992258099" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000014" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1072" name="SnapSigned(-0.4f,0.0f)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.SnapSigned(-0.4f,0.0f)" methodname="SnapSigned" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="708291355" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.000012" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1080" name="StampFlatAndLocal" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.048270" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1077" name="StampFlatAndLocal(0)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal(0)" methodname="StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="626608444" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.016248" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1078" name="StampFlatAndLocal(45)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal(45)" methodname="StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="497109042" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.015303" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1079" name="StampFlatAndLocal(90)" fullname="Freyja.WorldBuilder.Tests.GeometryTests.StampFlatAndLocal(90)" methodname="StampFlatAndLocal" classname="Freyja.WorldBuilder.Tests.GeometryTests" runstate="Runnable" seed="536432498" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.015691" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1082" name="IntegrationTests" fullname="Freyja.WorldBuilder.Tests.IntegrationTests" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:14Z" duration="3.868478" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1085" name="ConflictsBlockMutation" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.ConflictsBlockMutation" methodname="ConflictsBlockMutation" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="1656206111" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:10Z" duration="0.361263" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1088" name="NormalizerBottomCenter" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.NormalizerBottomCenter" methodname="NormalizerBottomCenter" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="691488051" result="Passed" start-time="2026-11-27 19:50:10Z" end-time="2026-11-27 19:50:11Z" duration="0.351289" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1083" name="RebuildPreservesManualAndIdentity" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.RebuildPreservesManualAndIdentity" methodname="RebuildPreservesManualAndIdentity" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="787317445" result="Passed" start-time="2026-11-27 19:50:11Z" end-time="2026-11-27 19:50:12Z" duration="0.921479" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1086" name="RemovingLotKeepsManualChild" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.RemovingLotKeepsManualChild" methodname="RemovingLotKeepsManualChild" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="1616174635" result="Passed" start-time="2026-11-27 19:50:12Z" end-time="2026-11-27 19:50:12Z" duration="0.722111" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1084" name="ReplacingHouseKeepsLot" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.ReplacingHouseKeepsLot" methodname="ReplacingHouseKeepsLot" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="1707028568" result="Passed" start-time="2026-11-27 19:50:12Z" end-time="2026-11-27 19:50:13Z" duration="0.754202" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1087" name="UndoRebuildRestoresPosition" fullname="Freyja.WorldBuilder.Tests.IntegrationTests.UndoRebuildRestoresPosition" methodname="UndoRebuildRestoresPosition" classname="Freyja.WorldBuilder.Tests.IntegrationTests" runstate="Runnable" seed="1342953412" result="Passed" start-time="2026-11-27 19:50:13Z" end-time="2026-11-27 19:50:14Z" duration="0.755253" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: /Users/bruno.duartec/Library/Application Support/DefaultCompany/Freyja/TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

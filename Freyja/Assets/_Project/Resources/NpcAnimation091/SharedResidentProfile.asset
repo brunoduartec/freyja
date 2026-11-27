@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7440bdf88a4accaa4570a663349207, type: 3}
+  m_Name: SharedResidentProfile
+  m_EditorClassIdentifier: Freyja.NpcAnimation.Runtime::Freyja.NpcAnimation.NpcAnimationProfile
+  motionController: {fileID: 9100000, guid: a9afebe5104714013aea2b5cd1d03b0e, type: 2}
+  idleClip: {fileID: -2576967968662016515, guid: 56fd86b76fc74d24d83522069f5deb9b, type: 3}
+  walkClip: {fileID: 3094330708855449807, guid: c133e3c197c12e04a9dd23bd0966910f, type: 3}
+  runClip: {fileID: 3094330708855449807, guid: 6deac83e30d8acd4cbb8c7d8a11545bd, type: 3}
+  locomotionSpeedParameter: Speed
+  stopThreshold: 0.05
+  walkThreshold: 1.35
+  runThreshold: 2.5
+  dampingSeconds: 0.12
+  cancelStateFullPath: Base Layer.Locomotion
+  actions:
+  - semanticId: sit_down
+    stateFullPath: Base Layer.Sitting_Enter
+    layer: 0
+    mode: 0
+    transitionSeconds: 0.12
+    timeoutSeconds: 5
+  - semanticId: sit_idle
+    stateFullPath: Base Layer.Sitting_Idle_Loop
+    layer: 0
+    mode: 1
+    transitionSeconds: 0.12
+    timeoutSeconds: 8
+  - semanticId: stand_up
+    stateFullPath: Base Layer.Sitting_Exit
+    layer: 0
+    mode: 0
+    transitionSeconds: 0.12
+    timeoutSeconds: 5

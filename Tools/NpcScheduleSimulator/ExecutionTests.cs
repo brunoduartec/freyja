@@ -53,6 +53,7 @@ internal static class ExecutionTests
         TestPathAndInvalidReservation(recipes);
         TestCleanupRetry(recipes);
         TestPoseRestoreRetry(recipes);
+        TestRunningTerminalCleanupRetry(recipes);
         TestOperationCancelFailure(recipes);
         TestReplacementAndNormalExit(recipes);
         TestWanderAndMovementExpiry(recipes);
@@ -75,6 +76,11 @@ internal static class ExecutionTests
         Is(ports.ReleaseBeforeStandUp==0,"adapter never releases occupied claim before stand_up completion");
         var blocked=runner.Tick(Intent("sit_a","idle",null,1,600,660,"after_sit"),new GameTimeSnapshot(1,600,0),10.3);
         Is(blocked.ExecutionId==ended.ExecutionId&&ports.ActiveClaims==1,"replacement waits while stand_up cleanup owns the seat");
+        var blockedAgain=runner.Tick(Intent("sit_a","idle",null,1,600,660,"after_sit"),new GameTimeSnapshot(1,600,0),10.4);
+        Is(blockedAgain.ResidualOperationId==ended.ResidualOperationId&&ports.StandUpStarts==1&&ports.ActiveClaims==1,
+            "repeated coordinator ticks retain the same stand_up ticket and occupied claim");
+        Is(!runner.RetryResidualCleanup(AtStart,10.49)&&ports.ActiveClaims==1&&ports.ReleaseBeforeStandUp==0,
+            "running restoration cannot release the claim before stand_up completes");
         Is(runner.RetryResidualCleanup(AtStart,10.5)&&ports.ActiveClaims==0,"confirmed stand_up releases exact claim");
         var replacement=runner.Tick(Intent("sit_a","idle",null,1,600,660,"after_sit"),new GameTimeSnapshot(1,600,0),10.6);
         Is(replacement!=null&&replacement.ExecutionId!=ended.ExecutionId,"replacement starts only after stand_up and release");
@@ -163,6 +169,29 @@ internal static class ExecutionTests
         Is(timedOut.HasResidualOwnership&&ports.ActiveClaims==1&&!runner.RetryResidualCleanup(AtStart,12),"stand_up timeout preserves residual claim");
         ports.StandUpDurationSeconds=.5;ports.OperationTimeoutSeconds=10;
         Is(!runner.RetryResidualCleanup(AtStart,13)&&ports.ActiveClaims==1&&runner.RetryResidualCleanup(AtStart,13.5)&&ports.ActiveClaims==0,"timed-out stand_up retries and releases after completion");
+    }
+
+    private static void TestRunningTerminalCleanupRetry(IDictionary<string,ActivityRecipe> recipes)
+    {
+        var ports=new FakeActivityPorts{RejectAnimation=true,StandUpDurationSeconds=2};
+        var runner=new ActivityCoordinator("running_cleanup",recipes,ports,new RecordingActivitySink());
+        var intent=Intent("running_cleanup","sit","home",1,480,600,"sit");
+        var failed=DriveToTerminal(runner,intent,ports,AtStart,0);
+        Is(failed.State==ActivityState.Failed&&failed.ResourceId!=null&&failed.ResidualOperationId!=null&&ports.ActiveClaims==1,
+            "failed sit keeps its occupied claim and active stand_up ticket");
+        Is(ports.StandUpStarts==1&&ports.ReleaseBeforeStandUp==0,
+            "stand_up restoration owns the failed execution without early release");
+
+        double retryAt=failed.FinishedAtSeconds+.25;
+        var retryRunning=runner.Tick(intent,AtStart,retryAt);
+        Is(retryRunning.ResidualOperationId==failed.ResidualOperationId&&ports.ActiveClaims==1,
+            "a Running cleanup retry preserves the same ticket and claim");
+        var blocked=runner.Tick(intent,AtStart,retryAt+.25);
+        Is(blocked.ResidualOperationId==failed.ResidualOperationId&&ports.StandUpStarts==1&&ports.ActiveClaims==1,
+            "blocked coordinator ticks do not replace or release the cleanup operation");
+
+        Is(runner.RetryResidualCleanup(AtStart,failed.FinishedAtSeconds+2)&&ports.ActiveClaims==0&&runner.Snapshot==null,
+            "explicit residual retry polls Running stand_up to completion and clears the blocked coordinator");
     }
 
     private static void TestOperationCancelFailure(IDictionary<string,ActivityRecipe> recipes)

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Passed" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.3311886">
+  <test-suite type="TestSuite" id="1028" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.331189" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1003" name="Freyja.NpcAnimation.PlayModeTests.dll" fullname="/Users/bruno.duartec/Documents/Projects/Freyja-091-npc-animation-system/Freyja/Library/ScriptAssemblies/Freyja.NpcAnimation.PlayModeTests.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:31Z" duration="0.071728" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28937" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1004" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:31Z" duration="0.067931" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1005" name="NpcAnimation" fullname="Freyja.NpcAnimation" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:31Z" duration="0.065685" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1006" name="Tests" fullname="Freyja.NpcAnimation.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:31Z" duration="0.063777" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="NpcAnimationSmartObjectPlayModeTests" fullname="Freyja.NpcAnimation.Tests.NpcAnimationSmartObjectPlayModeTests" classname="Freyja.NpcAnimation.Tests.NpcAnimationSmartObjectPlayModeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:31Z" duration="0.061787" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1002" name="TwoClaimsOccupyDistinctSlotsAndThirdClaimIsRejected" fullname="Freyja.NpcAnimation.Tests.NpcAnimationSmartObjectPlayModeTests.TwoClaimsOccupyDistinctSlotsAndThirdClaimIsRejected" methodname="TwoClaimsOccupyDistinctSlotsAndThirdClaimIsRejected" classname="Freyja.NpcAnimation.Tests.NpcAnimationSmartObjectPlayModeTests" runstate="Runnable" seed="451036663" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:31Z" duration="0.044746" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1015" name="Freyja.SmartObjects.PlayModeTests.dll" fullname="/Users/bruno.duartec/Documents/Projects/Freyja-091-npc-animation-system/Freyja/Library/ScriptAssemblies/Freyja.SmartObjects.PlayModeTests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.181760" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28937" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1016" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.177614" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1017" name="SmartObjects" fullname="Freyja.SmartObjects" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.175972" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1018" name="Tests" fullname="Freyja.SmartObjects.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.173020" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1007" name="SmartObjectDemoTests" fullname="Freyja.SmartObjects.Tests.SmartObjectDemoTests" classname="Freyja.SmartObjects.Tests.SmartObjectDemoTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.129790" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1009" name="CancellingOneRequestReleasesOnlyItsOwnReservation" fullname="Freyja.SmartObjects.Tests.SmartObjectDemoTests.CancellingOneRequestReleasesOnlyItsOwnReservation" methodname="CancellingOneRequestReleasesOnlyItsOwnReservation" classname="Freyja.SmartObjects.Tests.SmartObjectDemoTests" runstate="Runnable" seed="1396748886" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:31Z" duration="0.034731" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[[SmartObjectsDemo] cancelled-requester reservou cancel-bench/left; iniciando aproximação.
+[SmartObjectsDemo] continuing-requester reservou cancel-bench/right; iniciando aproximação.
+]]></output>
+              </test-case>
+              <test-case id="1008" name="ThreeRequestsReserveBothBenchASlotsThenFallbackToBenchBAndOccupyAfterArrival" fullname="Freyja.SmartObjects.Tests.SmartObjectDemoTests.ThreeRequestsReserveBothBenchASlotsThenFallbackToBenchBAndOccupyAfterArrival" methodname="ThreeRequestsReserveBothBenchASlotsThenFallbackToBenchBAndOccupyAfterArrival" classname="Freyja.SmartObjects.Tests.SmartObjectDemoTests" runstate="Runnable" seed="548825079" result="Passed" start-time="2026-11-27 19:48:31Z" end-time="2026-11-27 19:48:46Z" duration="15.083464" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[[SmartObjectsDemo] requester-1 reservou bench-a/left; iniciando aproximação.
+[SmartObjectsDemo] requester-2 reservou bench-a/right; iniciando aproximação.
+[SmartObjectsDemo] requester-3 reservou bench-b/only; iniciando aproximação.
+[SmartObjectsDemo] requester-1 chegou e ocupou bench-a/left; pose de referência sem animação.
+[SmartObjectsDemo] requester-2 chegou e ocupou bench-a/right; pose de referência sem animação.
+[SmartObjectsDemo] requester-3 chegou e ocupou bench-b/only; pose de referência sem animação.
+]]></output>
+              </test-case>
+              <test-case id="1010" name="UnreachableApproachReleasesItsReservation" fullname="Freyja.SmartObjects.Tests.SmartObjectDemoTests.UnreachableApproachReleasesItsReservation" methodname="UnreachableApproachReleasesItsReservation" classname="Freyja.SmartObjects.Tests.SmartObjectDemoTests" runstate="Runnable" seed="83269686" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.009249" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[[SmartObjectsDemo] unreachable-requester reservou unreachable-bench/seat; iniciando aproximação.
+[SmartObjectsDemo] unreachable-requester reservou unreachable-bench/seat; iniciando aproximação.
+[SmartObjectsDemo] Caminho de diagnóstico rejeitado; handle liberado para unreachable-requester.
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1011" name="SmartObjectLifecycleTests" fullname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests" classname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.041297" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1012" name="ObjectDisableReactivationAndDestroyClearClaims" fullname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests.ObjectDisableReactivationAndDestroyClearClaims" methodname="ObjectDisableReactivationAndDestroyClearClaims" classname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests" runstate="Runnable" seed="305736065" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.005331" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="OwnerDisableAndDestroyReleaseOnlyOwnedClaim" fullname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests.OwnerDisableAndDestroyReleaseOnlyOwnedClaim" methodname="OwnerDisableAndDestroyReleaseOnlyOwnedClaim" classname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests" runstate="Runnable" seed="1866601537" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.027396" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="SubsystemResetInvalidatesOldHandles" fullname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests.SubsystemResetInvalidatesOldHandles" methodname="SubsystemResetInvalidatesOldHandles" classname="Freyja.SmartObjects.Tests.SmartObjectLifecycleTests" runstate="Runnable" seed="2109099324" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.005469" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1021" name="Freyja.WorldBuilder.PlayTests.dll" fullname="/Users/bruno.duartec/Documents/Projects/Freyja-091-npc-animation-system/Freyja/Library/ScriptAssemblies/Freyja.WorldBuilder.PlayTests.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.054616" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="28937" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1022" name="Freyja" fullname="Freyja" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.051937" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1023" name="WorldBuilder" fullname="Freyja.WorldBuilder" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.050800" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1024" name="Tests" fullname="Freyja.WorldBuilder.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.050106" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1019" name="WorldSmokeTests" fullname="Freyja.WorldBuilder.Tests.WorldSmokeTests" classname="Freyja.WorldBuilder.Tests.WorldSmokeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.049367" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1020" name="TerrainSupportsCharacter" fullname="Freyja.WorldBuilder.Tests.WorldSmokeTests.TerrainSupportsCharacter" methodname="TerrainSupportsCharacter" classname="Freyja.WorldBuilder.Tests.WorldSmokeTests" runstate="Runnable" seed="1731581615" result="Passed" start-time="2026-11-27 19:48:46Z" end-time="2026-11-27 19:48:46Z" duration="0.048255" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: /Users/bruno.duartec/Library/Application Support/DefaultCompany/Freyja/TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,15 @@
+{
+  "name": "Freyja.NpcAnimation.PlayModeTests",
+  "rootNamespace": "Freyja.NpcAnimation.Tests",
+  "references": ["Freyja.NpcAnimation.Runtime", "Freyja.SmartObjects.Runtime"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

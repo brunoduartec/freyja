@@ -27,6 +27,7 @@
         { "action": "play_animation", "animation": "sit_down" },
         { "action": "wait", "until": "schedule_end" },
         { "action": "play_animation", "animation": "stand_up" },
+        { "action": "move_to", "point": "approach" },
         { "action": "release_slot" }
       ]
     }
