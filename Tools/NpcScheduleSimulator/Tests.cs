@@ -11,6 +11,12 @@ internal static class Tests
     public static int Run()
     {
         var data=Program.Load(Program.DataPath);var resolver=new ScheduleResolver(data);
+        string testSchedulePath=Path.Combine(Program.DataPath,"test-fixtures","npc_activity_execution_test.json");
+        var testData=Program.Load(Program.DataPath,new[]{testSchedulePath});var testResolver=new ScheduleResolver(testData);
+        Is(testData.NpcSchedules.ContainsKey("test_npc_activity_execution"),"test NPC JSON loads through shared schedule loader");
+        Is(testResolver.Resolve("test_npc_activity_execution",new GameTimeSnapshot(1,510,0),new WorldContextSnapshot("clear",null)).Intent.ActivityId=="idle","test NPC resolves idle");
+        Is(testResolver.Resolve("test_npc_activity_execution",new GameTimeSnapshot(1,600,0),new WorldContextSnapshot("clear",null)).Intent.ActivityId=="wander","test NPC resolves wander");
+        Is(testResolver.Resolve("test_npc_activity_execution",new GameTimeSnapshot(1,735,0),new WorldContextSnapshot("clear",null)).Intent.ActivityId=="sit","test NPC resolves sit");
         var t=new GameTimeSnapshot(1,0,0);Is(t.Weekday==0,"weekday derivation");
         Is(new GameTimeSnapshot(7,0,0).Weekday==6,"Sunday derives from Monday-based fixture calendar");
         Is(GameTimeSnapshot.ParseMinute("24:00",true)==1440,"24:00");

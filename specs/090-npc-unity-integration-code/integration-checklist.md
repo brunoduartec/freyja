@@ -1,0 +1,26 @@
+# Checklist — Unity Physical Integration (pending)
+
+- [ ] Open Unity 6000.3.25f1 and allow it to generate `.meta` for new scripts; inspect compiler/Console errors. Do not overwrite or discard existing local work.
+- [ ] Confirm the new scheduling scripts compile in `Assembly-CSharp`, which can see the existing `Freyja.SmartObjects.Runtime` assembly. No new scheduling asmdef is expected: it would lose references to `IslandWaypointWalker` in `Assembly-CSharp`. Confirm the .NET harness still compiles the same Core/Execution files and has no Unity dependencies.
+- [ ] Locate the real Freyja world clock/context source; map absolute day, minute, weekday origin, weather/flags, pause/time-scale/fast-forward. Resolve after initial activation and on boundaries/context events; verify forward skips do not replay and reset/backward time is diagnosed.
+- [ ] On `NpcScheduleTextAssetProvider`, assign `activityCatalog`, `templates[]`, `npcSchedules[]`, `overrides[]` and the existing `execution/recipes.json` to `activityRecipes`. Verify Editor and Player build loading and malformed/duplicate data failure.
+- [ ] Import `Freyja/Assets/_Project/NpcScheduling/Data/test-fixtures/npc_activity_execution_test.json` and assign that TextAsset as the sole entry in `NpcScheduleTextAssetProvider.npcSchedules[]`; assign the activity catalog, templates and recipes. Leave `overrides[]` empty for this isolated fixture, or provide only overrides whose `npcId` has a matching loaded schedule; existing merchant/fisherman overrides are invalid without those schedules. The fixture uses the runtime schema and IDs `idle`, `wander` and `sit`; keep it out of official NPC setups.
+- [ ] Create a disposable test-only NPC configuration. Add the host/provider and required `SmartObjectReservationOwner`; validate the animator, movement-controller ownership, and stable NPC ID. Do not attach to official residents.
+- [ ] On `NpcActivityController`, set `npcId`, `dataProvider`, `locations`, `activityPorts`, `animatorBindings` and `logTransitions`. Call `TickFromWorld` only with snapshots from the real world provider; confirm initialization fails closed if TextAssets or Smart Object owner are absent.
+- [ ] On `NpcLocationRegistry`, set `waypointNetwork` and author each `points[]` row with stable `pointId`, `regionId` and `point`. Register explicit test locations for home, village square and beach plus wander points. Confirm duplicate/unavailable IDs are reported and targets have complete paths.
+- [ ] On `NpcLocationRegistry`, assign `waypointNetwork` to the same `IslandWaypointNetwork` reference assigned to that NPC's `IslandWaypointWalker`; parent every registered `NpcLocationPoint.point` Transform beneath that network. The registry rejects outside points and the ports reject a network-reference mismatch.
+- [ ] Choose an existing bench asset. Configure two unique compatible `sit` slots per bench, each with approach and pose Transform; verify registry lookup, reservation, occupancy and release.
+- [ ] On `NpcUnityActivityPorts`, confirm `moveTimeoutSeconds`, `arrivalTolerance` and `alignmentTolerance` against the actor scale and authored approach/pose spacing. Do not accept a long snap as successful alignment.
+- [ ] On `NpcAnimatorBindings`, assign `animator`; configure `bindings[]` for exact recipe IDs `sit_down` and `stand_up`, each with verified `stateFullPath`, `layer`, `transitionSeconds` and `timeoutSeconds`. Confirm states exist and complete; no physical clips or states are assumed by code.
+- [ ] Confirm actual Animator controller states/clips for sit-down, seated loop/pose, and stand-up. Bind recipe IDs only to verified states/events; fail the test if the NPC remains standing during `sit`.
+- [ ] Run Edit Mode tests for location ID uniqueness, registry candidates and reservation adapter ownership where current Unity test infrastructure permits.
+- [ ] Run Play Mode `idle → wander → sit → wander → idle` with controlled game-clock advances. Confirm path completion, alignment, pose, stand-up, release and next intent.
+- [ ] Run three NPCs against two two-slot benches (or one bench and a third NPC without a seat); include all slots unavailable, fallback, exact release and no residual reservations.
+- [ ] Exercise partial/unreachable path, NavMesh disabled/off-mesh, destroyed/disabled destination, Smart Object disable/destruction, intent expiry during movement/sit, failed animation, host disable/destroy, scene unload, pause/resume, fast-forward, backward reset and a fresh Play Mode session.
+- [ ] Verify cancellation during `sit`: confirm the mapped `stand_up` Animator state completes before the exact Smart Object claim is released; rejected or timed-out cleanup must retain the claim and allow retry. This code-level contract is covered by the portable harness, but physical animation behavior remains unverified.
+- [ ] Confirm old callbacks/operation IDs cannot alter a newer execution; no reservations or operations remain after each cleanup case.
+- [ ] Save Unity test XML, Console summary and representative screenshots/video, record exact Editor/build status, re-run .NET harness after any fix, and update `validation.md`.
+
+## Current state
+
+All boxes remain unchecked until performed in Unity. The current code-only feature intentionally does not configure scenes, prefabs, `.meta`, NavMesh, assets or Animator controllers.

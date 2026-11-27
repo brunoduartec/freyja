@@ -108,8 +108,7 @@ namespace Freyja.NpcScheduling.Execution
         bool Release(string token, string npcId, string executionId);
         ActivityOperation Begin(string action, string npcId, string executionId, string targetId, string point, string animation, double nowSeconds);
         ActivityOperationResult Poll(ActivityOperation operation, string npcId, string executionId, double nowSeconds);
-        bool Cancel(ActivityOperation operation, string npcId, string executionId);
-        void RestorePose(string npcId, string executionId, string targetId);
+        bool Cancel(ActivityOperation operation, string npcId, string executionId, double nowSeconds);
     }
 
     public interface IActivityEventSink { void Emit(ActivityExecutionEvent activityEvent); }

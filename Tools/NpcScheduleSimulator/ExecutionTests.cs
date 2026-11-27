@@ -52,6 +52,7 @@ internal static class ExecutionTests
         TestFullBankAndOtherBank(recipes);
         TestPathAndInvalidReservation(recipes);
         TestCleanupRetry(recipes);
+        TestPoseRestoreRetry(recipes);
         TestOperationCancelFailure(recipes);
         TestReplacementAndNormalExit(recipes);
         TestWanderAndMovementExpiry(recipes);
@@ -68,9 +69,15 @@ internal static class ExecutionTests
         Is(snapshot.State==ActivityState.Executing&&ports.ActiveClaims==1,"sit reserves, moves, aligns, occupies and waits");
         Is(sink.Events.Any(x=>x.Kind==ExecutionEventKind.ResourceReserved)&&ports.ReservedSlotIds.Count==1,"reservation is correlated and exclusive");
         var ended=runner.Cancel("dialogue_interruption",AtStart,10);
-        Is(ended.State==ActivityState.Cancelled&&ports.ActiveClaims==0,"cancel releases sit resource");
-        Is(ports.RestorePoseCalls==1,"cancel requests pose restoration");
-        Is(sink.Events.Any(x=>x.Kind==ExecutionEventKind.ResourceReleased),"release event follows confirmed release");
+        Is(ended.State==ActivityState.Cancelled&&ended.HasResidualOwnership&&ports.ActiveClaims==1,"cancel retains sit claim while stand_up runs");
+        Is(ports.StandUpStarts==1&&ended.ResidualOperationId!=null,"cancel starts pollable stand_up cleanup");
+        Is(!runner.RetryResidualCleanup(AtStart,10.25)&&ports.ActiveClaims==1,"claim remains while stand_up is running");
+        Is(ports.ReleaseBeforeStandUp==0,"adapter never releases occupied claim before stand_up completion");
+        var blocked=runner.Tick(Intent("sit_a","idle",null,1,600,660,"after_sit"),new GameTimeSnapshot(1,600,0),10.3);
+        Is(blocked.ExecutionId==ended.ExecutionId&&ports.ActiveClaims==1,"replacement waits while stand_up cleanup owns the seat");
+        Is(runner.RetryResidualCleanup(AtStart,10.5)&&ports.ActiveClaims==0,"confirmed stand_up releases exact claim");
+        var replacement=runner.Tick(Intent("sit_a","idle",null,1,600,660,"after_sit"),new GameTimeSnapshot(1,600,0),10.6);
+        Is(replacement!=null&&replacement.ExecutionId!=ended.ExecutionId,"replacement starts only after stand_up and release");
 
         foreach(string phase in new[]{"move_to","align_to","play_animation","wait"})
         {
@@ -78,6 +85,7 @@ internal static class ExecutionTests
             var phaseIntent=Intent("phase_"+phase,"sit","beach",1,480,600,"phase");
             DriveToAction(phaseRunner,phaseIntent,phasePorts,phase,AtStart,0);
             var cancelled=phaseRunner.Cancel("phase_cancel",AtStart,20);
+            if(cancelled.HasResidualOwnership)CompleteResidual(phaseRunner,AtStart,20);
             Is(cancelled.State==ActivityState.Cancelled&&phasePorts.ActiveClaims==0,"cancel during "+phase+" releases resource");
         }
 
@@ -107,7 +115,9 @@ internal static class ExecutionTests
 
         ports=new FakeActivityPorts{RejectAnimation=true};runner=new ActivityCoordinator("anim",recipes,ports,new RecordingActivitySink());
         result=DriveToTerminal(runner,Intent("anim","sit","beach",1,480,600,"anim"),ports,AtStart,0);
-        Is(result.State==ActivityState.Failed&&result.ReasonCode=="animation_rejected"&&ports.ActiveClaims==0,"animation rejection cleans reservation");
+        Is(result.State==ActivityState.Failed&&result.ReasonCode=="animation_rejected"&&result.HasResidualOwnership&&ports.ActiveClaims==1,"sit animation rejection retains occupied claim for stand_up");
+        ports.RejectAnimation=false;CompleteResidual(runner,AtStart,20);
+        Is(ports.ActiveClaims==0,"confirmed stand_up releases claim after sit animation rejection");
 
         ports=new FakeActivityPorts{OperationDurationSeconds=10,OperationTimeoutSeconds=1};runner=new ActivityCoordinator("timeout",recipes,ports,new RecordingActivitySink());
         result=runner.Tick(Intent("timeout","sit","beach",1,480,600,"timeout"),AtStart,0);
@@ -130,8 +140,42 @@ internal static class ExecutionTests
         Is(runner.Tick(intent,AtStart,14)==null,"removed NPC remains detached after cleanup");
     }
 
+    private static void TestPoseRestoreRetry(IDictionary<string,ActivityRecipe> recipes)
+    {
+        var ports=new FakeActivityPorts();var runner=new ActivityCoordinator("pose_cleanup",recipes,ports,new RecordingActivitySink());
+        var intent=Intent("pose_cleanup","sit","home",1,480,600,"pose_cleanup");
+        DriveToAction(runner,intent,ports,"wait",AtStart,0);
+        ports.FailPoseRestore=true;
+        var cancelled=runner.Cancel("external",AtStart,10);
+        Is(cancelled.ResourceId!=null&&cancelled.ReasonCode=="pose_restore_failed"&&ports.ActiveClaims==1,
+            "rejected stand_up keeps occupied reservation owned");
+        Is(!runner.RetryResidualCleanup(AtStart,11)&&ports.ActiveClaims==1,
+            "residual cleanup does not release before pose restore succeeds");
+        ports.FailPoseRestore=false;
+        Is(!runner.RetryResidualCleanup(AtStart,12.25)&&ports.ActiveClaims==1,"retry polls stand_up rather than releasing early");
+        Is(!runner.RetryResidualCleanup(AtStart,12.5)&&ports.ActiveClaims==1&&runner.RetryResidualCleanup(AtStart,12.75)&&ports.ActiveClaims==0&&runner.Snapshot==null,
+            "confirmed pose restore permits exact reservation cleanup");
+
+        ports=new FakeActivityPorts{StandUpDurationSeconds=2,OperationTimeoutSeconds=1};
+        runner=new ActivityCoordinator("pose_timeout",recipes,ports,new RecordingActivitySink());
+        DriveToAction(runner,Intent("pose_timeout","sit","home",1,480,600,"timeout"),ports,"wait",AtStart,0);
+        var timedOut=runner.Cancel("external",AtStart,10);
+        Is(timedOut.HasResidualOwnership&&ports.ActiveClaims==1&&!runner.RetryResidualCleanup(AtStart,12),"stand_up timeout preserves residual claim");
+        ports.StandUpDurationSeconds=.5;ports.OperationTimeoutSeconds=10;
+        Is(!runner.RetryResidualCleanup(AtStart,13)&&ports.ActiveClaims==1&&runner.RetryResidualCleanup(AtStart,13.5)&&ports.ActiveClaims==0,"timed-out stand_up retries and releases after completion");
+    }
+
     private static void TestOperationCancelFailure(IDictionary<string,ActivityRecipe> recipes)
     {
+        var timedPorts=new FakeActivityPorts{SitAnimationDurationSeconds=30,OperationTimeoutSeconds=10};
+        var timedRunner=new ActivityCoordinator("animation_cancel_timeout",recipes,timedPorts,new RecordingActivitySink());
+        DriveToAction(timedRunner,Intent("animation_cancel_timeout","sit","home",1,480,600,"sit"),timedPorts,"play_animation",AtStart,0);
+        var interruptedAnimation=timedPorts.LastOperation;
+        var pendingStandUp=timedRunner.Cancel("external",AtStart,interruptedAnimation.StartedAt+.25);
+        Is(pendingStandUp.ResidualOperationId==interruptedAnimation.Id&&timedPorts.StandUpStarts==0&&timedPorts.ActiveClaims==1,"running sit animation remains owned until bounded cancellation timeout");
+        Is(!timedRunner.RetryResidualCleanup(AtStart,interruptedAnimation.StartedAt+10.1)&&timedPorts.LastOperation.Id!=interruptedAnimation.Id&&timedPorts.StandUpStarts==1&&timedPorts.ActiveClaims==1,"expired animation ticket advances to retained stand_up cleanup");
+        Is(timedRunner.RetryResidualCleanup(AtStart,interruptedAnimation.StartedAt+10.6)&&timedPorts.ActiveClaims==0,"stand_up completion releases after expired operation is retired");
+
         var ports=new FakeActivityPorts{FailOperationCancel=true};var runner=new ActivityCoordinator("cancel_op",recipes,ports,new RecordingActivitySink());
         var sit=Intent("cancel_op","sit","home",1,480,600,"sit");
         var moving=runner.Tick(sit,AtStart,0);string oldOperation=ports.LastOperation.Id;
@@ -189,7 +233,7 @@ internal static class ExecutionTests
     private static void TestOperationToken(IDictionary<string,ActivityRecipe> recipes)
     {
         var ports=new FakeActivityPorts();var old=ports.Begin("move_to","n","old","home","target",null,0);
-        ports.Cancel(old,"n","old");var fresh=ports.Begin("move_to","n","new","home","target",null,0);
+        ports.Cancel(old,"n","old",1);var fresh=ports.Begin("move_to","n","new","home","target",null,0);
         var stale=ports.Poll(old,"n","old",1);var current=ports.Poll(fresh,"n","new",1);
         Is(stale.Status==OperationStatus.Failed&&stale.ReasonCode=="operation_cancelled"&&current.Status==OperationStatus.Succeeded,"stale operation token cannot affect current one");
 
@@ -220,6 +264,8 @@ internal static class ExecutionTests
         for(int i=0;i<40;i++){snapshot=runner.Tick(intent,time,start+i*.25);if(snapshot!=null&&snapshot.CurrentOperation==action)return snapshot;}
         throw new Exception("execution never reached "+action+"; last="+(snapshot==null?"null":snapshot.State+"/"+snapshot.CurrentOperation));
     }
+    private static void CompleteResidual(ActivityCoordinator runner,GameTimeSnapshot time,double start)
+    {for(int i=1;i<=8&&runner.Snapshot!=null&&runner.Snapshot.HasResidualOwnership;i++)runner.RetryResidualCleanup(time,start+i*.25);}
     private static ActivitySnapshot DriveToTerminal(ActivityCoordinator runner,ActivityIntent intent,FakeActivityPorts ports,GameTimeSnapshot time,double start)
     {
         ActivitySnapshot snapshot=null;for(int i=0;i<40;i++){snapshot=runner.Tick(intent,time,start+i*.25);if(snapshot!=null&&(snapshot.State==ActivityState.Failed||snapshot.State==ActivityState.Completed))return snapshot;}

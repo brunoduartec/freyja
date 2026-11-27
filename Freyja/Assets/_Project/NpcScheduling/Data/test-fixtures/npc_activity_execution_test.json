@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "npcId": "test_npc_activity_execution",
+  "entries": [
+    { "id": "idle_night", "start": "00:00", "end": "08:00", "activityId": "idle" },
+    { "id": "idle_morning", "start": "08:00", "end": "09:00", "activityId": "idle" },
+    { "id": "wander_morning", "start": "09:00", "end": "12:00", "activityId": "wander", "targetId": "village_square" },
+    { "id": "sit_midday", "start": "12:00", "end": "13:00", "activityId": "sit", "targetId": "village_square" },
+    { "id": "idle_evening", "start": "13:00", "end": "24:00", "activityId": "idle" }
+  ]
+}
