@@ -37,7 +37,7 @@
 
 - [x] T014 [P] Registrar ativos usados, setores, contagens, snapshots de performance, Console e limitações em `specs/088-vegetacao-densa/validacao.md`.
 - [x] T015 Conferir cena salva/limpa, Console, colliders e ausência de novos assets/metas/GUIDs; auditoria final: 632 flores, 11 arbustos, 2 árvores novas, 645 objetos estáticos e zero colliders.
-- [ ] T016 Integrar `088-vegetacao-densa` em `main` sem remover ou sobrescrever alterações locais preexistentes. A cena da branch foi salva; revisar o estado da branch principal imediatamente antes do merge.
+- [x] T016 Integrar `088-vegetacao-densa` em `main` por fast-forward no commit `8094021`; arquivos não rastreados das tarefas de NPC permaneceram fora da integração.
 
 ## Dependências
 
