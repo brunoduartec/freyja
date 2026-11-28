@@ -12,6 +12,14 @@ namespace Freyja.Environment
         [SerializeField, Min(1f)] private float cycleSeconds = 96f;
         [SerializeField] private bool advanceClock = true;
         [SerializeField, Range(0f, 360f)] private float sunriseAzimuth = 155f;
+#if UNITY_EDITOR
+        [System.NonSerialized] private float editorCalendarRate = 1f;
+        public float EditorCalendarRate => editorCalendarRate;
+        public void EditorSetCalendarRate(float value)
+        {
+            editorCalendarRate = value == 5f || value == 10f ? value : 1f;
+        }
+#endif
 
         public float Hour => Mathf.Repeat(hour, 24f);
         public bool AdvancesAutomatically
@@ -94,8 +102,12 @@ namespace Freyja.Environment
         private void Update()
         {
             float delta = Time.deltaTime;
+            float calendarDelta = delta;
+#if UNITY_EDITOR
+            calendarDelta *= editorCalendarRate;
+#endif
             if (advanceClock)
-                hour = Mathf.Repeat(hour + delta * 24f / Mathf.Max(1f, cycleSeconds), 24f);
+                hour = Mathf.Repeat(hour + calendarDelta * 24f / Mathf.Max(1f, cycleSeconds), 24f);
 
             cloudTravel = Mathf.Repeat(cloudTravel + delta * 0.004f, 10f);
             ApplyLighting();

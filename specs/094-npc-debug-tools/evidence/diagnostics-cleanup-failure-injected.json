@@ -1,0 +1,10 @@
+{
+  "mode": "edit",
+  "scenario": "debug_cancel while occupied; pose restoration initially runs; the next cleanup retry cannot release the exact reservation token",
+  "reasonAfterCancel": "debug_cancel",
+  "retryCleanupReturned": false,
+  "reasonAfterRetry": "cleanup_failed",
+  "residualOwnership": true,
+  "portsReleaseResult": false,
+  "method": "Unity MCP script_eval ran ActivityExecution against a fake IActivityPorts implementation"
+}

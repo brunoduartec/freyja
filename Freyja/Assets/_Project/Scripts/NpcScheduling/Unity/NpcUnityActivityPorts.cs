@@ -68,6 +68,20 @@ namespace Freyja.NpcScheduling.Unity
             if(!owner.isActiveAndEnabled||!walker.isActiveAndEnabled)throw new InvalidOperationException("activity_ports_component_disabled");
         }
 
+        internal void ResetForActorDeactivation()
+        {
+            candidates.Clear();
+            smartObjectPoints.Clear();
+            claims.Clear();
+            operations.Clear();
+            npcId=null;
+            owner=null;
+            locations=null;
+            animations=null;
+            walker=null;
+            actor=null;
+        }
+
         public bool TryGetTargetlessPoint(string activityId,string action,string requestedNpcId,out string pointId)
         {
             pointId=null;

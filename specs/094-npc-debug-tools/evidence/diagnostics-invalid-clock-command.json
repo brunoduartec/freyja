@@ -1,0 +1,7 @@
+{
+  "command": "clock_advance",
+  "status": "rejected",
+  "npcId": "",
+  "reason": "minutes_must_be_1_to_1439",
+  "result": ""
+}

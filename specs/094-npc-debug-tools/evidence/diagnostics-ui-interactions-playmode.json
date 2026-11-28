@@ -1,0 +1,23 @@
+{
+  "environment": {
+    "unityVersion": "6000.3.25f1",
+    "scene": "Assets/_Project/Scenes/Ilha_Principal.unity",
+    "playMode": true,
+    "npcIds": ["world_helena", "world_ivo", "world_luana"]
+  },
+  "method": "Unity MCP script_eval invoked NpcDebugMonitorWindow.Refresh and Locate handlers by reflection while the real monitor window was open.",
+  "search": {
+    "query": "world_ivo",
+    "matchedNpcIds": ["world_ivo"]
+  },
+  "selectionPersistence": {
+    "selectedBeforeRefresh": "world_helena",
+    "selectedAfterRefresh": "world_helena"
+  },
+  "locate": {
+    "requestedNpcId": "world_ivo",
+    "selectionActiveGameObject": "Ivo Batista"
+  },
+  "screenshot": "monitor-ui-interaction-playmode.png",
+  "limitation": "Handlers invoked through reflection; mouse typing/clicking was not automated."
+}

@@ -39,6 +39,23 @@ namespace Freyja.SmartObjects
 
         public static event Action<string, IReadOnlyCollection<SmartObject>> DuplicateObjectIdDetected;
 
+#if UNITY_EDITOR
+        public static SmartObject[] EditorGetRegisteredObjects()
+        {
+            EnsureMainThread();
+            var copy = new List<SmartObject>();
+            foreach (HashSet<SmartObject> group in ObjectsById.Values)
+                foreach (SmartObject item in group)
+                    if (item != null) copy.Add(item);
+            copy.Sort((a, b) =>
+            {
+                int id = string.Compare(a.ObjectId, b.ObjectId, StringComparison.Ordinal);
+                return id != 0 ? id : string.Compare(a.name, b.name, StringComparison.Ordinal);
+            });
+            return copy.ToArray();
+        }
+#endif
+
         static SmartObjectRegistry() => mainThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
