@@ -217,7 +217,7 @@ namespace Freyja.NpcScheduling.Execution
                 if(restore!=OperationStatus.Succeeded)return false;
             }
             bool all=true;
-            for(int i=resources.Count-1;i>=0;i--){string token=resources[i];bool released=false;try{released=ports.Release(token,intent.NpcId,ExecutionId);}catch{}if(released){resources.RemoveAt(i);occupied=false;Emit(ExecutionEventKind.ResourceReleased,"cleanup_retry",null);}else all=false;}
+            for(int i=resources.Count-1;i>=0;i--){string token=resources[i];bool released=false;try{released=ports.Release(token,intent.NpcId,ExecutionId);}catch{}if(released){resources.RemoveAt(i);occupied=false;Emit(ExecutionEventKind.ResourceReleased,"cleanup_retry",null);}else{all=false;reason="cleanup_failed";}}
             if(all&&(reason=="cleanup_failed"||reason=="operation_cancel_failed"))reason="cleanup_recovered";
             return all;
         }

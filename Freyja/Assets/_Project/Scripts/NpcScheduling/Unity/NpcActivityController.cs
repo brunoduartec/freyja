@@ -22,6 +22,19 @@ namespace Freyja.NpcScheduling.Unity
         private GameTimeSnapshot lastTime;
         private WorldContextSnapshot lastContext;
         private ActivityIntent currentIntent;
+        private ResolutionTrace lastResolutionTrace;
+#if UNITY_EDITOR
+        private bool editorReevaluationRequested;
+        public static event Action<ActivityExecutionEvent> EditorActivityEvent;
+        public ResolutionTrace EditorLastResolutionTrace => hasSnapshot ? lastResolutionTrace : null;
+
+        public bool EditorRequestReevaluation()
+        {
+            if (!isActiveAndEnabled || coordinator == null) return false;
+            editorReevaluationRequested = true;
+            return true;
+        }
+#endif
         private double lastOperationalSeconds;
         private bool hasSnapshot;
         private bool initializationPending;
@@ -52,6 +65,12 @@ namespace Freyja.NpcScheduling.Unity
         private void OnDisable()
         {
             initializationPending=false;
+            if(!gameObject.activeInHierarchy)
+            {
+                if(activityPorts!=null)activityPorts.ResetForActorDeactivation();
+                coordinator=null; resolver=null; currentIntent=null; hasSnapshot=false;
+                return;
+            }
             if(coordinator!=null&&hasSnapshot)
             {
                 coordinator.Cancel("host_disabled",lastTime,lastOperationalSeconds);
@@ -77,12 +96,20 @@ namespace Freyja.NpcScheduling.Unity
 
             bool resolve=!hasSnapshot||lastContext==null||!SameContext(lastContext,context)||
                 time.AbsoluteDay!=lastTime.AbsoluteDay||time.MinuteOfDay>=currentIntent.ValidUntil;
+#if UNITY_EDITOR
+            if (editorReevaluationRequested)
+            {
+                editorReevaluationRequested = false;
+                resolve = true;
+            }
+#endif
             if(resolve)
             {
                 try
                 {
                     ResolutionResult result=resolver.Resolve(npcId,time,context);
                     currentIntent=result.Intent;
+                    lastResolutionTrace=result.Trace;
                     if(logTransitions)
                     {
                         foreach(string diagnostic in result.Trace.Diagnostics)Debug.LogWarning("NPC "+npcId+" schedule: "+diagnostic,this);
@@ -110,10 +137,20 @@ namespace Freyja.NpcScheduling.Unity
             if(!IsTerminalResidual(coordinator.Snapshot))return false;
             bool cleared=coordinator.RetryResidualCleanup(time,operationalSeconds);
             ActivitySnapshot snapshot=coordinator.Snapshot;
-            if(!cleared&&snapshot!=null&&snapshot.HasResidualOwnership)
-                Fail("residual_cleanup_pending: "+(snapshot.ReasonCode??"unknown"));
+            if(!cleared&&snapshot!=null&&snapshot.HasResidualOwnership&&IsCleanupFailure(snapshot.ReasonCode))
+                Fail("residual_cleanup_failed: "+snapshot.ReasonCode);
             else if(cleared){lastReportedError=null;initializationError=null;}
             return cleared;
+        }
+
+        private static bool IsCleanupFailure(string reason)
+        {
+            if(String.IsNullOrEmpty(reason))return true;
+            return !String.Equals(reason,"debug_cancel",StringComparison.Ordinal)&&
+                !String.Equals(reason,"world_driver_disabled",StringComparison.Ordinal)&&
+                !String.Equals(reason,"validation_interruption",StringComparison.Ordinal)&&
+                !String.Equals(reason,"host_disabled",StringComparison.Ordinal)&&
+                !String.Equals(reason,"external_cancel",StringComparison.Ordinal);
         }
 
         private static bool IsTerminalResidual(ActivitySnapshot snapshot)
@@ -129,6 +166,9 @@ namespace Freyja.NpcScheduling.Unity
 
         public void Emit(ActivityExecutionEvent activityEvent)
         {
+#if UNITY_EDITOR
+            if (activityEvent != null) EditorActivityEvent?.Invoke(activityEvent);
+#endif
             if(!logTransitions||activityEvent==null)return;
             string target=String.IsNullOrEmpty(activityEvent.TargetId)?"-":activityEvent.TargetId;
             string reason=String.IsNullOrEmpty(activityEvent.ReasonCode)?"-":activityEvent.ReasonCode;

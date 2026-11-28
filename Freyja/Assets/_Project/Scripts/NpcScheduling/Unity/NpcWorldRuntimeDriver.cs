@@ -31,6 +31,30 @@ namespace Freyja.NpcScheduling.Unity
         public bool IsReady => clock != null && hostsValidated && activeHosts.Count > 0;
         public GameTimeSnapshot CurrentGameTime => currentTime;
         public string RuntimeStatus => runtimeStatus;
+#if UNITY_EDITOR
+        public CoastalDayNight EditorClock => clock;
+        public bool EditorHostsValidated => hostsValidated;
+        public int EditorConfiguredHostCount => hosts == null ? 0 : hosts.Length;
+        public int EditorInactiveHostCount
+        {
+            get
+            {
+                if (hosts == null) return 0;
+                int count = 0;
+                foreach (NpcActivityController host in hosts)
+                    if (host == null || !host.isActiveAndEnabled) count++;
+                return count;
+            }
+        }
+        public int EditorRejectedHostCount => hostsValidated ? Math.Max(0, EditorConfiguredHostCount - EditorInactiveHostCount - activeHosts.Count) : 0;
+        public NpcActivityController[] EditorGetHosts()
+        {
+            if (!hostsValidated) return Array.Empty<NpcActivityController>();
+            var copy = new List<NpcActivityController>(activeHosts);
+            copy.Sort((a, b) => string.Compare(a != null ? a.NpcId : null, b != null ? b.NpcId : null, StringComparison.Ordinal));
+            return copy.ToArray();
+        }
+#endif
 
         private void OnEnable()
         {

@@ -1,0 +1,22 @@
+{
+  "environment": {
+    "unityVersion": "6000.3.25f1",
+    "scene": "Assets/_Project/Scenes/Ilha_Principal.unity",
+    "playMode": true,
+    "npcIds": ["world_helena", "world_ivo", "world_luana"]
+  },
+  "npcId": "world_ivo",
+  "precondition": "Snapshot showed active Moving execution before the command.",
+  "firstCommand": {
+    "command": "cancel",
+    "status": "accepted",
+    "reason": "cancel_forwarded_to_activity_coordinator",
+    "result": "world_ivo-exec-000001"
+  },
+  "immediateDuplicate": {
+    "command": "cancel",
+    "status": "rejected",
+    "reason": "no_active_execution",
+    "result": "world_ivo-exec-000001"
+  }
+}

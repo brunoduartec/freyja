@@ -1,0 +1,11 @@
+{
+  "mode": "edit",
+  "capacity": 512,
+  "emittedCount": 514,
+  "capturedCount": 512,
+  "droppedCount": 2,
+  "firstCaptureOrder": 3,
+  "lastCaptureOrder": 514,
+  "method": "Unity MCP invoked the real EditorActivityEvent subscriber with synthetic ActivityExecutionEvent values",
+  "bufferClearedAfterProbe": true
+}

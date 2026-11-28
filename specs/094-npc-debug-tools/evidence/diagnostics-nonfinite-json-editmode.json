@@ -1,0 +1,7 @@
+{
+  "method": "Unity MCP script_eval invoked the production ToVector and JsonSettings helpers by reflection.",
+  "input": {"x": "NaN", "y": 1.0, "z": "+Infinity"},
+  "vectorStatus": "unavailable_non_finite",
+  "serialized": "{\"x\":null,\"y\":1.0,\"z\":null,\"status\":\"unavailable_non_finite\"}",
+  "result": "PASS"
+}

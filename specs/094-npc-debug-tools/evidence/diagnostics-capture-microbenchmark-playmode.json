@@ -1,0 +1,25 @@
+{
+  "environment": {
+    "unityVersion": "6000.3.25f1",
+    "scene": "Assets/_Project/Scenes/Ilha_Principal.unity",
+    "playMode": true,
+    "npcCount": 3,
+    "iterations": 100,
+    "warmupIterations": 10
+  },
+  "measurement": "Stopwatch + GC.GetAllocatedBytesForCurrentThread around CaptureSnapshot(limit=512), on Unity Editor main thread.",
+  "monitorOpen": {
+    "totalMilliseconds": 2.99,
+    "averageMillisecondsPerSnapshot": 0.030,
+    "totalAllocatedBytes": 0,
+    "averageAllocatedBytesPerSnapshot": 0
+  },
+  "monitorClosed": {
+    "totalMilliseconds": 2.92,
+    "averageMillisecondsPerSnapshot": 0.029,
+    "totalAllocatedBytes": 0,
+    "averageAllocatedBytesPerSnapshot": 0
+  },
+  "limitation": "This microbenchmark measures direct API capture only; it does not measure EditorWindow repaint/update cost, profiler frame CPU, allocations from the full Editor update loop, or player overhead.",
+  "result": "PARTIAL"
+}
