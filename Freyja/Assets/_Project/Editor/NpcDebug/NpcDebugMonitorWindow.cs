@@ -27,6 +27,16 @@ namespace Freyja.NpcDebug.Editor
             window.Show();
         }
 
+        public static void FocusNpc(string npcId)
+        {
+            NpcDebugMonitorWindow window = GetWindow<NpcDebugMonitorWindow>();
+            window.titleContent = new GUIContent("NPC Debug Monitor");
+            window.selectedNpcId = npcId;
+            window.Refresh();
+            window.Show();
+            window.Focus();
+        }
+
         private void OnEnable()
         {
             EditorApplication.update -= OnEditorUpdate;
